@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # Install AmiRock
 # B.Titze 2021
 
