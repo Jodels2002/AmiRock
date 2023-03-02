@@ -84,6 +84,7 @@ systemctl start fan-control
       
      		make -j4 PLATFORM=rk3588
             sudo chmod -R 777 $HOME/amiberry
+	    sudo chmod -R 777 /usr/share/plymouth/
 	    mkdir $HOME/Amiga/
             cp -rf $HOME/Amiga/amiberry  $HOME/Amiga/amiberry_old
             cp -rf $HOME/amiberry/*  $HOME/Amiga/
@@ -105,7 +106,7 @@ systemctl start fan-control
 	     sudo rm -rf $HOME/Amiga/make-bundle.sh
 	     
 	     
-	     
+	     sudo chmod -R 777 /usr/share/plymouth/
 	     
 	     
       
