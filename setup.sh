@@ -23,3 +23,13 @@ sudo apt-get update
   sudo apt install -y nemo 
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
   sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
+  
+  cd /lib/firmware/
+  sudo wget https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin
+  cd
+sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
+sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
+
+sudo apt update -y
+sudo apt dist-upgrade -y
+sudo apt install kodi -y
