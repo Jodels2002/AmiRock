@@ -1,0 +1,19 @@
+{
+    "pwmchip": -1,
+    "gpio": 0,
+    "pwm-period": 10000,
+    "temp-map": [
+        
+        
+        {
+            "temp": 64,
+            "duty": 90,
+            "duration": 320
+        },
+        {
+            "temp": 67,
+            "duty": 100,
+            "duration": 580
+        }
+    ]
+}
