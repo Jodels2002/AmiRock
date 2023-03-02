@@ -80,17 +80,34 @@ systemctl start fan-control
             sudo rm -rf amiberry
             git clone https://github.com/midwan/amiberry
             cd amiberry
-	    	
-      		clear
-      		toilet "AmiRock" --metal
-      		echo " "
-      		echo " "
-      		echo "Raspberry Pi OS 64 bit is running..."
-      		echo "Compiling now ...Amiberry :-)"
+
       
      		make -j4 PLATFORM=rk3588
-     
-      
+            sudo chmod -R 777 $HOME/amiberry
+	    mkdir $HOME/Amiga/
+            cp -rf $HOME/Amiga/amiberry  $HOME/Amiga/amiberry_old
+            cp -rf $HOME/amiberry/*  $HOME/Amiga/
+             sudo rm -rf $HOME/amiberry
+	     sudo rm -rf $HOME/Amiga/abr
+	     sudo rm -rf $HOME/Amiga/cmake
+	     sudo rm -rf $HOME/Amiga/external
+	     sudo rm -rf $HOME/Amiga/src
+	     sudo rm -rf $HOME/Amiga/Android.mk
+	     sudo rm -rf $HOME/Amiga/whdboot-src
+	     sudo rm -rf $HOME/Amiga/VSLinux
+	     sudo rm -rf $HOME/Amiga/Info.plist.template
+	     sudo rm -rf $HOME/Amiga/CMakeSettings.json
+	     sudo rm -rf $HOME/Amiga/Makefile
+	     sudo rm -rf $HOME/Amiga/Entitlements.plist
+	     sudo rm -rf $HOME/Amiga/CMakeLists.txt
+	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
+	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
+	     sudo rm -rf $HOME/Amiga/make-bundle.sh
+	     
+	     
+	     
+	     
+	     
       
       
 
