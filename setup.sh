@@ -16,14 +16,16 @@ export DISTRO=buster-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 sudo apt-get update
 
-  sudo apt install -y dialog mc zip unzip wget
+  sudo apt install -y dialog mc zip unzip wget toilet
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
 
   sudo apt install -y nemo 
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
   sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
-  
+  clear
+      		toilet "AmiRock" --metal
+          
   cd /lib/firmware/
   
   sudo wget https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin
@@ -34,7 +36,11 @@ sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 sudo apt update -y
 sudo apt dist-upgrade -y
 sudo apt install kodi -y
-
+clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " Fan-Control by pymumu"
+          
 git clone https://github.com/pymumu/fan-control-rock5b
 cd fan-control-rock5b
 make package
@@ -63,7 +69,26 @@ systemctl start fan-control
       sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
       sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
       cp -rf $HOME/AmiRock/config/xfce4/* $HOME/.config/xfce4/
-   
+      
+      cd
+      		clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " "
+       		echo "Compiling now ...Amiberry :-)"
+          
+            sudo rm -rf amiberry
+            git clone https://github.com/midwan/amiberry
+            cd amiberry
+	    	
+      		clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " "
+      		echo "Raspberry Pi OS 64 bit is running..."
+      		echo "Compiling now ...Amiberry :-)"
+      
+     		make -j4 PLATFORM=rk3588
      
       
       
