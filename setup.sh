@@ -43,4 +43,31 @@ sudo systemctl enable fan-control
 systemctl start fan-control
 
 
+      cd /usr/share/icons
+      sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
+      sudo unzip -u  /usr/share/icons/AMIGAOSLINUX.zip
+      sudo rm -rf /usr/share/icons/default
+      sudo cp -rf /usr/share/icons/AMIGAOSLINUX/ /usr/share/icons/default/
+      
+      cd $HOME/AmiRock/
+      git clone --depth=1 https://github.com/x64k/amitk
+      clear
+      sudo cp -rf $HOME/AmiRock/amitk /usr/share/themes
+      sudo cp -rf /home/$USER/KickPi-OS/amitk /usr/share/themes
+      
+      git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
+      clear
+
+      sudo cp -rf $HOME/AmiRock/amigaos_xfwm4_themes/* /usr/share/themes/
+      sudo rm -rf /usr/share/themes/Default/xfwm4/
+      sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
+      sudo cp -rf /home/$USER/KickPi-OS/config/rpd-wallpaper/* /usr/share/backgrounds/
+    
+   
+     
+      
+      
+      
+
+
 
