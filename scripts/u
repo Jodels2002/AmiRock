@@ -1,0 +1,156 @@
+#!/bin/bash
+# Install AmiRock-OS
+# B.Titze 2023
+# AmiRock-OS updater
+BLACK='\033[0;39m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+GREY='\033[1;30m'
+
+cd
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$GREY "
+
+
+sudo rm -rf ~/AmiRock-OS
+        echo -e  ""
+	echo -e -n "$BLACK Check free disk space..." 
+	echo -e "$BLUE "
+	df -H -l /root
+	echo -e -n " "
+FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
+
+
+if [[ $FREE -lt  5000000 ]]; then               # 10G = 10*1024*1024k
+
+  
+     echo -e  "$RED 1.> Not enough disk space !                            -"
+
+     echo -e "$BLACK 1.> "
+     echo -e  ""
+     echo -e  "Deleting stuff... "
+    sleep 4
+      
+      echo -e  ""
+      # Make Space / thats live :-)
+      	
+	if [ -d /home/$USER/pimiga15/disks/Work/Videos/ ]; then
+	        echo -e "$BLUE Deleting Pimiga15 Videos... "
+      		sudo rm -rf /home/$USER/pimiga15/disks/Work/Videos/*
+      	fi
+	if [ -d /home/$USER/pimiga15/disks/Work/Amiga_CD_Collection/ ]; then
+	   echo -e -n "$BLUE Deleting Amiga_CD_Collections... "
+           sudo rm -rf /home/$USER/pimiga15/disks/Work/Commodore_Amiga_Tosec_Complete/Demos/
+           sudo rm -rf /home/$USER/pimiga15/disks/Work/Commodore_Amiga_Tosec_Complete/Demos/Demos.info
+	fi
+	
+	 echo -e  ""
+	echo -e -n "$BLACK Check free disk space again..." 
+	echo -e "$BLUE "
+	df -H -l /root
+	echo -e -n " "
+        FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
+	
+	
+
+       if [[ $FREE -lt  5000000 ]]; then               # 10G = 10*1024*1024k
+        echo -e  ""
+	echo -e -n "$BLACK Less than 5GB disk space free..." 
+	
+
+       # Make Space / thats live
+	if [ -d /home/$USER/pimiga2/disks/Work/Videos/ ]; then
+	 
+           sudo rm -rf /home/$USER/pimiga2/disks/Work/Videos/*
+	   sudo rm -rf /home/$USER/Amiga/Install/*
+	fi
+
+         else
+	  echo " "
+	 echo -e -n "$BLUE Enough disk space free..." 
+fi 
+	
+fi
+
+       
+
+LED_off
+sudo dpkg --configure -a
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+sudo apt -y --fix-broken install
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+sudo apt -f -y install
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+sudo apt-get autoremove
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+sudo apt-get autoclean
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+sudo apt-get clean 
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+
+wget -q --spider http://google.com
+
+ if [ $? -eq 0 ]; then
+
+
+sudo rm -rf /home/$USER/AmiRock-OS/
+
+
+      cd
+      git clone --depth=1 https://github.com/Jodels2002/AmiRock-OS_up.git
+      sudo mv /home/$USER/AmiRock-OS_up /home/$USER/AmiRock-OS  
+      sudo chmod -R 777 AmiRock-OS
+     
+      
+      sudo cp -f -R /home/$USER/AmiRock-OS/scripts/* /usr/local/bin
+      sudo rm -rf /opt/AmiRock-OS
+      sudo cp -f -R /home/$USER/AmiRock-OS/ /opt
+      
+      
+      sudo chmod -R 777 /usr/local/bin
+      sudo chmod -R 777 /opt/AmiRock-OS
+      
+      
+      
+      /home/$USER/AmiRock-OS/scripts/pikickme.sh
+ 
+ else
+    whiptail --msgbox " Sorry, you must first connect to internet ..." 20 50 1
+ 
+ fi
