@@ -148,7 +148,7 @@ sudo rm -rf /home/$USER/AmiRock-OS/
       
       
       
-      /home/$USER/AmiRock-OS/scripts/pikickme.sh
+      /home/$USER/AmiRock-OS/scripts/AmiKickme.sh
  
  else
     whiptail --msgbox " Sorry, you must first connect to internet ..." 20 50 1
