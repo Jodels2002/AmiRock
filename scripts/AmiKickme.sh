@@ -28,10 +28,7 @@
       echo " No Rights Reserved.  "
       echo " "
       
-
-      
-      #sudo mv /usr/local/bin/uk /usr/local/bin/u
-      
+    
            
       if [ ! -d /home/$USER/.config/autostart/ ]; then
       echo " Create Autostart "
@@ -63,14 +60,7 @@ clear
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
       
-       sudo chmod -R 777 /usr/local/bin/
 
-      # (crontab -l 2>/dev/null; echo "*/5 * * * * /usr/local/bin/loop.sh") | crontab -
-      
-       LED
-       if [ -d /OLED/ ]; then
-       AmiRock-OS.sh
-       fi
        
       
 fi    
@@ -110,73 +100,11 @@ fi
 fi
        
 
-     LED
+
  if [ ! -d /boot/dietpi/func/ ]; then
       sudo cp -R /opt/AmiRock/config/dietpi-banner /boot/dietpi/func/dietpi-banner
       fi
 	
-	
-if [ "$(getconf LONG_BIT)" == "64" ]; then
- # Only if Amiberry update hase made
-   
-        cd
-	     
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-            REVCODE=$(sudo cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}' | sed 's/^ *//g' | sed 's/ *$//g')
-if [ "$REVCODE" = "a020d3" ]; then
-    PIMODEL="Raspberry Pi 3 Model B Plus, 1 GB RAM - 64 bit"
-	echo "$PIMODEL ($REVCODE)"
-
-	
-
-cp -R /home/$USER/AmiRock/Amiga/amiberry_64 /home/$USER/Amiga/amiberry
-cp -R /home/$USER/AmiRock/Amiga/amiberry_64 /home/$USER/Amiga/amiberry_dmx
-cp -R /home/$USER/AmiRock/Amiga/amiberry_64 /home/$USER/Amiga/amiberry_sdl
-cp -R /home/$USER/AmiRock/Amiga/amiberry_dev64 /home/$USER/Amiga/amiberry_dev
-
-sudo cp -R /home/$USER/AmiRock/config/config3_64bit.txt /boot/config.txt
-      
-fi
- 	    
-    
-else
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      
-      REVCODE=$(sudo cat /proc/cpuinfo | grep 'Revision' | awk '{print $3}' | sed 's/^ *//g' | sed 's/ *$//g')
-if [ "$REVCODE" = "a020d3" ]; then
-    PIMODEL="Raspberry Pi 3 Model B Plus, 1 GB RAM - 32bit"
-	echo "$PIMODEL ($REVCODE)"
-
-
-
-
-cp -R /home/$USER/AmiRock/Amiga/amiberry_sdl /home/$USER/Amiga/amiberry_sdl
-cp -R /home/$USER/AmiRock/Amiga/amiberry_sdl /home/$USER/Amiga/amiberry
-cp -R /home/$USER/AmiRock/Amiga/amiberry_sdl /home/$USER/Amiga/amiberry_dev
-cp -R /home/$USER/AmiRock/Amiga/amiberry_dmx /home/$USER/Amiga/amiberry_dmx
-
-sudo cp -R /home/$USER/AmiRock/config/config3b.txt /boot/config.txt
-      
-fi
-    
-
-fi
- 
- 
 
 if [ -f /home/$USER/Desktop/AmigaForever9Plus.msi ]; then
 AFimport.sh
