@@ -8,6 +8,26 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
+ echo ""
+      echo " "
+      echo "1>	Hi Guys,"
+      echo " "
+      echo "1>	welcome to the "AmiRock" installer! "
+      echo "1>CLI"
+      echo "1>CLI"
+      echo "1>	Please note that the Kickroms and Workbench files are still under copyright (Amiga Forever)!  "
+      echo "1>CLI"
+      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
+      echo "1>CLI: "
+      echo "1>                  Greetings your´s "
+      echo "1>Assign >NIL:      Bernd Titze"
+      echo " "
+      echo " " 
+      echo "	LOADWB ...  :-)"
+      sleep 4s
+      echo " "
+      echo " "     
+
 chsh -s /bin/bash
 sudo chsh -s /bin/bash
 
