@@ -1,12 +1,14 @@
 #!/bin/bash
 # Install AmiRock
-# B.Titze 2021
+# B.Titze 2023
 
 BLACK='\033[0;39m'
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
+
+
 
  echo ""
       echo " "
@@ -26,7 +28,11 @@ GREY='\033[1;30m'
       echo "	LOADWB ...  :-)"
       sleep 4s
       echo " "
-      echo " "     
+      echo " " 
+      
+      
+#***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  Radxa Key update        **************************************   
 
 chsh -s /bin/bash
 sudo chsh -s /bin/bash
@@ -36,6 +42,8 @@ export DISTRO=buster-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 sudo apt-get update
 
+#***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
@@ -43,6 +51,10 @@ sudo apt-get update
   sudo apt install -y nemo 
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
   sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
+  
+#***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  Graphic Driver        **************************************   
+  
   clear
       		toilet "AmiRock" --metal
           
@@ -56,6 +68,10 @@ sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 sudo apt update -y
 sudo apt dist-upgrade -y
 sudo apt install kodi -y
+
+#***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  Fan Control by pymumu        **************************************   
+
 clear
       		toilet "AmiRock" --metal
       		echo " "
@@ -68,6 +84,8 @@ sudo dpkg -i fan-control*.deb
 sudo systemctl enable fan-control
 systemctl start fan-control
 
+#***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  Amiga Desktop        ************************************** 
 
       cd /usr/share/icons
       sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
@@ -91,44 +109,10 @@ systemctl start fan-control
       cp -rf $HOME/AmiRock/config/xfce4/* $HOME/.config/xfce4/
       
       cd
-      		clear
-      		toilet "AmiRock" --metal
-      		echo " "
-      		echo " "
-       		echo "Compiling now ...Amiberry :-)"
-          
-            sudo rm -rf amiberry
-            git clone https://github.com/midwan/amiberry
-            cd amiberry
-
-      
-     		make -j4 PLATFORM=rk3588
-            sudo chmod -R 777 $HOME/amiberry
-	    sudo chmod -R 777 /usr/share/plymouth/
-	    mkdir $HOME/Amiga/
-            cp -rf $HOME/Amiga/amiberry  $HOME/Amiga/amiberry_old
-            cp -rf $HOME/amiberry/*  $HOME/Amiga/
-             sudo rm -rf $HOME/amiberry
-	     sudo rm -rf $HOME/Amiga/abr
-	     sudo rm -rf $HOME/Amiga/cmake
-	     sudo rm -rf $HOME/Amiga/external
-	     sudo rm -rf $HOME/Amiga/src
-	     sudo rm -rf $HOME/Amiga/Android.mk
-	     sudo rm -rf $HOME/Amiga/whdboot-src
-	     sudo rm -rf $HOME/Amiga/VSLinux
-	     sudo rm -rf $HOME/Amiga/Info.plist.template
-	     sudo rm -rf $HOME/Amiga/CMakeSettings.json
-	     sudo rm -rf $HOME/Amiga/Makefile
-	     sudo rm -rf $HOME/Amiga/Entitlements.plist
-	     sudo rm -rf $HOME/Amiga/CMakeLists.txt
-	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
-	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
-	     sudo rm -rf $HOME/Amiga/make-bundle.sh
-	     
-	     
-	     sudo chmod -R 777 /usr/share/plymouth/
-	     
-	     
+ #***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************ End First run        ************************************** 
+      		
+ $HOME/AmiRock/scriptsAmiKickme.sh
       
       
 
