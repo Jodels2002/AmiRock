@@ -495,41 +495,37 @@ if  xset q &>/dev/null; then
       RED='\033[1;31m'
       GREY='\033[1;30m'
 clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo -e "$BLACK "
-      echo " Type 'd' to boot into Kick-OS Workbench"
-      echo ""
-      echo " 1.>  "
-      echo -e " 1.>  ( a ) Start Amiga                   *Amiberry*" 
-      echo " 1.>  ( d ) AmiRock Desktop                          " 
-      echo -e " 1.>  ( e ) Emulationstation              *RetroPie*" 
-      echo " 1.>  ( r ) Emulationstation Setup                  "
-      echo -e "$GREEN 1.>  ( u ) AmiRock-OS Update                        "
-      echo -e "$BLACK 1.>  ( m ) AmiRock-OS Config                        " 
-      echo -e " 1.>  ( c ) Raspi-Config                            "
-      echo " 1.>  ( s ) Shutdown                                 "  
-      echo ""
-      
+     cd
+clear
+toilet "AmiRock" --metal
+echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+echo " Version V2.0 2020-2021 KickPi-OS "
+echo " No Rights Reserved.  "
+echo -e "$BLACK "
+echo " Type 'd' to boot into AmiRock Workbench"
+echo ""
+echo " 1.>  "
+echo -e " 1.>  ( u ) AmiRock-OS Update                     "
+echo " 1.>  ( m ) ArmRock-OS Config                       " 
+echo -e " 1.>  ( c ) Armbian-Config                       "
+echo " 1.>  ( s ) Shutdown                                "  
+echo ""
 else 
-   toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo -e "$BLACK "
-      echo " Type 'd' to boot into Kick-OS Workbench"
-      echo ""
-      echo " 1.>  "
-      echo -e " 1.>  ( a ) Start Amiga                   *Amiberry*" 
-      echo " 1.>  ( d ) AmiRock Desktop                          " 
-      echo -e " 1.>  ( e ) Emulationstation              *RetroPie*" 
-      echo " 1.>  ( r ) Emulationstation Setup                  "
-      echo -e "$GREEN 1.>  ( u ) AmiRock-OS Update                        "
-      echo -e "$BLACK 1.>  ( m ) AmiRock-OS Config                        " 
-      echo -e " 1.>  ( c ) Raspi-Config                            "
-      echo " 1.>  ( s ) Shutdown                                 "  
+  cd
+clear
+toilet "AmiRock" --metal
+echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+echo " Version V2.0 2020-2021 KickPi-OS "
+echo " No Rights Reserved.  "
+echo -e "$BLACK "
+echo " Type 'd' to boot into AmiRock Workbench"
+echo ""
+echo " 1.>  "
+echo -e " 1.>  ( u ) AmiRock-OS Update                     "
+echo " 1.>  ( m ) ArmRock-OS Config                       " 
+echo -e " 1.>  ( c ) Armbian-Config                       "
+echo " 1.>  ( s ) Shutdown                                "  
+echo ""
 
 startx
 fi
