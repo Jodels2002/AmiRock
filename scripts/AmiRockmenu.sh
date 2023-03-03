@@ -186,7 +186,7 @@ esac
 cd
 clear
 toilet "AmiRock" --metal
-echo -e "$BLUE KickPI-OS ROM Operating System and Libraries" 
+echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
 echo " Version V2.0 2020-2021 KickPi-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
