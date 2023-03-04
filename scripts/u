@@ -145,7 +145,7 @@ wget -q --spider http://google.com
       
       
       
-      /home/$USER/AmiRock-OS/scripts/AmiKickme.sh
+      /home/$USER/AmiRock/scripts/AmiKickme.sh
  
  else
     whiptail --msgbox " Sorry, you must first connect to internet ..." 20 50 1
