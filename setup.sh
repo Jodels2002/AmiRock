@@ -90,6 +90,9 @@ systemctl start fan-control
 
       cd 
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
+      sudo apt install python3-pip
+      sudo python3 -m pip install -U setuptools
+      sudo python3 -m pip install -U amitools
       
 
 #***********************************************  #AmiRock-OS install script  ***********************************
