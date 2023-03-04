@@ -12,7 +12,7 @@
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
       fi	 
-      sudo chmod -R 777 /home/$USER/AmiRock-OS
+      sudo chmod -R 777 /home/$USER/AmiRock
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       
@@ -400,7 +400,8 @@ fi
       #update.sh
      sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
      fi     
-  
+     
+     
       if [ ! -d /home/$USER/Documents/ ]; then
       mkdir /home/$USER/Documents/
       fi
@@ -416,9 +417,20 @@ fi
       sudo find . -name "_UAEFSDB.___" -type f -print0 | xargs -0 /bin/rm -f
       cd ~
       #sudo rm -rf ~/.cache/
-      sudo rm -rf ~/AmiRock-OS
-      sudo rm -rf ~/Templates/*
-      cp -rf  /opt/Backup/amiberry_dev /home/$USER/Amiga
+      sudo rm -rf ~/AmiRock
+     
+      
+      if [ -d $HOME/AMIGAOSLINUX/ ]; then
+         sudo rm -rf $HOME/AMIGAOSLINUX/
+      fi
+      
+      if [ -d $HOME/AmiRock/ ]; then
+         sudo rm -rf $HOME/AmiRock/
+      fi
+      
+      if [ -d $HOME/fan-control-rock5b/ ]; then
+         sudo rm -rf $HOME/fan-control-rock5b/
+      fi
  
 
       echo " "
