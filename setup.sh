@@ -112,7 +112,7 @@ systemctl start fan-control
  #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************ End First run        ************************************** 
       		
- $HOME/AmiRock/scriptsAmiKickme.sh
+ $HOME/AmiRock/scripts/AmiKickme.sh
       
       
 
