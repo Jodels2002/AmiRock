@@ -388,7 +388,7 @@ fi
       echo " "
       
       fi
-      sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
+
       #cd
       #unzip -u -o $HOME/AmiRock/Amiga/Amiga.zip
       
