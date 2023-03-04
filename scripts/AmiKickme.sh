@@ -49,8 +49,6 @@
       echo " "
       sudo apt-get update
       sudo apt-get upgrade -y
-  
-      
 
   
 cd /home/$USER/AmiRock/
@@ -60,12 +58,6 @@ clear
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
       
-
-       
-      
-fi    
-                    
- 
 
       # Update allways Routine
       if [ ! -d /opt/AmiRock/ ]; then
