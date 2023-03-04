@@ -305,7 +305,13 @@ if [ "$(getconf LONG_BIT)" == "64" ]; then
 	    # Backup
 	    
 	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup
-   fi        
+   fi 
+      if [ -d /usr/share/applications/amiberry_dev.png/ ]; then
+      cp -rf  $HOME/AmiRock/amiberry_dev.png $HOME/Amiga/data/
+      cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
+      cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+      fi
+   
    if [ ! -f /opt/Backup/amiberry ]; then    
 	    
 	    cd
@@ -326,7 +332,7 @@ if [ "$(getconf LONG_BIT)" == "64" ]; then
             sudo chmod -R 777 /home/$USER/amiberry
             cp -rf /home/$USER/Amiga/amiberry  /home/$USER/Amiga/amiberry_old
             cp -rf /home/$USER/amiberry/amiberry  /home/$USER/Amiga/amiberry
-	    cp -rf /home/$USER/amiberry/amiberry  /home/$USER/Amiga/amiberry_dmx
+	   
 	    
 	  
 	    cp -rf  /home/$USER/Amiga/amiberry /opt/Backup/
