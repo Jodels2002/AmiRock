@@ -433,7 +433,9 @@ fi
       if [ -d $HOME/fan-control-rock5b/ ]; then
          sudo rm -rf $HOME/fan-control-rock5b/
       fi
- 
+      
+
+
 
       echo " "
       echo "  ... repair rights  "         
