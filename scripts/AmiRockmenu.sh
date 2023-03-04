@@ -170,6 +170,7 @@ case $CHOICE in
 	    sudo chmod -R 777 /usr/share/plymouth/
 	    mkdir $HOME/Amiga/
             cp -rf $HOME/amiberry/amiberry  $HOME/Amiga/amiberry_dev
+	    sudo rm -rf $HOME/amiberry/amiberry
             cp -rf $HOME/amiberry/*  $HOME/Amiga/
              sudo rm -rf $HOME/amiberry
 	     sudo rm -rf $HOME/Amiga/abr
