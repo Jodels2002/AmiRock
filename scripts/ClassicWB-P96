@@ -1,0 +1,5 @@
+
+
+cd $HOME/Amiga/
+./amiberry --config conf/ClassicWB-P96.uae -G
+
