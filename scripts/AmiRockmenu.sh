@@ -89,9 +89,7 @@ case $CHOICE in
             Pimiga-imp.sh
             ;;  
 	    
-                         255) echo "[ESC] key pressed.";;
-                           esac
-            ;;  
+      
             
           n)
        
@@ -199,7 +197,9 @@ case $CHOICE in
          
             ;;  
             
-            
+                               255) echo "[ESC] key pressed.";;
+                           esac
+            ;;  
 esac
 
 
