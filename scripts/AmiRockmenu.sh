@@ -25,7 +25,7 @@ MENU="Version 3.1:"
 OPTIONS=(d "Boot to AmiRock  Desktop     "
          i "Install ClassicWB             "
          m "Import Pimiga 1.5 / 2.0       "  
-         u "Update AmiRock                 "
+         u "Update AmiRock-OS                 "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
          c "Armbian-config                "
@@ -39,6 +39,11 @@ CHOICE=$(dialog --clear \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
+                
+   
+       
+   
+
 cd ~
 
 clear
@@ -83,13 +88,13 @@ case $CHOICE in
             clear
             Pimiga-imp.sh
             ;;  
-            
-
-            255) echo "[ESC] key pressed."
+	    
+                         255) echo "[ESC] key pressed.";;
                            esac
             ;;  
             
           n)
+       
               #***********************************************  #AmiRock-OS install script  ***********************************
               #************************************************  Compile Amiberry         ************************************** 
             clear
