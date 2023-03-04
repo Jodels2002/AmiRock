@@ -15,7 +15,7 @@
       sudo chmod -R 777 /home/$USER/AmiRock-OS
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo cp  $HOME/AmiRock/config/splash/* /etc/systemd/system/
+      
     
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
@@ -376,9 +376,6 @@ fi
         sudo cp -rf /usr/share/applications/AmiRock-OS.desktop /home/$USER/Desktop/AmiRock-OS.desktop
       fi  
       
-      if [ ! -f /home/$USER/Desktop/CLI.desktop ]; then
-        sudo cp -rf /usr/share/applications/CLI.desktop /home/$USER/Desktop/CLI.desktop
-      fi 
       
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
