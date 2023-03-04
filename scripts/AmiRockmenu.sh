@@ -55,7 +55,7 @@ case $CHOICE in
            #***********************************************  #AmiRock-OS install script  ***********************************
              #************************************************  Armbian-config    **************************************
             clear
-            toilet "Armbian-config" --metal
+            echo "Armbian-config"
             sudo armbian-config
             ;; 
                  
@@ -199,8 +199,6 @@ case $CHOICE in
             
                                255) echo "[ESC] key pressed.";;
                            esac
-            ;;  
-esac
 
 
 cd
