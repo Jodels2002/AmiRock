@@ -19,7 +19,7 @@ HEIGHT=35
 WIDTH=70
 CHOICE_HEIGHT=8
 BACKTITLE="Main"
-TITLE="KickPI-OS ROM Operating System"
+TITLE="AmiRock-OS ROM Operating System"
 MENU="Version 3.1:"
 
 OPTIONS=(d "Boot to AmiRock  Desktop     "
