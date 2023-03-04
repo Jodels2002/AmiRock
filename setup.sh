@@ -35,7 +35,7 @@ GREY='\033[1;30m'
 #************************************************  Radxa Key update        **************************************   
 
 chsh -s /bin/bash
-sudo chsh -s /bin/bash
+
 
 sudo apt-get install -y wget
 export DISTRO=buster-stable
