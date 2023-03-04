@@ -100,6 +100,12 @@ systemctl start fan-control
       fi
       if [ ! -d $HOME/Desktop/ ]; then
       mkdir $HOME/Desktop/
+     
+        mkdir $HOME/Downloads
+        mkdir $HOME/Documents
+        mkdir $HOME/Music
+        mkdir $HOME/Pictures
+        mkdir $HOME/Videos
       fi
 
       cd /usr/share/icons
