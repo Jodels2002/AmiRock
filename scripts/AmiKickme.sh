@@ -19,7 +19,7 @@
     
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
-      sudo apt install -y samba cifs-utils
+     
      
       clear
       toilet "AmiRock-OS" --metal
@@ -57,6 +57,8 @@ clear
 
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
+       sudo chmod -R 777 /usr/share/plymouth/
+       cp -rf  $HOME/AmiRock/amiberry_dev.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
       
 
       # Update allways Routine
