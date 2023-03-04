@@ -306,11 +306,7 @@ if [ "$(getconf LONG_BIT)" == "64" ]; then
 	    
 	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup
    fi 
-      if [ ! -d /usr/share/applications/amiberry_dev.png/ ]; then
-      cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
-      cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
-      cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
-      fi
+    
    cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
    if [ ! -f /opt/Backup/amiberry ]; then    
 	    
@@ -440,6 +436,11 @@ fi
          sudo rm -rf $HOME/fan-control-rock5b/
       fi
       
+      if [ ! -d /usr/share/applications/amiberry_dev.png/ ]; then
+      cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
+      cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
+      cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+      fi
 
 
 
