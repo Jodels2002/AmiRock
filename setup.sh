@@ -86,6 +86,13 @@ sudo systemctl enable fan-control
 systemctl start fan-control
 
 #***********************************************  #AmiRock-OS install script  ***********************************
+#************************************************  Amiga        ************************************** 
+
+      cd 
+      unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
+      
+
+#***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga Desktop        ************************************** 
 
       if [ ! -d $HOME/Documents/ ]; then
