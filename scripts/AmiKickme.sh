@@ -401,9 +401,8 @@ fi
      fi     
      
      
-      if [ ! -d /home/$USER/Documents/ ]; then
-      mkdir /home/$USER/Documents/
-      fi
+     
+      
       echo " "
       echo "  ... cleanup Amiga folder  " 
       sudo chmod -R 777 /home/$USER/Amiga
