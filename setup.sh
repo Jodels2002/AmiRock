@@ -111,7 +111,28 @@ systemctl start fan-control
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************ End First run        ************************************** 
-      		
+ sudo systemctl disable apt-daily-upgrade.service 
+	sudo systemctl disable apt-daily-upgrade.timer
+	sudo systemctl disable apt-daily.service
+	sudo systemctl disable apt-daily.timer
+	sudo systemctl disable cups
+ sudo systemctl disable syslog.socket
+	sudo systemctl disable service webmin
+	sudo systemctl disable man-db.service 
+	sudo systemctl disable man-db.timer
+	sudo systemctl disable alsa-restore.service at boot time
+	sudo systemctl disable alsa-state.service at boot time    
+        sudo update-rc.d motd remove
+	       sudo rm -rf /etc/systemd/pstore.conf
+       	sudo rm -rf /etc/systemd/journald.conf
+       	sudo rm -rf /etc/systemd/system/network-online.target.wants/
+       	sudo rm -rf /etc/systemd/system/syslog.service
+       	sudo rm -rf /etc/systemd/system/lo*
+       	sudo rm -rf /etc/systemd/system/cu*
+        sudo rm -rf /etc/systemd/system/multi-user.target.wants/cu*
+       	sudo rm -rf /etc/systemd/system/multi-user.target.wants/rsyslog.service
+       	sudo rm -rf /etc/systemd/system/printer.target.wants/
+  		
  $HOME/AmiRock/scripts/AmiKickme.sh
       
       
