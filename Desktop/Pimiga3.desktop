@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Pimiga 3
+Exec=ap3
+Icon=/home/pi/Amiga/data/amiberry.png
+Terminal=true
+Type=Application
+Keywords=file manager;console;
