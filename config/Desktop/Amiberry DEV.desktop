@@ -4,5 +4,5 @@ Type=Application
 Name=Amiberry DEV
 Comment=Amiga emulator
 Icon=/usr/share/applications/amiberry_dev.png
-Exec=/usr/share/amiberry
-Path=/usr/share/amiberry/
+Exec=amiberry_dev
+
