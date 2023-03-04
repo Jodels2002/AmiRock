@@ -135,13 +135,15 @@ case $CHOICE in
 	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
 	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
 	     sudo rm -rf $HOME/Amiga/make-bundle.sh
-	    mkdir /opt/KickPi-OS/Backup
+	      mkdir /opt/KickPi-OS/Backup
 	    
 	    # Backup
 	 
 	    cp -rf  $HOME/Amiga/amiberry_old /opt/Backup
             cp -rf  $HOME/Amiga/amiberry /opt/Backup
 	    cp -rf  $HOME/Amiga/amiberry_dev /opt/Backup
+	    cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
+             
 	
             cd
             sudo rm -rf amiberry
@@ -190,7 +192,9 @@ case $CHOICE in
 	    cp -rf  $HOME/Amiga/amiberry_old /opt/Backup
             cp -rf  $HOME/Amiga/amiberry /opt/Backup
 	    cp -rf  $HOME/Amiga/amiberry_dev /opt/Backup
-	
+	    cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+	    cp -rf  $HOME/AmiRock/amiberry_dev.png $HOME/Amiga/data/
+            cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
 	    
             cd
             sudo rm -rf amiberry
