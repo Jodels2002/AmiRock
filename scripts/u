@@ -129,22 +129,19 @@ wget -q --spider http://google.com
  if [ $? -eq 0 ]; then
 
 
-sudo rm -rf /home/$USER/AmiRock-OS/
+      sudo rm -rf /home/$USER/AmiRock/
 
 
       cd
-      git clone --depth=1 https://github.com/Jodels2002/AmiRock-OS_up.git
-      sudo mv /home/$USER/AmiRock-OS_up /home/$USER/AmiRock-OS  
-      sudo chmod -R 777 AmiRock-OS
+      git clone --depth=1 https://github.com/Jodels2002/AmiRock.git
+      
+      sudo chmod -R 777 AmiRock
      
       
-      sudo cp -f -R /home/$USER/AmiRock-OS/scripts/* /usr/local/bin
-      sudo rm -rf /opt/AmiRock-OS
-      sudo cp -f -R /home/$USER/AmiRock-OS/ /opt
-      
-      
+      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
+      sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 777 /opt/AmiRock-OS
+      sudo chmod -R 777 /opt/AmiRock
       
       
       
