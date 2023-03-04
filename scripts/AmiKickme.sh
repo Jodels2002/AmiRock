@@ -491,7 +491,7 @@ clear
 clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 KickPi-OS "
+echo " Version V2.0 2020-2021 AmiRock-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
@@ -507,7 +507,7 @@ else
 clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 KickPi-OS "
+echo " Version V2.0 2020-2021 AmiRock-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
