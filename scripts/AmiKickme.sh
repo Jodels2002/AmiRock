@@ -301,7 +301,7 @@ fi
       
        
       
-fi    
+   
             if [ ! -f /home/$USER/Amiga/amiberry_old ]; then
             cp -rf  /home/$USER/Amiga/amiberry_old /opt/Backup/
 	    fi
