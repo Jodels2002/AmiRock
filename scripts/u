@@ -11,6 +11,7 @@ GREY='\033[1;30m'
       if [ ! -d $HOME/Documents/ ]; then
       mkdir $HOME/Documents/
       fi
+      
       if [ ! -d $HOME/Desktop/ ]; then
       mkdir $HOME/Desktop/
       fi
