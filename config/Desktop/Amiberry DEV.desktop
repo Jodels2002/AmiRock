@@ -3,6 +3,6 @@ Version=1.0
 Type=Application
 Name=Amiberry DEV
 Comment=Amiga emulator
-Icon=$HOME/Amiga/amiberry_dev.png
+Icon=/usr/share/applications/amiberry_dev.png
 Exec=$HOME/Amiga/amiberry_dev
 Path=$HOME/Amiga/
