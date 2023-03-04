@@ -220,58 +220,7 @@ if [ -d /home/$USER/Amiga/dir/System_ADVSP/ ]; then
       sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
 fi 
 
-if [ "$(getconf LONG_BIT)" == "64" ]; then
-      
 
-      sudo cp  -rf  /home/$USER/Amiga/amiberry /home/$USER/Amiga/amiberry_old
-      clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "Raspberry Pi OS 64 bit is running..."
-      
-      if [ ! -f /opt/Backup/amiberry-v5.5-rpi4-sdl2-64bit-debian.zip ]; then    
-      
-      cd /home/$USER/Amiga/
-      wget https://github.com/BlitterStudio/amiberry/releases/download/v5.5/amiberry-v5.5-rpi4-sdl2-64bit-debian.zip
-      unzip -o  /home/$USER/Amiga/amiberry-v5.5-rpi4-sdl2-64bit-debian.zip
-      cp -rf /home/$USER/Amiga/amiberry  /home/$USER/Amiga/amiberry_sdl
-      sudo cp -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-sdl2-64bit-debian.zip /opt/Backup
-      sudo rm -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-sdl2-64bit-debian/
-      sudo rm -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-sdl2-64bit-debian.zip
-     
-    
-      cp -R /home/$USER/AmiRock/Amiga/amiberry64_dmx /home/$USER/Amiga/amiberry
-      cp -R /home/$USER/AmiRock/Amiga/amiberry64_dev /home/$USER/Amiga/amiberry_dev
-     
-      
-      fi 
-      
-    else 
-      sudo cp  -rf  /home/$USER/Amiga/amiberry /home/$USER/Amiga/amiberry_old
-      clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "Raspberry Pi OS 32 bit is running... "
-      
-      if [ ! -f /opt/Backup/amiberry-v5.5-rpi4-dmx-32bit-retropie.zip ]; then    
-      cd /home/$USER/Amiga/
-      
-      wget https://github.com/BlitterStudio/amiberry/releases/download/v5.5/amiberry-v5.5-rpi4-dmx-32bit-retropie.zip
-      unzip -o  /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie.zip
-      sudo rm /home/$USER/Amiga/amiberry_sdl
-      cp -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie/amiberry  /home/$USER/Amiga/amiberry_sdl
-      cp -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie/*  /home/$USER/Amiga/
-      sudo cp -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie.zip /opt/Backup
-      sudo rm -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie
-      sudo rm -rf /home/$USER/Amiga/amiberry-v5.5-rpi4-dmx-32bit-retropie.zip
-      
-      cp -R /home/$USER/AmiRock/Amiga/amiberry32_dmx /home/$USER/Amiga/amiberry
-      cp -R /home/$USER/AmiRock/Amiga/amiberry32_dev /home/$USER/Amiga/amiberry_dev
-      fi 
-      
-      
    if [ ! -f /home/$USER/Amiga/amiberry_dev ]; then    
       
       cd
