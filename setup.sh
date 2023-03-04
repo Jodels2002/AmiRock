@@ -130,7 +130,9 @@ systemctl start fan-control
       sudo rm -rf /usr/share/themes/Default/xfwm4/
       sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
       sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
-      cp -rf $HOME/AmiRock/config/xfce4/* $HOME/.config/xfce4/
+      cd $HOME/.config/
+      unzip -u  $HOME/AmiRock/config/Desktop/Settings.zip
+  
       
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
