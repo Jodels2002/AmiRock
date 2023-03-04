@@ -168,8 +168,9 @@ case $CHOICE in
 		
             sudo chmod -R 777 $HOME/amiberry
 	    sudo chmod -R 777 /usr/share/plymouth/
-	    mkdir $HOME/Amiga/
+	   
             cp -rf $HOME/amiberry/amiberry  $HOME/Amiga/amiberry_dev
+	    cp -rf $HOME/Amiga/amiberry_dev $HOME/Amiga/amiberry_dev_old
 	    sudo rm -rf $HOME/amiberry/amiberry
             cp -rf $HOME/amiberry/*  $HOME/Amiga/
              sudo rm -rf $HOME/amiberry
