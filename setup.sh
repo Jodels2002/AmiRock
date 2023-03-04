@@ -47,6 +47,7 @@ sudo apt-get update
   sudo apt install -y dialog mc zip unzip wget toilet
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
+  sudo apt install arqiver  -y
 
   sudo apt install -y nemo 
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
