@@ -58,7 +58,9 @@ clear
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
        sudo chmod -R 777 /usr/share/plymouth/
-       cp -rf  $HOME/AmiRock/amiberry_dev.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+       cp -rf  /home/pi/Amiga/data/amiberry_dev.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+       cp -rf  /home/pi/Amiga/data/amiberry-logo.png /usr/share/plymouth/themes/armbian/watermark.png
+       
       
 
       # Update allways Routine
