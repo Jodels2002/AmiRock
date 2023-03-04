@@ -87,6 +87,13 @@ systemctl start fan-control
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga Desktop        ************************************** 
 
+      if [ ! -d $HOME/Documents/ ]; then
+      mkdir $HOME/Documents/
+      fi
+      if [ ! -d $HOME/Desktop/ ]; then
+      mkdir $HOME/Desktop/
+      fi
+
       cd /usr/share/icons
       sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
       sudo unzip -u  /usr/share/icons/AMIGAOSLINUX.zip
