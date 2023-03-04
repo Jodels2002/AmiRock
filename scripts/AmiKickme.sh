@@ -15,7 +15,7 @@
       sudo chmod -R 777 /home/$USER/AmiRock-OS
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo cp  /opt/AmiRock/config/splash/* /etc/systemd/system/
+      sudo cp  $HOME/AmiRock/config/splash/* /etc/systemd/system/
     
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
@@ -34,7 +34,7 @@
       echo " Create Autostart "
       mkdir /home/$USER/.config/autostart/
       fi
-      #sudo cp -rf /opt/AmiRock/config/Keyboard.desktop /home/$USER/.config/autostart/
+      #sudo cp -rf $HOME/AmiRock/config/Keyboard.desktop /home/$USER/.config/autostart/
       	
       clear
       toilet "AmiRock-OS" --metal
@@ -94,7 +94,7 @@ fi
 
 
  if [ ! -d /boot/dietpi/func/ ]; then
-      sudo cp -R /opt/AmiRock/config/dietpi-banner /boot/dietpi/func/dietpi-banner
+      sudo cp -R $HOME/AmiRock/config/dietpi-banner /boot/dietpi/func/dietpi-banner
       fi
 	
 
@@ -138,13 +138,13 @@ fi
    fi
 
 if [ ! -f /home/$USER/Amiga/data/amiberry_dev.png ]; then
-      sudo cp -R /opt/AmiRock/Amiga/amiberry_dev.png /home/$USER/Amiga/data/
+      sudo cp -R $HOME/AmiRock/Amiga/amiberry_dev.png /home/$USER/Amiga/data/
       fi
       
 
  if [ -d /home/$USER/FS-UAE/Configurations/ ]; then
       #update.sh
-     sudo cp -R /opt/AmiRock/config/fs-uae/* /home/$USER/FS-UAE/Configurations/
+     sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/FS-UAE/Configurations/
  fi
  
  if [ -d /home/$USER/pimiga/ ]; then
@@ -154,10 +154,10 @@ if [ ! -f /home/$USER/Amiga/data/amiberry_dev.png ]; then
 fi    
 if [ -d /home/$USER/pimiga3/ ]; then
      
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga3.desktop /home/$USER/Desktop/
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga3.desktop /usr/share/applications/
-      sudo cp  -rf  /opt/AmiRock/config/config/Pimiga3.uae /home/$USER/Amiga/conf/
-      sudo cp  -rf  "/opt/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga3/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga3.desktop /home/$USER/Desktop/
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga3.desktop /usr/share/applications/
+      sudo cp  -rf  $HOME/AmiRock/config/config/Pimiga3.uae /home/$USER/Amiga/conf/
+      sudo cp  -rf  "$HOME/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga3/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
       #sudo chmod -R 777 /home/$USER/pimiga15/disks/System/
       clear
       toilet "AmiRock-OS" --metal
@@ -174,10 +174,10 @@ if [ -d /home/$USER/pimiga/ ]; then
 fi
 if [ -d /home/$USER/pimiga15/ ]; then
      
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga1.5.desktop /home/$USER/Desktop/
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga1.5.desktop /usr/share/applications/
-      sudo cp  -rf  /opt/AmiRock/config/config/Pimiga15.uae /home/$USER/Amiga/conf/
-      sudo cp  -rf  "/opt/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga15/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga1.5.desktop /home/$USER/Desktop/
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga1.5.desktop /usr/share/applications/
+      sudo cp  -rf  $HOME/AmiRock/config/config/Pimiga15.uae /home/$USER/Amiga/conf/
+      sudo cp  -rf  "$HOME/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga15/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
       #sudo chmod -R 777 /home/$USER/pimiga15/disks/System/
       clear
       toilet "AmiRock-OS" --metal
@@ -188,16 +188,16 @@ if [ -d /home/$USER/pimiga15/ ]; then
 fi
 if [ -d /home/$USER/pimiga2/ ]; then
       
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga20.desktop /home/$USER/Desktop/
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga20.desktop /usr/share/applications/
-      sudo cp  -rf  /opt/AmiRock/config/Pimiga2.uae /home/$USER/Amiga/conf/
-      sudo cp  -rf  /opt/AmiRock/configPimiga2.uae /home/$USER/Amiga/conf/
-      sudo cp  -rf  /opt/AmiRock/config/PimigaSS.uae /home/$USER/Amiga/conf/
-      sudo cp  -rf  "/opt/AmiRock/config/Games Launcher.uae" /home/$USER/Amiga/conf/
-      sudo cp  -rf  "/opt/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga2/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga20.desktop /home/$USER/Desktop/
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga20.desktop /usr/share/applications/
+      sudo cp  -rf  $HOME/AmiRock/config/Pimiga2.uae /home/$USER/Amiga/conf/
+      sudo cp  -rf  $HOME/AmiRock/configPimiga2.uae /home/$USER/Amiga/conf/
+      sudo cp  -rf  $HOME/AmiRock/config/PimigaSS.uae /home/$USER/Amiga/conf/
+      sudo cp  -rf  "$HOME/AmiRock/config/Games Launcher.uae" /home/$USER/Amiga/conf/
+      sudo cp  -rf  "$HOME/AmiRock/Amiga/screenmode.prefs" /home/$USER/pimiga2/disks/System/Prefs/Env-Archive/Sys/screenmode.prefs
       #sudo chmod -R 777 /home/$USER/pimiga2/disks/System/
       cd /home/$USER/pimiga2/disks/
-      sudo cp  -rf  /opt/AmiRock/Amiga/pm/System.zip /home/$USER/pimiga2/disks/
+      sudo cp  -rf  $HOME/AmiRock/Amiga/pm/System.zip /home/$USER/pimiga2/disks/
       unzip -o /home/$USER/pimiga2/disks/System.zip
       rm -rvf /home/$USER/pimiga2/disks/System.zip
       clear
@@ -211,13 +211,13 @@ fi
 
 
 if [ -d /home/$USER/Amiga/dir/System_P96/ ]; then
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /home/$USER/Amiga/conf/
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /home/$USER/Amiga/conf/
+      sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
 fi
 
 if [ -d /home/$USER/Amiga/dir/System_ADVSP/ ]; then
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /home/$USER/Amiga/conf/
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
+      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /home/$USER/Amiga/conf/
+      sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
 fi 
 
 if [ "$(getconf LONG_BIT)" == "64" ]; then
@@ -369,7 +369,7 @@ fi
       echo "  ... repair settings  "  
       
       sudo rm -rf /home/$USER/.bashrc
-      cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/.bashrc
+      cp -rf $HOME/AmiRock/scripts/.bashrc /home/$USER/.bashrc
    
       
       if [ ! -f /home/$USER/Desktop/AmiRock-OS.desktop ]; then
@@ -382,7 +382,7 @@ fi
       
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
-      sudo cp -rf /opt/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
+      sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
       
       clear
       toilet "AmiRock-OS" --metal
@@ -392,16 +392,16 @@ fi
       echo " "
       
       fi
-      sudo cp -rf /opt/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
+      sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
       #cd
-      #unzip -u -o /opt/AmiRock/Amiga/Amiga.zip
+      #unzip -u -o $HOME/AmiRock/Amiga/Amiga.zip
       
 
 	   
      
      if [ -d /home/$USER/Documents/FS-UAE/Configurations/ ]; then
       #update.sh
-     sudo cp -R /opt/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
+     sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
      fi     
   
       if [ ! -d /home/$USER/Documents/ ]; then
@@ -491,7 +491,7 @@ clear
 clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 AmiRock-OS "
+echo " Version V2.0 2020-2021 KickPi-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
@@ -507,7 +507,7 @@ else
 clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 AmiRock-OS "
+echo " Version V2.0 2020-2021 KickPi-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
