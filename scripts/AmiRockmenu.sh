@@ -25,7 +25,7 @@ MENU="Version 3.1:"
 OPTIONS=(d "Boot to AmiRock  Desktop     "
          i "Install ClassicWB             "
          m "Import Pimiga 1.5 / 2.0       "  
-         u "UpdateAmiRock                 "
+         u "Update AmiRock                 "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
          c "Armbian-config                "
@@ -85,7 +85,7 @@ case $CHOICE in
             ;;  
             
 
-                  255) echo "[ESC] key pressed.";;
+            255) echo "[ESC] key pressed."
                            esac
             ;;  
             
