@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Keyboard
+Comment=
+Exec=setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gb,de,fr,it,gr,dk 
+OnlyShowIn=XFCE;
+RunHook=0
+StartupNotify=false
+Terminal=false
+Hidden=false
+
