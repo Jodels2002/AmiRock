@@ -351,11 +351,15 @@ if [ "$(getconf LONG_BIT)" == "64" ]; then
        
       
 fi    
-
+            if [ ! -f /home/$USER/Amiga/amiberry_old ]; then
             cp -rf  /home/$USER/Amiga/amiberry_old /opt/Backup/
+	    fi
+	    if [ ! -f /home/$USER/Amiga/amiberry ]; then
             cp -rf  /home/$USER/Amiga/amiberry /opt/Backup/
+	    fi
+	    if [ ! -f /home/$USER/Amiga/amiberry_dev ]; then
 	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup/
-	    cp -rf  /home/$USER/Amiga/amiberry_dmx /opt/Backup /
+	    fi
 
     clear
       toilet "AmiRock-OS" --metal
