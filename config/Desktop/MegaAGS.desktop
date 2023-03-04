@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MegaAGS
+Exec=MegaAGS.sh
+Icon=/home/pi/Amiga/data/amiberry.png
+Terminal=true
+Type=Application
+Keywords=file manager;console;

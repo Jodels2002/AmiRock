@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Pimiga 1.5
+Exec=ap
+Icon=/home/pi/Amiga/data/amiberry.png
+Terminal=true
+Type=Application
+Keywords=file manager;console;
