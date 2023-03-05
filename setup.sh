@@ -44,7 +44,7 @@ sudo apt-get update
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  usefull Tools        **************************************  
-  sudo apt install -y dialog mc zip unzip wget toilet
+  sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
   sudo apt install arqiver  -y
