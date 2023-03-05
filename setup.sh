@@ -151,7 +151,13 @@ systemctl start fan-control
       sudo rm -rf /usr/share/themes/Default/xfwm4/
       sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
       sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
-     
+      sudo rm -rf /usr/share/backgrounds/u*
+      sudo rm -rf /usr/share/backgrounds/j*
+      sudo rm -rf /usr/share/backgrounds/J*
+      sudo rm -rf /usr/share/backgrounds/w*
+      sudo rm -rf /usr/share/backgrounds/o*
+      sudo rm -rf /usr/share/backgrounds/Ch*
+      sudo rm -rf /usr/share/backgrounds/B*
    
   
       
