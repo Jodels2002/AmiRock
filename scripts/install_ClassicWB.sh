@@ -83,25 +83,7 @@ if [  -d "/boot/Shared/" ]; then
 	  echo -e "$BLACK 1>Assign >NIL: Greetings your´s B. Titze "
 	  echo -e "$GREEN "
 	  
-sleep 1
-
-      if [ ! -f /home/$USER/Amiga/kickstarts/amiga-os-310-a1200.rom ]; then
-      echo "        **** Amiga Forever files found ****"
-      echo "        ***   copy files and activate   ***"
-             
-      sudo rsync -av --ignore-existing /boot/Shared/* ~/Amiga 
-      sudo mv /home/$USER/Amiga/rom/* /home/$USER/Amiga/kickstarts/
-      sudo cp -R /home/$USER/RetroPie/BIOS/MegaAGS-Kickstart.rom /home/$USER/Amiga/kickstarts/kick31a1200.rom
-      sudo rm -d /home/$USER/Amiga/rom/
-      sudo rm /home/$USER/Amiga/dir/*.*
-      fi
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$BLUE KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
-      echo " No Rights Reserved.  "
-  	 
-      echo ""   
+ 
 fi  
       mkdir /home/$USER/Amiga/dir/Work
       mkdir /home/$USER/Amiga/dir/Work/Software
@@ -441,7 +423,7 @@ fi
 
 
 
-if    [  -f  /home/$USER/Amiga/kickstarts/kick31a1200.rom  ]; then
+if    [  -f  /home/$USER/Amiga/kickstarts/A1200.rom  ]; then
 desktop
 
 if [ ! -d /home/$USER/Amiga/dir/Software/ ]; then
