@@ -8,7 +8,26 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
+ clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " " 
+      
+      echo ""
+      echo " "
+      echo "1>	Hi Guys,"
+      echo " "
+      echo "1>	welcome to the "AmiRock" installer! "
+      echo "1>CLI"
 
+      echo "1>                  Greetings your´s "
+      echo "1>Assign >NIL:      Bernd Titze"
+      echo " "
+      echo " " 
+      echo "	LOADWB ...  :-)"
+      sleep 4s
 
  
       
