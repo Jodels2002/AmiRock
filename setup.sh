@@ -68,7 +68,7 @@ sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 
 sudo apt update -y
 sudo apt dist-upgrade -y
-sudo apt install kodi -y
+# sudo apt install kodi -y
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Fan Control by pymumu        **************************************   
@@ -90,7 +90,7 @@ systemctl start fan-control
 
       cd 
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
-      sudo apt install python3-pip
+      sudo apt install python3-pip -y
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools
       
