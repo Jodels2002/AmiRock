@@ -41,7 +41,14 @@ sudo apt-get install -y wget
 export DISTRO=buster-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 sudo apt-get update
-
+      
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
@@ -52,7 +59,14 @@ sudo apt-get update
   sudo apt install -y nemo 
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
   sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
-  
+        
+	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Graphic Driver        **************************************   
   
@@ -114,10 +128,26 @@ systemctl start fan-control
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools
       
+            clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      sudo  sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4
+            sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libraspberrypi-dev
+	    sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+      
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga Desktop        ************************************** 
-
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      
       if [ ! -d $HOME/Documents/ ]; then
       mkdir $HOME/Documents/
       fi
@@ -143,7 +173,12 @@ systemctl start fan-control
       sudo cp -rf $HOME/AmiRock/amitk /usr/share/themes
       sudo cp -rf $HOME/AmiRock/config/Logo/* /usr/share/
   
-      
+            clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
       git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
       clear
 
@@ -163,7 +198,7 @@ systemctl start fan-control
       
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
-
+        
         sudo systemctl disable apt-daily-upgrade.service 
 	sudo systemctl disable apt-daily-upgrade.timer
 	sudo systemctl disable apt-daily.service
@@ -188,7 +223,12 @@ systemctl start fan-control
 	
 #************************************************ End First run        **************************************   		
      
-      
+          clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "  
  
  $HOME/AmiRock/scripts/AmiKickme.sh
       
