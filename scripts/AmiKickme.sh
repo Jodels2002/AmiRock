@@ -19,6 +19,7 @@
     
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
+      sudo cp -rf $HOME/AmiRock/config/Logo/* /opt/AmiRock/config/
      
      
       clear
