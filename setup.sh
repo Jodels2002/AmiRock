@@ -100,8 +100,9 @@ systemctl start fan-control
       echo "  First installation "
       echo " "
       cd 
-      unzip -u  /home/pi/AmiRock/config/worker.zip
-      unzip -u  /home/pi/AmiRock/config/config.zip
+      unzip -u  $HOME/AmiRock/config/worker.zip
+      sudo rm -rf $HOME/.config/
+      unzip -u  $HOME/AmiRock/config/config.zip
       sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       sudo apt install python3-pip  -y
@@ -145,8 +146,8 @@ systemctl start fan-control
       sudo rm -rf /usr/share/themes/Default/xfwm4/
       sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
       sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
-      cd $HOME/.config/
-      unzip -u  $HOME/AmiRock/config/Desktop/Settings.zip
+     
+   
   
       
       cd
