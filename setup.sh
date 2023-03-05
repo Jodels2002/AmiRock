@@ -90,7 +90,11 @@ systemctl start fan-control
 
       cd 
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
-      sudo apt install python3-pip -y
+      
+      sudo apt install worker unadf xdms fs-uae fs-uae-arcade fonts-amiga -y
+      sudo cp -rf $HOME//Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
+      
+      sudo apt install python3-pip  -y
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools
       
