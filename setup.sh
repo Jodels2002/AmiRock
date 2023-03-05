@@ -101,6 +101,7 @@ systemctl start fan-control
       echo " "
       cd 
       unzip -u  /home/pi/AmiRock/config/worker.zip
+      unzip -u  /home/pi/AmiRock/config/config.zip
       sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       sudo apt install python3-pip  -y
