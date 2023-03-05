@@ -224,12 +224,6 @@ systemctl start fan-control
 	
 #************************************************ End First run        **************************************   		
      
-          clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "  
  
  $HOME/AmiRock/scripts/AmiKickme.sh
       
