@@ -4,7 +4,17 @@
 # B.Titze 2021
 
 #************************************************************************************************************
-Update_Amiberry.sh
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
 
       rm -d -r /home/$USER/Amiga/dir/System_ADVSP/
       rm -d -r /home/$USER/Amiga/dir/System_P96/
@@ -42,6 +52,17 @@ else
 	echo -e "$RED 1.>            -"
 
 exit
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
 desktop
 fi
       
@@ -55,13 +76,17 @@ fi
       sudo cp  -rf  /home/$USER/Amiga/rom/amiga-os-310-a1200.rom /home/$USER/Amiga/kickstarts/kick31a1200.rom
       sudo mv /home/$USER/Amiga/rom/* /home/$USER/Amiga/kickstarts/
       sudo rm -d /home/$USER/Amiga/rom/
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$BLUE KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+  clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-  	 
-      echo ""   
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       
 fi
       
@@ -88,19 +113,30 @@ fi
       mkdir /home/$USER/Amiga/dir/Work
       mkdir /home/$USER/Amiga/dir/Work/Software
       mkdir /home/$USER/Amiga/Install/
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$BLUE KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+  clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-  	 
-      echo ""   
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
 
  if [ ! -d /home/$USER/Amiga/Install/DF0 ]; then
-      #cd /home/$USER/Amiga/adf/
-      #xdftool amiga-os-300-workbench.adf unpack /home/$USER/Amiga/Install/
-      #mv /home/$USER/Amiga/Install/Workbench3.0/ /home/$USER/Amiga/Install/DF0
-      #rm -f /home/$USER/Amiga/Install/W*.*
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
      
      
       #CreateDF0
@@ -119,29 +155,34 @@ ClassicWB()
 {
       ClassicWB.sh
       clear
-      toilet "KickPi-OS" --metal
-      echo "KickPI-OS ROM Operating System and Libraries" 
-      echo "Version V1.5 2020-2021 KickPi-OS "
-      echo "No Rights Reserved.  "
-      echo ""
-      echo -e -n "$GREEN Found Amiga Files ..."
-      echo -e -n "$BLUE "
-      sleep 3
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
+     
       
       
     if [ ! -f /home/$USER/Amiga/Install/ClassicWB_UAE_v28.zip ]; then
           
     
       
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-      echo -e -n "$BLUE Downloading  ClassicWB_UAE_v28..."
-      echo ""
-      echo -e "$GRAY "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
         cd /home/$USER/Amiga/Install
       wget http://download.abime.net/classicwb/ClassicWB_UAE_v28.zip
     
@@ -151,14 +192,16 @@ ClassicWB()
     
         
       clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-      echo -e -n "$BLUE Downloading  ClassicWB_UAE_v28..."
-      echo ""
-      echo -e "$GRAY "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
 
       cd /home/$USER/Amiga/Install
 
@@ -173,24 +216,30 @@ ClassicWB()
       
       
       
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-      echo "ClassicWB extracting... "
-      cd /home/$USER/Amiga/Install/
-      unzip -o -q ./ClassicWB_UAE_v28.zip
-      clear
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       cp -r -f  "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /home/$USER/Amiga/dir/
       
     else 
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
       echo " "
         echo "ClassicWB already downloaded"
         
@@ -199,13 +248,17 @@ ClassicWB()
 if [ ! -d /home/$USER/Amiga/Install/ClassicWB_LITE_v28/ ]; then
       
 
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-      echo "ClassicWB_LITE_v28 extracting... "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       unzip -o -q ./ClassicWB_LITE_v28.zip
       clear
 fi 
@@ -213,15 +266,17 @@ fi
 if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
      mkdir /home/$USER/Amiga/dir/System_ADVSP
 
-    ClassicWB.sh
      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
+      echo -e "$BLUE"
       echo " "
-      echo -e -n "$BLUE "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       echo "  Configure System_ADVSP ...   " 
       
       cd "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/"
@@ -256,12 +311,16 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       mkdir /home/$USER/Amiga/dir/System_P96
     
      
-      ClassicWB.sh
       clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
       echo " "
       echo -e -n "$BLUE "
       echo "  Configure System_P96 ...   " 
@@ -305,12 +364,16 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
 ClassicWB13()
 {
 
- ClassicWB.sh
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+  clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
       echo " "
       
 if [ ! -f /home/$USER/Amiga/Install/ClassicWB_LITE_v28.zip ]; then
@@ -321,12 +384,16 @@ if [ ! -f /home/$USER/Amiga/Install/ClassicWB_LITE_v28.zip ]; then
       cd /home/$USER/Amiga/Install
 
       wget http://download.abime.net/classicwb/ClassicWB_LITE_v28.zip
-
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
       echo " "
       echo "ClassicWB extracting... "
       unzip -o -q ./ClassicWB_LITE_v28.zip
@@ -336,11 +403,16 @@ fi
 if [  -d /home/$USER/pimiga2/ ]; then
       mkdir /home/$USER/Amiga/dir/ClassicWB13   
       ClassicWB.sh
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
       echo " "
       echo -e -n "$BLUE "
       echo "  Configure ClassicWB13 ...   " 
@@ -362,35 +434,47 @@ if [  -d /home/$USER/pimiga2/ ]; then
       #WB1.3
       cd /home/$USER/Amiga/dir/ClassicWB13/System/
       unzip -o -q ./WB13.zip
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-      echo " "      
-      echo -e "$BLACK  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       #WHDLoad
       cd /opt/KickPi-OS/Amiga/ClassicWB/
       unzip -o -q ./whdpac.zip
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-      echo " "      
-      echo -e "$BLACK  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       cp -rf  /opt/KickPi-OS/Amiga/ClassicWB/whdpac/* /home/$USER/Amiga/dir/ClassicWB13/System/
       rm -d -r /opt/KickPi-OS/Amiga/ClassicWB/whdpac/
       rm -f /home/$USER/Amiga/dir/ClassicWB13/System/*.zip
       rm -f /home/$USER/Amiga/dir/ClassicWB13/System/T/*.*
       rm -f /home/$USER/Amiga/dir/ClassicWB13/System/Temp/*.*
       clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-      echo ""   
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       #ClassicWB Options
       mv /home/$USER/Amiga/dir/ClassicWB13/System/Temp/AntiClick_disable /home/$USER/Amiga/dir/ClassicWB13/System/C/AntiClick
       mv /home/$USER/Amiga/dir/ClassicWB13/System/Temp/BorderBlank_enable /home/$USER/Amiga/dir/ClassicWB13/System/C/BorderBlank
@@ -436,10 +520,17 @@ ClassicWB13
 
 
 else
-clear
-          toilet "KickPi-OS" --metal
-          echo " "
-	  echo " "
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
 	  whiptail --msgbox "Information: AmigaForever * by Cloanto 
 	  \n 1>Please note that the Kickroms and Workbench
 	  files are still under copyright! 
@@ -464,14 +555,17 @@ clear
 fi
       rm -d -r /home/$USER/Amiga/Install/DF0
       sudo chmod -R 777 /home/$USER/Amiga/
-      cd
-      clear
-      toilet "KickPi-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+       clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-      echo " "      
-      echo -e "$BLACK  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "AmiRock-OS install ClassicWB ..."
+      echo -e "$GREY "
+      echo " "
       echo -e "$BLUE ClassicWBs createt "
-      echo -e "$BLACK  "
+      cho -e "$GREY "
 
