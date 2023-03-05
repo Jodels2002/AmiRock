@@ -70,6 +70,11 @@ sudo apt update -y
 sudo apt dist-upgrade -y
 # sudo apt install kodi -y
 
+      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
+      sudo cp -f -R /home/$USER/AmiRock/ /opt
+      sudo chmod -R 777 /usr/local/bin
+      sudo chmod -R 777 /opt/AmiRock
+
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Fan Control by pymumu        **************************************   
 
@@ -176,6 +181,9 @@ systemctl start fan-control
        	sudo rm -rf /etc/systemd/system/printer.target.wants/
 	
 #************************************************ End First run        **************************************   		
+     
+      
+ 
  $HOME/AmiRock/scripts/AmiKickme.sh
       
       
