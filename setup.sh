@@ -125,6 +125,7 @@ systemctl start fan-control
       git clone --depth=1 https://github.com/x64k/amitk
       clear
       sudo cp -rf $HOME/AmiRock/amitk /usr/share/themes
+      sudo cp -rf $HOME/AmiRock/config/Logo/* /usr/share/
   
       
       git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
