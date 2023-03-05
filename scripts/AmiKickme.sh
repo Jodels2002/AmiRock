@@ -59,7 +59,7 @@ clear
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
        sudo chmod -R 777 /usr/share/plymouth/
-       cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+       sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
        #cp -rf  /home/pi/Amiga/data/amiberry-logo.png /usr/share/plymouth/themes/armbian/watermark.png
        
       
@@ -258,7 +258,7 @@ fi
 	    
 	    # Backup
 	    
-	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup
+	    sudo cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup
    fi 
     
    cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
@@ -391,9 +391,9 @@ fi
       fi
       
       if [ ! -d /usr/share/applications/amiberry_dev.png/ ]; then
-      cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
-      cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
-      cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+      sudo cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
+      sudo cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
+      sudo cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
       fi
 
 
