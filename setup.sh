@@ -92,7 +92,16 @@ systemctl start fan-control
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
       
       sudo apt install worker unadf xdms fs-uae fs-uae-arcade fonts-amiga -y
-      sudo cp -rf $HOME//Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
+      
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      cd 
+      unzip -u  /home/pi/AmiRock/config/worker.zip
+      sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       sudo apt install python3-pip  -y
       sudo python3 -m pip install -U setuptools
