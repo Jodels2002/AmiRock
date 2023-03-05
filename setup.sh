@@ -134,6 +134,19 @@ systemctl start fan-control
       echo " "
       echo "  First installation "
       echo " "
+      
+      cd 
+      git clone --depth=1 https://github.com/rewtnull/amigafonts
+      sudo cp -rf /home/$USER/amigafonts/ttf/* /usr/share/fonts/truetype/
+      sudo rm -rf /home/$USER/amigafonts/
+      
+               clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      
       sudo  sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4
             sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libraspberrypi-dev
 	    sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
@@ -194,7 +207,13 @@ systemctl start fan-control
       sudo rm -rf /usr/share/backgrounds/Ch*
       sudo rm -rf /usr/share/backgrounds/B*
    
-  
+  echo " "
+      echo " "
+      toilet -F gay PhotoGimp
+       
+      curl -L "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip" -o /home/$USER/KickPi-OS/PhotoGIMP.zip && unzip /home/$USER/KickPi-OS/PhotoGIMP.zip -d /home/$USER/KickPi-OS/ 
+      sudo cp -R /home/$USER/KickPi-OS/PhotoGIMP\ by\ Diolinux\ v2020\ for\ Flatpak/.var/app/org.gimp.GIMP/config/* ~/.config
+      echo " PhotoGimp by Diolinux installed..."
       
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
