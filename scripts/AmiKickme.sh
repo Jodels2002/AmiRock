@@ -316,6 +316,39 @@ fi
 	    if [ ! -f /home/$USER/Amiga/amiberry_dev ]; then
 	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup/
 	    fi
+	    
+	    if [ ! -f /home/$USER/Amiga/kickstarts/A1200.rom ]; then
+	    
+	             clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " " 
+
+      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
+      echo "1>CLI"
+      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
+      echo "1>CLI: "
+      echo "1>                  Greetings your´s "
+      echo "1>Assign >NIL:      Bernd Titze"
+      echo " "
+      echo " " 
+      echo "	LOADWB ...  :-)"
+      sleep 4s
+      echo " "
+      echo " " 
+   cd  
+      	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
+      	
+      	sudo chmod -R 777 $HOME/RetroPieBIOS
+      
+         
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /home/$USER/Amiga/kickstarts/A500.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /home/$USER/Amiga/kickstarts/A600.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/A1200.rom
+      	sudo rm -rf /home/$USER/RetroPieBIOS    
+ fi
 
     clear
       toilet "AmiRock-OS" --metal
