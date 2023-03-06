@@ -414,7 +414,7 @@ echo " 1.>  ( m ) ArmRock-OS Config                       "
 echo -e " 1.>  ( c ) Armbian-Config                       "
 echo " 1.>  ( s ) Shutdown                                "  
 echo -e "$BLUE "
-echo "  ... finished AmiRoch setup :-)  " 
+echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
 
           
