@@ -406,7 +406,7 @@ fi
       sudo find . -name "_UAEFSDB.___" -type f -print0 | xargs -0 /bin/rm -f
       cd ~
       #sudo rm -rf ~/.cache/
-      sudo rm -rf ~/AmiRock
+      
      
       
       if [ -d $HOME/AMIGAOSLINUX/ ]; then
@@ -423,6 +423,7 @@ fi
       
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
+   
  
       fi
 
@@ -438,7 +439,7 @@ fi
       sudo chmod -R 777 /home/$USER/Amiga/
       sudo chmod -R 777 /home/$USER/Desktop/
       sudo chmod -R 777 /usr/share/applications/
-      
+      sudo rm -rf ~/AmiRock
       echo " "
       echo "  ... finish setup  " 
          
