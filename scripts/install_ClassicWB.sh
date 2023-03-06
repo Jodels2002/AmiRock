@@ -19,7 +19,7 @@ GREY='\033[1;30m'
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
           
-      sudo apt install python3-pip  python3-dev python-dev -y
+      sudo apt install python3-pip  python3-dev  -y
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools     
 
