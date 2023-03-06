@@ -251,8 +251,7 @@ systemctl start fan-control
 	sudo systemctl disable service webmin
 	sudo systemctl disable man-db.service 
 	sudo systemctl disable man-db.timer
-	sudo systemctl disable alsa-restore.service at boot time
-	sudo systemctl disable alsa-state.service at boot time    
+	  
         sudo update-rc.d motd remove
 	sudo rm -rf /etc/systemd/pstore.conf
        	sudo rm -rf /etc/systemd/journald.conf
