@@ -15,7 +15,7 @@
       sudo chmod -R 777 /home/$USER/AmiRock
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      cp -R /home/$USER/AmiRock/scripts/.ba* /home/$USER/
+      cp -R /opt/AmiRock/scripts/.ba* /home/$USER/
       
     
       sudo rm -rf /usr/share/applications/*Ami*
@@ -333,7 +333,7 @@ fi
       
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
-      sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
+      #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
       
       clear
       toilet "AmiRock-OS" --metal
