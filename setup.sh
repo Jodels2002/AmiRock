@@ -165,13 +165,20 @@ systemctl start fan-control
       fi
       if [ ! -d $HOME/Desktop/ ]; then
       mkdir $HOME/Desktop/
-     
-        mkdir $HOME/Downloads
-        mkdir $HOME/Documents
-        mkdir $HOME/Music
-        mkdir $HOME/Pictures
-        mkdir $HOME/Videos
       fi
+      if [ ! -d $HOME/Downloads ]; then
+        mkdir $HOME/Downloads
+	fi
+      if [ ! -d $HOME/Music ]; then
+        mkdir $HOME/Music
+	fi
+      if [ ! -d $HOME/Pictures ]; then
+        mkdir $HOME/Pictures
+	fi
+      if [ ! -d $HOME/Videos ]; then
+        mkdir $HOME/Videos
+	fi
+	
 
       cd /usr/share/icons
       sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
