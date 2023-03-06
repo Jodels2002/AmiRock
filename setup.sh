@@ -26,9 +26,15 @@ GREY='\033[1;30m'
       echo "1>Assign >NIL:      Bernd Titze"
       echo " "
       echo " " 
-      echo "	LOADWB ...  :-)"
+      echo "	Please type zour sudo password ...  :-)"
       sleep 4s
+  if [ ! -d /opt/Backup/ ]; then
+      sudo chmod -R 777 /opt/
+      mkdir /opt/Backup/
+      mkdir /opt/Backup/config/
+      cp -rf /etc/lightdm/ /opt/Backup/config/
 
+      fi
  
       
 #***********************************************  #AmiRock-OS install script  ***********************************
@@ -167,6 +173,8 @@ systemctl start fan-control
       echo " "
       echo "  First installation "
       echo " "
+      
+    
       
       if [ ! -d $HOME/Documents/ ]; then
       mkdir $HOME/Documents/
