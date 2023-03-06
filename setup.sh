@@ -109,6 +109,8 @@ systemctl start fan-control
 
       cd 
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
+       sudo rm -rf $HOME/Amiga/conf/amiberry.conf
+       sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
       
       sudo apt install worker unadf xdms fs-uae fs-uae-arcade fonts-amiga -y
       
