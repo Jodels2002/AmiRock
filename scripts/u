@@ -132,10 +132,6 @@ clear
       echo " No Rights Reserved.  "
       echo " "
 
-wget -q --spider http://google.com
-
- if [ $? -eq 0 ]; then
-
 
       sudo rm -rf /home/$USER/AmiRock/
       sudo rm -rf /opt/AmiRock/
@@ -156,7 +152,3 @@ wget -q --spider http://google.com
       
       /home/$USER/AmiRock/scripts/AmiKickme.sh
  
- else
-    whiptail --msgbox " Sorry, you must first connect to internet ..." 20 50 1
- 
- fi
