@@ -88,6 +88,7 @@ case $CHOICE in
             clear
 	    cd
 	     sudo rm -rf /opt/Amiga
+	     sudo mkdir /opt/Amiga
 	     sudo ln -s /opt/Amiga/ Amiga
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
 	      clear
