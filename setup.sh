@@ -56,7 +56,7 @@ sudo apt-get update
   sudo apt install build-essential -y
   sudo apt install arqiver  -y
 
-  sudo apt install -y nemo 
+  sudo apt install -y nemo xini* xorg
   sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
   sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
         
