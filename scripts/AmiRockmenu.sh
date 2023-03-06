@@ -118,7 +118,9 @@ case $CHOICE in
       	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/A1200.rom
 	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/kick31a1200.rom
 	
-      	sudo rm -rf /home/$USER/RetroPieBIOS    
+      	 sudo rm -rf /home/$USER/RetroPieBIOS
+	 sudo rm -rf $HOME/Amiga/conf/amiberry.conf
+	 sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
             ;;  
 	    
       
@@ -167,8 +169,7 @@ case $CHOICE in
 	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
 	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
 	     sudo rm -rf $HOME/Amiga/make-bundle.sh
-	     sudo rm -rf $HOME/Amiga/conf/amiberry.conf
-	     sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
+	    
 	      mkdir /opt/KickPi-OS/Backup
 	    
 	    # Backup
