@@ -354,6 +354,7 @@ fi
      if [ -d /home/$USER//Schreibtisch/ ]; then
      
      sudo cp -R /opt/AmiRock/config/Desktop/* /home/$USER/Schreibtisch/
+     sudo chmod -R 777 /home/$USER/Schreibtisch/
      fi     
      if [ -d /home/$USER/Desktop/ ]; then
     
