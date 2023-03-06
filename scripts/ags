@@ -1,0 +1,4 @@
+
+mkdir /opt/Backup/MegaAGS
+cd /opt/Backup/MegaAGS
+wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
