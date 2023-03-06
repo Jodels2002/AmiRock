@@ -86,7 +86,9 @@ case $CHOICE in
              #***********************************************  #AmiRock-OS install script  ***********************************
              #************************************************ Reset Amiga       ************************************** 
             clear
-	     sudo rm -rf $HOME/Amiga
+	    cd
+	     sudo rm -rf /opt/Amiga
+	     sudo ln -s /opt/Amiga/ Amiga
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
 	      clear
       toilet "AmiRock-OS" --metal
