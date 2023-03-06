@@ -218,40 +218,7 @@ if [ -d /home/$USER/Amiga/dir/System_ADVSP/ ]; then
 fi 
 
 
-   if [ ! -f /home/$USER/Amiga/amiberry_dev ]; then    
-      
-      cd
-      
-      sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4
-            sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libraspberrypi-dev
-            clear
-            Update_Amiberry.sh
-            
-            echo "AmiRock-OS ROM Operating System and Libraries" 
-            echo "Version V1.5 2020-2021 AmiRock-OS "
-            echo "No Rights Reserved.  "
-            echo -e "$BLUE "
-            echo "Compiling Amiberry (DEV)..."
-            echo -e "$BLACK "
-            cd
-            sudo rm -rf amiberry
-            git clone -b dev https://github.com/midwan/amiberry
-            cd amiberry
-	    
-           clear
-      	   toilet "AmiRock-OS" --metal
-      	   echo " "
-      	   echo " "
-      	   echo "Raspberry Pi OS 32 bit is running... "
-      	   echo "rebooting now ..."
-      	   make -j4 PLATFORM=rpi3
-            sudo chmod -R 777 /home/$USER/amiberry
-            cp -rf /home/$USER/amiberry/amiberry  /home/$USER/Amiga/amiberry_dev
-	    
-	    # Backup
-	    
-	    sudo cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup
-   fi 
+   
     
    cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
    if [ ! -f /opt/Backup/amiberry ]; then    
