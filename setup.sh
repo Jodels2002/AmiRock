@@ -107,11 +107,14 @@ systemctl start fan-control
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga        ************************************** 
 
-      cd 
-      sudo mkdir /opt/Amiga/
-      sudo ln -s /opt/Amiga/ Amiga
+      cd
+	     sudo rm -rf /opt/Amiga
+	     sudo mkdir /opt/Amiga
+	     sudo chmod -R 777 /opt/
+	     sudo ln -s /opt/Amiga/ Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
       
-      unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
+     
        sudo rm -rf $HOME/Amiga/conf/amiberry.conf
        sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
       
