@@ -438,15 +438,14 @@ fi
       sudo chmod -R 777 /home/$USER/Desktop/
       sudo chmod -R 777 /usr/share/applications/
       sudo rm -rf ~/AmiRock
-      echo " "
-      echo "  ... finish setup  " 
+   
          
       
 
         
 	
 		
-
+clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
 echo " Version V2.0 2020-2021 KickPi-OS "
@@ -459,5 +458,6 @@ echo -e " 1.>  ( u ) AmiRock-OS Update                     "
 echo " 1.>  ( m ) ArmRock-OS Config                       " 
 echo -e " 1.>  ( c ) Armbian-Config                       "
 echo " 1.>  ( s ) Shutdown                                "  
-echo ""
+   echo " "
+      echo "  ... finish Classic WB setup  " 
 
