@@ -422,9 +422,7 @@ fi
       fi
       
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
-      sudo cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
-   
- 
+      sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
       fi
 
 
