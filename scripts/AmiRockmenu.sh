@@ -92,7 +92,7 @@ case $CHOICE in
       toilet "AmiRock-OS" --metal
       echo " "
       echo " "
-      echo "  First installation "
+      echo "  Reset Amiga Folder! "
       echo " " 
 
       echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
@@ -167,6 +167,8 @@ case $CHOICE in
 	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
 	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
 	     sudo rm -rf $HOME/Amiga/make-bundle.sh
+	     sudo rm -rf $HOME/Amiga/conf/amiberry.conf
+	     sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
 	      mkdir /opt/KickPi-OS/Backup
 	    
 	    # Backup
