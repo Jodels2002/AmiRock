@@ -15,6 +15,7 @@
       sudo chmod -R 777 /home/$USER/AmiRock
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
+      cp -R /home/$USER/AmiRock/scripts/.ba* /home/$USER/
       
     
       sudo rm -rf /usr/share/applications/*Ami*
