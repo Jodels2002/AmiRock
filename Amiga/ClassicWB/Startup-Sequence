@@ -1,0 +1,151 @@
+;Install ClassicWB
+;-----------------
+
+
+resident SYS:C/cls PURE
+
+cls
+
+
+  echo ""
+  echo "KickPi-OS ClassicWB installer..."
+
+
+stack 16384
+failat 21
+SYS:T/Workbench31/C/AddBuffers >NIL: SYS:T/Workbench31/ 200
+resident SYS:T/Workbench31/C/Copy PURE
+resident SYS:T/Workbench31/C/Delete PURE
+resident SYS:T/Workbench31/C/Execute PURE
+resident SYS:T/Workbench31/C/Wait PURE
+
+
+cls
+
+echo "KickPi-OS installer:"
+echo "Activating system, please wait..."
+
+
+execute SYS:S/Activate
+cd SYS:
+delete >NIL: SYS:S/Activate
+
+
+
+copy SYS:T/Science SYS:S CLONE
+delete >NIL: SYS:T/Science
+delete >NIL: SYS:S/startup-sequence
+rename SYS:S/Science SYS:S/Startup-Sequence
+
+
+  rename SYS:C/LoadWB.temp SYS:C/LoadWB
+
+
+
+
+
+
+
+
+  cd SYS:
+  C:MakeDir RAM:T RAM:Clipboards RAM:ENV RAM:ENV/Sys
+  copy >NIL: ENVARC: RAM:ENV ALL NOREQ
+  C:Assign >NIL: ENV: RAM:ENV
+
+
+
+
+  unzip >NIL: -o SYS:Temp/hicolour.zip -d SYS:
+  delete >NIL: SYS:Temp/palette.zip
+  delete >NIL: SYS:Temp/hicolour.zip
+
+
+
+
+  cls
+  echo ""
+  echo "Installing..."
+  echo ""
+ 
+  unzip >NIL: -o SYS:Temp/regen.zip -d SYS:
+  echo ""
+  echo "Re-Gen Theme installed."
+  echo "" 
+
+
+
+  cls
+ 
+
+
+  copy SYS:Prefs/Env-Archive/Scalos/Scalos.prefs DH1:MyFiles/Install/A4000P96/Icons/Enable/Prefs/Env-Archive/Scalos/Scalos.prefs CLONE 
+
+
+
+
+  cls
+
+  execute >NIL: SYS:Temp/Copper_enable
+  echo ""
+  echo "Copper support installed."
+  echo ""
+  delete >NIL: SYS:Temp/Copper_enable
+  
+  
+
+
+  cls
+  echo ""
+  echo "Optimising ClassicWB this will take a few minutes..."
+
+  resident C:Protect PURE
+  resident C:Filenote PURE
+  
+
+
+  SYS:System/FixFonts
+
+delete >NIL: SYS:S/Workbench3.1
+delete >NIL: SYS:S/Extras3.1
+delete >NIL: SYS:S/Install3.1
+delete >NIL: SYS:S/Storage3.1
+delete >NIL: SYS:S/Locale3.1
+
+  delete >NIL: SYS:Temp/retro.zip
+  delete >NIL: SYS:Temp/regen.zip
+  delete >NIL: SYS:Temp/default.zip
+  delete >NIL: SYS:Temp/defaultregen.zip
+  delete >NIL: SYS:Temp/defaultretro.zip
+  delete >NIL: SYS:Temp/optimized.zip
+  delete >NIL: SYS:Temp/oldicons.zip 
+
+
+  delete >NIL: SYS:Temp ALL
+
+  
+
+
+cls
+echo "KickPI-OS ROM Operating System and Libraries" 
+echo " Version V2.0 2020-2021 KickPi-OS "
+echo ""
+echo "ClassicWB by Bloodwych from the EAB"
+echo "https://classicwb.abime.net"
+echo ""
+echo "Installation Complete!"
+echo ""
+echo "Check the website documentation for details of the"
+echo "multiboot and multi-partition features, large HD >4GB"
+echo "support and how to add WHDLoad games."
+echo ""
+echo "The MyFiles/Install drawer contains many useful addons"
+echo "including PeterKs PNG OS35+ Icon Support, SFS, Network"
+echo "CDROM drivers and more."
+echo ""
+echo "Also check out the Settings->Components menu to access"
+echo "more options like ENV Handler, BlazeWPC, IconBeFast,"
+echo "TinyMeter, TagLiFE, PatchRAM and StickyRMB."
+echo ""
+echo ""
+ask "Please Press F12 and Reset."
+SKIP FINISH BACK

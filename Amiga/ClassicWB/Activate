@@ -1,0 +1,162 @@
+;ClassicWB Activate Install 68K LITE FULL ADV ADVSP P96 UAE
+
+cd SYS:T/Workbench31/C/
+;AntiClick
+copy AddBuffers SYS:C CLONE
+copy AddDataTypes SYS:C CLONE
+copy Assign SYS:C CLONE
+copy Avail SYS:C CLONE
+copy BindDrivers SYS:C CLONE
+copy Break SYS:C CLONE
+copy ChangeTaskPri SYS:C CLONE
+copy ConClip SYS:C CLONE
+copy Copy SYS:C CLONE
+copy CPU SYS:C CLONE
+copy Date SYS:C CLONE
+copy Delete SYS:C CLONE
+copy Dir SYS:C CLONE
+copy DiskChange SYS:C CLONE
+copy Ed SYS:C CLONE
+copy Edit SYS:C CLONE
+copy Eval SYS:C CLONE
+copy Execute SYS:C CLONE
+copy Filenote SYS:C CLONE
+copy IconX SYS:C CLONE
+copy Info SYS:C CLONE
+copy Install SYS:C CLONE
+copy IPrefs SYS:C CLONE
+copy Join SYS:C CLONE
+copy List SYS:C CLONE
+;copy LoadResource SYS:C CLONE WB30
+;LoadWB
+copy Lock SYS:C CLONE
+copy MagTape SYS:C CLONE
+copy MakeDir SYS:C CLONE
+;MakeLink
+copy Mount SYS:C CLONE
+copy Protect SYS:C CLONE
+copy Relabel SYS:C CLONE
+copy RemRAD SYS:C CLONE
+copy Rename SYS:C CLONE
+copy RequestChoice SYS:C CLONE
+copy RequestFile SYS:C CLONE
+copy Search SYS:C CLONE
+copy SetClock SYS:C CLONE
+copy SetDate SYS:C CLONE
+copy SetFont SYS:C CLONE
+copy SetKeyboard SYS:C CLONE
+;SetPatch
+copy Sort SYS:C CLONE
+copy Status SYS:C CLONE
+copy Type SYS:C CLONE
+copy Version SYS:C CLONE
+copy Wait SYS:C CLONE
+copy Which SYS:C CLONE
+
+cd SYS:T/Workbench31/Classes/DataTypes
+copy 8svx.datatype SYS:Classes/Datatypes CLONE
+copy amigaguide.datatype SYS:Classes/Datatypes CLONE
+;copy anim.datatype SYS:Classes/Datatypes CLONE WB30
+;copy animation.datatype SYS:Classes/Datatypes CLONE WB30
+;copy ascii.datatype SYS:Classes/Datatypes CLONE WB30
+;copy cdxl.datatype SYS:Classes/Datatypes CLONE WB30
+;ilbm.datatype
+;picture.datatype
+;copy sound.datatype SYS:Classes/Datatypes CLONE WB30
+;copy text.datatype SYS:Classes/Datatypes CLONE WB30
+
+cd SYS:T/Workbench31/Classes/Gadgets
+copy colorwheel.gadget SYS:Classes/Gadgets CLONE
+copy gradientslider.gadget SYS:Classes/Gadgets CLONE
+;copy tapedeck.gadget SYS:Classes/Gadgets CLONE WB30
+
+cd SYS:T/Workbench31/Devs
+copy clipboard.device SYS:Devs CLONE
+copy mfm.device SYS:Devs CLONE
+copy parallel.device SYS:Devs CLONE
+copy postscript_init.ps SYS:Devs CLONE
+copy printer.device SYS:Devs CLONE
+copy serial.device SYS:Devs CLONE
+copy system-configuration SYS:Devs CLONE
+
+cd SYS:T/Workbench31/Devs/DataTypes
+copy 8SVX SYS:Devs/DataTypes CLONE
+copy AmigaGuide SYS:Devs/DataTypes CLONE
+;copy ANIM SYS:Devs/DataTypes CLONE WB30
+;copy CDXL SYS:Devs/DataTypes CLONE WB30
+copy FTXT SYS:Devs/DataTypes CLONE
+copy ILBM SYS:Devs/DataTypes CLONE
+
+cd SYS:T/Workbench31/Devs/DOSDrivers
+copy PIPE SYS:Devs/DOSDrivers CLONE
+
+cd SYS:T/Workbench31/Devs/Printers
+copy Generic SYS:Devs/Printers CLONE
+
+cd SYS:T/Workbench31/L
+copy aux-handler SYS:L CLONE
+copy port-handler SYS:L CLONE
+copy queue-handler SYS:L CLONE
+
+cd SYS:T/Workbench31/Libs
+copy amigaguide.library SYS:Libs CLONE
+;asl.library
+copy bullet.library SYS:Libs CLONE
+copy commodities.library SYS:Libs CLONE
+copy datatypes.library SYS:Libs CLONE
+copy diskfont.library SYS:Libs CLONE
+copy iffparse.library SYS:Libs CLONE
+copy locale.library SYS:Libs CLONE
+;copy lowlevel.library SYS:Libs CLONE WB30
+copy mathieeedoubbas.library SYS:Libs CLONE
+copy mathieeedoubtrans.library SYS:Libs CLONE
+copy mathieeesingtrans.library SYS:Libs CLONE
+copy mathtrans.library SYS:Libs CLONE
+;copy nonvolatile.library SYS:Libs CLONE WB30
+;copy realtime.library SYS:Libs CLONE WB30
+copy rexxsupport.library SYS:Libs CLONE
+copy rexxsyslib.library SYS:Libs CLONE
+copy version.library SYS:Libs CLONE
+
+cd SYS:T/Workbench31/Rexxc
+copy HI SYS:Rexxc CLONE
+copy RX SYS:Rexxc CLONE
+copy RXC SYS:Rexxc CLONE
+copy RXLIB SYS:Rexxc CLONE
+copy RXSET SYS:Rexxc CLONE
+copy TCC SYS:Rexxc CLONE
+copy TCO SYS:Rexxc CLONE
+copy TE SYS:Rexxc CLONE
+copy TS SYS:Rexxc CLONE
+copy WaitForPort SYS:Rexxc CLONE
+
+cd SYS:T/Workbench31/S
+copy DPat SYS:S CLONE
+copy Ed-startup SYS:S CLONE
+;Shell-Startup
+copy SPat SYS:S CLONE
+copy PCD SYS:S CLONE
+;Startup-Sequence
+
+cd SYS:T/Workbench31/System
+copy CLI SYS:System CLONE
+copy DiskCopy SYS:System CLONE
+copy FixFonts SYS:System CLONE
+copy Format SYS:System CLONE
+copy NoFastMem SYS:System CLONE
+copy RexxMast SYS:System CLONE
+
+cd SYS:T/Workbench31/Utilities
+copy Clock SYS:Utilities CLONE
+copy MultiView SYS:Utilities/More CLONE
+copy MultiView SYS:Utilities CLONE
+copy MultiView SYS:Utilities/AmigaGuide CLONE
+
+;SPECIAL CIRCUMSTANCES
+
+cd SYS:T/Workbench31/Utilities
+copy MultiView SYS:C/MultiView CLONE
+copy MultiView SYS:C/AmigaGuide CLONE
+copy MultiView SYS:C/More CLONE
+copy MultiView SYS:C/MuchMore CLONE
+copy MultiView SYS:C/Least CLONE
