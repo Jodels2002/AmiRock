@@ -138,6 +138,8 @@ systemctl start fan-control
       unzip -u  $HOME/AmiRock/config/config.zip
       sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
+      sudo cp -R /opt/Amiga/data/amiberry.png /usr/share/applications/
+      sudo cp -R /opt/Amiga/data/amiberry_dev.png /usr/share/applications/
       
       
             clear
