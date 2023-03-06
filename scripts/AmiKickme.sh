@@ -416,5 +416,5 @@ echo " 1.>  ( s ) Shutdown                                "
 echo -e "$BLUE "
 echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
-
+m
           
