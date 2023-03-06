@@ -458,6 +458,8 @@ echo -e " 1.>  ( u ) AmiRock-OS Update                     "
 echo " 1.>  ( m ) ArmRock-OS Config                       " 
 echo -e " 1.>  ( c ) Armbian-Config                       "
 echo " 1.>  ( s ) Shutdown                                "  
-   echo " "
-      echo "  ... finish Classic WB setup  " 
+echo -e "$BLUE "
+echo "  ... finish Classic WB setup  " 
+echo -e "$BLACK "
 
+          
