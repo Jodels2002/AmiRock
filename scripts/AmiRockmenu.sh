@@ -121,7 +121,9 @@ case $CHOICE in
       	 sudo rm -rf /home/$USER/RetroPieBIOS
 	 sudo rm -rf $HOME/Amiga/conf/amiberry.conf
 	 sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
-            ;;  
+            
+	    u
+	    ;;  
 	    
       
             
