@@ -347,10 +347,18 @@ fi
   
      
      if [ -d /home/$USER/Documents/FS-UAE/Configurations/ ]; then
-      #update.sh
+      
      sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
-     fi     
+     fi   
      
+     if [ -d /home/$USER//Schreibtisch/ ]; then
+     
+     sudo cp -R /opt/AmiRock/config/Desktop/* /home/$USER/Schreibtisch/
+     fi     
+     if [ -d /home/$USER/Desktop/ ]; then
+    
+     sudo cp -R /opt/AmiRock/config/Desktop/* /home/$USER/Desktop/
+     fi    
      
      
       
