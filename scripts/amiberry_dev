@@ -1,2 +1,2 @@
-cd /home/pi/Amiga/
+cd /home/$USER/Amiga/
 ./amiberry_dev
