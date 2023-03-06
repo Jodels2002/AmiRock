@@ -24,8 +24,8 @@ MENU="Version 3.1:"
 
 OPTIONS=(d "Boot to AmiRock  Desktop     "
          i "Install ClassicWB             "
-         m "Import Pimiga 1.5 / 2.0       "  
-         u "Update AmiRock-OS                 "
+         m "Reset Amiga Folder            "  
+         u "Update AmiRock-OS             "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
          c "Armbian-config                "
@@ -84,9 +84,41 @@ case $CHOICE in
             
           m)
              #***********************************************  #AmiRock-OS install script  ***********************************
-             #************************************************  Import Pimiga        ************************************** 
+             #************************************************ Reset Amiga       ************************************** 
             clear
-            Pimiga-imp.sh
+	     sudo rm -rf $HOME/Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+	      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " " 
+
+      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
+      echo "1>CLI"
+      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
+      echo "1>CLI: "
+      echo "1>                  Greetings your´s "
+      echo "1>Assign >NIL:      Bernd Titze"
+      echo " "
+      echo " " 
+      echo "	LOADWB ...  :-)"
+      sleep 4s
+      echo " "
+      echo " " 
+   cd  
+      	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
+      	
+      	sudo chmod -R 777 $HOME/RetroPieBIOS
+      
+         
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /home/$USER/Amiga/kickstarts/A500.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /home/$USER/Amiga/kickstarts/A600.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/A1200.rom
+	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/kick31a1200.rom
+	
+      	sudo rm -rf /home/$USER/RetroPieBIOS    
             ;;  
 	    
       
