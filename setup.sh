@@ -115,8 +115,8 @@ systemctl start fan-control
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
       
      
-       sudo rm -rf $HOME/Amiga/conf/amiberry.conf
-       sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
+       sudo rm -rf /opt/Amiga/conf/amiberry.conf
+       sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
       
       sudo apt install worker unadf xdms fs-uae fs-uae-arcade fonts-amiga -y
       
@@ -130,7 +130,7 @@ systemctl start fan-control
       unzip -u  $HOME/AmiRock/config/worker.zip
       sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
-      sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
+      sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       
       
