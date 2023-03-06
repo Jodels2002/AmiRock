@@ -113,21 +113,13 @@ fi
    
    if [ -f /home/$USER/Amiga/kickstarts/kick31a1200.rom ]; then
        
-       if [ -d /OLED/ ]; then
-          ClassicWB.sh
-       fi
+    
  
       if [ ! -f /home/$USER/Amiga/dir/System_ADVSP/System/T/CWB3.pac ]; then
       install_ClassicWB.sh
       fi
      
-      if [ ! -f /home/$USER/Amiga/dir/System_ADVSP/System/T/CWB3.pac ]; then
-      install_ClassicWB.sh
-      fi
-   
-      if [ ! -f /home/$USER/Amiga/dir/ClassicWB13/System/T/Science ]; then
-      install_ClassicWB.sh
-      fi
+  
    
    else
    
