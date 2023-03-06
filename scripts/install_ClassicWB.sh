@@ -6,27 +6,19 @@
 #************************************************************************************************************
 
 
-
-
 BLACK='\033[0;39m'
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 GREY='\033[1;30m'
 
-
-
-
-   
-    
  
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-      
-      
+          
      
 fi
       
