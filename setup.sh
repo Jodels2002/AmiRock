@@ -26,8 +26,8 @@ GREY='\033[1;30m'
       echo "1>Assign >NIL:      Bernd Titze"
       echo " "
       echo " " 
-      echo "	Please type zour sudo password ...  :-)"
-      sleep 4s
+      echo "	Please type your sudo password ...  :-)"
+    
   if [ ! -d /opt/Backup/ ]; then
       sudo chmod -R 777 /opt/
       mkdir /opt/Backup/
