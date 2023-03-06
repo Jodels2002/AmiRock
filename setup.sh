@@ -125,9 +125,6 @@ systemctl start fan-control
       sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       
-      sudo apt install python3-pip  python3-dev python-dev -y
-      sudo python3 -m pip install -U setuptools
-      sudo python3 -m pip install -U amitools
       
             clear
       toilet "AmiRock-OS" --metal
