@@ -272,7 +272,8 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /home/$USER/Amiga/dir/System_P96/System/S/
       cp -rf /opt/AmiRock/Amiga/ClassicWB/screenmode.prefs /home/$USER/Amiga/dir/System_P96/System/Prefs/Env-Archive/Sys/
       cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /home/$USER/Amiga/conf/
-      cp -rf /home/$USER/Amiga/dir/Work/Software /home/$USER/Amiga/dir/System_P96/System/    
+      cp -rf "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /home/$USER/Amiga/dir/
+          
       
       cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
