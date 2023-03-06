@@ -108,6 +108,9 @@ systemctl start fan-control
 #************************************************  Amiga        ************************************** 
 
       cd 
+      sudo mkdir /opt/Amiga/
+      sudo ln -s /opt/Amiga/ Amiga
+      
       unzip -u  $HOME/AmiRock/Amiga/Amiga.zip
        sudo rm -rf $HOME/Amiga/conf/amiberry.conf
        sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
