@@ -438,12 +438,8 @@ fi
       sudo chmod -R 777 /home/$USER/Desktop/
       sudo chmod -R 777 /usr/share/applications/
       sudo rm -rf ~/AmiRock
-   
-         
-      
-
-        
-	
+  
+cd
 		
 clear
 toilet "AmiRock" --metal
