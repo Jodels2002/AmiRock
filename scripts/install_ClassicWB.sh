@@ -20,9 +20,9 @@ GREY='\033[1;30m'
       echo " No Rights Reserved.  "
           
      
-fi
+
       
- }
+
  if [ -d /home/$USER/Desktop/Shared/ ]; then
  
           
