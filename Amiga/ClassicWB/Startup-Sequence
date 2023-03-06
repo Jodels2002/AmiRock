@@ -126,8 +126,8 @@ delete >NIL: SYS:S/Locale3.1
 
 
 cls
-echo "KickPI-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 KickPi-OS "
+echo "AmiRock ROM Operating System and Libraries" 
+echo " Version V2.0 2020-2021 AmiRock-OS "
 echo ""
 echo "ClassicWB by Bloodwych from the EAB"
 echo "https://classicwb.abime.net"
