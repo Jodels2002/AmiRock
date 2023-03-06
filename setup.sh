@@ -124,7 +124,8 @@ systemctl start fan-control
       unzip -u  $HOME/AmiRock/config/config.zip
       sudo cp -rf $HOME/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
-      sudo apt install python3-pip  -y
+      
+      sudo apt install python3-pip  python3-dev python-dev -y
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools
       
