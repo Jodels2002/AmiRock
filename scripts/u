@@ -138,6 +138,7 @@ wget -q --spider http://google.com
 
 
       sudo rm -rf /home/$USER/AmiRock/
+      sudo rm -rf /opt/AmiRock/
 
 
       cd
@@ -149,7 +150,7 @@ wget -q --spider http://google.com
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 777 /opt/AmiRock
+      sudo chmod -R 777 /opt/AmiRock/
       
       
       
