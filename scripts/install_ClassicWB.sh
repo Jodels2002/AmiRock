@@ -96,7 +96,7 @@ fi
      
       #CreateDF0
       sudo mkdir /home/$USER/Amiga/Install/DF0
-      cd /opt/AmiRock-OS/Amiga/ClassicWB/
+      cd /opt/AmiRock/Amiga/ClassicWB/
       unzip -o -q ./DF0.zip
       sudo mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /home/$USER/Amiga/Install/DF0
       sudo chmod -R 777 /home/$USER/Amiga/Install/DF0
@@ -156,9 +156,7 @@ ClassicWB()
     
       if [ ! -d /home/$USER/Amiga/Install/ClassicWB_UAE_v28/ ]; then
       
-      sudo python3 -m pip install -U pip
-      sudo python3 -m pip install -U setuptools
-      sudo pip install amitools
+
       
       
       
@@ -345,9 +343,9 @@ if [  -d /home/$USER/pimiga2/ ]; then
 	  rm -d -r /home/$USER/Amiga/dir/ClassicWB13/
       xdftool System.hdf unpack /home/$USER/Amiga/dir/ClassicWB13
       cd /opt/AmiRock/Amiga/ClassicWB/
-      unzip -o -q ./DF0.zip
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/DF0/* /home/$USER/Amiga/dir/ClassicWB13/System/
-      rm -d -r /opt/AmiRock/Amiga/ClassicWB/DF0/
+     
+      cp -rf /home/$USER/Amiga/Install/DF0/* /home/$USER/Amiga/dir/ClassicWB13/System/
+     
      
       cp -rf /home/$USER/Amiga/dir/ClassicWB13/System/T/Science /home/$USER/Amiga/dir/ClassicWB13/System/S/Startup-Sequence
       cp -rf /home/$USER/Amiga/dir/ClassicWB13/System/Temp/*.zip /home/$USER/Amiga/dir/ClassicWB13/System/
@@ -399,7 +397,7 @@ if [  -d /home/$USER/pimiga2/ ]; then
       #cd /home/$USER/Amiga/dir/ClassicWB13/System/
       rm -d -r /home/$USER/Amiga/dir/ClassicWB13/System/Demos
       ln -s /home/$USER/pimiga2/disks/Demos/WHDLOAD/OCS/ Demos
-            
+         
       #
 
     sudo cp -rf /opt/AmiRock/config/ClassicWB13.desktop /usr/share/applications/
@@ -419,7 +417,7 @@ fi
 
 
 if    [  -f  /home/$USER/Amiga/kickstarts/kick31a1200.rom  ]; then
-desktop
+
 
 if [ ! -d /home/$USER/Amiga/dir/Software/ ]; then
 cp -r -f  "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /home/$USER/Amiga/dir/
@@ -456,8 +454,10 @@ clear
 	  
 	  
 	  exit
+	  
 fi
-      rm -d -r /home/$USER/Amiga/Install/DF0
+rm -d -r /home/$USER/Amiga/Install/DF0/  
+     
       sudo chmod -R 777 /home/$USER/Amiga/
       cd
       clear
@@ -469,4 +469,3 @@ fi
       echo -e "$BLACK  "
       echo -e "$BLUE ClassicWBs createt "
       echo -e "$BLACK  "
-
