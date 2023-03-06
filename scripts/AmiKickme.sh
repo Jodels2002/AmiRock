@@ -384,11 +384,7 @@ fi
       
       fi
 
-      #cd
-      #unzip -u -o $HOME/AmiRock/Amiga/Amiga.zip
-      
-
-	   
+  
      
      if [ -d /home/$USER/Documents/FS-UAE/Configurations/ ]; then
       #update.sh
@@ -425,10 +421,9 @@ fi
          sudo rm -rf $HOME/fan-control-rock5b/
       fi
       
-      if [ ! -d /usr/share/applications/amiberry_dev.png/ ]; then
+      if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  $HOME/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
-      sudo cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
-      sudo cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+ 
       fi
 
 
@@ -451,9 +446,7 @@ fi
 
         
 	
-		if [ -d /OLED/ ]; then
-		AmiRock-OS.sh
-		fi
+		
  clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
