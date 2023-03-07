@@ -63,8 +63,6 @@ sudo apt-get update
   sudo apt install arqiver  -y
 
   sudo apt install -y nemo xini* xorg
-  sudo apt install -y base-devel sdl2 sdl2_ttf sdl2_image flac mpg123 libmpeg2 
-  sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
         
 	clear
       toilet "AmiRock-OS" --metal
@@ -87,8 +85,9 @@ sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 
 sudo apt update -y
-sudo apt dist-upgrade -y
-# sudo apt install kodi -y
+sudo apt upgrade -y
+#sudo apt dist-upgrade -y
+sudo apt install kodi -y
 
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
@@ -178,25 +177,7 @@ systemctl start fan-control
       
     
       
-      if [ ! -d $HOME/Documents/ ]; then
-      mkdir $HOME/Documents/
-      fi
-      if [ ! -d $HOME/Desktop/ ]; then
-      mkdir $HOME/Desktop/
-      fi
-      if [ ! -d $HOME/Downloads ]; then
-        mkdir $HOME/Downloads
-	fi
-      if [ ! -d $HOME/Music ]; then
-        mkdir $HOME/Music
-	fi
-      if [ ! -d $HOME/Pictures ]; then
-        mkdir $HOME/Pictures
-	fi
-      if [ ! -d $HOME/Videos ]; then
-        mkdir $HOME/Videos
-	fi
-	
+
 
       cd /usr/share/icons
       sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
@@ -231,37 +212,18 @@ systemctl start fan-control
       sudo rm -rf /usr/share/backgrounds/Ch*
       sudo rm -rf /usr/share/backgrounds/B*
    
-  echo " "
       echo " "
-      toilet -F gay PhotoGimp
+      #echo " "
+      #toilet -F gay PhotoGimp
        
-      curl -L "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip" -o /home/$USER/KickPi-OS/PhotoGIMP.zip && unzip /home/$USER/KickPi-OS/PhotoGIMP.zip -d /home/$USER/KickPi-OS/ 
-      sudo cp -R /home/$USER/KickPi-OS/PhotoGIMP\ by\ Diolinux\ v2020\ for\ Flatpak/.var/app/org.gimp.GIMP/config/* ~/.config
-      echo " PhotoGimp by Diolinux installed..."
+      #curl -L "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip" -o /home/$USER/KickPi-OS/PhotoGIMP.zip && unzip /home/$USER/KickPi-OS/PhotoGIMP.zip -d /home/$USER/KickPi-OS/ 
+      #sudo cp -R /home/$USER/KickPi-OS/PhotoGIMP\ by\ Diolinux\ v2020\ for\ Flatpak/.var/app/org.gimp.GIMP/config/* ~/.config
+      #echo " PhotoGimp by Diolinux installed..."
       
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
         
-        sudo systemctl disable apt-daily-upgrade.service 
-	sudo systemctl disable apt-daily-upgrade.timer
-	sudo systemctl disable apt-daily.service
-	sudo systemctl disable apt-daily.timer
-	sudo systemctl disable cups
-        sudo systemctl disable syslog.socket
-	sudo systemctl disable service webmin
-	sudo systemctl disable man-db.service 
-	sudo systemctl disable man-db.timer
-	  
-        sudo update-rc.d motd remove
-	sudo rm -rf /etc/systemd/pstore.conf
-       	sudo rm -rf /etc/systemd/journald.conf
-       	sudo rm -rf /etc/systemd/system/network-online.target.wants/
-       	sudo rm -rf /etc/systemd/system/syslog.service
-       	sudo rm -rf /etc/systemd/system/lo*
-       	sudo rm -rf /etc/systemd/system/cu*
-        sudo rm -rf /etc/systemd/system/multi-user.target.wants/cu*
-       	sudo rm -rf /etc/systemd/system/multi-user.target.wants/rsyslog.service
-       	sudo rm -rf /etc/systemd/system/printer.target.wants/
+
 	
 #************************************************ End First run        **************************************   		
      
