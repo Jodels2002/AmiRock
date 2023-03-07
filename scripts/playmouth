@@ -1,0 +1,21 @@
+Text='\033[1;32m'
+NC='\033[0m'
+
+  clear
+ 
+  	echo -e "${Text}Installing Playmouth"
+
+  	cp -iRv apple-mac-plymouth /usr/share/plymouth/themes/
+
+  	update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/apple-mac-plymouth/apple-mac-plymouth.plymouth 100
+  	
+  	echo -e "${Text}Plymouth Theme Configured"
+  sleep 1.5
+  clear
+  	echo "Select Number of Plymouth Theme"
+  sleep 1.0
+    echo -e "${NC} "
+  	update-alternatives --config default.plymouth
+  	update-initramfs -u
+
+  clear
