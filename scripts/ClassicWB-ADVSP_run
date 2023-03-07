@@ -1,0 +1,3 @@
+ cd /opt/Amiga/
+      ./amiberry --config conf/ClassicWB-ADVSP.uae -G
+      cd
