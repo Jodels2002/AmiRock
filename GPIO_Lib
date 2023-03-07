@@ -1,0 +1,16 @@
+Ported the adafruit blinka library to Rock 5.
+Supported (and mainly untested): GPIO I2C SPI UART PWM ADC
+
+Repo: https://github.com/happyme531/Adafruit_Blinka/tree/rk3588-rock-5 28
+
+Install guide: https://learn.adafruit.com/circuitpython-on-orangepi-linux/orange-pi-pc-setup 21
+
+When you finished the guide please replace the adafruit_blinka package with the repo package to get the Rock5 support.
+
+The pin name is named after the physical pin location (and the peripheral function name). For example, board.D3 === board.I2C7_SDA_M3 -> GPIO4_B3
+
+Plz refer to https://wiki.radxa.com/Rock5/hardware/5b/gpio 10 for more.
+
+This branch is awaiting testing so I can open a pull request to merge it into the main repo https://github.com/adafruit/Adafruit_Blinka 6 which can be installed directly using pip.
+
+The circuitpython ecosystem is truly great, achieving the goal of write once, run anywhere(microcontroller, arm sbc, x86 machine) and 400+ libraries is available so I port this instead of mraa or RPI.GPIO
