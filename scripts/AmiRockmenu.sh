@@ -1,19 +1,15 @@
 #!/bin/bash
 # Install KickPi-OS
 # B.Titze 2023
-
+BLACK='\033[0;39m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
 clear
 
  
      echo "AmiRock OS 64 bit is running..."
      
-
-clear
-
-BLACK='\033[0;39m'
-BLUE='\033[1;34m'
-GREEN='\033[1;32m'
-RED='\033[1;31m'
 
 HEIGHT=35
 WIDTH=70
@@ -40,9 +36,7 @@ CHOICE=$(dialog --clear \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
                 
-   
-       
-   
+
 
 cd ~
 
@@ -108,9 +102,8 @@ case $CHOICE in
       echo " "
       echo " " 
       echo "	LOADWB ...  :-)"
-      sleep 4s
-      echo " "
-      echo " " 
+      sleep 1s
+    
    cd  
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
       	
