@@ -61,7 +61,7 @@ if [  -d "/boot/Shared/" ]; then
 	  echo -e "$BLACK 1>Assign >NIL: Greetings your´s B. Titze "
 	  echo -e "$GREEN "
 	  
-sleep 1
+
 
       if [ ! -f /home/$USER/Amiga/kickstarts/amiga-os-310-a1200.rom ]; then
       echo "        **** Amiga Forever files found ****"
@@ -239,7 +239,9 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       echo " No Rights Reserved.  "
       echo " "
   	 
-      echo ""   
+      echo ""
+      
+     ClassicWB-ADVSP_run
        
     fi
       
@@ -284,7 +286,7 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-  	 
+  	ClassicWB-P96_run 
       echo ""   
  fi
  
@@ -328,103 +330,14 @@ if [ ! -f /home/$USER/Amiga/Install/ClassicWB_LITE_v28.zip ]; then
       clear
 fi 
 
-if [  -d /home/$USER/pimiga2/ ]; then
-      mkdir /home/$USER/Amiga/dir/ClassicWB13   
- 
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e -n "$BLUE "
-      echo "  Configure ClassicWB13 ...   " 
-    
-      
-      
-      cd "/home/$USER/Amiga/Install/ClassicWB_LITE_v28/"
-	  rm -d -r /home/$USER/Amiga/dir/ClassicWB13/
-      xdftool System.hdf unpack /home/$USER/Amiga/dir/ClassicWB13
-      cd /opt/AmiRock/Amiga/ClassicWB/
-     
-      cp -rf /home/$USER/Amiga/Install/DF0/* /home/$USER/Amiga/dir/ClassicWB13/System/
-     
-     
-      cp -rf /home/$USER/Amiga/dir/ClassicWB13/System/T/Science /home/$USER/Amiga/dir/ClassicWB13/System/S/Startup-Sequence
-      cp -rf /home/$USER/Amiga/dir/ClassicWB13/System/Temp/*.zip /home/$USER/Amiga/dir/ClassicWB13/System/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB13/GamesMenu.menu /home/$USER/Amiga/dir/ClassicWB13/System/System/BMenu/Files/GamesMenu/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB13/DemosMenu.menu /home/$USER/Amiga/dir/ClassicWB13/System/System/BMenu/Files/DemosMenu/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-WB13.uae /home/$USER/Amiga/conf/
-      #WB1.3
-      cd /home/$USER/Amiga/dir/ClassicWB13/System/
-      unzip -o -q ./WB13.zip
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "      
-      echo -e "$BLACK  "
-      #WHDLoad
-      cd /opt/AmiRock/Amiga/ClassicWB/
-      unzip -o -q ./whdpac.zip
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "      
-      echo -e "$BLACK  "
-      cp -rf  /opt/AmiRock/Amiga/ClassicWB/whdpac/* /home/$USER/Amiga/dir/ClassicWB13/System/
-      rm -d -r /opt/AmiRock/Amiga/ClassicWB/whdpac/
-      rm -f /home/$USER/Amiga/dir/ClassicWB13/System/*.zip
-      rm -f /home/$USER/Amiga/dir/ClassicWB13/System/T/*.*
-      rm -f /home/$USER/Amiga/dir/ClassicWB13/System/Temp/*.*
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo ""   
-      #ClassicWB Options
-      mv /home/$USER/Amiga/dir/ClassicWB13/System/Temp/AntiClick_disable /home/$USER/Amiga/dir/ClassicWB13/System/C/AntiClick
-      mv /home/$USER/Amiga/dir/ClassicWB13/System/Temp/BorderBlank_enable /home/$USER/Amiga/dir/ClassicWB13/System/C/BorderBlank
-
-      
-      #Symbolic Links
-      cd /home/$USER/Amiga/dir/ClassicWB13/System/
-      rm -d -r /home/$USER/Amiga/dir/ClassicWB13/System/Games
-      ln -s /home/$USER/pimiga2/disks/Games/WHDLOAD/OCS/ Games
-      
-      #cd /home/$USER/Amiga/dir/ClassicWB13/System/
-      rm -d -r /home/$USER/Amiga/dir/ClassicWB13/System/Demos
-      ln -s /home/$USER/pimiga2/disks/Demos/WHDLOAD/OCS/ Demos
-         
-      #
-
-    sudo cp -rf /opt/AmiRock/config/ClassicWB13.desktop /usr/share/applications/
-    clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-  	 
-      echo ""         
-      
-fi
 
 }
 
 
 
-if    [  -f  /home/$USER/Amiga/kickstarts/kick31a1200.rom  ]; then
-
-
 if [ ! -d /home/$USER/Amiga/dir/Software/ ]; then
 cp -r -f  "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /home/$USER/Amiga/dir/
-fi
+
 
 ClassicWB
 ClassicWB13
@@ -459,7 +372,7 @@ clear
 	  exit
 	  
 fi
-rm -d -r /home/$USER/Amiga/Install/DF0/  
+rm -d -r /opt/Amiga/Install/DF0/  
      
       sudo chmod -R 777 /home/$USER/Amiga/
       cd
