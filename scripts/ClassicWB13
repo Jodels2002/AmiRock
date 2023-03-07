@@ -1,6 +1,0 @@
-
-
-
-cd $HOME/Amiga/
-./amiberry --config conf/ClassicWB-WB13.uae -G
-
