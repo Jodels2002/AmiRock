@@ -8,13 +8,7 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
-      if [ ! -d $HOME/Documents/ ]; then
-      mkdir $HOME/Documents/
-      fi
-      
-      if [ ! -d $HOME/Desktop/ ]; then
-      mkdir $HOME/Desktop/
-      fi
+
 
 cd
 clear
@@ -25,70 +19,9 @@ clear
       echo " "
       echo -e "$GREY "
 
-
-sudo rm -rf ~/AmiRock-OS
-        echo -e  ""
-	echo -e -n "$BLACK Check free disk space..." 
-	echo -e "$BLUE "
-	df -H -l /root
-	echo -e -n " "
-FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
-
-
-if [[ $FREE -lt  5000000 ]]; then               # 10G = 10*1024*1024k
-
-  
-     echo -e  "$RED 1.> Not enough disk space !                            -"
-
-     echo -e "$BLACK 1.> "
-     echo -e  ""
-     echo -e  "Deleting stuff... "
-    sleep 4
-      
-      echo -e  ""
-      # Make Space / thats live :-)
-      	
-	if [ -d /home/$USER/pimiga15/disks/Work/Videos/ ]; then
-	        echo -e "$BLUE Deleting Pimiga15 Videos... "
-      		sudo rm -rf /home/$USER/pimiga15/disks/Work/Videos/*
-      	fi
-	if [ -d /home/$USER/pimiga15/disks/Work/Amiga_CD_Collection/ ]; then
-	   echo -e -n "$BLUE Deleting Amiga_CD_Collections... "
-           sudo rm -rf /home/$USER/pimiga15/disks/Work/Commodore_Amiga_Tosec_Complete/Demos/
-           sudo rm -rf /home/$USER/pimiga15/disks/Work/Commodore_Amiga_Tosec_Complete/Demos/Demos.info
-	fi
-	
-	 echo -e  ""
-	echo -e -n "$BLACK Check free disk space again..." 
-	echo -e "$BLUE "
-	df -H -l /root
-	echo -e -n " "
-        FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
-	
-	
-
-       if [[ $FREE -lt  5000000 ]]; then               # 10G = 10*1024*1024k
-        echo -e  ""
-	echo -e -n "$BLACK Less than 5GB disk space free..." 
-	
-
-       # Make Space / thats live
-	if [ -d /home/$USER/pimiga2/disks/Work/Videos/ ]; then
-	 
-           sudo rm -rf /home/$USER/pimiga2/disks/Work/Videos/*
-	   sudo rm -rf /home/$USER/Amiga/Install/*
-	fi
-
-         else
-	  echo " "
-	 echo -e -n "$BLUE Enough disk space free..." 
-fi 
-	
-fi
+************************** repair & Check dpkg **********************************************************************
 
        
-
-LED_off
 sudo dpkg --configure -a
 clear
       toilet "AmiRock-OS" --metal
@@ -125,6 +58,9 @@ clear
       echo " No Rights Reserved.  "
       echo " "
 sudo apt-get clean 
+
+************************** Get update **********************************************************************
+
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
