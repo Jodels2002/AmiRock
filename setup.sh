@@ -28,13 +28,9 @@ GREY='\033[1;30m'
       echo " " 
       echo "	Please type your sudo password ...  :-)"
     
-  if [ ! -d /opt/Backup/ ]; then
-      sudo chmod -R 777 /opt/
-      mkdir /opt/Backup/
-      mkdir /opt/Backup/config/
-      cp -rf /etc/lightdm/ /opt/Backup/config/
 
-      fi
+      
+
  
       
 #***********************************************  #AmiRock-OS install script  ***********************************
@@ -222,7 +218,14 @@ systemctl start fan-control
       
       cd
  #***********************************************  #AmiRock-OS install script  ***********************************
-        
+     
+     if [ ! -d /opt/Backup/ ]; then
+      sudo chmod -R 777 /opt/
+      mkdir /opt/Backup/
+      mkdir /opt/Backup/config/
+      cp -rf /etc/lightdm/ /opt/Backup/config/
+
+      fi     
 
 	
 #************************************************ End First run        **************************************   		
