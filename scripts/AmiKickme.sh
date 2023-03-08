@@ -200,16 +200,7 @@ fi
      sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
      fi   
      
-     if [ -d /home/$USER//Schreibtisch/ ]; then
-     
-     sudo cp -R /opt/AmiRock/config/Desktop/* /home/$USER/Schreibtisch/
-     sudo chmod -R 777 /home/$USER/Schreibtisch/
-     fi     
-     if [ -d /home/$USER/Desktop/ ]; then
-    
-     sudo cp -R /opt/AmiRock/config/Desktop/* /home/$USER/Desktop/
-     fi    
-     
+
      
       
       echo " "
