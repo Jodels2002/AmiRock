@@ -22,8 +22,8 @@
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
-      sudo cp -rf $HOME/AmiRock/config/Logo/* /opt/AmiRock/config/
-     
+      sudo cp -rf /opt/AmiRock/config/Logo/* /opt/AmiRock/config/
+      sudo cp -rf /opt/AmiRock/config/Logo/boot.bmp /usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg
      
       clear
       toilet "AmiRock-OS" --metal
