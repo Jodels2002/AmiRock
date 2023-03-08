@@ -235,6 +235,19 @@ fi
          sudo rm -rf $HOME/fan-control-rock5b/
       fi
       
+      if [ -d $HOME/Schreibtisch/ ]; then
+         sudo rm -rf $HOME/Schreibtisch/
+	 sudo rm -rf $HOME/.config/user-dirs.dirs
+	 mkdir $HOME/Desktop
+      fi
+      
+      if [ -d $HOME/Videos/ ]; then
+         sudo rm -rf $HOME/Videos/
+      fi
+          if [ -d $HOME/Bilder/ ]; then
+         sudo rm -rf $HOME/Bilder/
+      fi
+      
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
       fi
