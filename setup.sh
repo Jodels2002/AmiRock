@@ -32,7 +32,7 @@ GREY='\033[1;30m'
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
-  sudo apt install build-essential -y
+  sudo apt install build-essential cmake -y
   sudo apt install arqiver  -y
 
   #sudo apt install -y nemo xini* xorg
