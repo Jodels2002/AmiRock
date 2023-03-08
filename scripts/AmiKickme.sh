@@ -9,6 +9,11 @@
       GREEN='\033[1;32m'
       RED='\033[1;31m'
       GREY='\033[1;30m'
+
+  clear
+      
+      
+      
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
       fi	 
