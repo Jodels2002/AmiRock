@@ -57,8 +57,10 @@ clear
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-sudo apt-get clean 
-
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get upgrade
+sudo update-initramfs -u
 #************************** Get update **********************************************************************
 
 clear
