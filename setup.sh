@@ -129,8 +129,7 @@ systemctl start fan-control
       echo " "
       cd 
       unzip -u  $HOME/AmiRock/config/worker.zip
-      sudo rm -rf $HOME/.config/
-      unzip -u  $HOME/AmiRock/config/config.zip
+      
       sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
       sudo cp -R /opt/Amiga/data/amiberry.png /usr/share/applications/
@@ -217,6 +216,10 @@ systemctl start fan-control
       #echo " PhotoGimp by Diolinux installed..."
       
       cd
+      
+      #sudo rm -rf $HOME/.config/
+      unzip -u  $HOME/AmiRock/config/config.zip
+      
  #***********************************************  #AmiRock-OS install script  ***********************************
      
      if [ ! -d /opt/Backup/ ]; then
