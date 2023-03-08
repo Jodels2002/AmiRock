@@ -36,10 +36,9 @@ GREY='\033[1;30m'
 	     sudo ln -s /opt/Amiga/ Amiga
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
 	     sudo chmod -R 777 /usr/share/plymouth/
-  	     cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
-
+  	cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	# sudo update-initramfs -u
+  	#sudo update-initramfs -u
        
       
 
