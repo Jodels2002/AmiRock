@@ -57,8 +57,8 @@ sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 
 sudo apt update -y
-sudo apt upgrade -y
-#sudo apt dist-upgrade -y
+#sudo apt upgrade -y
+sudo apt dist-upgrade -y
 sudo apt install kodi -y
 
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
@@ -193,7 +193,7 @@ systemctl start fan-control
       
       cd
       
-      #sudo rm -rf $HOME/.config/
+      sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
       
  #***********************************************  #AmiRock-OS install script  ***********************************
