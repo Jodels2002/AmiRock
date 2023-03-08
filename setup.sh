@@ -9,9 +9,7 @@ RED='\033[1;31m'
 GREY='\033[1;30m'
 
  clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
+      
       echo "  First installation "
       echo " " 
       
@@ -28,28 +26,6 @@ GREY='\033[1;30m'
       echo " " 
       echo "	Please type your sudo password ...  :-)"
     
-
-      
-
- 
-      
-#***********************************************  #AmiRock-OS install script  ***********************************
-#************************************************  Radxa Key update        **************************************   
-
-chsh -s /bin/bash
-
-
-sudo apt-get install -y wget
-export DISTRO=buster-stable
-wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
-sudo apt-get update
-      
-      clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
       
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  usefull Tools        **************************************  
@@ -58,7 +34,7 @@ sudo apt-get update
   sudo apt install build-essential -y
   sudo apt install arqiver  -y
 
-  sudo apt install -y nemo xini* xorg
+  #sudo apt install -y nemo xini* xorg
         
 	clear
       toilet "AmiRock-OS" --metal
