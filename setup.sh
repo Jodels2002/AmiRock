@@ -25,6 +25,13 @@ GREY='\033[1;30m'
       echo " "
       echo " " 
       echo "	Please type your sudo password ...  :-)"
+      
+
+        sudo chmod -R 777 /usr/share/plymouth/
+  	cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
+
+  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	# sudo update-initramfs -u
     
       
 #***********************************************  #AmiRock-OS install script  ***********************************
@@ -196,17 +203,7 @@ systemctl start fan-control
       
       sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
-      Text='\033[1;32m'
-      NC='\033[0m'
-
-        clear
- 
-  	echo -e "${Text}Installing Playmouth"
-        sudo chmod -R 777 /usr/share/plymouth/
-  	cp -rf /opt/AmiRock/config/playmouth/* /usr/share/plymouth/themes/
-
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	sudo update-initramfs -u
+  
 	clear
 
       
