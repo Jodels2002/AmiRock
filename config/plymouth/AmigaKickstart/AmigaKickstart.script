@@ -1,0 +1,125 @@
+# AmigaKickstart Animated Plymouth Theme
+# By Mark Hart (markhart@outlook.com)
+# Version 1.0
+# 02/03/23
+
+
+# Set Background Color
+Window.SetBackgroundTopColor (0.00, 0.00, 0.00);
+Window.SetBackgroundBottomColor (0.00, 0.00, 0.00);
+
+
+# Set Variables
+
+progress = 1;
+
+numberofframes = 1;
+
+flyingman_image = [];
+
+flyingman_sprite = Sprite();
+
+
+
+# Set Animation Images Based On GetMode
+# Possible modes: boot  shutdown  reboot  updates  system-upgrade firmware-upgrade
+
+if ( Plymouth.GetMode () == "boot" )
+{
+
+  # Set C64 Animation: Startup
+
+  # Set Number of Frames
+  numberofframes = 70;
+
+  # Set Animation Images
+  for (i = 1; i < 71; i++)
+  {
+    flyingman_image[i] = Image("startup-" + i + ".png");
+    flyingman_sprite = Sprite();
+  }
+
+  # Center Images
+  flyingman_sprite.SetX(Window.GetWidth() / 2 - flyingman_image[1].GetWidth() / 2);
+  flyingman_sprite.SetY(Window.GetHeight() / 2 - flyingman_image[1].GetHeight() / 2);
+
+}
+
+
+if ( Plymouth.GetMode () == "updates" )
+{
+
+  # Set C64 Animation: Startup
+
+  # Set Number of Frames
+  numberofframes = 70;
+
+  # Set Animation Images
+  for (i = 1; i < 71; i++)
+  {
+    flyingman_image[i] = Image("startup-" + i + ".png");
+    flyingman_sprite = Sprite();
+  }
+
+  # Center Images
+  flyingman_sprite.SetX(Window.GetWidth() / 2 - flyingman_image[1].GetWidth() / 2);
+  flyingman_sprite.SetY(Window.GetHeight() / 2 - flyingman_image[1].GetHeight() / 2);
+
+}
+
+
+if ( Plymouth.GetMode () == "reboot"  )
+{
+
+  # Set C64 Animation: Shutdown
+
+  # Set Number of Frames
+  numberofframes = 11;
+
+  # Set Animation Images
+  for (i = 1; i < 12; i++)
+  {
+    flyingman_image[i] = Image("shutdown-" + i + ".png");
+    flyingman_sprite = Sprite();
+  }
+
+  # Center Images
+  flyingman_sprite.SetX(Window.GetWidth() / 2 - flyingman_image[1].GetWidth() / 2);
+  flyingman_sprite.SetY(Window.GetHeight() / 2 - flyingman_image[1].GetHeight() / 2);
+
+}
+
+
+if ( Plymouth.GetMode () == "shutdown"  )
+{
+
+  # Set C64 Animation: Shutdown
+
+  # Set Number of Frames
+  numberofframes = 11;
+
+  # Set Animation Images
+  for (i = 1; i < 12; i++)
+  {
+    flyingman_image[i] = Image("shutdown-" + i + ".png");
+    flyingman_sprite = Sprite();
+  }
+
+  # Center Images
+  flyingman_sprite.SetX(Window.GetWidth() / 2 - flyingman_image[1].GetWidth() / 2);
+  flyingman_sprite.SetY(Window.GetHeight() / 2 - flyingman_image[1].GetHeight() / 2);
+
+}
+
+
+# This function gets called continuosly by Plymouth, up to 50 times a second
+
+fun refresh_callback ()
+{
+  flyingman_sprite.SetImage(flyingman_image[Math.Int(progress / 3) % numberofframes]);
+  progress++;
+}
+  
+Plymouth.SetRefreshFunction (refresh_callback);
+
+
