@@ -26,20 +26,7 @@ GREY='\033[1;30m'
       echo " " 
       echo "	Please type your sudo password ...  :-)"
       
-      
-#***********************************************  #AmiRock-OS install script  ***********************************
-      
- cd
-	     sudo rm -rf /opt/Amiga
-	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
-	     sudo ln -s /opt/Amiga/ Amiga
-             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
-	     sudo chmod -R 777 /usr/share/plymouth/
-  	cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	#sudo update-initramfs -u
-       
+         
       
 
 #************************************************  usefull Tools        **************************************  
@@ -216,7 +203,18 @@ systemctl start fan-control
       cp -rf /etc/lightdm/ /opt/Backup/config/
 
       fi     
-
+#***********************************************  #AmiRock-OS install script  ***********************************
+      
+ cd
+	     sudo rm -rf /opt/Amiga
+	     sudo mkdir /opt/Amiga
+	     sudo chmod -R 777 /opt/
+	     sudo ln -s /opt/Amiga/ Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+	     sudo chmod -R 777 /usr/share/plymouth/
+  	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	sudo update-initramfs -u
 	
 #************************************************ End First run        **************************************   		
      
