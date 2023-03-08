@@ -83,7 +83,12 @@ systemctl start fan-control
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga        ************************************** 
-
+cd
+	     sudo rm -rf /opt/Amiga
+	     sudo mkdir /opt/Amiga
+	     sudo chmod -R 777 /opt/
+	     sudo ln -s /opt/Amiga/ Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
          
        sudo rm -rf /opt/Amiga/conf/amiberry.conf
        sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
@@ -205,12 +210,7 @@ systemctl start fan-control
       fi     
 #***********************************************  #AmiRock-OS install script  ***********************************
       
- cd
-	     sudo rm -rf /opt/Amiga
-	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
-	     sudo ln -s /opt/Amiga/ Amiga
-             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+ 
 	     sudo chmod -R 777 /usr/share/plymouth/
   	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
