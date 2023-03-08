@@ -26,15 +26,23 @@ GREY='\033[1;30m'
       echo " " 
       echo "	Please type your sudo password ...  :-)"
       
-
-        sudo chmod -R 777 /usr/share/plymouth/
-  	cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
+      
+#***********************************************  #AmiRock-OS install script  ***********************************
+      
+ cd
+	     sudo rm -rf /opt/Amiga
+	     sudo mkdir /opt/Amiga
+	     sudo chmod -R 777 /opt/
+	     sudo ln -s /opt/Amiga/ Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+	     sudo chmod -R 777 /usr/share/plymouth/
+  	     cp -rf /opt/AmiRock/config/plymouth/* /usr/share/plymouth/themes/
 
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
   	# sudo update-initramfs -u
-    
+       
       
-#***********************************************  #AmiRock-OS install script  ***********************************
+
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
@@ -90,14 +98,7 @@ systemctl start fan-control
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga        ************************************** 
 
-      cd
-	     sudo rm -rf /opt/Amiga
-	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
-	     sudo ln -s /opt/Amiga/ Amiga
-             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
-      
-     
+         
        sudo rm -rf /opt/Amiga/conf/amiberry.conf
        sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
       
