@@ -9,9 +9,7 @@ clear
 toilet "AmiRock" --metal
 echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
 echo " Version V2.0 2020-2021 AmiRock-OS "
-echo " No Rights Reserved.  "
-echo -e "$GREY "
-echo " Type 'd' to boot into AmiRock Workbench"
+echo -e "$GREY No Rights Reserved.  "
 echo -e "$BLACK "
 echo " 1.>  "
 echo -e " 1.>  ( u ) AmiRock-OS Update                     "
