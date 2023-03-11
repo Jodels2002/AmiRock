@@ -26,4 +26,5 @@ cd AmiRock
 
 
 
-# Reboot and have fun Greetings Bernd
+# Reboot and have fun 
+   Greetings Bernd
