@@ -220,7 +220,13 @@ cd
 	     sudo chmod -R 777 /usr/share/plymouth/
   	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	sudo update-initramfs -u
+  	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+	sudo update-initramfs -u
 	
 #************************************************ End First run        **************************************   		
      
