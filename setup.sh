@@ -29,20 +29,7 @@ GREY='\033[1;30m'
          
       
 
-#************************************************  usefull Tools        **************************************  
-  sudo apt install -y dialog mc zip unzip wget toilet ksnip
-  sudo apt install -y gparted ntfs-3g
-  sudo apt install build-essential cmake -y
-  sudo apt install arqiver  -y
 
-  #sudo apt install -y nemo xini* xorg
-        
-	clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
       
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Graphic Driver        **************************************   
@@ -71,6 +58,21 @@ sudo apt install kodi -y
       sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 777 /usr/local/bin
       sudo chmod -R 777 /opt/AmiRock
+      
+#************************************************  usefull Tools        **************************************  
+  sudo apt install -y dialog mc zip unzip wget toilet ksnip
+  sudo apt install -y gparted ntfs-3g
+  sudo apt install build-essential cmake -y
+  sudo apt install arqiver  -y
+
+  #sudo apt install -y nemo xini* xorg
+        
+	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Fan Control by pymumu        **************************************   
@@ -95,7 +97,13 @@ cd
 	     sudo chmod -R 777 /opt/
 	     sudo ln -s /opt/Amiga/ Amiga
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
-         
+       clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      
        sudo rm -rf /opt/Amiga/conf/amiberry.conf
        sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
       
@@ -136,9 +144,20 @@ cd
       echo " "
       
       sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
       sudo apt-get -y install libserialport
       sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
-      
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
 	sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
 	    
 	
@@ -159,9 +178,15 @@ cd
       cd /usr/share/icons
       sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
       sudo unzip -u  /usr/share/icons/AMIGAOSLINUX.zip
+  
       sudo rm -rf /usr/share/icons/default
       sudo cp -rf /usr/share/icons/AMIGAOSLINUX/ /usr/share/icons/default/
-      
+      clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
       cd $HOME/AmiRock/
       git clone --depth=1 https://github.com/x64k/amitk
       clear
