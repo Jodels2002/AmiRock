@@ -58,8 +58,14 @@ sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
 #sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 
 sudo apt update -y
-#sudo apt dist-upgrade -y
-#sudo apt install kodi -y
+sudo apt dist-upgrade -y
+
+sudo apt install glmark2 glmark2-es2 glmark2-es2-wayland -y
+sudo apt install mesa-utils -y
+sudo apt install mali-g610-firmware -y
+sudo apt install malirun -y
+
+sudo apt install kodi -y
 
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
