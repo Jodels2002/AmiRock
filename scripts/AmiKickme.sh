@@ -16,7 +16,15 @@
       
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
-      fi	 
+      fi
+      
+       if [ ! -d /usr/share/xfce4/ ]; then
+         sudo apt purge gnome* -y
+         sudo apt install xfce4 -y
+      fi
+      
+      
+      
       sudo chmod -R 777 /home/$USER/AmiRock
       sudo chmod -R 777 /opt/Backup/
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
