@@ -218,14 +218,6 @@ fi
       
       fi
 
-  
-     
-     if [ -d /home/$USER/Documents/FS-UAE/Configurations/ ]; then
-      
-     sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/Documents/FS-UAE/Configurations/
-     fi   
-     
-
      
       
       echo " "
