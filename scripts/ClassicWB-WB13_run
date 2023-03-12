@@ -1,7 +1,9 @@
 
- if [ ! -d /opt/Backup/dir/Softwatre ]; then
+ if [ ! -d /opt/Backup/dir/Work/ ]; then
+ 
          install_ClassicWB.sh
-      fi
+ 
+ fi
 
 cd /opt/Amiga/
 ./amiberry --config conf/ClassicWB-WB13.uae -G
