@@ -63,16 +63,7 @@ if [  -d "/boot/Shared/" ]; then
 	  
 
 
-      if [ ! -f /opt/Amiga/kickstarts/amiga-os-310-a1200.rom ]; then
-      echo "        **** Amiga Forever files found ****"
-      echo "        ***   copy files and activate   ***"
-             
-      sudo rsync -av --ignore-existing /boot/Shared/* ~/Amiga 
-      sudo mv /opt/Amiga/rom/* /opt/Amiga/kickstarts/
-      sudo cp -R /home/$USER/RetroPie/BIOS/MegaAGS-Kickstart.rom /opt/Amiga/kickstarts/kick31a1200.rom
-      sudo rm -d /opt/Amiga/rom/
-      sudo rm /opt/Amiga/dir/*.*
-      fi
+  
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -241,7 +232,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
   	 
       echo ""
       
-     ClassicWB-ADVSP_run
+     #ClassicWB-ADVSP_run
        
     fi
       
@@ -335,7 +326,7 @@ fi
 
 
 
-if [ ! -d /opt/Amiga/dir/Software/ ]; then
+
 cp -r -f  "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /opt/Amiga/dir/
 
 
@@ -359,20 +350,15 @@ clear
      
 	  \n " 20 50 1
 	  
-	 echo -e "$RED ***  No valid Amiga KickRom found :-( ***"
-	  echo " "
-	  echo -e "$BLUE - Copie first your  * Shared * folder  "
-	  echo -e  "   from your Amiga Forever installation to your AmiRock-OS Desktop "
-	  echo -e  " "
-	  echo -e  " - Or copy a legal 3.1 Rom as kick31a1200.rom to "
-	  echo -e  "   /opt/Amiga/kickstarts/kick31a1200.rom "
-	  echo -e "$BLACK "
-	  
+	 rm -d -r /opt/Amiga/Install/DF0/  
+     
+      sudo chmod -R 777 /opt/Amiga/
+      cd
 	  
 	  exit
 	  
 fi
-rm -d -r /opt/Amiga/Install/DF0/  
+       rm -d -r /opt/Amiga/Install/DF0/  
      
       sudo chmod -R 777 /opt/Amiga/
       cd
