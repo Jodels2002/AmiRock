@@ -12,21 +12,33 @@
 
   clear
       
+      sudo chmod -R 777 /opt/
       
-      
+      if [ ! -d /opt/Backup/ ]; then
+         sudo mkdir /opt/Backup/
+      fi
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
       fi
       
        if [ ! -d /usr/share/xfce4/ ]; then
+         mkdir /opt/Amiga/dir
+	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
+	 sudo rm -rf /home/$USER/Amiga
+	 cd
+	
          sudo apt purge gnome* -y
          sudo apt install xfce4 -y
+	 sudo apt install xfce4-terminal -y
+	 
+	 sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
+	 sudo chmod -R 777 /home/$USER/Desktop/
       fi
       
       
       
       sudo chmod -R 777 /home/$USER/AmiRock
-      sudo chmod -R 777 /opt/Backup/
+     
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
