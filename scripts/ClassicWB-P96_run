@@ -1,5 +1,7 @@
-
-
+ if [ ! -d /opt/Backup/dir/Softwatre ]; then
+         install_ClassicWB.sh
+      fi
+      
 cd /opt/Amiga/
 ./amiberry --config conf/ClassicWB-P96.uae -G
 
