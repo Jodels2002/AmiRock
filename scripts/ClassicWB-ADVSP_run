@@ -1,7 +1,7 @@
  
  if [ ! -d /opt/Backup/dir/System_ADVSP/ ]; then
  
-         install_ClassicWB.sh
+         /user/share/bin/install_ClassicWB.sh
  
  fi
       
