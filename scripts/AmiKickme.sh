@@ -30,6 +30,7 @@
          sudo apt purge gnome* -y
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal -y
+	 sudo apt purge terminator -y
 	 
 	 sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
 	 sudo chmod -R 777 /home/$USER/Desktop/
@@ -205,7 +206,7 @@ fi
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
       #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
-      
+      sudo apt purge terminator -y
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
