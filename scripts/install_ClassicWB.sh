@@ -29,10 +29,10 @@ GREY='\033[1;30m'
  
           
       sudo rsync -av --ignore-existing /home/$USER/Desktop/Shared/* ~/Amiga 
-      sudo chmod -R 777 /home/$USER/Amiga/
-      sudo cp  -rf  /home/$USER/Amiga/rom/amiga-os-310-a1200.rom /home/$USER/Amiga/kickstarts/kick31a1200.rom
-      sudo mv /home/$USER/Amiga/rom/* /home/$USER/Amiga/kickstarts/
-      sudo rm -d /home/$USER/Amiga/rom/
+      sudo chmod -R 777 /opt/Amiga/
+      sudo cp  -rf  /opt/Amiga/rom/amiga-os-310-a1200.rom /opt/Amiga/kickstarts/kick31a1200.rom
+      sudo mv /opt/Amiga/rom/* /opt/Amiga/kickstarts/
+      sudo rm -d /opt/Amiga/rom/
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -63,15 +63,15 @@ if [  -d "/boot/Shared/" ]; then
 	  
 
 
-      if [ ! -f /home/$USER/Amiga/kickstarts/amiga-os-310-a1200.rom ]; then
+      if [ ! -f /opt/Amiga/kickstarts/amiga-os-310-a1200.rom ]; then
       echo "        **** Amiga Forever files found ****"
       echo "        ***   copy files and activate   ***"
              
       sudo rsync -av --ignore-existing /boot/Shared/* ~/Amiga 
-      sudo mv /home/$USER/Amiga/rom/* /home/$USER/Amiga/kickstarts/
-      sudo cp -R /home/$USER/RetroPie/BIOS/MegaAGS-Kickstart.rom /home/$USER/Amiga/kickstarts/kick31a1200.rom
-      sudo rm -d /home/$USER/Amiga/rom/
-      sudo rm /home/$USER/Amiga/dir/*.*
+      sudo mv /opt/Amiga/rom/* /opt/Amiga/kickstarts/
+      sudo cp -R /home/$USER/RetroPie/BIOS/MegaAGS-Kickstart.rom /opt/Amiga/kickstarts/kick31a1200.rom
+      sudo rm -d /opt/Amiga/rom/
+      sudo rm /opt/Amiga/dir/*.*
       fi
       clear
       toilet "AmiRock-OS" --metal
@@ -81,9 +81,9 @@ if [  -d "/boot/Shared/" ]; then
   	 
       echo ""   
 fi  
-      mkdir /home/$USER/Amiga/dir/Work
-      mkdir /home/$USER/Amiga/dir/Work/Software
-      mkdir /home/$USER/Amiga/Install/
+      mkdir /opt/Amiga/dir/Work
+      mkdir /opt/Amiga/dir/Work/Software
+      mkdir /opt/Amiga/Install/
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -92,18 +92,18 @@ fi
   	 
       echo ""   
 
- if [ ! -d /home/$USER/Amiga/Install/DF0 ]; then
+ if [ ! -d /opt/Amiga/Install/DF0 ]; then
  
      
      
       #CreateDF0
-      sudo mkdir /home/$USER/Amiga/Install/DF0
+      sudo mkdir /opt/Amiga/Install/DF0
       cd /opt/AmiRock/Amiga/ClassicWB/
       unzip -o -q ./DF0.zip
-      sudo mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /home/$USER/Amiga/Install/DF0
-      sudo chmod -R 777 /home/$USER/Amiga/Install/DF0
+      sudo mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /opt/Amiga/Install/DF0
+      sudo chmod -R 777 /opt/Amiga/Install/DF0
       rm -d -r /opt/AmiRock/Amiga/ClassicWB/DF0/
-      rm -d -r /home/$USER/Amiga/Install/DF0/*.info
+      rm -d -r /opt/Amiga/Install/DF0/*.info
  fi 
 
 ClassicWB()
@@ -120,7 +120,7 @@ ClassicWB()
       sleep 3
       
       
-    if [ ! -f /home/$USER/Amiga/Install/ClassicWB_UAE_v28.zip ]; then
+    if [ ! -f /opt/Amiga/Install/ClassicWB_UAE_v28.zip ]; then
           
     
       
@@ -133,12 +133,12 @@ ClassicWB()
       echo -e -n "$BLUE Downloading  ClassicWB_UAE_v28..."
       echo ""
       echo -e "$GRAY "
-        cd /home/$USER/Amiga/Install
+        cd /opt/Amiga/Install
       wget http://download.abime.net/classicwb/ClassicWB_UAE_v28.zip
     
     fi
     
-    if [ ! -f /home/$USER/Amiga/Install/ClassicWB_UAE_v28.zip ]; then
+    if [ ! -f /opt/Amiga/Install/ClassicWB_UAE_v28.zip ]; then
     
         
       clear
@@ -151,12 +151,12 @@ ClassicWB()
       echo ""
       echo -e "$GRAY "
 
-      cd /home/$USER/Amiga/Install
+      cd /opt/Amiga/Install
 
       wget http://download.abime.net/classicwb/ClassicWB_LITE_v28.zip
      fi
     
-      if [ ! -d /home/$USER/Amiga/Install/ClassicWB_UAE_v28/ ]; then
+      if [ ! -d /opt/Amiga/Install/ClassicWB_UAE_v28/ ]; then
       
 
       
@@ -169,10 +169,10 @@ ClassicWB()
       echo " No Rights Reserved.  "
       echo " "
       echo "ClassicWB extracting... "
-      cd /home/$USER/Amiga/Install/
+      cd /opt/Amiga/Install/
       unzip -o -q ./ClassicWB_UAE_v28.zip
       clear
-      cp -r -f  "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /home/$USER/Amiga/dir/
+      cp -r -f  "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /opt/Amiga/dir/
       
     else 
       clear
@@ -185,7 +185,7 @@ ClassicWB()
         
       fi
       
-if [ ! -d /home/$USER/Amiga/Install/ClassicWB_LITE_v28/ ]; then
+if [ ! -d /opt/Amiga/Install/ClassicWB_LITE_v28/ ]; then
       
 
       clear
@@ -199,10 +199,10 @@ if [ ! -d /home/$USER/Amiga/Install/ClassicWB_LITE_v28/ ]; then
       clear
 fi 
 
-if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
+if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
 
-     rm -d -r /home/$USER/Amiga/dir/System_ADVSP/
-     mkdir /home/$USER/Amiga/dir/System_ADVSP
+     rm -d -r /opt/Amiga/dir/System_ADVSP/
+     mkdir /opt/Amiga/dir/System_ADVSP
 
    
      clear
@@ -216,19 +216,19 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       echo "  Configure System_ADVSP ...   " 
 	     
       
-      cd "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/"
-      xdftool System_ADVSP.hdf unpack /home/$USER/Amiga/dir/System_ADVSP
+      cd "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/"
+      xdftool System_ADVSP.hdf unpack /opt/Amiga/dir/System_ADVSP
      
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/CWB3.pac /home/$USER/Amiga/dir/System_ADVSP/System/T/
-      cd /home/$USER/Amiga/dir/System_ADVSP/System/T/
-      unzip -u /home/$USER/Amiga/dir/System_ADVSP/System/T/CWB3.pac
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Startup-Sequence /home/$USER/Amiga/dir/System_ADVSP/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/CWB3.pac /opt/Amiga/dir/System_ADVSP/System/T/
+      cd /opt/Amiga/dir/System_ADVSP/System/T/
+      unzip -u /opt/Amiga/dir/System_ADVSP/System/T/CWB3.pac
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Startup-Sequence /opt/Amiga/dir/System_ADVSP/System/S/
       
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /home/$USER/Amiga/dir/System_ADVSP/System/S/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Science /home/$USER/Amiga/dir/System_ADVSP/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /opt/Amiga/dir/System_ADVSP/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Science /opt/Amiga/dir/System_ADVSP/System/S/
       
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /home/$USER/Amiga/conf/
-      cp -rf /home/$USER/Amiga/dir/Work/Software /home/$USER/Amiga/dir/System_ADVSP/System/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf/
+      cp -rf /opt/Amiga/dir/Work/Software /opt/Amiga/dir/System_ADVSP/System/
       
       cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
@@ -245,11 +245,11 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
        
     fi
       
-      if [ ! -d /home/$USER/Amiga/dir/System_P96/ ]; then
+      if [ ! -d /opt/Amiga/dir/System_P96/ ]; then
 	  
-      cd /home/$USER/Amiga/hdf
-	  rm -d -r /home/$USER/Amiga/dir/System_P96/
-      mkdir /home/$USER/Amiga/dir/System_P96
+      cd /opt/Amiga/hdf
+	  rm -d -r /opt/Amiga/dir/System_P96/
+      mkdir /opt/Amiga/dir/System_P96
     
      
       
@@ -263,23 +263,23 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       echo "  Configure System_P96 ...   " 
       
       
-      cd "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/"
-      xdftool System_P96.hdf unpack /home/$USER/Amiga/dir/System_P96
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/CWB3.pac /home/$USER/Amiga/dir/System_P96/System/T/
-      cd /home/$USER/Amiga/dir/System_P96/System/T/
-      unzip -o -q /home/$USER/Amiga/dir/System_P96/System/T/CWB3.pac
+      cd "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/"
+      xdftool System_P96.hdf unpack /opt/Amiga/dir/System_P96
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/CWB3.pac /opt/Amiga/dir/System_P96/System/T/
+      cd /opt/Amiga/dir/System_P96/System/T/
+      unzip -o -q /opt/Amiga/dir/System_P96/System/T/CWB3.pac
       
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Startup-Sequence /home/$USER/Amiga/dir/System_P96/System/S/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Science /home/$USER/Amiga/dir/System_P96/System/S/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /home/$USER/Amiga/dir/System_P96/System/S/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/screenmode.prefs /home/$USER/Amiga/dir/System_P96/System/Prefs/Env-Archive/Sys/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /home/$USER/Amiga/conf/
-      cp -rf "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /home/$USER/Amiga/dir/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Startup-Sequence /opt/Amiga/dir/System_P96/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Science /opt/Amiga/dir/System_P96/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /opt/Amiga/dir/System_P96/System/S/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/screenmode.prefs /opt/Amiga/dir/System_P96/System/Prefs/Env-Archive/Sys/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf/
+      cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
           
       
       cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
-      cp -rf /home/$USER/Amiga/dir/System_P96/System/Prefs/Patterns/Amiga_1024x768.jpg /home/$USER/Amiga/dir/System_P96/System/Prefs/Patterns/bsg_pm2_800x600.png
+      cp -rf /opt/Amiga/dir/System_P96/System/Prefs/Patterns/Amiga_1024x768.jpg /opt/Amiga/dir/System_P96/System/Prefs/Patterns/bsg_pm2_800x600.png
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -290,11 +290,11 @@ if [ ! -d /home/$USER/Amiga/dir/System_ADVSP ]; then
       echo ""   
  fi
  
- if [ ! -d /home/$USER/Amiga/dir/Amiga1000/ ]; then
-   cd /home/$USER/Amiga/dir/
+ if [ ! -d /opt/Amiga/dir/Amiga1000/ ]; then
+   cd /opt/Amiga/dir/
    unzip -u /opt/AmiRock/Amiga/Amiga1000.zip
-   cp -rf "/opt/AmiRock/Amiga/ClassicWB/Amiga1000.uae" /home/$USER/Amiga/conf/
-   cp -rf "/opt/AmiRock/Amiga/ClassicWB/Aros.uae" /home/$USER/Amiga/conf/
+   cp -rf "/opt/AmiRock/Amiga/ClassicWB/Amiga1000.uae" /opt/Amiga/conf/
+   cp -rf "/opt/AmiRock/Amiga/ClassicWB/Aros.uae" /opt/Amiga/conf/
    
  fi  
 }
@@ -310,12 +310,12 @@ ClassicWB13()
       echo " No Rights Reserved.  "
       echo " "
       
-if [ ! -f /home/$USER/Amiga/Install/ClassicWB_LITE_v28.zip ]; then
+if [ ! -f /opt/Amiga/Install/ClassicWB_LITE_v28.zip ]; then
       echo -e -n "$BLUE Downloading  ClassicWB_UAE_v28..."
       echo ""
       echo -e "$GRAY "
 
-      cd /home/$USER/Amiga/Install
+      cd /opt/Amiga/Install
 
       wget http://download.abime.net/classicwb/ClassicWB_LITE_v28.zip
 
@@ -335,8 +335,8 @@ fi
 
 
 
-if [ ! -d /home/$USER/Amiga/dir/Software/ ]; then
-cp -r -f  "/home/$USER/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /home/$USER/Amiga/dir/
+if [ ! -d /opt/Amiga/dir/Software/ ]; then
+cp -r -f  "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /opt/Amiga/dir/
 
 
 ClassicWB
@@ -365,7 +365,7 @@ clear
 	  echo -e  "   from your Amiga Forever installation to your AmiRock-OS Desktop "
 	  echo -e  " "
 	  echo -e  " - Or copy a legal 3.1 Rom as kick31a1200.rom to "
-	  echo -e  "   /home/$USER/Amiga/kickstarts/kick31a1200.rom "
+	  echo -e  "   /opt/Amiga/kickstarts/kick31a1200.rom "
 	  echo -e "$BLACK "
 	  
 	  
@@ -374,7 +374,7 @@ clear
 fi
 rm -d -r /opt/Amiga/Install/DF0/  
      
-      sudo chmod -R 777 /home/$USER/Amiga/
+      sudo chmod -R 777 /opt/Amiga/
       cd
       clear
       toilet "AmiRock-OS" --metal
