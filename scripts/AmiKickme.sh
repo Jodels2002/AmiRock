@@ -77,7 +77,7 @@ clear
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
        sudo chmod -R 777 /usr/share/plymouth/
        sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
-       #cp -rf  /home/pi/Amiga/data/amiberry-logo.png /usr/share/plymouth/themes/armbian/watermark.png
+
        
       
 
@@ -114,24 +114,21 @@ clear
 fi
    
 
-if [ ! -f /home/$USER/Amiga/data/amiberry_dev.png ]; then
-      sudo cp -R $HOME/AmiRock/Amiga/amiberry_dev.png /home/$USER/Amiga/data/
+if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
+      sudo cp -R /opt/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
       
 
- if [ -d /home/$USER/FS-UAE/Configurations/ ]; then
-      #update.sh
-     sudo cp -R $HOME/AmiRock/config/fs-uae/* /home/$USER/FS-UAE/Configurations/
- fi
+
 
 
 if [ -d /home/$USER/Amiga/dir/System_P96/ ]; then
-      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /home/$USER/Amiga/conf/
+      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
       sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
 fi
 
 if [ -d /home/$USER/Amiga/dir/System_ADVSP/ ]; then
-      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /home/$USER/Amiga/conf/
+      cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
       sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
 fi 
 
@@ -142,17 +139,17 @@ fi
 
       
    
-            if [ ! -f /home/$USER/Amiga/amiberry_old ]; then
-            cp -rf  /home/$USER/Amiga/amiberry_old /opt/Backup/
+            if [ ! -f /opt/Amiga/amiberry_old ]; then
+            cp -rf  /opt/Amiga/amiberry_old /opt/Backup/
 	    fi
-	    if [ ! -f /home/$USER/Amiga/amiberry ]; then
-            cp -rf  /home/$USER/Amiga/amiberry /opt/Backup/
+	    if [ ! -f /opt/Amiga/amiberry ]; then
+            cp -rf  /opt/Amiga/amiberry /opt/Backup/
 	    fi
-	    if [ ! -f /home/$USER/Amiga/amiberry_dev ]; then
-	    cp -rf  /home/$USER/Amiga/amiberry_dev /opt/Backup/
+	    if [ ! -f /opt/Amiga/amiberry_dev ]; then
+	    cp -rf  /opt/Amiga/amiberry_dev /opt/Backup/
 	    fi
 	    
-	    if [ ! -f /home/$USER/Amiga/kickstarts/A1200.rom ]; then
+	    if [ ! -f /opt/Amiga/kickstarts/A1200.rom ]; then
 	    
 	             clear
       toilet "AmiRock-OS" --metal
@@ -178,10 +175,10 @@ fi
       	sudo chmod -R 777 $HOME/RetroPieBIOS
       
          
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /home/$USER/Amiga/kickstarts/A500.rom
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /home/$USER/Amiga/kickstarts/A600.rom
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/A1200.rom
-	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/kick31a1200.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /opt/Amiga/kickstarts/A500.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /opt/Amiga/kickstarts/A600.rom
+      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/A1200.rom
+	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/kick31a1200.rom
 	
       	sudo rm -rf /home/$USER/RetroPieBIOS    
  fi
@@ -261,7 +258,7 @@ fi
       fi
       
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
-      sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png $HOME/Amiga/data/
+      sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
 
 
