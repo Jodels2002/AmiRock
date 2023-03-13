@@ -29,15 +29,15 @@ cd /opt/MegaAGS/
 
 if [ ! -d /opt/MegaAGS/games/Amiga/ ]; then
 clear
-      echo -e "$BLUE"
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+  
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
       echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
 
   7z x ./MegaAGS-v2022.11.11.7z
   clear
-      echo -e "$BLUE"
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+ 
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
       echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
     
