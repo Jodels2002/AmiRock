@@ -1,6 +1,6 @@
 if [ ! -d /home/pi/Amiga/Install/WHDLoad/Games ]; then 
 clear
-      toilet "KickPi-OS" --metal
+      toilet "AmiRock-OS" --metal
       echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 KickPi-OS "
       echo " No Rights Reserved.  "
@@ -8,7 +8,7 @@ clear
 	  echo -e "$BLACK  "
 	  echo -e "$BLUE Downloading WHDLOAD Games/Demos "
 	  echo -e "$BLACK  "
-
+mkdir /opt/Amiga/Install/
 mkdir /opt/Amiga/Install/WHDLoad
 mkdir /opt/Amiga/Install/WHDLoad/Games
 mkdir /opt/Amiga/Install/WHDLoad/Demos
