@@ -120,17 +120,26 @@ if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
       fi
       
 
+cd
+	     
 
 
 
 if [ -d /opt/Amiga/dir/System_P96/ ]; then
       #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
       sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+      cd /opt/Amiga/dir/System_P96/System/Devs
+      unzip -u  /opt/AmiRock/Amiga/ks.zip
+      cd
 fi
 
 if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
       #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
       sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
+      
+      cd /opt/Amiga/dir/System_ADVSP/System/Devs
+      unzip -u  /opt/AmiRock/Amiga/ks.zip
+      cd
 fi 
 
 if [ -d /opt/Backup/MegaAGS/games/Amiga/ ]; then
