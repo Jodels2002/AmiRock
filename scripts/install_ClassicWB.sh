@@ -277,7 +277,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-  	ClassicWB-P96_run 
+  	#ClassicWB-P96_run 
       echo ""   
  fi
  
@@ -371,3 +371,4 @@ fi
       echo -e "$BLACK  "
       echo -e "$BLUE ClassicWBs createt "
       echo -e "$BLACK  "
+      ClassicWB-P96_run
