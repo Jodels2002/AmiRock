@@ -39,7 +39,7 @@
       sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
       
    
-      sudo unzip -u  /opt/AmiRock/config/up.zip
+      sudo unzip -o  /opt/AmiRock/config/up.zip
       
       
       sudo chmod -R 777 /home/$USER/AmiRock
