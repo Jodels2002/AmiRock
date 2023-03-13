@@ -46,13 +46,7 @@
       sudo cp -rf /opt/AmiRock/config/Logo/* /opt/AmiRock/config/
       sudo cp -rf /opt/AmiRock/config/Logo/boot.jpg /usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg
      
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      
+   
     
            
       clear
@@ -63,7 +57,7 @@
       echo " "
       echo -e "$BLUE"
       echo " "
-      echo "AmiRock-OS Update Linux System ..."
+      echo " AmiRock-OS Update Linux System ..."
       echo -e "$GREY "
       echo " "
       sudo apt-get update
