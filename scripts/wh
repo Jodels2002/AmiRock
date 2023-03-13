@@ -1,8 +1,6 @@
 if [ ! -d /opt/Amiga/dir/System_ADVSP/ ]; then
  
-         cd /user/local/bin/
- 
-         ./install_ClassicWB.sh
+      install_ClassicWB.sh
  
  fi
 
