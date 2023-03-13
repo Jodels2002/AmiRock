@@ -126,40 +126,7 @@ cd
      mkdir /opt/Amiga/dir/Work/
  fi
 
-if [ -d /opt/Amiga/dir/System_P96/ ]; then
-      #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
-      sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
-      cd /opt/Amiga/dir/System_P96/System/Devs
-      unzip -u  /opt/AmiRock/Amiga/ks.zip
-      cd
-      
-      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
-      
-      cd /opt/Amiga/dir/Software/
-      sudo rm -rf /opt/Amiga/dir/Software/Games/
-      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf/
-      fi
-      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
-      
-      cd /opt/Amiga/dir/Software/
-      sudo rm -rf /opt/Amiga/dir/Software/Demos/
-      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Demos/ Demos
-      
-      fi
-      
-      
-fi
 
-if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
-      #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
-      sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
-      
-      cd /opt/Amiga/dir/System_ADVSP/System/Devs
-      unzip -u  /opt/AmiRock/Amiga/ks.zip
-      cd
-fi 
 
 if [ -d /opt/Backup/MegaAGS/games/Amiga/ ]; then
    
