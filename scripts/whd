@@ -87,7 +87,7 @@ clear
 	  echo -e "$BLUE Extracting WHDLOAD Demos "
 	  echo -e "$BLACK  "
  
-mkdir /opt/Amiga/dir/Work//WHDLoad_Demos/
+mkdir /opt/Amiga/dir/Work/WHDLoad_Demos/
 cd /opt/Amiga/dir/Work/WHDLoad_Demos/
 
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/AGA.zip 
@@ -122,7 +122,7 @@ if [ -d /opt/Amiga/dir/System_P96/ ]; then
      
       fi
       
-      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
+      if [ -d /opt/Amiga/dir/Work/WHDLoad_Demos/ ]; then
       
       cd /opt/Amiga/dir/Software/
       sudo rm -rf /opt/Amiga/dir/Software/Demos/
