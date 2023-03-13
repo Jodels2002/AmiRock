@@ -43,7 +43,7 @@ clear
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
