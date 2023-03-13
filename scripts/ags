@@ -1,6 +1,6 @@
 
-mkdir /opt/Backup/MegaAGS
-cd /opt/Backup/MegaAGS
+mkdir /opt/MegaAGS
+cd /opt/MegaAGS
 
 if [ ! -f /opt/Backup/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
@@ -10,7 +10,7 @@ if [ ! -f /opt/Backup/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
   7zip x ./MegaAGS-v2022.11.11.7z
   7zip x ./MegaAGS-Extras.7z
   
-if [ -d /opt/Backup/MegaAGS/games/Amiga/ ]; then
+if [ -d /opt/MegaAGS/games/Amiga/ ]; then
    
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/Amiga/conf/
