@@ -27,19 +27,14 @@ clear
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo "Extracting files .."
       echo -e "$GREY "
-      echo " "
+
   7z x ./MegaAGS-v2022.11.11.7z
   clear
  toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
       echo "Extracting files .."
       echo -e "$GREY "
-      echo " "
+    
   7z x ./MegaAGS-Extras.7z
 fi
   
