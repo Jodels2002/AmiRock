@@ -6,3 +6,5 @@ Comment=Amiga emulator
 Icon=/usr/share/applications/amiberry_dev.png
 Exec=amiberry_dev
 
+Path=/opt/Amiga
+
