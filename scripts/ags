@@ -1,3 +1,9 @@
+BLACK='\033[0;39m'
+      BLUE='\033[1;34m'
+      GREEN='\033[1;32m'
+      RED='\033[1;31m'
+      GREY='\033[1;30m'
+
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -23,16 +29,16 @@ cd /opt/MegaAGS/
 
 if [ ! -d /opt/MegaAGS/games/Amiga/ ]; then
 clear
- toilet "AmiRock-OS" --metal
+      echo -e "$BLUE"
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo "Extracting files .."
+      echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
 
   7z x ./MegaAGS-v2022.11.11.7z
   clear
- toilet "AmiRock-OS" --metal
+      echo -e "$BLUE"
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo "Extracting files .."
+      echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
     
   7z x ./MegaAGS-Extras.7z
@@ -47,7 +53,7 @@ clear
       echo " "
       echo -e "$BLUE"
       echo " "
-      echo "ready --- have fun "
+      echo -e "$GREEN ready  --- have fun :-)"
       echo -e "$GREY "
       echo " "
    
