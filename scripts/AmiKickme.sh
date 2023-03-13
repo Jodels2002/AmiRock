@@ -122,8 +122,9 @@ if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
 
 cd
 	     
-
-
+ if [ ! -d /opt/Amiga/dir/Work/ ]; then
+     mkdir /opt/Amiga/dir/Work/
+ fi
 
 if [ -d /opt/Amiga/dir/System_P96/ ]; then
       #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
@@ -131,6 +132,23 @@ if [ -d /opt/Amiga/dir/System_P96/ ]; then
       cd /opt/Amiga/dir/System_P96/System/Devs
       unzip -u  /opt/AmiRock/Amiga/ks.zip
       cd
+      
+      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
+      
+      cd /opt/Amiga/dir/Software/
+      sudo rm -rf /opt/Amiga/dir/Software/Games/
+      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
+      
+      fi
+      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
+      
+      cd /opt/Amiga/dir/Software/
+      sudo rm -rf /opt/Amiga/dir/Software/Demos/
+      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Demos
+      
+      fi
+      
+      
 fi
 
 if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
