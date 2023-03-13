@@ -1,7 +1,19 @@
-
-
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "Installing MegaAGS ..."
+      echo -e "$GREY "
+      echo " "
 
 if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
+      echo "Download MegaAGS"
+      echo -e "$GREY "
+      echo " "
       mkdir /opt/MegaAGS
       cd /opt/MegaAGS/
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
@@ -10,12 +22,48 @@ if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
 cd /opt/MegaAGS/
 
 if [ ! -d /opt/MegaAGS/games/Amiga/ ]; then
+clear
+ toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "Extracting files .."
+      echo -e "$GREY "
+      echo " "
   7z x ./MegaAGS-v2022.11.11.7z
+  clear
+ toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "Extracting files .."
+      echo -e "$GREY "
+      echo " "
   7z x ./MegaAGS-Extras.7z
 fi
   
 if [ -d /opt/MegaAGS/games/Amiga/ ]; then
+clear
+ toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo "ready --- have fun "
+      echo -e "$GREY "
+      echo " "
    
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/conf/
 fi 
+cd /opt/Amiga/
+      ./amiberry --config conf/MegaAGS.uae -G
+      cd
