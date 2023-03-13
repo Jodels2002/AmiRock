@@ -285,7 +285,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
    cd /opt/Amiga/dir/
    unzip -u /opt/AmiRock/Amiga/Amiga1000.zip
    cp -rf "/opt/AmiRock/Amiga/ClassicWB/Amiga1000.uae" /opt/Amiga/conf/
-   cp -rf "/opt/AmiRock/Amiga/ClassicWB/Aros.uae" /opt/Amiga/conf/
+   
    
  fi  
 }
