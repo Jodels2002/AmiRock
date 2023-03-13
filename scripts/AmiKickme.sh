@@ -175,7 +175,17 @@ fi
       	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/A1200.rom
 	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/kick31a1200.rom
 	
-      	sudo rm -rf /home/$USER/RetroPieBIOS    
+      	sudo rm -rf /home/$USER/RetroPieBIOS 
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+          
+      sudo apt install python3-pip  python3-dev  -y
+      sudo python3 -m pip install -U setuptools
+      sudo python3 -m pip install -U amitools   
+	
  fi
 
     clear
