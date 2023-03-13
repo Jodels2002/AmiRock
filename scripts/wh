@@ -38,7 +38,7 @@ gdown --id 12W_8pWRK5d2APJQoeNI7bxmVCBuQzOqc
 fi
 
 cd /opt/Amiga/Install/WHDLoad/Demos
-if [ ! -f /home/pi/Amiga/Install/WHDLoad/Demos/AGA.zip ]; then
+if [ ! -f /opt/Amiga/Install/WHDLoad/Demos/AGA.zip ]; then
 # Demos AGA
 gdown --id 12ycTm7EGRkLouuRMW896azGfKku3l1V3
 fi
@@ -47,7 +47,7 @@ if [ ! -f /opt/Amiga/Install/WHDLoad/Demos/OCS.zip ]; then
 gdown --id 12zOR1L6m9QhzvR3_L5DEJQIbPHvG8g42
 fi
 
-if [ ! -d /home/pi/Amiga/dir/WHDLoad/Games/OCS ]; then 
+if [ ! -d /opt/Amiga/dir/WHDLoad/Games/OCS ]; then 
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
