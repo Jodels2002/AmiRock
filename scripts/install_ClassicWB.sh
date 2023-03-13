@@ -358,6 +358,26 @@ clear
 	  exit
 	  
 fi
+
+if [ -d /opt/Amiga/dir/System_P96/ ]; then
+
+      sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+      sudo cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf
+      cd /opt/Amiga/dir/System_P96/System/Devs
+      unzip -u  /opt/AmiRock/Amiga/ks.zip
+      cd
+
+fi
+
+if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
+    
+ 
+      sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
+      sudo cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf
+      cd /opt/Amiga/dir/System_ADVSP/System/Devs
+      unzip -u  /opt/AmiRock/Amiga/ks.zip
+      cd
+fi 
        rm -d -r /opt/Amiga/Install/DF0/  
      
       sudo chmod -R 777 /opt/Amiga/
