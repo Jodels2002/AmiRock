@@ -129,3 +129,4 @@ if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
       cd
 fi 
 
+ClassicWB-P96_run
