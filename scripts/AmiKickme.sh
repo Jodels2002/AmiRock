@@ -220,16 +220,15 @@ fi
       
       echo " "
       echo "  ... cleanup Amiga folder  " 
-      sudo chmod -R 777 /home/$USER/Amiga
+     
       echo " "
       echo "  ... delete unnecessary files  " 
-      cd ~
+      cd  /opt/
       sudo find . -name "\._*" -type f -print0 | xargs -0 /bin/rm -f
       sudo find . -name "\.DS_*" -type f -print0 | xargs -0 /bin/rm -f
-      cd /home/$USER/Amiga/
       sudo find . -name "_UAEFSDB.___" -type f -print0 | xargs -0 /bin/rm -f
       cd ~
-      #sudo rm -rf ~/.cache/
+     
       
      
       
@@ -271,7 +270,7 @@ fi
       sudo chmod -R 777 /usr/local/bin/
       sudo chmod -R 777 /home/$USER/.config/
       sudo chmod -R 777 /home/$USER/.local/
-      sudo chmod -R 777 /opt/Amiga/
+      sudo chmod -R 777 /opt/
       sudo chmod -R 777 /home/$USER/Desktop/
       #sudo chmod -R 777 /usr/share/applications/
       sudo rm -rf ~/AmiRock
