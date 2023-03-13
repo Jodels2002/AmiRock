@@ -1,0 +1,90 @@
+if [ ! -d /home/pi/Amiga/Install/WHDLoad/Games ]; then 
+clear
+      toilet "KickPi-OS" --metal
+      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 KickPi-OS "
+      echo " No Rights Reserved.  "
+      echo " "      
+	  echo -e "$BLACK  "
+	  echo -e "$BLUE Downloading WHDLOAD Games/Demos "
+	  echo -e "$BLACK  "
+
+mkdir /opt/Amiga/Install/WHDLoad
+mkdir /opt/Amiga/Install/WHDLoad/Games
+mkdir /opt/Amiga/Install/WHDLoad/Demos
+fi
+
+
+if [ ! -f /usr/local/bin/gdown ]; then
+sudo pip install gdown
+fi
+cd /opt/Amiga/Install/WHDLoad/Games
+
+if [ ! -f /opt/Amiga/Install/WHDLoad/Games/OCS.zip ]; then
+# Game OCS
+gdown --id 12mNx9uZjiGY47mGN5It7oFjgttS7tZvm
+fi
+if [ ! -f /opt/Amiga/Install/WHDLoad/Games/AGA.zip ]; then
+# Game AGA
+gdown --id 12oG6cmivWTtz_ZgcWHgxcBdRWo4J3d55
+fi
+if [ ! -f /opt/Amiga/Install/WHDLoad/Games/CDTV.zip ]; then
+# Game CDTV
+gdown --id 12TU8U8L_3pe5Fg6A-u9PXLX1InbiCxBH
+fi
+if [ ! -f /opt/Amiga/Install/WHDLoad/Games/NTSC.zip ]; then
+# Game NTSC
+gdown --id 12W_8pWRK5d2APJQoeNI7bxmVCBuQzOqc
+fi
+
+cd /opt/Amiga/Install/WHDLoad/Demos
+if [ ! -f /home/pi/Amiga/Install/WHDLoad/Demos/AGA.zip ]; then
+# Demos AGA
+gdown --id 12ycTm7EGRkLouuRMW896azGfKku3l1V3
+fi
+if [ ! -f /opt/Amiga/Install/WHDLoad/Demos/OCS.zip ]; then
+# Demos OCS
+gdown --id 12zOR1L6m9QhzvR3_L5DEJQIbPHvG8g42
+fi
+
+if [ ! -d /home/pi/Amiga/dir/Work/WHDLoad_Games/It ]; then 
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 KickPi-OS "
+      echo " No Rights Reserved.  "
+      echo " "      
+	  echo -e "$BLACK  "
+	  echo -e "$BLUE Extracting WHDLOAD Games "
+	  echo -e "$BLACK  "
+mkdir /opt/Amiga/dir/Work/  
+mkdir /opt/Amiga/dir/Work/WHDLoad_Games/
+cd /opt/Amiga/dir/Work/WHDLoad_Games/
+
+unzip -o /opt/Amiga/Install/WHDLoad/Games/OCS.zip 
+unzip -o /opt/Amiga/Install/WHDLoad/Games/AGA.zip 
+unzip -o /opt/Amiga/Install/WHDLoad/Games/CDTV.zip 
+unzip -o /opt/Amiga/Install/WHDLoad/Games/NTSC.zip 
+
+
+fi
+
+if [ ! -d /home/pi/Amiga/dir/Work/WHDLoad_Demos/OCS ]; then 
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 KickPi-OS "
+      echo " No Rights Reserved.  "
+      echo " "      
+	  echo -e "$BLACK  "
+	  echo -e "$BLUE Extracting WHDLOAD Demos "
+	  echo -e "$BLACK  "
+mkdir /home/pi/Amiga/dir/Work/  
+mkdir /home/pi/Amiga/dir/Work/WHDLoad_Demos/
+cd /home/pi/Amiga/dir/Work/WHDLoad_Demos/
+
+unzip -o /opt/Amiga/Install/WHDLoad/Demos/AGA.zip 
+unzip -o /opt/Amiga/Install/WHDLoad/Demos/OCS.zip 
+
+fi
+
