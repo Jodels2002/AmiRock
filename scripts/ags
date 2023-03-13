@@ -5,6 +5,7 @@ BLACK='\033[0;39m'
       GREY='\033[1;30m'
       
       sudo apt install 7z -y
+      sudo cp -rf /bin/7zz /bin/7z 
 
 clear
       toilet "AmiRock-OS" --metal
