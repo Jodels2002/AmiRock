@@ -1,4 +1,13 @@
-if [ ! -d /home/pi/Amiga/Install/WHDLoad/Games ]; then 
+if [ ! -d /opt/Amiga/dir/System_ADVSP/ ]; then
+ 
+         cd /user/local/bin/
+ 
+         ./install_ClassicWB.sh
+ 
+ fi
+
+
+if [ ! -d /opt/Amiga/Install/WHDLoad/Games ]; then 
 
 mkdir /opt/Amiga/Install/
 mkdir /opt/Amiga/Install/WHDLoad
