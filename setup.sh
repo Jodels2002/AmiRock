@@ -64,6 +64,8 @@ sudo apt install malirun -y
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential cmake -y
   sudo apt install arqiver  -y
+  sudo apt install 7z -y
+  sudo cp -rf /bin/7zz /bin/7z 
 
   #sudo apt install -y nemo xini* xorg
         
