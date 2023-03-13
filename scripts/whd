@@ -1,3 +1,26 @@
+if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
+
+     echo -e  "Installation aborted..."
+     echo -e  "$RED 1.> Not enough disk space !                            -"
+     echo -e "$BLUE  1.> You need 10GB Avial left! " 
+     echo -e "$BLACK 1.> "
+     echo -e  ""
+ 
+     sleep 4
+     echo -e  ""
+
+		    		
+        fi
+	   
+     
+     else
+     echo -e "$BLACK 1.>$GREEN Enough free space:-) "  
+     echo -e  ""   
+              
+
+
+
+
 if [ ! -d /opt/Amiga/dir/System_ADVSP/ ]; then
  
       install_ClassicWB.sh
@@ -139,3 +162,4 @@ clear
 	  echo -e "$BLACK  "
 
 ClassicWB-P96_run
+fi 
