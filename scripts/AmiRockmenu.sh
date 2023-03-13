@@ -20,7 +20,6 @@ MENU="Version 3.1:"
 
 OPTIONS=(d "Boot to AmiRock  Desktop     "
          i "Install ClassicWB             "
-         m "Reset Amiga Folder            "  
          u "Update AmiRock-OS             "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
@@ -76,53 +75,7 @@ case $CHOICE in
             u
             ;;  
             
-          m)
-             #***********************************************  #AmiRock-OS install script  ***********************************
-             #************************************************ Reset Amiga       ************************************** 
-            clear
-	    cd
-	     sudo rm -rf /opt/Amiga
-	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
-	     sudo ln -s /opt/Amiga/ Amiga
-             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
-	      clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  Reset Amiga Folder! "
-      echo " " 
-
-      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
-      echo "1>CLI"
-      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
-      echo "1>CLI: "
-      echo "1>                  Greetings your´s "
-      echo "1>Assign >NIL:      Bernd Titze"
-      echo " "
-      echo " " 
-      echo "	LOADWB ...  :-)"
-      sleep 1s
-    
-   cd  
-      	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
-      	
-      	sudo chmod -R 777 $HOME/RetroPieBIOS
-      
-         
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /home/$USER/Amiga/kickstarts/A500.rom
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /home/$USER/Amiga/kickstarts/A600.rom
-      	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/A1200.rom
-	cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /home/$USER/Amiga/kickstarts/kick31a1200.rom
-	
-      	 sudo rm -rf /home/$USER/RetroPieBIOS
-	 sudo rm -rf $HOME/Amiga/conf/amiberry.conf
-	 sudo rm -rf $HOME/Amiga/conf/amiberry-osx.conf
-            
-	    u
-	    ;;  
-	    
-      
+              
             
           n)
        
