@@ -206,7 +206,7 @@ fi
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
       #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
-      sudo apt purge terminator -y
+      
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
