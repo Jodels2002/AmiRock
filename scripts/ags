@@ -2,7 +2,7 @@
 mkdir /opt/MegaAGS
 cd /opt/MegaAGS
 
-if [ ! -f /opt/Backup/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
+if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
       
       fi
