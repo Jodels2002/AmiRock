@@ -1,0 +1,11 @@
+if [ ! -d /opt/Amiga/dir/System_ADVSP/ ]; then
+ 
+         cd /user/local/bin/
+ 
+         ./install_ClassicWB.sh
+ 
+ fi
+      
+ cd /opt/Amiga/
+      ./amiberry --config conf/MegaAGS.uae -G
+      cd
