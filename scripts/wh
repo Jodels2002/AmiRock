@@ -47,7 +47,7 @@ if [ ! -f /opt/Amiga/Install/WHDLoad/Demos/OCS.zip ]; then
 gdown --id 12zOR1L6m9QhzvR3_L5DEJQIbPHvG8g42
 fi
 
-if [ ! -d /home/pi/Amiga/dir/Work/WHDLoad_Games/It ]; then 
+if [ ! -d /home/pi/Amiga/dir/WHDLoad/Games/OCS ]; then 
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -57,9 +57,9 @@ clear
 	  echo -e "$BLACK  "
 	  echo -e "$BLUE Extracting WHDLOAD Games "
 	  echo -e "$BLACK  "
-mkdir /opt/Amiga/dir/Work/  
-mkdir /opt/Amiga/dir/Work/WHDLoad_Games/
-cd /opt/Amiga/dir/Work/WHDLoad_Games/
+mkdir /opt/Amiga/dir/WHDLoad/  
+mkdir /opt/Amiga/dir/WHDLoad/WHDLoad_Games/
+cd /opt/Amiga/dir//WHDLoad/WHDLoad_Games/
 
 unzip -o /opt/Amiga/Install/WHDLoad/Games/OCS.zip 
 unzip -o /opt/Amiga/Install/WHDLoad/Games/AGA.zip 
@@ -69,7 +69,7 @@ unzip -o /opt/Amiga/Install/WHDLoad/Games/NTSC.zip
 
 fi
 
-if [ ! -d /home/pi/Amiga/dir/Work/WHDLoad_Demos/OCS ]; then 
+if [ ! -d /home/pi/Amiga/dir/WHDLoad/WHDLoad_Demos/AGA ]; then 
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
@@ -79,9 +79,9 @@ clear
 	  echo -e "$BLACK  "
 	  echo -e "$BLUE Extracting WHDLOAD Demos "
 	  echo -e "$BLACK  "
-mkdir /opt/Amiga/dir/Work/  
-mkdir /opt/Amiga/dir/Work/WHDLoad_Demos/
-cd /opt/Amiga/dir/Work/WHDLoad_Demos/
+ 
+mkdir /opt/Amiga/dir/WHDLoad/WHDLoad_Demos/
+cd /opt/Amiga/dir/WHDLoad/WHDLoad_Demos/
 
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/AGA.zip 
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/OCS.zip 
