@@ -2,6 +2,7 @@
 Name=ClassicWB-ADVSP
 Exec=ClassicWB-ADVSP_run
 Icon=/opt/Amiga/data/amiberry.png
+Path=/opt/Amiga
 Terminal=true
 Type=Application
 Keywords=file manager;console;
