@@ -1,4 +1,10 @@
 
 mkdir /opt/Backup/MegaAGS
 cd /opt/Backup/MegaAGS
-wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
+
+if [ ! -f /opt/Backup/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
+      wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
+      
+      fi
+      
+      
