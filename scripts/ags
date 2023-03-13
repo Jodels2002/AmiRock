@@ -12,12 +12,9 @@ clear
       echo " "
       echo -e "$BLUE"
       echo " "
-      echo "Installing MegaAGS ..."
       echo -e "$GREY "
-      echo " "
-echo -e  ""
-	echo -e -n "$BLACK Check free disk space..." 
-	echo -e "$BLUE "
+      echo -e -n "$BLACK Check free disk space..." 
+      echo -e "$BLUE "
 	df -H -l /root
 	echo -e -n " "
 FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
@@ -30,15 +27,15 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
      echo -e "$BLACK 1.> "
      echo -e  ""
  
-     sleep 4
-     echo -e  ""
-
-		    		
-    
-	   
+     sleep 2
+   
      
      else
 if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
+      clear
+      echo -e "$GREEN "
+      echo "Installing MegaAGS ..."
+      echo -e "$GREY "
       echo "Download MegaAGS"
       echo -e "$GREY "
       echo " "
