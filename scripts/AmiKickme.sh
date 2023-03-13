@@ -144,7 +144,7 @@ if [ -d /opt/Amiga/dir/System_P96/ ]; then
       
       cd /opt/Amiga/dir/Software/
       sudo rm -rf /opt/Amiga/dir/Software/Demos/
-      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Demos
+      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Demos/ Demos
       
       fi
       
