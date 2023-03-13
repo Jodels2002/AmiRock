@@ -1,3 +1,10 @@
+echo -e  ""
+	echo -e -n "$BLACK Check free disk space..." 
+	echo -e "$BLUE "
+	df -H -l /root
+	echo -e -n " "
+FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
+
 if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
 
      echo -e  "Installation aborted..."
@@ -10,7 +17,7 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
      echo -e  ""
 
 		    		
-        fi
+    
 	   
      
      else
