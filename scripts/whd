@@ -122,7 +122,7 @@ fi
 
 if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
       #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
-      sudo cp -rf $HOME/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
+      sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
       
       cd /opt/Amiga/dir/System_ADVSP/System/Devs
       unzip -u  /opt/AmiRock/Amiga/ks.zip
