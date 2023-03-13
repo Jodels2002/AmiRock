@@ -1,19 +1,19 @@
 if [ ! -d /home/pi/Amiga/Install/WHDLoad/Games ]; then 
+
+mkdir /opt/Amiga/Install/
+mkdir /opt/Amiga/Install/WHDLoad
+mkdir /opt/Amiga/Install/WHDLoad/Games
+mkdir /opt/Amiga/Install/WHDLoad/Demos
+fi
 clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 KickPi-OS "
       echo " No Rights Reserved.  "
       echo " "      
 	  echo -e "$BLACK  "
 	  echo -e "$BLUE Downloading WHDLOAD Games/Demos "
 	  echo -e "$BLACK  "
-mkdir /opt/Amiga/Install/
-mkdir /opt/Amiga/Install/WHDLoad
-mkdir /opt/Amiga/Install/WHDLoad/Games
-mkdir /opt/Amiga/Install/WHDLoad/Demos
-fi
-
 
 if [ ! -f /usr/local/bin/gdown ]; then
 sudo pip install gdown
@@ -50,7 +50,7 @@ fi
 if [ ! -d /home/pi/Amiga/dir/Work/WHDLoad_Games/It ]; then 
 clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 KickPi-OS "
       echo " No Rights Reserved.  "
       echo " "      
@@ -79,9 +79,9 @@ clear
 	  echo -e "$BLACK  "
 	  echo -e "$BLUE Extracting WHDLOAD Demos "
 	  echo -e "$BLACK  "
-mkdir /home/pi/Amiga/dir/Work/  
-mkdir /home/pi/Amiga/dir/Work/WHDLoad_Demos/
-cd /home/pi/Amiga/dir/Work/WHDLoad_Demos/
+mkdir /opt/Amiga/dir/Work/  
+mkdir /opt/Amiga/dir/Work/WHDLoad_Demos/
+cd /opt/Amiga/dir/Work/WHDLoad_Demos/
 
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/AGA.zip 
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/OCS.zip 
