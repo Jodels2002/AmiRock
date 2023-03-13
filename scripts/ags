@@ -7,4 +7,7 @@ if [ ! -f /opt/Backup/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       
       fi
       
-      
+  7zip x ./MegaAGS-v2022.11.11.7z
+  7zip x ./MegaAGS-Extras.7z
+  
+
