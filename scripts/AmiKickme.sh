@@ -36,6 +36,8 @@
 	 sudo chmod -R 777 /home/$USER/Desktop/
       fi
       sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
+      sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
+      
       
       
       sudo chmod -R 777 /home/$USER/AmiRock
