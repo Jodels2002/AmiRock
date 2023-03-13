@@ -19,7 +19,8 @@ TITLE="AmiRock-OS ROM Operating System"
 MENU="Version 3.1:"
 
 OPTIONS=(d "Boot to AmiRock  Desktop     "
-         i "Install ClassicWB             "
+         i "Download & Install ClassicWB  "
+	 m "Download & Install MegaAGS    "
          u "Update AmiRock-OS             "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
@@ -75,7 +76,12 @@ case $CHOICE in
             u
             ;;  
             
-              
+           m)
+            #update
+            clear
+            ags
+            ;;  
+               
             
           n)
        
