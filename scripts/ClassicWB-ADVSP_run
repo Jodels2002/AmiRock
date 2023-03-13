@@ -1,5 +1,5 @@
  
- if [ ! -d /opt/Backup/dir/System_ADVSP/ ]; then
+ if [ ! -d /opt/Amiga/dir/System_ADVSP/ ]; then
  
          cd /user/local/bin/
  
