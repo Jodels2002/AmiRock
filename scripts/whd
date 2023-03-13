@@ -148,6 +148,7 @@ if [ -d /opt/Amiga/dir/System_P96/ ]; then
       
       cd /opt/Amiga/dir/Software/
       sudo rm -rf /opt/Amiga/dir/Software/Games/
+      sudo rm -rf /opt/Amiga/dir/Work/Software/
       sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
      
       fi
