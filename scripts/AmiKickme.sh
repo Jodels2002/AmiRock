@@ -138,8 +138,8 @@ if [ -d /opt/Amiga/dir/System_P96/ ]; then
       cd /opt/Amiga/dir/Software/
       sudo rm -rf /opt/Amiga/dir/Software/Games/
       sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
-      cp -rf /opt/Amiga/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
-      cp -rf /opt/Amiga/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
       fi
       if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
       
