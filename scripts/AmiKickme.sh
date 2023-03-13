@@ -35,6 +35,24 @@
 	
 	 sudo chmod -R 777 /home/$USER/Desktop/
       fi
+      
+      if [  -d /home/rock/wine/share/wine ]; then
+         mkdir /opt/Amiga/dir
+	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
+	 sudo rm -rf /home/$USER/Amiga
+	 cd
+	
+          #sudo apt purge gnome* -y
+         sudo apt install xfce4 -y
+	 sudo apt install xfce4-terminal -y
+	 sudo apt purge terminator -y
+	 
+	
+	 sudo chmod -R 777 /home/$USER/Desktop/
+      fi
+      
+      
+      
       sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
       
