@@ -25,53 +25,9 @@ GREY='\033[1;30m'
 
       
 
- if [ -d /home/$USER/Desktop/Shared/ ]; then
+
+      
  
-          
-      sudo rsync -av --ignore-existing /home/$USER/Desktop/Shared/* ~/Amiga 
-      sudo chmod -R 777 /opt/Amiga/
-      sudo cp  -rf  /opt/Amiga/rom/amiga-os-310-a1200.rom /opt/Amiga/kickstarts/kick31a1200.rom
-      sudo mv /opt/Amiga/rom/* /opt/Amiga/kickstarts/
-      sudo rm -d /opt/Amiga/rom/
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-  	 
-      echo ""   
-      
-fi
-      
-if [  -d "/boot/Shared/" ]; then
-	
-  
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "      
-	  echo -e "$BLACK  "
-	  echo -e "$BLUE             AmigaForever * by Cloanto "
-	  echo -e "$BLACK  "
-	  echo -e "$BLACK 1>Please note that the Kickroms and Workbench"
-	  echo -e "$BLACK 1>are still under copyright!" 
-      echo -e "$BLACK 1>  "   
-	  echo -e "$BLACK 1>Assign >NIL: Greetings your´s B. Titze "
-	  echo -e "$GREEN "
-	  
-
-
-  
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-  	 
-      echo ""   
-fi  
       mkdir /opt/Amiga/dir/Work
       mkdir /opt/Amiga/dir/Work/Software
       mkdir /opt/Amiga/Install/
