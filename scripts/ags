@@ -1,15 +1,18 @@
 
-mkdir /opt/MegaAGS
-cd /opt/MegaAGS
+
 
 if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
+      mkdir /opt/MegaAGS
+      cd /opt/MegaAGS/
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
       
       fi
 cd /opt/MegaAGS/
 
-  7zip x ./MegaAGS-v2022.11.11.7z
-  7zip x ./MegaAGS-Extras.7z
+if [ ! -d /opt/MegaAGS/games/Amiga/ ]; then
+  7z x ./MegaAGS-v2022.11.11.7z
+  7z x ./MegaAGS-Extras.7z
+fi
   
 if [ -d /opt/MegaAGS/games/Amiga/ ]; then
    
