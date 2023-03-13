@@ -38,6 +38,8 @@
       sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
       
+   
+      sudo unzip -u  /opt/AmiRock/config/up.zip
       
       
       sudo chmod -R 777 /home/$USER/AmiRock
