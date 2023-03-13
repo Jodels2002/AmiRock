@@ -80,7 +80,7 @@ if [ ! -d /opt/Amiga/dir/Work/WHDLoad_Demos/AGA ]; then
 clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 KickPi-OS "
+      echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "      
 	  echo -e "$BLACK  "
@@ -94,39 +94,48 @@ unzip -o /opt/Amiga/Install/WHDLoad/Demos/AGA.zip
 unzip -o /opt/Amiga/Install/WHDLoad/Demos/OCS.zip 
 
 fi
-if [ -d /opt/Amiga/dir/System_P96/ ]; then
-      #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/Amiga/conf/
-      sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
-      cd /opt/Amiga/dir/System_P96/System/Devs
-      unzip -u  /opt/AmiRock/Amiga/ks.zip
-      cd
-      
-      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
-      
-      cd /opt/Amiga/dir/Software/
-      sudo rm -rf /opt/Amiga/dir/Software/Games/
-      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf/
-      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf/
-      fi
-      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
-      
-      cd /opt/Amiga/dir/Software/
-      sudo rm -rf /opt/Amiga/dir/Software/Demos/
-      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Demos/ Demos
-      
-      fi
-      
-      
-fi
 
 if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
-      #cp -rf $HOME/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/Amiga/conf/
+    
+     
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf/
       sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/ 
       
       cd /opt/Amiga/dir/System_ADVSP/System/Devs
       unzip -u  /opt/AmiRock/Amiga/ks.zip
       cd
 fi 
+if [ -d /opt/Amiga/dir/System_P96/ ]; then
+    
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf/
+      sudo cp -rf $HOME/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+      cd /opt/Amiga/dir/System_P96/System/Devs
+      unzip -u  /opt/AmiRock/Amiga/ks.zip
+      cd
+ fi 
+ 
+      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
+      
+      cd /opt/Amiga/dir/Software/
+      sudo rm -rf /opt/Amiga/dir/Software/Games/
+      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Games/ Games
+     
+      fi
+      
+      if [ -d /opt/Amiga/dir/Work/WHDLoad_Games/ ]; then
+      
+      cd /opt/Amiga/dir/Software/
+      sudo rm -rf /opt/Amiga/dir/Software/Demos/
+      sudo ln -s /opt/Amiga/dir/Work/WHDLoad_Demos/ Demos
+      
+    fi
+
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY KickPI-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "      
+	  echo -e "$BLACK  "
 
 ClassicWB-P96_run
