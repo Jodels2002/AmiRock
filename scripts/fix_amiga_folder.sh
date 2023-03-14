@@ -8,7 +8,17 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
-cd
+if [ ! -d /opt/Amiga/data/ ]; then
+      
+
+            dialog --title "Did you want to install a fresh Amiga folder? " \
+            --backtitle "AmiRock-OS Amiga folder renew" \
+            --yesno "\n If you don't want to renew the folder,\n please answer with no. \n  " \ 10 60
+            response=$?
+
+            case $response in
+                  1) 
+	         cd
 	     sudo rm -rf /opt/Amiga
        sudo mkdir /opt/
 	     sudo mkdir /opt/Amiga
@@ -33,9 +43,7 @@ cd
             clear
       toilet "AmiRock-OS" --metal
       echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
+ 
       
       cd 
 
@@ -43,3 +51,21 @@ cd
 	sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
   
   AmiKickme.sh
+
+	         
+	                           ;;
+                  0) 
+		  echo "Ok, exit...nothing to do"
+		  
+   
+                                    ;;
+
+                  255) echo "[ESC] key pressed.";;
+                           esac
+           
+      
+      
+      fi
+
+
+
