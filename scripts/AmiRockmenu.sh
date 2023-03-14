@@ -25,6 +25,7 @@ OPTIONS=(d -"  Back to AmiRock Desktop               "
          u "Update AmiRock-OS             "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
+	 f "Fix Amiga folder     (new)    "
          c "Armbian-config                "
          s "Shutdown                      ")
         
@@ -75,7 +76,14 @@ case $CHOICE in
             #update
             clear
             u
-            ;;  
+            ;; 
+	    
+	  f)
+            #update
+            clear
+            fix_amiga_folder.sh
+            ;; 
+    
             
            m)
             #update
