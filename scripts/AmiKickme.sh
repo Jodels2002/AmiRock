@@ -11,6 +11,42 @@
       GREY='\033[1;30m'
 
   clear
+  
+  if [ ! -d /opt/Amiga/data/ ]; then
+      
+
+        cd
+	     sudo rm -rf /opt/Amiga
+             sudo mkdir /opt/
+	     sudo mkdir /opt/Amiga
+	     #sudo ln -s /opt/Amiga/ Amiga
+             unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+       clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  Fix Amiga Folder "
+      echo " "
+  
+      cd 
+
+      sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
+      
+      sudo cp -R /opt/Amiga/data/amiberry.png /usr/share/applications/
+      sudo cp -R /opt/Amiga/data/amiberry_dev.png /usr/share/applications/
+      sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+      
+            clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+ 
+      
+      cd 
+
+  
+	
+  
+ fi
       
       sudo chmod -R 777 /opt/
       
