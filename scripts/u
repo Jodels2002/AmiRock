@@ -11,10 +11,10 @@ GREY='\033[1;30m'
 
 
 cd
-clear
+ clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       echo -e "$GREY "
@@ -23,38 +23,38 @@ clear
 
        
 sudo dpkg --configure -a
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 sudo apt -y --fix-broken install
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 sudo apt -f -y install
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 sudo apt-get autoremove -y
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 sudo apt-get autoclean
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 sudo apt-get clean
@@ -63,10 +63,10 @@ sudo apt-get upgrade
 sudo update-initramfs -u
 #************************** Get update **********************************************************************
 sudo apt purge terminator -y
-clear
+ clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
 
