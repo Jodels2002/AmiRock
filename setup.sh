@@ -2,6 +2,11 @@
 # Install AmiRock
 # B.Titze 2023
 
+
+# systemctl set-default multi-user.target
+# systemctl set-default graphical.target
+
+
 BLACK='\033[0;39m'
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
