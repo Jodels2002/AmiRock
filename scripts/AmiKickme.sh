@@ -47,7 +47,7 @@
   
  fi
       
-      sudo chmod -R 755 /opt/
+      sudo chmod -R 775 /opt/
       
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
