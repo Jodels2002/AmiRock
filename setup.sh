@@ -145,6 +145,7 @@ cd
       git clone --depth=1 https://github.com/rewtnull/amigafonts
       sudo cp -rf /home/$USER/amigafonts/ttf/* /usr/share/fonts/truetype/
       sudo rm -rf /home/$USER/amigafonts/
+      sudo rm -rf /opt/Amiga/conf/am*
       
                clear
       toilet "AmiRock-OS" --metal
@@ -168,7 +169,7 @@ cd
       echo " "
       echo "  First installation "
       echo " "
-	sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+      sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
 	    
 	
 
