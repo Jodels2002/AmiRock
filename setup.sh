@@ -280,7 +280,8 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt purge terminator -y
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
-	 
+	 sudo rm -rf $HOME/.config/
+         unzip -u  $HOME/AmiRock/config/afconfig.zip
 	 
 	 sudo chmod -R 755 /home/$USER/
 	 #sudo reboot now
