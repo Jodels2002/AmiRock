@@ -5,7 +5,8 @@
 
 # sudo systemctl set-default multi-user.target
 # systemctl set-default graphical.target
-# update.rc firstrun defaults
+# update.rc firstrun defaults first Festplatte zu klein
+
 
 BLACK='\033[0;39m'
 BLUE='\033[1;34m'
