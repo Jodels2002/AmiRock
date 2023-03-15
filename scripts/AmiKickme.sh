@@ -15,12 +15,10 @@
   if [ ! -d /opt/Amiga/data/ ]; then
       
 
-        cd
+       cd /opt/
 	     sudo rm -rf /opt/Amiga
-             sudo mkdir /opt/
-	     sudo mkdir /opt/Amiga
-	     #sudo ln -s /opt/Amiga/ Amiga
-	     cd /opt/
+             #sudo ln -s /opt/Amiga/ Amiga
+	        
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
        clear
       toilet "AmiRock-OS" --metal
