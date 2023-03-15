@@ -68,8 +68,8 @@ sudo apt install malirun -y
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
-  sudo apt install build-essential cmake -y
-  sudo apt install arqiver  -y
+  sudo apt install build-essential -y
+  sudo apt install arqiver nemo -y
   sudo apt install 7z -y
    sudo apt install raspi-config -y
   sudo cp -rf /bin/7zz /bin/7z 
@@ -266,7 +266,24 @@ cd
       sudo raspi-config nonint do_expand_rootfs
 	
 #************************************************ End First run        **************************************   		
-     
+
+if [  -d /home/rock/wine/share/wine ]; then
+         mkdir /opt/Amiga/dir
+	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
+	 sudo rm -rf /home/$USER/Amiga
+	 sudo rm -rf /opt/Amiga/conf/am*
+	 cd
+	
+         sudo apt purge gnome* -y
+         sudo apt install xfce4 -y
+	 sudo apt install xfce4-terminal -y
+	 sudo apt purge terminator -y
+	 cp -rf /home/$USER/AmiRock/config/bashrc /home/$USER/.bashrc
+	
+	 sudo chmod -R 755 /home/$USER/
+	 sudo reboot now
+      fi
+ #************************************************ End First run        **************************************   	     
  $HOME/AmiRock/scripts/AmiKickme.sh
       
       
