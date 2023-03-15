@@ -82,7 +82,7 @@
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal nemo -y
 	 sudo apt purge terminator -y
-	 cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/.bashrc
+	 cp -rf /home/$USER/AmiRock/config/bashrc /home/$USER/.bashrc
 	
 	 sudo chmod -R 755 /home/$USER/
 	 sudo reboot now
