@@ -78,13 +78,14 @@
 	 sudo rm -rf /opt/Amiga/conf/am*
 	 cd
 	
-          #sudo apt purge gnome* -y
+         sudo apt purge gnome* -y
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal nemo -y
 	 sudo apt purge terminator -y
-	 sudo 
+	 cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/.bashrc
 	
-	 sudo chmod -R 755 /home/$USER/Desktop/
+	 sudo chmod -R 755 /home/$USER/
+	 sudo reboot now
       fi
       
       
