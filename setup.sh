@@ -253,7 +253,7 @@ cd
 #***********************************************  #AmiRock-OS install script  ***********************************
       
  
-	     sudo chmod -R 755 /usr/share/plymouth/
+	     sudo chmod -R 775 /usr/share/plymouth/
   	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
   	clear
@@ -281,7 +281,10 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
-	 sudo usermod -a -G root rock	 
+	 sudo usermod -a -G root rock
+	 sudo adduser amiga
+	 echo 'amiga:amiga' | chpasswd	
+	 usermod -aG amiga
 	 
 	 sudo chmod -R 755 /home/$USER/
 	 #sudo reboot now
