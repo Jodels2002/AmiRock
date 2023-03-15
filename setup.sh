@@ -98,6 +98,7 @@ cd
 	     sudo mkdir /opt/Amiga
 	     sudo chmod -R 777 /opt/
 	     sudo ln -s /opt/Amiga/ Amiga
+	     cd /opt/
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
        clear
       toilet "AmiRock-OS" --metal
