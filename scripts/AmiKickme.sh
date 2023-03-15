@@ -206,12 +206,9 @@ fi
 	             clear
       toilet "AmiRock-OS" --metal
       echo " "
-      echo " "
-      echo "  First installation "
-     echo -e "$RED "
-
+      echo -e "$RED "
       echo " 1>Please note that the Kickroms and Workbench files are still under copyright!  "
-      echo "$BLUE 1>CLI"
+      echo -e "$BLUE "
       echo " 1>	So only use this image if you own the original Amigas, Amiga Forever."
       echo " 1>CLI: "
       echo -e "$BLACK "
