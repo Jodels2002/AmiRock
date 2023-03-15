@@ -108,8 +108,8 @@
            
       clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       echo -e "$BLUE"
@@ -136,10 +136,10 @@ clear
       # Update allways Routine
       if [ ! -d /opt/AmiRock/ ]; then
  
-      clear
+       clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       echo -e "$BLUE"
@@ -152,8 +152,8 @@ clear
       else 
       clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       echo -e "$BLUE"
@@ -207,13 +207,14 @@ fi
       toilet "AmiRock-OS" --metal
       echo " "
       echo -e "$RED "
-      echo " 1>Please note that the Kickroms and Workbench files are still under copyright!  "
+      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
       echo -e "$BLUE "
-      echo " 1>	So only use this image if you own the original Amigas, Amiga Forever."
-      echo " 1>CLI: "
+      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
+      echo "1>CLI: "
       echo -e "$BLACK "
       echo " 1>                  Greetings your´s "
       echo " 1>Assign >NIL:      Bernd Titze"
+      echo " "
       echo " "
 
    cd  
@@ -230,8 +231,8 @@ fi
       	sudo rm -rf /home/$USER/RetroPieBIOS 
  clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
           
       sudo apt install python3-pip  python3-dev  -y
@@ -242,8 +243,8 @@ fi
 
     clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       echo -e "$BLUE"
@@ -263,10 +264,10 @@ fi
       
       #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
       
-      clear
+       clear
       toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
       echo " "
       
@@ -333,10 +334,10 @@ fi
   
 cd
 		
-clear
-toilet "AmiRock" --metal
-echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-echo " Version V2.0 2020-2021 KickPi-OS "
+ clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo "$GREY Version V2.0 2020-2021 AmiRock-OS "
 echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
