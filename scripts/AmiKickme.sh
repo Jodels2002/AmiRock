@@ -326,6 +326,7 @@ fi
       sudo chmod -R 755 /home/$USER/.config/
       sudo chmod -R 755 /home/$USER/.local/
       sudo chmod -R 755 /opt/
+      sudo chmod -R 777 /opt/Amiga
       sudo chmod -R 755 /home/$USER/Desktop/
       sudo chmod -R 755 /usr/share/applications/
       sudo rm -rf ~/AmiRock
