@@ -274,7 +274,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo rm -rf /opt/Amiga/conf/am*
 	 cd
 	
-         sudo apt purge gnome* -y
+         sudo apt purge gnome-c* -y
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
