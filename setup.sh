@@ -3,7 +3,7 @@
 # B.Titze 2023
 
 
-# systemctl set-default multi-user.target
+# sudo systemctl set-default multi-user.target
 # systemctl set-default graphical.target
 
 
@@ -61,8 +61,8 @@ sudo apt install malirun -y
 
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
-      sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 777 /opt/AmiRock
+      sudo chmod -R 755 /usr/local/bin
+      sudo chmod -R 755 /opt/AmiRock
       
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
@@ -101,7 +101,7 @@ systemctl start fan-control
 cd
 	     sudo rm -rf /opt/Amiga
 	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
+	     sudo chmod -R 755 /opt/
 	     sudo ln -s /opt/Amiga/ Amiga
 	     cd /opt/
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
@@ -241,7 +241,7 @@ cd
  #***********************************************  #AmiRock-OS install script  ***********************************
      
      if [ ! -d /opt/Backup/ ]; then
-      sudo chmod -R 777 /opt/
+      sudo chmod -R 755 /opt/
       mkdir /opt/Backup/
       mkdir /opt/Backup/config/
       cp -rf /etc/lightdm/ /opt/Backup/config/
@@ -250,7 +250,7 @@ cd
 #***********************************************  #AmiRock-OS install script  ***********************************
       
  
-	     sudo chmod -R 777 /usr/share/plymouth/
+	     sudo chmod -R 755 /usr/share/plymouth/
   	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
   	clear
@@ -263,7 +263,6 @@ cd
 	
 #************************************************ End First run        **************************************   		
      
- 
  $HOME/AmiRock/scripts/AmiKickme.sh
       
       
