@@ -47,7 +47,7 @@
   
  fi
       
-      sudo chmod -R 777 /opt/
+      sudo chmod -R 755 /opt/
       
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
@@ -68,7 +68,7 @@
 	 sudo apt purge terminator -y
 	 
 	
-	 sudo chmod -R 777 /home/$USER/Desktop/
+	 sudo chmod -R 755 /home/$USER/Desktop/
       fi
       
       if [  -d /home/rock/wine/share/wine ]; then
@@ -83,7 +83,7 @@
 	 sudo apt purge terminator -y
 	 
 	
-	 sudo chmod -R 777 /home/$USER/Desktop/
+	 sudo chmod -R 755 /home/$USER/Desktop/
       fi
       
       
@@ -95,7 +95,7 @@
       sudo unzip -o  /opt/AmiRock/config/up.zip
       
       
-      sudo chmod -R 777 /home/$USER/AmiRock
+      sudo chmod -R 755 /home/$USER/AmiRock
      
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo rm -rf /usr/share/applications/*Ami*
@@ -127,7 +127,7 @@ clear
 
      
        cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
-       sudo chmod -R 777 /usr/share/plymouth/
+       sudo chmod -R 755 /usr/share/plymouth/
        sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
 
        
@@ -219,7 +219,7 @@ fi
    cd  
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
       	
-      	sudo chmod -R 777 $HOME/RetroPieBIOS
+      	sudo chmod -R 755 $HOME/RetroPieBIOS
       
          
       	cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /opt/Amiga/kickstarts/A500.rom
@@ -322,12 +322,12 @@ fi
       echo "  ... repair rights  "         
     
       
-      sudo chmod -R 777 /usr/local/bin/
-      sudo chmod -R 777 /home/$USER/.config/
-      sudo chmod -R 777 /home/$USER/.local/
-      sudo chmod -R 777 /opt/
-      sudo chmod -R 777 /home/$USER/Desktop/
-      sudo chmod -R 777 /usr/share/applications/
+      sudo chmod -R 755 /usr/local/bin/
+      sudo chmod -R 755 /home/$USER/.config/
+      sudo chmod -R 755 /home/$USER/.local/
+      sudo chmod -R 755 /opt/
+      sudo chmod -R 755 /home/$USER/Desktop/
+      sudo chmod -R 755 /usr/share/applications/
       sudo rm -rf ~/AmiRock
   
 cd
@@ -349,4 +349,3 @@ echo -e "$BLUE "
 echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
 m
-          
