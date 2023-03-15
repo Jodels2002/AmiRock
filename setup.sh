@@ -71,6 +71,7 @@ sudo apt install malirun -y
   sudo apt install build-essential -y
   sudo apt install arqiver nemo -y
   sudo apt install 7z -y
+  sudo apt install protracker -y
    sudo apt install raspi-config -y
   sudo cp -rf /bin/7zz /bin/7z 
 
