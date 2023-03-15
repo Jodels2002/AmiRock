@@ -26,7 +26,7 @@ Simply open a terminal in the installed Armibian and execute these lines:
 
 git clone --depth=1 https://github.com/Jodels2002/AmiRock.git
 
-sudo chmod -R 777 AmiRock
+sudo chmod -R 755 AmiRock
 
 cd AmiRock
 
