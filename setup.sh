@@ -281,7 +281,8 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
-	
+	 sudo usermod -a -G root rock	 
+	 
 	 sudo chmod -R 755 /home/$USER/
 	 #sudo reboot now
       fi
