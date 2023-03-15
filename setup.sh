@@ -282,9 +282,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt purge terminator -y
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
-	 sudo adduser amiga
-	 echo 'amiga:amiga' | chpasswd	
-	 usermod -aG amiga
+	 
 	 
 	 sudo chmod -R 755 /home/$USER/
 	 #sudo reboot now
