@@ -210,17 +210,15 @@ fi
       echo "  First installation "
      echo -e "$RED "
 
-      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
-      echo "1>CLI"
-      echo "1>	So only use this image if you own the original Amigas, Amiga Forever."
-      echo "1>CLI: "
+      echo " 1>Please note that the Kickroms and Workbench files are still under copyright!  "
+      echo "$BLUE 1>CLI"
+      echo " 1>	So only use this image if you own the original Amigas, Amiga Forever."
+      echo " 1>CLI: "
       echo -e "$BLACK "
-      echo "1>                  Greetings your´s "
-      echo "1>Assign >NIL:      Bernd Titze"
-
-      sleep 1s
+      echo " 1>                  Greetings your´s "
+      echo " 1>Assign >NIL:      Bernd Titze"
       echo " "
-      echo " " 
+
    cd  
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
       	
