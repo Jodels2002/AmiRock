@@ -253,9 +253,9 @@ fi
       sudo find . -name "\.DS_*" -type f -print0 | xargs -0 /bin/rm -f
       sudo find . -name "_UAEFSDB.___" -type f -print0 | xargs -0 /bin/rm -f
       cd ~
-     
-      
-     
+       sudo rm -rf /opt/Amiga/conf/amiberry.conf
+       sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf      
+     clear
       
       if [ -d $HOME/AMIGAOSLINUX/ ]; then
          sudo rm -rf $HOME/AMIGAOSLINUX/
