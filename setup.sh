@@ -269,12 +269,10 @@ cd
 
 if [  -d /home/rock/wine/share/wine ]; then
          mkdir /opt/Amiga/dir
-	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
-	 sudo rm -rf /home/$USER/Amiga
-	 sudo rm -rf /opt/Amiga/conf/am*
+	
 	 cd
 	
-         sudo apt purge console -y
+         sudo apt purge gnome-terminal -y
 	 #sudo apt purge gnome-c* -y
 	 
          sudo apt install xfce4 -y
