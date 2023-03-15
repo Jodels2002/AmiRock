@@ -82,6 +82,7 @@ clear
    
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/conf/
+      sudo chmod -R 777 /opt/Amiga/
 fi 
 cd /opt/Amiga/
       ./amiberry --config conf/MegaAGS.uae -G
