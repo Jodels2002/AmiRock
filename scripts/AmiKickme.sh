@@ -11,7 +11,7 @@
       GREY='\033[1;30m'
 
   clear
-  cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
+  cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
   if [ ! -d /opt/Amiga/data/ ]; then
       
 
@@ -83,8 +83,8 @@
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal nemo -y
 	 sudo apt purge terminator -y
-	 cp -rf /home/$USER/AmiRock/config/bashrc /home/$USER/.bashrc
-	
+	 cp -rf /opt/AmiRock/scripts/bashrc /home/$USER/.bashrc
+	 
 	 sudo chmod -R 755 /home/$USER/
 	 sudo reboot now
       fi
@@ -129,7 +129,7 @@ cd /home/$USER/AmiRock/
 clear
 
      
-       cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
+       
        sudo chmod -R 755 /usr/share/plymouth/
        sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
 
