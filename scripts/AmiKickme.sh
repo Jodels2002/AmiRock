@@ -218,7 +218,7 @@ fi
       echo "1>                  Greetings your´s "
       echo "1>Assign >NIL:      Bernd Titze"
 
-      sleep 4s
+      sleep 1s
       echo " "
       echo " " 
    cd  
