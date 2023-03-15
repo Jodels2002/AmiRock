@@ -292,13 +292,13 @@ fi
       echo "  ... repair rights  "         
     
       
-      sudo chmod -R 755 /usr/local/bin/
-      sudo chmod -R 755 /home/$USER/.config/
-      sudo chmod -R 755 /home/$USER/.local/
-      sudo chmod -R 755 /opt/
+      sudo chmod -R 775 /usr/local/bin/
+      sudo chmod -R 775 /home/$USER/.config/
+      sudo chmod -R 775 /home/$USER/.local/
+      sudo chmod -R 775 /opt/
       sudo chmod -R 775 /opt/Amiga
       sudo chmod -R 775 /home/$USER/Desktop/
-      sudo chmod -R 755 /usr/share/applications/
+      sudo chmod -R 775 /usr/share/applications/
       sudo rm -rf ~/AmiRock
   
 cd
