@@ -11,7 +11,7 @@
       GREY='\033[1;30m'
 
   clear
-  
+  cp -rf /home/$USER/AmiRock/config/.bashrc /home/$USER/
   if [ ! -d /opt/Amiga/data/ ]; then
       
 
@@ -69,6 +69,7 @@
 	 
 	
 	 sudo chmod -R 755 /home/$USER/Desktop/
+	 
       fi
       
       if [  -d /home/rock/wine/share/wine ]; then
