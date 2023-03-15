@@ -42,7 +42,7 @@ if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       echo "Download MegaAGS"
       echo -e "$GREY "
       echo " "
-      mkdir /opt/MegaAGS
+      sudo mkdir /opt/MegaAGS
       cd /opt/MegaAGS/
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
       
