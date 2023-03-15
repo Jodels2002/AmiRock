@@ -75,13 +75,14 @@
          mkdir /opt/Amiga/dir
 	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
 	 sudo rm -rf /home/$USER/Amiga
+	 sudo rm -rf /opt/Amiga/conf/am*
 	 cd
 	
           #sudo apt purge gnome* -y
          sudo apt install xfce4 -y
-	 sudo apt install xfce4-terminal -y
+	 sudo apt install xfce4-terminal nemo -y
 	 sudo apt purge terminator -y
-	 
+	 sudo 
 	
 	 sudo chmod -R 755 /home/$USER/Desktop/
       fi
