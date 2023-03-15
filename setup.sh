@@ -281,7 +281,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	
 	 sudo chmod -R 755 /home/$USER/
-	 sudo reboot now
+	 #sudo reboot now
       fi
  #************************************************ End First run        **************************************   	     
  $HOME/AmiRock/scripts/AmiKickme.sh
