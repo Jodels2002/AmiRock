@@ -71,6 +71,7 @@ sudo apt install malirun -y
   sudo apt install build-essential cmake -y
   sudo apt install arqiver  -y
   sudo apt install 7z -y
+   sudo apt install raspi-config -y
   sudo cp -rf /bin/7zz /bin/7z 
 
   #sudo apt install -y nemo xini* xorg
@@ -260,7 +261,8 @@ cd
       echo " "
       echo "  First installation "
       echo " "
-	sudo update-initramfs -u
+      sudo update-initramfs -u
+      sudo raspi-config nonint do_expand_rootfs
 	
 #************************************************ End First run        **************************************   		
      
