@@ -43,6 +43,7 @@ if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       echo -e "$GREY "
       echo " "
       sudo mkdir /opt/MegaAGS
+      sudo chmod -R 777 /opt/MegaAGS
       cd /opt/MegaAGS/
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
       
