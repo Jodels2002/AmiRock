@@ -62,7 +62,7 @@
 	 sudo rm -rf /home/$USER/Amiga
 	 cd
 	
-         sudo apt purge gnome* -y
+         sudo apt purge gnome-* -y
          sudo apt install xfce4 -y
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
@@ -72,22 +72,7 @@
 	 
       fi
       
-      if [  -d /home/rock/wine/share/wine ]; then
-         mkdir /opt/Amiga/dir
-	 sudo cp -rf  /home/$USER/Amiga/* /opt/Amiga/
-	 sudo rm -rf /home/$USER/Amiga
-	 sudo rm -rf /opt/Amiga/conf/am*
-	 cd
-	
-         sudo apt purge gnome* -y
-         sudo apt install xfce4 -y
-	 sudo apt install xfce4-terminal nemo -y
-	 sudo apt purge terminator -y
-	 cp -rf /opt/AmiRock/scripts/bashrc /home/$USER/.bashrc
-	 
-	 sudo chmod -R 755 /home/$USER/
-	 sudo reboot now
-      fi
+
       
       
       
