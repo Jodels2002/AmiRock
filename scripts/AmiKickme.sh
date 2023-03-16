@@ -295,7 +295,7 @@ fi
 	 if [ ! -d /home/$USER/Movies/ ]; then
 	 mkdir /home/$USER/Movies
 	  fi
-	 
+	 sudo rm -rf /home/$USER/.config/dconf/*
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
       fi
