@@ -274,19 +274,23 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 cd
 	
          sudo apt purge gnome-terminal -y
-	 #sudo apt purge gnome-c* -y
-	 
-         sudo apt install xfce4 -y
+	 sudo apt install nautilus nautilus-action -y
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
+	 #sudo apt purge gnome-c* -y
+	 
+         #sudo apt install xfce4 -y
+	 
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
 	 sudo rm -rf $HOME/.config/
          unzip -u  $HOME/AmiRock/config/afconfig.zip
 	 
-	 sudo chmod -R 755 /home/$USER/
+	 #sudo chmod -R 776 /home/rock/
 	 #sudo reboot now
-      fi
+	 sudo apt-get autoremove -y
+	 
+	 fi
  #************************************************ End First run        **************************************   	     
  $HOME/AmiRock/scripts/AmiKickme.sh
       
