@@ -44,18 +44,6 @@
 
 fi
 	 
-	if [  -d /home/$USER/wine/share/wine ]; then
-         
-	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
-	 
-	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
-	 sudo chmod -R 775 /home/rock/
-	 fi
-	 
-	
-	
-  
-
       
       sudo chmod -R 775 /opt/
       
@@ -295,7 +283,15 @@ fi
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
-
+      
+      if [  -d /home/$USER/wine/share/wine ]; then
+         
+	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
+	 
+	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
+	 sudo chmod -R 775 /home/rock/
+	 fi
+	 
 
 
       echo " "
