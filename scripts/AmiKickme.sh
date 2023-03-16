@@ -42,10 +42,25 @@
       
       cd 
 
-  
+fi
+	 
+	if [  -d /home/rock/wine/share/wine ]; then
+         
+	
+	 #sudo rm -rf $HOME/.config/
+         #sudo unzip -u  $HOME/AmiRock/config/afconfig.zip
+	 
+	 #
+	 #sudo reboot now
+	 
+	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
+	 sudo chmod -R 775 /home/rock/
+	 fi
+	 
+	
 	
   
- fi
+
       
       sudo chmod -R 775 /opt/
       
