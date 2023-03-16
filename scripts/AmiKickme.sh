@@ -287,15 +287,18 @@ fi
       if [  -d /home/$USER/wine/share/wine ]; then
          
 	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
-	  if [  -d /home/$USER/Videos]; then
+	  if [ ! -d /home/$USER/Videos]; then
 	  
 	 sudo rm -rf /home/$USER/Videos
+	  fi 
+	 
+	 if [ ! -d /home/$USER/Movies]; then
 	 mkdir /home/$USER/Movies
 	  fi
 	 
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
-	 fi
+      fi
 	 
 
 
