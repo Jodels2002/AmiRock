@@ -44,14 +44,9 @@
 
 fi
 	 
-	if [  -d /home/rock/wine/share/wine ]; then
+	if [  -d /home/$USER/wine/share/wine ]; then
          
-	
-	 #sudo rm -rf $HOME/.config/
-         #sudo unzip -u  $HOME/AmiRock/config/afconfig.zip
-	 
-	 #
-	 #sudo reboot now
+	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
 	 
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
