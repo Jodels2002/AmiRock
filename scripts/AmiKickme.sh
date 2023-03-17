@@ -311,7 +311,7 @@ fi
       sudo chmod -R 775 /home/$USER/.local/
       sudo chmod -R 777 /opt/
       #sudo chmod -R 777 /opt/Amiga
-      sudo chmod -R 775 /home/$USER/Desktop/
+      sudo chmod -R 775 /home/$USER/
       sudo chmod -R 775 /usr/share/applications/
       sudo rm -rf ~/AmiRock
   
