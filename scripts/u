@@ -79,13 +79,13 @@ sudo apt-get upgrade
       cd
       git clone --depth=1 https://github.com/Jodels2002/AmiRock.git
       
-      sudo chmod -R 755 AmiRock
+      sudo chmod -R 775 AmiRock
      
       
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
-      sudo chmod -R 755 /usr/local/bin
-      sudo chmod -R 755 /opt/AmiRock/
+      sudo chmod -R 775 /usr/local/bin
+      sudo chmod -R 775 /opt/AmiRock/
       
       
       
