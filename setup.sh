@@ -298,10 +298,14 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 #sudo chmod -R 776 /home/rock/
 	 #sudo reboot now
 	 sudo apt-get autoremove -y
-	 
+	 sudo ln -s /home/rock/ /home/pi
 	 fi
  #************************************************ End First run        **************************************   	     
- $HOME/AmiRock/scripts/AmiKickme.sh
+ 
+ 
+  $HOME/AmiRock/scripts/AmiKickme.sh
+ 
+
       
       
 
