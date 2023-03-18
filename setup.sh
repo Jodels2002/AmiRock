@@ -236,9 +236,12 @@ cd
       
       cd
       
+      if [ ! -d /home/rock/wine/share/wine ]; then
       sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
-  
+            
+      fi
+	
 	clear
 
       
