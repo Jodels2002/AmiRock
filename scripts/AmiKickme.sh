@@ -284,9 +284,18 @@ fi
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
       
- #***********************************************  #AmiRock-OS Afterburner  ***********************************      if [  -d /home/$USER/wine/share/wine ]; then
-         
-	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
+ #***********************************************  #AmiRock-OS Afterburner  ***********************************      
+ 
+ if [  -d /home/$USER/wine/share/wine ]; then
+ 
+                 clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation for Afterburner Image "
+      echo " "
+      
+      	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
 	  if [ ! -d /home/$USER/Videos/ ]; then
 	  
 	 sudo rm -rf /home/$USER/Videos
