@@ -64,7 +64,19 @@ sudo apt install malirun -y
       sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 755 /usr/local/bin
       sudo chmod -R 755 /opt/AmiRock
-      
+#************************************************  Fan Control by pymumu        **************************************   
+
+clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " Fan-Control by pymumu"
+          
+git clone https://github.com/pymumu/fan-control-rock5b
+cd fan-control-rock5b
+make package
+sudo dpkg -i fan-control*.deb
+sudo systemctl enable fan-control
+systemctl start fan-control     
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
@@ -238,19 +250,7 @@ cd
       unzip -u  $HOME/AmiRock/config/config.zip
       
 
-#************************************************  Fan Control by pymumu        **************************************   
 
-clear
-      		toilet "AmiRock" --metal
-      		echo " "
-      		echo " Fan-Control by pymumu"
-          
-git clone https://github.com/pymumu/fan-control-rock5b
-cd fan-control-rock5b
-make package
-sudo dpkg -i fan-control*.deb
-sudo systemctl enable fan-control
-systemctl start fan-control
             
 fi
 
