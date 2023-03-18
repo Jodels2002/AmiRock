@@ -318,7 +318,7 @@ fi
       echo " "
       echo "  ... repair rights  "         
     
-      rm ~/.local/share/keyrings/*
+      #rm ~/.local/share/keyrings/*
       sudo chmod -R 775 /usr/local/bin/
       sudo chmod -R 775 /home/$USER/.config/
       sudo chmod -R 775 /home/$USER/.local/
