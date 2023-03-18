@@ -86,8 +86,15 @@ sudo apt-get upgrade
       sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 775 /usr/local/bin
       sudo chmod -R 775 /opt/AmiRock/
-      
-      
+       
+       
+       
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      sudo update-initramfs -u      
       
       /home/$USER/AmiRock/scripts/AmiKickme.sh
  
