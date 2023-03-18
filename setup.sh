@@ -85,6 +85,7 @@ systemctl start fan-control
   sudo apt install 7z -y
   sudo apt install protracker -y
   sudo apt install raspi-config -y
+  sudo raspi-config nonint do_expand_rootfs
   clear
   sudo apt purge terminator -y
   sudo cp -rf /bin/7zz /bin/7z 
@@ -276,7 +277,7 @@ fi
       echo "  First installation "
       echo " "
       sudo update-initramfs -u
-      sudo raspi-config nonint do_expand_rootfs
+      
 	
 #************************************************ End First run        **************************************   		
 
