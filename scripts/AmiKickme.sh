@@ -2,7 +2,7 @@
 #***********************************************  #AmiRock-OS install script  ***********************************
 # Install AmiRock-OS
 # B.Titze 2023
-#*************************************************************************************************************
+if [  -d /home/rock/wine/share/wine ]; then
       #mkdir /home/$USER/.backup
       BLACK='\033[0;39m'
       BLUE='\033[1;34m'
@@ -284,7 +284,7 @@ fi
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
       
-      if [  -d /home/$USER/wine/share/wine ]; then
+ #***********************************************  #AmiRock-OS Afterburner  ***********************************      if [  -d /home/$USER/wine/share/wine ]; then
          
 	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
 	  if [ ! -d /home/$USER/Videos/ ]; then
@@ -300,7 +300,7 @@ fi
 	 sudo chmod -R 775 /home/rock/
       fi
 	 
-
+#***********************************************  #AmiRock-OS install script  *********************************** 
 
       echo " "
       echo "  ... repair rights  "         
