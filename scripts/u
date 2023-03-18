@@ -60,9 +60,10 @@ sudo apt-get autoclean
 sudo apt-get clean
 sudo apt-get update
 sudo apt-get upgrade
-sudo update-initramfs -u
+#sudo update-initramfs -u
+
 #************************** Get update **********************************************************************
-sudo apt purge terminator -y
+
  clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
