@@ -39,7 +39,10 @@ GREY='\033[1;30m'
       
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Graphic Driver        **************************************   
-  
+      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
+      sudo cp -f -R /home/$USER/AmiRock/ /opt
+      sudo chmod -R 775 /usr/local/bin
+      sudo chmod -R 775 /opt/
   clear
       		toilet "AmiRock" --metal
           
@@ -60,10 +63,7 @@ sudo apt install malirun -y
 
 #sudo apt install kodi -y
 
-      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo cp -f -R /home/$USER/AmiRock/ /opt
-      sudo chmod -R 755 /usr/local/bin
-      sudo chmod -R 755 /opt/AmiRock
+      
 #************************************************  Fan Control by pymumu        **************************************   
 
 clear
@@ -223,12 +223,19 @@ cd
       sudo rm -rf /usr/share/backgrounds/B*
    
       echo " "
-      #echo " "
-      #toilet -F gay PhotoGimp
-       
-      #curl -L "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip" -o /home/$USER/KickPi-OS/PhotoGIMP.zip && unzip /home/$USER/KickPi-OS/PhotoGIMP.zip -d /home/$USER/KickPi-OS/ 
-      #sudo cp -R /home/$USER/KickPi-OS/PhotoGIMP\ by\ Diolinux\ v2020\ for\ Flatpak/.var/app/org.gimp.GIMP/config/* ~/.config
-      #echo " PhotoGimp by Diolinux installed..."
+      #***********************************************  #AmiRock-OS install splash  ***********************************
+      
+        sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
+	sudo chmod -R 775 /usr/share/plymouth/
+  	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation "
+      echo " "
+      sudo update-initramfs -u
       
       cd
  #***********************************************  #AmiRock-OS Not Afterburner  ***********************************     
@@ -264,19 +271,7 @@ fi
       cp -rf /etc/lightdm/ /opt/Backup/config/
 
       fi     
-#***********************************************  #AmiRock-OS install script  ***********************************
-      
- 
-	     sudo chmod -R 775 /usr/share/plymouth/
-  	cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
-      sudo update-initramfs -u
+
       
 	
 #************************************************ End First run        **************************************   		
