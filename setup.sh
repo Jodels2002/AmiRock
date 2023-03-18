@@ -69,12 +69,14 @@ sudo apt install malirun -y
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
-  sudo apt install arqiver nemo -y
+  sudo apt install arqiver nemo geany -y
   sudo apt install 7z -y
   sudo apt install protracker -y
-   sudo apt install raspi-config -y
+  sudo apt install raspi-config -y
+  clear
+  sudo apt purge terminator -y
   sudo cp -rf /bin/7zz /bin/7z 
-
+ 
   #sudo apt install -y nemo xini* xorg
         
 	clear
