@@ -1,0 +1,7 @@
+verbosity=1
+bootlogo=true
+overlay_prefix=rockchip-rk3588
+fdtfile=rockchip/rk3588-rock-5b.dtb
+rootdev=UUID=49da2114-59db-449f-8f3d-44612aede904
+rootfstype=ext4
+usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
