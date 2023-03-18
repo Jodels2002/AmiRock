@@ -84,20 +84,7 @@ sudo apt install malirun -y
       echo "  First installation "
       echo " "
 
-#***********************************************  #AmiRock-OS install script  ***********************************
-#************************************************  Fan Control by pymumu        **************************************   
 
-clear
-      		toilet "AmiRock" --metal
-      		echo " "
-      		echo " Fan-Control by pymumu"
-          
-git clone https://github.com/pymumu/fan-control-rock5b
-cd fan-control-rock5b
-make package
-sudo dpkg -i fan-control*.deb
-sudo systemctl enable fan-control
-systemctl start fan-control
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga        ************************************** 
@@ -235,18 +222,38 @@ cd
       #echo " PhotoGimp by Diolinux installed..."
       
       cd
-      
+ #***********************************************  #AmiRock-OS Afterburner  ***********************************     
       if [ ! -d /home/rock/wine/share/wine ]; then
+        clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  First installation"
+      echo " "
+      
+      
       sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
-            
-      fi
-	
-	clear
-
       
- #***********************************************  #AmiRock-OS install script  ***********************************
-     
+
+#************************************************  Fan Control by pymumu        **************************************   
+
+clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " Fan-Control by pymumu"
+          
+git clone https://github.com/pymumu/fan-control-rock5b
+cd fan-control-rock5b
+make package
+sudo dpkg -i fan-control*.deb
+sudo systemctl enable fan-control
+systemctl start fan-control
+            
+fi
+
+#***********************************************  #AmiRock-OS install script  ***********************************
+ 
      if [ ! -d /opt/Backup/ ]; then
       sudo chmod -R 755 /opt/
       mkdir /opt/Backup/
