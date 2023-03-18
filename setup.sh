@@ -213,13 +213,7 @@ cd
       echo " "
       echo "  First installation "
       echo " "
-      git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
-      clear
-
-      sudo cp -rf $HOME/AmiRock/amigaos_xfwm4_themes/* /usr/share/themes/
-      sudo rm -rf /usr/share/themes/Default/xfwm4/
-      sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
-      sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
+     
       sudo rm -rf /usr/share/backgrounds/u*
       sudo rm -rf /usr/share/backgrounds/j*
       sudo rm -rf /usr/share/backgrounds/J*
@@ -237,7 +231,7 @@ cd
       #echo " PhotoGimp by Diolinux installed..."
       
       cd
- #***********************************************  #AmiRock-OS Afterburner  ***********************************     
+ #***********************************************  #AmiRock-OS Not Afterburner  ***********************************     
       if [ ! -d /home/rock/wine/share/wine ]; then
         clear
       toilet "AmiRock-OS" --metal
@@ -250,7 +244,13 @@ cd
       sudo rm -rf $HOME/.config/
       unzip -u  $HOME/AmiRock/config/config.zip
       
+      git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
+      clear
 
+      sudo cp -rf $HOME/AmiRock/amigaos_xfwm4_themes/* /usr/share/themes/
+      sudo rm -rf /usr/share/themes/Default/xfwm4/
+      sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
+      sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
 
             
 fi
