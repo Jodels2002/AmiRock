@@ -2,7 +2,7 @@
 #***********************************************  #AmiRock-OS install script  ***********************************
 # Install AmiRock-OS
 # B.Titze 2023
-if [  -d /home/rock/wine/share/wine ]; then
+
       #mkdir /home/$USER/.backup
       BLACK='\033[0;39m'
       BLUE='\033[1;34m'
