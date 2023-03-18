@@ -276,7 +276,8 @@ fi
       if [ -d $HOME/Videos/ ]; then
          sudo rm -rf $HOME/Videos/
       fi
-          if [ -d $HOME/Bilder/ ]; then
+      
+      if [ -d $HOME/Bilder/ ]; then
          sudo rm -rf $HOME/Bilder/
       fi
       
@@ -299,11 +300,14 @@ fi
 	  if [ ! -d /home/$USER/Videos/ ]; then
 	  
 	 sudo rm -rf /home/$USER/Videos
+	
 	  fi 
 	 
 	 if [ ! -d /home/$USER/Movies/ ]; then
+	 
 	 mkdir /home/$USER/Movies
-	  fi
+	  
+	 fi
 	 sudo rm -rf /home/$USER/.config/dconf/*
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
