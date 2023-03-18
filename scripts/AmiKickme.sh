@@ -293,7 +293,7 @@ fi
       toilet "AmiRock-OS" --metal
       echo " "
       echo " "
-      echo "  First installation for Afterburner Image "
+      echo "  Detect Afterburner Image "
       echo " "
       
       	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
@@ -308,6 +308,12 @@ fi
 	 mkdir /home/$USER/Movies
 	  
 	 fi
+	    sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
+	    sudo chmod -R 775 /usr/share/plymouth/
+  	    sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+  	    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	    clear   	 
+	 
 	 sudo rm -rf /home/$USER/.config/dconf/*
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
