@@ -311,8 +311,7 @@ fi
 	 fi
 	    sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
 	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
-	    sudo apt install cockpit -y
-	    cromium-browser  http://localhost:9090/users
+	
 
 	    
 	    sudo chmod -R 775 /usr/share/plymouth/
@@ -341,7 +340,9 @@ fi
       sudo rm -rf ~/AmiRock
   
 cd
-		
+	
+	    sudo apt install cockpit -y
+	    chromium-browser  http://localhost:9090/	
  clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -358,4 +359,5 @@ echo " 1.>  ( s ) Shutdown                                "
 echo -e "$BLUE "
 echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
+
 m
