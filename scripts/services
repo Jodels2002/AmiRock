@@ -1,5 +1,5 @@
 # /lib/systemd/system/armbian-led-state.service
-
+# https://mega.nz/folder/7dkl0JDC#nSgd-mn3moo2aDYvEBNj7A
 sudo systemctl disable armbian-firstrun-config.service
 sudo systemctl disable armbian-hardware-monitor.service
 sudo systemctl disable armbian-led-state.service 
