@@ -309,7 +309,7 @@ fi
 	 mkdir /home/$USER/Movies
 	  
 	 fi
-	    sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
+	    #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
 	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
 	
 
