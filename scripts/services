@@ -1,0 +1,10 @@
+# /lib/systemd/system/armbian-led-state.service
+
+sudo systemctl disable armbian-firstrun-config.service
+sudo systemctl disable armbian-hardware-monitor.service
+sudo systemctl disable armbian-led-state.service 
+sudo systemctl disable armbian-disable-autologin.service
+sudo systemctl disable armbian-hardware-optimize.service
+sudo rm -f /lib/systemd/system/armbian-*
+sudo systemctl disable openvpn.service
+sudo systemctl disable rsyslog.service
