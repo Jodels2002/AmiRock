@@ -22,6 +22,7 @@ OPTIONS=(d -"  Back to AmiRock Desktop               "
          i "Download & Install ClassicWB           "
 	 m "Download & Install MegaAGS             "
 	 w "Download & Install WHDL Games&Demos    "
+	 q "Install MSI in Wine           "
          u "Update AmiRock-OS             "
          n "Update Amiberry               "
          o "Update Amiberry (DEV)         "
@@ -89,6 +90,13 @@ case $CHOICE in
             clear
             whd
             ;;  
+	    
+	    q)
+            #update
+            clear
+            wine msiexec /i "$(zenity --file-selection)"
+            ;;  
+	    
                
             
           n)
