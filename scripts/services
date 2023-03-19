@@ -8,3 +8,5 @@ sudo systemctl disable armbian-hardware-optimize.service
 sudo rm -f /lib/systemd/system/armbian-*
 sudo systemctl disable openvpn.service
 sudo systemctl disable rsyslog.service
+
+sudo apt purge gdm3 -y
