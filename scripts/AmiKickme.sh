@@ -310,6 +310,11 @@ fi
 	  
 	 fi
 	    sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
+	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
+	    sudo apt install cockpit -y
+	    cromium-browser  http://localhost:9090/users
+
+	    
 	    sudo chmod -R 775 /usr/share/plymouth/
   	    sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
