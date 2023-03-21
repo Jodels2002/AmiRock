@@ -327,17 +327,34 @@ fi
 #***********************************************  #AmiRock-OS install script  *********************************** 
 
       echo " "
-      echo "  ... repair rights  "         
+      echo "  ... repair rights  "  
+      
     
-      #rm ~/.local/share/keyrings/*
+    if [  -d /home/$USER/wine/share/wine ]; then    
+    
+  
       sudo chmod -R 775 /usr/local/bin/
       sudo chmod -R 775 /home/$USER/.config/
       sudo chmod -R 775 /home/$USER/.local/
       sudo chmod -R 777 /opt/
-      #sudo chmod -R 777 /opt/Amiga
+  
       sudo chmod -R 775 /home/$USER/
       sudo chmod -R 775 /usr/share/applications/
       sudo rm -rf ~/AmiRock
+      
+      else 
+      sudo chmod -R 777 /usr/local/bin/
+      sudo chmod -R 777 /home/$USER/.config/
+      sudo chmod -R 777 /home/$USER/.local/
+      sudo chmod -R 777 /opt/
+  
+      sudo chmod -R 777 /home/$USER/
+      sudo chmod -R 777 /usr/share/applications/
+     
+     fi
+      
+      sudo rm -rf ~/AmiRock
+      
   
 cd
 	
