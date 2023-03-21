@@ -1,11 +1,19 @@
 # /lib/systemd/system/armbian-led-state.service
-# https://mega.nz/folder/7dkl0JDC#nSgd-mn3moo2aDYvEBNj7A
+# sudo rm -f /lib/systemd/system/armbian-*
+
 sudo systemctl disable armbian-firstrun-config.service
 sudo systemctl disable armbian-hardware-monitor.service
 sudo systemctl disable armbian-led-state.service 
 sudo systemctl disable armbian-disable-autologin.service
 sudo systemctl disable armbian-hardware-optimize.service
-sudo rm -f /lib/systemd/system/armbian-*
+sudo systemctl disable apt-news.service
+sudo systemctl disable armbian-ramlog.service
+sudo systemctl disable cups.service
+sudo systemctl disable debug-shell.service
+sudo systemctl disable dmesg.service
+sudo systemctl disable lightdm.service
+sudo systemctl disable man-db.service
+sudo systemctl disable update-notifier-motd.service
 sudo systemctl disable openvpn.service
 sudo systemctl disable rsyslog.service
 
