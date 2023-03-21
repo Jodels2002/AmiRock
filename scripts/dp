@@ -4,7 +4,8 @@ git clone https://github.com/dolphin-emu/dolphin.git dolphin-emu
 cd ./dolphin-emu
 git submodule update --init --recursive
 
-mkdir Build && cd Buildcmake ..
-make -j$(nproc)
+mkdir Build && cd Build
+cmake ..$HOME/dolphin-emu
+make -j8
 
 sudo make install
