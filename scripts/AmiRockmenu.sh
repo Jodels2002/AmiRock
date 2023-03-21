@@ -120,7 +120,7 @@ case $CHOICE in
             cd amiberry
 
 
-     	    make -j4 PLATFORM=rk3588
+     	    make -j8 PLATFORM=rk3588
             
 	    sudo chmod -R 777 $HOME/amiberry
 	    sudo chmod -R 777 /usr/share/plymouth/
@@ -173,7 +173,7 @@ case $CHOICE in
             cd amiberry
 
 
-     		make -j4 PLATFORM=rk3588
+     		make -j8 PLATFORM=rk3588
 		
             sudo chmod -R 777 $HOME/amiberry
 	    sudo chmod -R 777 /usr/share/plymouth/
