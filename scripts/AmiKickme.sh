@@ -284,7 +284,7 @@ fi
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
-      chromium-browser  http://localhost:9090/
+      
  #***********************************************  #AmiRock-OS Afterburner  ***********************************      
  
  if [  -d /home/$USER/wine/share/wine ]; then
@@ -378,3 +378,4 @@ echo "  ... finished AmiRock setup :-)  "
 echo -e "$BLACK "
 
 m
+firefox-esr http://localhost:9090/
