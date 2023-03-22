@@ -145,6 +145,7 @@ if [ ! -d /opt/Amiga/Install/ClassicWB_LITE_v28/ ]; then
       unzip -o -q ./ClassicWB_LITE_v28.zip
       clear
 fi 
+cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
 
 if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
 
