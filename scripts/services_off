@@ -16,5 +16,7 @@ sudo systemctl disable man-db.service
 sudo systemctl disable update-notifier-motd.service
 sudo systemctl disable openvpn.service
 sudo systemctl disable rsyslog.service
+sudo systemctl disable usbmount@.service
+sudo systemctl disable chronyd.service
 
-sudo apt purge gdm3 -y
+# sudo apt purge gdm3 -y
