@@ -334,7 +334,7 @@ if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
       cd
 fi 
        
-         #cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
+       cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
        
        rm -d -r /opt/Amiga/Install/DF0/  
      
