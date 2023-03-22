@@ -284,7 +284,7 @@ fi
       if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
-      
+      chromium-browser  http://localhost:9090/
  #***********************************************  #AmiRock-OS Afterburner  ***********************************      
  
  if [  -d /home/$USER/wine/share/wine ]; then
@@ -359,7 +359,7 @@ fi
 cd
 	
 	    
-	    chromium-browser  http://localhost:9090/	
+	    	
  clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
