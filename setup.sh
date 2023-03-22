@@ -301,6 +301,8 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 #sudo reboot now
 	 sudo apt-get autoremove -y
 	 sudo ln -s /home/rock/ /home/pi
+	 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
+
 	 fi
  #************************************************ End First run        **************************************   	     
  
