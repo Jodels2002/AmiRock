@@ -87,12 +87,12 @@ sudo apt-get upgrade
       sudo chmod -R 775 /usr/local/bin
       sudo chmod -R 775 /opt/AmiRock/
        
-       
-       
+      sudo apt install cockpit -y
+      clear 
       toilet "AmiRock-OS" --metal
       echo " "
       echo " "
-      echo "  First installation "
+      echo "  Updating Boot Image "
       echo " "
       sudo update-initramfs -u      
       
