@@ -119,7 +119,7 @@ ClassicWB()
       cd /opt/Amiga/Install/
       unzip -o -q ./ClassicWB_UAE_v28.zip
       clear
-      cp -r -f  "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /opt/Amiga/dir/
+     
       
     else 
       clear
@@ -221,7 +221,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
       cp -rf /opt/AmiRock/Amiga/ClassicWB/Activate /opt/Amiga/dir/System_P96/System/S/
       cp -rf /opt/AmiRock/Amiga/ClassicWB/screenmode.prefs /opt/Amiga/dir/System_P96/System/Prefs/Env-Archive/Sys/
       cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf/
-      cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
+    
           
       
       cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /home/$USER/Desktop/
@@ -283,7 +283,6 @@ fi
 
 
 
-cp -r -f  "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software/" /opt/Amiga/dir/
 
 
 ClassicWB
@@ -334,6 +333,9 @@ if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
       unzip -u  /opt/AmiRock/Amiga/ks.zip
       cd
 fi 
+       
+         #cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
+       
        rm -d -r /opt/Amiga/Install/DF0/  
      
       sudo chmod -R 777 /opt/Amiga/
