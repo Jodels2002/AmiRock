@@ -358,7 +358,7 @@ fi
   
 cd
 	
-	    sudo apt install cockpit -y
+	    
 	    chromium-browser  http://localhost:9090/	
  clear
       toilet "AmiRock-OS" --metal
