@@ -59,6 +59,7 @@ sudo apt-get autoclean
       echo " "
 sudo apt-get clean
 sudo apt-get update
+sudo apt install cockpit -y
 sudo apt-get upgrade
 #sudo update-initramfs -u
 
@@ -87,7 +88,7 @@ sudo apt-get upgrade
       sudo chmod -R 775 /usr/local/bin
       sudo chmod -R 775 /opt/AmiRock/
        
-      sudo apt install cockpit -y
+      
       clear 
       toilet "AmiRock-OS" --metal
       echo " "
