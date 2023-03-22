@@ -59,7 +59,6 @@ sudo apt-get autoclean
       echo " "
 sudo apt-get clean
 sudo apt-get update
-sudo apt install cockpit -y
 sudo apt-get upgrade
 #sudo update-initramfs -u
 
