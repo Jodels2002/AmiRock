@@ -28,8 +28,9 @@ GREY='\033[1;30m'
 
       
  
-      mkdir /opt/Amiga/dir/Work
+      mkdir /opt/Amiga/dir/
       mkdir /opt/Amiga/dir/Work/Software
+      mkdir /opt/Amiga/dir/Software
       mkdir /opt/Amiga/Install/
       clear
       toilet "AmiRock-OS" --metal
