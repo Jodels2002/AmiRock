@@ -143,9 +143,10 @@ cd
 	     
  if [ ! -d /opt/Amiga/dir/Work/ ]; then
       mkdir /opt/Amiga/dir/
-      mkdir /opt/Amiga/dir/Work/Software
+      mkdir /opt/Amiga/dir/Work/
       mkdir /opt/Amiga/dir/Software
       mkdir /opt/Amiga/Install/
+      mkdir /opt/Amiga/kickstarts
  fi
 
 
