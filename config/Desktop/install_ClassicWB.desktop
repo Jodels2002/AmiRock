@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Amiberry 
+Comment=Amiga emulator
+Icon=/usr/share/applications/amiberry.png
+Exec=install_ClassicWB.sh
+
