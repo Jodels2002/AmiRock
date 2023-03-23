@@ -77,7 +77,8 @@ cd fan-control-rock5b
 make package
 sudo dpkg -i fan-control*.deb
 sudo systemctl enable fan-control
-systemctl start fan-control     
+sudo systemctl start fan-control   
+
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
