@@ -42,8 +42,8 @@ if [ ! -f /opt/MegaAGS/MegaAGS-v2022.11.11.7z ]; then
       echo "Download MegaAGS"
       echo -e "$GREY "
       echo " "
-      sudo mkdir /opt/MegaAGS
-      sudo chmod -R 777 /opt/MegaAGS
+      mkdir /opt/MegaAGS
+    
       cd /opt/MegaAGS/
       wget https://archive.org/download/megaags/MegaAGS-v2022.11.11.7z
       
@@ -80,9 +80,9 @@ clear
       echo -e "$GREY "
       echo " "
    
-      sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
-      sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/conf/
-      sudo chmod -R 777 /opt/Amiga/
+      cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
+      cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/conf/
+     
 fi 
 cd /opt/Amiga/
       ./amiberry --config conf/MegaAGS.uae -G
