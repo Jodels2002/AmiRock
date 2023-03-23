@@ -19,9 +19,9 @@ GREY='\033[1;30m'
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
           
-      #sudo apt install python3-pip  python3-dev  -y
-      #sudo python3 -m pip install -U setuptools
-      #sudo python3 -m pip install -U amitools     
+      #   apt install python3-pip  python3-dev  -y
+      #   python3 -m pip install -U setuptools
+      #   python3 -m pip install -U amitools     
 
       
 
@@ -44,11 +44,11 @@ GREY='\033[1;30m'
      
      
       #CreateDF0
-      sudo mkdir /opt/Amiga/Install/DF0
+         mkdir /opt/Amiga/Install/DF0
       cd /opt/AmiRock/Amiga/ClassicWB/
       unzip -o -q ./DF0.zip
-      sudo mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /opt/Amiga/Install/DF0
-      sudo chmod -R 777 /opt/Amiga/Install/DF0
+         mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /opt/Amiga/Install/DF0
+         chmod -R 777 /opt/Amiga/Install/DF0
       rm -d -r /opt/AmiRock/Amiga/ClassicWB/DF0/
       rm -d -r /opt/Amiga/Install/DF0/*.info
  fi 
@@ -179,7 +179,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
       cp -rf /opt/Amiga/dir/Work/Software /opt/Amiga/dir/System_ADVSP/System/
       
       cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /home/$USER/Desktop/
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
+         cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -226,7 +226,7 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
           
       
       cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /home/$USER/Desktop/
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+         cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
       cp -rf /opt/Amiga/dir/System_P96/System/Prefs/Patterns/Amiga_1024x768.jpg /opt/Amiga/dir/System_P96/System/Prefs/Patterns/bsg_pm2_800x600.png
       clear
       toilet "AmiRock-OS" --metal
@@ -308,7 +308,7 @@ clear
 	  
 	 rm -d -r /opt/Amiga/Install/DF0/  
      
-      sudo chmod -R 777 /opt/Amiga/
+         chmod -R 777 /opt/Amiga/
       cd
 	  
 	  exit
@@ -317,8 +317,8 @@ fi
 
 if [ -d /opt/Amiga/dir/System_P96/ ]; then
 
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
-      sudo cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf
+         cp -rf /opt/AmiRock/config/ClassicWB-P96.desktop /usr/share/applications/
+         cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-P96.uae /opt/Amiga/conf
       cd /opt/Amiga/dir/System_P96/System/Devs
       unzip -u  /opt/AmiRock/Amiga/ks.zip
       cd
@@ -328,8 +328,8 @@ fi
 if [ -d /opt/Amiga/dir/System_ADVSP/ ]; then
     
  
-      sudo cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
-      sudo cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf
+      cp -rf /opt/AmiRock/config/ClassicWB-ADVSP.desktop /usr/share/applications/
+      cp -rf /opt/AmiRock/Amiga/ClassicWB/ClassicWB-ADVSP.uae /opt/Amiga/conf
       cd /opt/Amiga/dir/System_ADVSP/System/Devs
       unzip -u  /opt/AmiRock/Amiga/ks.zip
       cd
@@ -339,7 +339,7 @@ fi
        
        rm -d -r /opt/Amiga/Install/DF0/  
      
-      sudo chmod -R 777 /opt/Amiga/
+         chmod -R 777 /opt/Amiga/
       cd
       clear
       toilet "AmiRock-OS" --metal
