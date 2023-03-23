@@ -141,13 +141,7 @@ if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
 
 cd
 	     
- if [ ! -d /opt/Amiga/dir/Work/ ]; then
-      mkdir /opt/Amiga/dir/
-      mkdir /opt/Amiga/dir/Work/
-      mkdir /opt/Amiga/dir/Software
-      mkdir /opt/Amiga/Install/
-      mkdir /opt/Amiga/kickstarts
- fi
+
 
 
 
@@ -211,6 +205,13 @@ fi
       sudo python3 -m pip install -U amitools   
 	
  fi
+  if [ ! -d /opt/Amiga/dir/Work/ ]; then
+      mkdir /opt/Amiga/dir/
+      mkdir /opt/Amiga/dir/Work/
+      mkdir /opt/Amiga/dir/Software
+      mkdir /opt/Amiga/Install/
+      mkdir /opt/Amiga/kickstarts
+  fi
 
     clear
       toilet "AmiRock-OS" --metal
