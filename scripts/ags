@@ -4,7 +4,9 @@ BLACK='\033[0;39m'
       RED='\033[1;31m'
       GREY='\033[1;30m'
       
-      
+      sudo apt install python3-pip  python3-dev  -y
+      sudo python3 -m pip install -U setuptools
+      sudo python3 -m pip install -U amitools         
 
 clear
       toilet "AmiRock-OS" --metal
