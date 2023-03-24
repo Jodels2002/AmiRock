@@ -200,9 +200,7 @@ fi
       echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
           
-      sudo apt install python3-pip  python3-dev  -y
-      sudo python3 -m pip install -U setuptools
-      sudo python3 -m pip install -U amitools   
+    
 	
  fi
   if [ ! -d /opt/Amiga/dir/Work/ ]; then
