@@ -20,4 +20,4 @@ git clone https://github.com/adafruit/Adafruit_CircuitPython_SSD1306.git
 
 pip3 install adafruit-circuitpython-ssd1306
 sudo pip3 install adafruit-circuitpython-ssd1306
-sudi i2cdetect -y 1
+sudo i2cdetect -y 1
