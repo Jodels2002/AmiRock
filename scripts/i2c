@@ -24,3 +24,6 @@ git clone https://github.com/adafruit/Adafruit_CircuitPython_SSD1306.git
 pip3 install adafruit-circuitpython-ssd1306
 sudo pip3 install adafruit-circuitpython-ssd1306
 sudo i2cdetect -y 1
+#https://indibit.de/raspberry-pi-oled-display-128x64-mit-python-ansteuern-i2c/
+
+git clone https://github.com/BLavery/lib_oled96
