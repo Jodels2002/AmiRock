@@ -8,7 +8,7 @@ pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 sudo apt-get install -y python3-smbus python3-dev i2c-tools
 sudo adduser amiga i2c
 sudo adduser root i2c
-
+# I2C7_SDA_M3, I2C7_SCL_M3
 overlays=rk3588-spi0-m2-cs0-spidev
 
 
