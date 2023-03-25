@@ -3,24 +3,16 @@ https://learn.adafruit.com/circuitpython-on-orangepi-linux/orange-pi-pc-setup
 sudo apt-get install libgpiod2 python3-libgpiod
 pip3 install gpiod
 
-pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+# pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 
 sudo apt-get install -y python3-smbus python3-dev i2c-tools
 sudo adduser amiga i2c
 sudo adduser root i2c
 # I2C7_SDA_M3, I2C7_SCL_M3
 
-sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
+sudo echo "overlays=rk3588-i2c7-m3" >> /boot/armbianEnv.txt
 
 
-#https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SSD1306
-pip3 install adafruit-circuitpython-displayio-ssd1306
-sudo pip3 install adafruit-circuitpython-displayio-ssd1306
-
-#https://github.com/happyme531/Adafruit_Blinka/tree/rk3588-rock-5
-pip3 install Adafruit-Blinka
-sudo pip3 install Adafruit-Blinka
-sudo git clone https://github.com/happyme531/Adafruit_Blinka.git
 
 #https://github.com/adafruit/Adafruit_CircuitPython_SSD1306
 cd
@@ -28,3 +20,4 @@ git clone https://github.com/adafruit/Adafruit_CircuitPython_SSD1306.git
 
 pip3 install adafruit-circuitpython-ssd1306
 sudo pip3 install adafruit-circuitpython-ssd1306
+sudi i2cdetect -y 1
