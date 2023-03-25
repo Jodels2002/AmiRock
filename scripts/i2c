@@ -9,9 +9,15 @@ sudo apt-get install -y python3-smbus python3-dev i2c-tools
 sudo adduser amiga i2c
 sudo adduser root i2c
 # I2C7_SDA_M3, I2C7_SCL_M3
-overlays=rk3588-i2c0-m1
+
+sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 
 
 #https://github.com/adafruit/Adafruit_CircuitPython_DisplayIO_SSD1306
 pip3 install adafruit-circuitpython-displayio-ssd1306
 sudo pip3 install adafruit-circuitpython-displayio-ssd1306
+
+#https://github.com/happyme531/Adafruit_Blinka/tree/rk3588-rock-5
+pip3 install Adafruit-Blinka
+sudo pip3 install Adafruit-Blinka
+sudo git clone https://github.com/happyme531/Adafruit_Blinka.git
