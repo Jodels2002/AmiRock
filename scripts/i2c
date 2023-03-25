@@ -9,7 +9,7 @@ sudo apt-get install -y python3-smbus python3-dev i2c-tools
 sudo adduser amiga i2c
 sudo adduser root i2c
 # I2C7_SDA_M3, I2C7_SCL_M3
-overlays=rk3588-spi0-m2-cs0-spidev
+overlays=rk3588-i2c1-m0 
 
 
 
