@@ -23,5 +23,8 @@ sudo pip3 install Adafruit-Blinka
 sudo git clone https://github.com/happyme531/Adafruit_Blinka.git
 
 #https://github.com/adafruit/Adafruit_CircuitPython_SSD1306
+cd
+git clone https://github.com/adafruit/Adafruit_CircuitPython_SSD1306.git
+
 pip3 install adafruit-circuitpython-ssd1306
 sudo pip3 install adafruit-circuitpython-ssd1306
