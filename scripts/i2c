@@ -1,21 +1,35 @@
 #https://learn.adafruit.com/circuitpython-on-orangepi-linux/orange-pi-pc-setup
-#https://github.com/adafruit/Adafruit_Python_SSD1306
+
 #https://wiki.radxa.com/Rock5/hardware/5b/gpio
 
-sudo apt-get install libgpiod2 python3-libgpiod  -y
-pip3 install gpiod
-      sudo apt install python3-pip  python3-dev  -y
-      sudo python3 -m pip install -U setuptools
-      sudo python3 -m pip install -U amitools  
-      sudo python3 -m pip install -U gpiod
-      pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 
-sudo apt-get install -y python3-smbus python3-dev i2c-tools
-sudo adduser amiga i2c
-sudo adduser root i2c
+#https://github.com/adafruit/Adafruit_Python_SSD1306
+
 # I2C7_SDA_M3, I2C7_SCL_M3
 
 sudo echo "overlays=rk3588-i2c7-m3" >> /boot/armbianEnv.txt
+
+sudo apt-get install -y python3 python3-pip python3-smbus python3-dev i2c-tools python3-pip  python3-dev
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
+sudo update-alternatives --config python
+sudo apt-get install libgpiod2 python3-libgpiod  -y
+       
+       sudo python3 -m pip install -U setuptools
+       sudo python3 -m pip install -U gpiod
+       pip3 install gpiod
+
+          pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+     sudo pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+
+if [  -d /home/rock/ ]; then
+    sudo adduser root i2c
+fi
+if [  -d /home/amiga/ ]; then
+    sudo adduser amiga i2c
+fi    
+    sudo adduser rock i2c
+
 
 
 
