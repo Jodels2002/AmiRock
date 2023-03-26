@@ -43,6 +43,12 @@ sudo i2cdetect -y 1
 
 cd
 git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
-cd Adafruit_Python_SSD1306
+sudo chmod -R 777 Adafruit_Python_SSD1306
 
+
+
+git clone https://github.com/rm-hull/luma.examples.git
+sudo chmod -R 777 Adafruit_Python_SSD1306
+cd luma.examples
+sudo -H pip install -e .
 
