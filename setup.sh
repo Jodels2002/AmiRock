@@ -56,12 +56,11 @@ sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
 sudo apt update -y
 sudo apt dist-upgrade -y
 sudo apt-get autoremove -y
-
-#sudo apt install glmark2 glmark2-es2 glmark2-es2-wayland -y
-#sudo apt install mesa-utils -y
 sudo apt install mali-g610-firmware -y
 sudo apt install malirun -y
 
+#sudo apt install glmark2 glmark2-es2 glmark2-es2-wayland -y
+#sudo apt install mesa-utils -y
 #sudo apt install kodi -y
 
       
@@ -83,7 +82,7 @@ sudo systemctl start fan-control
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g
   sudo apt install build-essential -y
-  sudo apt install arqiver nemo geany -y
+  sudo apt install arqiver geany -y
   sudo apt install 7z -y
   sudo apt install cockpit -y
   sudo apt install pt2-clone -y
@@ -94,7 +93,7 @@ sudo systemctl start fan-control
   sudo apt purge terminator -y
   sudo cp -rf /bin/7zz /bin/7z 
  
-  #sudo apt install -y nemo xini* xorg
+
         
 	clear
       toilet "AmiRock-OS" --metal
@@ -168,8 +167,8 @@ cd
       echo " "
       echo "  First installation "
       echo " "
-      sudo apt-get -y install libserialport
-      sudo apt-get -y install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev
+   
+     
       clear
       toilet "AmiRock-OS" --metal
       echo " "
