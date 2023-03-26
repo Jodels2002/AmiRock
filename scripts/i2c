@@ -1,6 +1,6 @@
 #https://learn.adafruit.com/circuitpython-on-orangepi-linux/orange-pi-pc-setup
-
 #https://github.com/adafruit/Adafruit_Python_SSD1306
+#https://wiki.radxa.com/Rock5/hardware/5b/gpio
 
 sudo apt-get install libgpiod2 python3-libgpiod  -y
 pip3 install gpiod
