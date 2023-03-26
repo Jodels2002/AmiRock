@@ -19,7 +19,7 @@ sudo apt-get install python3-libgpiod  -y
        
        sudo python3 -m pip install -U setuptools
        sudo python3 -m pip install -U gpiod
-       sudo python3 -m pip install -U RPi.GPIO
+       # sudo python3 -m pip install -U RPi.GPIO
        sudo python3 -m pip install -U gpiod
        
        sudo -H pip3 install luma.oled
