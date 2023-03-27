@@ -204,7 +204,7 @@ if __name__ == '__main__':
     army = army()
     rows = random.sample(range(12), 12)
 
-    img_path = str(Path(__file__).resolve().parent.joinpath('images', 'radxe.png'))
+    img_path = str(Path(__file__).resolve().parent.joinpath('images', 'radxa.png'))
     splash = Image.open(img_path) \
         .transform((device.width, device.height), Image.AFFINE, (1, 0, 0, 0, 1, 0), Image.BILINEAR) \
         .convert(device.mode)
@@ -238,7 +238,7 @@ if __name__ == '__main__':
             with canvas(device) as draw:
                 if army.size() == 0:
                     draw.text((27, 28), text="Radxa", fill="white")
-                    draw.text((30, 38), text="Rock 5b", fill="white")
+                    draw.text((27, 45), text="Rock 5b", fill="white")
                 else:
                     draw.text((30, 28), text="Rock 5b", fill="white")
 
