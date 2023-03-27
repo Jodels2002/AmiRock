@@ -81,10 +81,10 @@ sudo systemctl start fan-control
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
   sudo apt install -y gparted ntfs-3g nemo
-  sudo apt install build-essential -y
+  #sudo apt install build-essential -y
   sudo apt install arqiver geany -y
   sudo apt install 7z -y
-  sudo apt install cockpit -y
+  #sudo apt install cockpit -y
   sudo apt install pt2-clone -y
   sudo apt install raspi-config -y
   sudo raspi-config nonint do_expand_rootfs
