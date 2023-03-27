@@ -316,7 +316,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 
 	 sudo ln -s /home/rock/ /home/pi
 	 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
-	 sudo echo "overlays=rk3588-i2c7-m3" >> /boot/armbianEnv.txt
+	  #sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 
 	 fi
  #************************************************ End First run        **************************************   	     
