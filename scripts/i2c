@@ -25,10 +25,11 @@ sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2
      
        
        sudo -H pip3 install luma.oled
+       
        git clone https://github.com/rm-hull/luma.examples.git
        sudo chmod -R 777 luma.examples
        cd luma.examples
-       sudo -H pip install -e .
+       # TEST sudo -H pip install -e .
        
        
        
