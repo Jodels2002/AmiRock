@@ -3,11 +3,6 @@
 # B.Titze 2023
 
 
-# sudo systemctl set-default multi-user.target
-# systemctl set-default graphical.target
-# update.rc firstrun defaults first Festplatte zu klein
-
-
 BLACK='\033[0;39m'
 BLUE='\033[1;34m'
 GREEN='\033[1;32m'
@@ -154,21 +149,7 @@ cd
       sudo rm -rf /home/$USER/amigafonts/
       sudo rm -rf /opt/Amiga/conf/am*
       
-               clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
-      
-      sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 
-      clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
-   
+
      
       clear
       toilet "AmiRock-OS" --metal
