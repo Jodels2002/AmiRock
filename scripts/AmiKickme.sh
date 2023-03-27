@@ -95,10 +95,13 @@ clear
 
      
        
-       sudo chmod -R 755 /usr/share/plymouth/
-       sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+      
+       if [ ! -d /opt/OLED/images/ ]; then
+       mkdir /opt/OLED
+       mkdir /opt/OLED/images
+       fi
 
-       
+       cp -rf /opt/AmiRock/OLED/* /opt/OLED/
       
 
       # Update allways Routine
