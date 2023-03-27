@@ -1,0 +1,13 @@
+
+      
+      if [ -d /opt/OLED/ ]; then
+ 
+         cd /opt/OLED/
+ 
+         python3 invaders.py
+ 
+ fi
+      
+ cd /opt/Amiga/
+      ./amiberry --config conf/ClassicWB-ADVSP.uae -G
+      cd
