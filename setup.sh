@@ -289,7 +289,8 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt-get autoremove -y
 	 
 	 sudo chmod -R 775 /usr/share/plymouth/
-	 sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+	 sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/watermark.png
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	clear
