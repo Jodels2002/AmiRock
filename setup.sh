@@ -78,7 +78,7 @@ sudo systemctl start fan-control
   sudo apt install -y gparted ntfs-3g nemo
   #sudo apt install build-essential -y
   sudo apt install arqiver geany -y
-  sudo apt install 7z -y
+  sudo apt install 7zip -y
   #sudo apt install cockpit -y
   sudo apt install pt2-clone -y
   sudo apt install raspi-config -y
