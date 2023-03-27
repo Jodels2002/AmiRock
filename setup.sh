@@ -304,7 +304,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 
 	 sudo chmod -R 775 /usr/share/plymouth/
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/glow/glow.plymouth 500
+  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	clear
       toilet "Afterburner" --metal
       echo " "
