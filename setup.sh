@@ -228,7 +228,7 @@ cd
    
       echo " "
 #***********************************************  #AmiRock-OS install splash  ***********************************
-      
+    if [ ! -d /home/rock/wine/share/wine ]; then   
         #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
 	sudo chmod -R 775 /usr/share/plymouth/
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
@@ -240,7 +240,7 @@ cd
       echo "  First installation "
       echo " "
       sudo update-initramfs -u
-      
+    fi
       cd
  #***********************************************  #AmiRock-OS Not Afterburner  ***********************************     
       if [ ! -d /home/rock/wine/share/wine ]; then
@@ -301,8 +301,22 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 #sudo chmod -R 776 /home/rock/
 	 #sudo reboot now
 	 sudo apt-get autoremove -y
+	 
+	 sudo chmod -R 775 /usr/share/plymouth/
+  	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/glow/glow.plymouth 500
+  	clear
+      toilet "Afterburner" --metal
+      echo " "
+      echo " "
+      echo "  Extended "
+      echo " "
+      sudo update-initramfs -u
+	 
+	 
 	 sudo ln -s /home/rock/ /home/pi
 	 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
+	 sudo echo "overlays=rk3588-i2c7-m3" >> /boot/armbianEnv.txt
 
 	 fi
  #************************************************ End First run        **************************************   	     
