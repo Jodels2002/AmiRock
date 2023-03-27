@@ -37,6 +37,7 @@ sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2
        sudo cp -rf  ~/luma.examples/examples/fonts/* /usr/share/fonts/truetype/
        cp -rf  ~/luma.examples/examples/fonts /opt/OLED/
        cp -rf  ~/luma.examples/examples/images /opt/OLED/
+       cp -rf  ~/luma.examples/examples/images /opt/OLED/
        cp -rf  ~/luma.examples/examples/hotspot /opt/OLED/
        cp -rf /opt/AmiRock/OLED/* /opt/OLED/
          
