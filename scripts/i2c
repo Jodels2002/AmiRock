@@ -36,16 +36,16 @@ sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2
 
 if [  -d /home/rock/ ]; then
      sudo adduser rock i2c
-     sudo usermod -a -G i2c,spi,gpio rock
+  
 fi
 
 if [  -d /home/amiga/ ]; then
     sudo adduser amiga i2c
-    sudo usermod -a -G i2c,spi,gpio amiga
+
 fi    
    
     sudo adduser root i2c
-    sudo usermod -a -G i2c,spi,gpio root
+ 
 
 sudo i2cdetect -y 1
 
