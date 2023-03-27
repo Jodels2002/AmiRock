@@ -237,9 +237,9 @@ if __name__ == '__main__':
         for i in range(2):
             with canvas(device) as draw:
                 if army.size() == 0:
-                    draw.text((27, 28), text="Victory", fill="blue")
+                    draw.text((27, 28), text="Radxa", fill="white")
                 else:
-                    draw.text((30, 28), text="Defeat", fill="red")
+                    draw.text((30, 28), text="Rock 5b", fill="white")
 
         time.sleep(5)
     except KeyboardInterrupt:
