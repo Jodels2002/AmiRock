@@ -88,16 +88,7 @@ sudo apt-get upgrade
       sudo chmod -R 775 /opt/AmiRock/
        
       
-      clear 
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  Updating Boot Image "
-      echo " "
-       sudo chmod -R 755 /usr/share/plymouth/
-       sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
-       sudo cp -rf  /opt/AmiRock/config/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
-      sudo update-initramfs -u      
+  
       
       /home/$USER/AmiRock/scripts/AmiKickme.sh
  
