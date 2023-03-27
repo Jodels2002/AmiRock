@@ -80,7 +80,7 @@ sudo systemctl start fan-control
 
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
-  sudo apt install -y gparted ntfs-3g
+  sudo apt install -y gparted ntfs-3g nemo
   sudo apt install build-essential -y
   sudo apt install arqiver geany -y
   sudo apt install 7z -y
