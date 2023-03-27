@@ -381,4 +381,4 @@ echo "  ... finished AmiRock setup :-)  "
 echo -e "$BLACK "
 
 m
-firefox-esr http://localhost:9090/
+#firefox-esr http://localhost:9090/
