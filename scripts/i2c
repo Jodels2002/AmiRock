@@ -47,7 +47,7 @@ fi
     sudo adduser root i2c
  
 
-sudo i2cdetect -y 1
+sudo i2cdetect -y 0
 
 
 
