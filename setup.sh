@@ -262,7 +262,12 @@ fi
 #************************************************ End First run        **************************************   		
 
 if [  -d /home/rock/wine/share/wine ]; then
-         mkdir /opt/Amiga/dir
+          clear
+      toilet "Afterburner" --metal
+      echo " "
+      echo " "
+      echo "  Extendet"
+      echo " "
 	
 	 cd
 	
@@ -284,6 +289,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo apt-get autoremove -y
 	 
 	 sudo chmod -R 775 /usr/share/plymouth/
+	 sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	clear
