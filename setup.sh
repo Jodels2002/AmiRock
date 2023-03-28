@@ -272,7 +272,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 cd
 	
          sudo apt purge gnome-terminal -y
-	 sudo apt install nautilus nautilus-action -y
+	 sudo apt purge nautilus nautilus-action -y
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
 	 #sudo apt purge gnome-c* -y
@@ -291,6 +291,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 sudo chmod -R 775 /usr/share/plymouth/
 	 sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
 	 sudo cp -rf /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/watermark.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/ubuntu-logo.png
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	clear
@@ -304,7 +305,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	 
 	 sudo ln -s /home/rock/ /home/pi
 	 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
-	  #sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
+	 sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 
 	 fi
 	 sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
