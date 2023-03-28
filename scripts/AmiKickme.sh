@@ -12,16 +12,7 @@
 
   clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
-      clear 
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  Updating Boot Image "
-      echo " "
-       sudo chmod -R 755 /usr/share/plymouth/
-       sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
-       sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
-      sudo update-initramfs -u     
+ 
   
   if [ ! -d /opt/Amiga/data/ ]; then
       
