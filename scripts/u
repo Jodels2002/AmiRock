@@ -88,6 +88,7 @@ sudo apt-get upgrade
       sudo chmod -R 775 /opt/AmiRock/
 
 #************************** Afterburner Extended **********************************************************************       
+     
      if [  -d /home/rock/wine/share/wine ]; then
           clear
       toilet "Afterburner" --metal
@@ -110,10 +111,24 @@ sudo apt-get upgrade
       echo " "
       echo "  Extended "
       echo " "
+      echo "  Updating Boot Image "
+     
+      
+   else 
+      sudo chmod -R 775 /usr/share/plymouth/
+      sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+      sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  Updating Boot Image "
+      echo " "
       sudo update-initramfs -u
-
-	 fi
-  
+       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
+    fi
+     sudo update-initramfs -u
       
       /home/$USER/AmiRock/scripts/AmiKickme.sh
  
