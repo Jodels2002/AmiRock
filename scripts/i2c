@@ -63,11 +63,15 @@ if [  -d /home/amiga/ ]; then
     sudo adduser amiga i2c
 fi    
    sudo adduser root i2c
+   sudo cp -R /opt/AmiRock/config/boot.service /etc/systemd/system/boot.service
+   sudo cp -R /home/$USER/KickPi-OS/config/splash/Booting.png /etc/systemd/system/Booting.png
+   sudo systemctl enable boot
   
   clear
       		toilet "AmiRock" --metal
       		echo " "
-      		echo " OLED-Control by Richard Hull"
+      		echo " luma.oled by Richard Hull"
+        echo " "
 sudo i2cdetect -y 0
 
 
