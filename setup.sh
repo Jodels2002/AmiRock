@@ -119,8 +119,8 @@ cd
        sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
       
       sudo apt install worker unadf xdms fonts-amiga -y
-      sudo apt-get -y install libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4      
-      clear
+      sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
+	clear
       
       toilet "AmiRock-OS" --metal
       echo " "
