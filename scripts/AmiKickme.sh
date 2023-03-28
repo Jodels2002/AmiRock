@@ -40,12 +40,10 @@
             clear
       toilet "AmiRock-OS" --metal
       echo " "
- 
-      
+       
       cd 
 
 fi
-	 
       
       sudo chmod -R 775 /opt/
       
@@ -54,17 +52,13 @@ fi
       fi
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
-      fi
-      
-             
+      fi         
       
       sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
       
    
-      sudo unzip -o  /opt/AmiRock/config/up.zip
-      
-      
+      sudo unzip -o  /opt/AmiRock/config/up.zip   
       sudo chmod -R 755 /home/$USER/AmiRock
      
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
@@ -72,10 +66,7 @@ fi
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
       sudo cp -rf /opt/AmiRock/config/Logo/* /opt/AmiRock/config/
       sudo cp -rf /opt/AmiRock/config/Logo/boot.jpg /usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg
-     
-   
-    
-           
+         
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -94,10 +85,7 @@ fi
 cd /home/$USER/AmiRock/
 
 clear
-
-     
-       
-      
+             
        if [ ! -d /opt/OLED/images/ ]; then
        mkdir /opt/OLED
        mkdir /opt/OLED/images
@@ -141,26 +129,16 @@ fi
 
 if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
       sudo cp -R /opt/Amiga/amiberry_dev.png /opt/Amiga/data/
-      fi
-      
-
-cd
-	     
-
-
-
+      fi      
+cd	     
 
 if [ -d /opt/Backup/MegaAGS/games/Amiga/ ]; then
    
       sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
       #sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/Amiga/conf/
 fi 
-
-   
-    
-   sudo cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
-
-      
+  
+   sudo cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/  
    
             if [ ! -f /opt/Amiga/amiberry_old ]; then
             cp -rf  /opt/Amiga/amiberry_old /opt/Backup/
@@ -191,8 +169,7 @@ fi
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
       	
       	sudo chmod -R 755 $HOME/RetroPieBIOS
-      
-         
+        
       	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /opt/Amiga/kickstarts/A500.rom
       	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /opt/Amiga/kickstarts/A600.rom
       	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/A1200.rom
@@ -203,9 +180,7 @@ fi
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
       echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-          
-    
+      echo " No Rights Reserved.  "    
 	
  fi
   if [ ! -d /opt/Amiga/dir/Work/ ]; then
@@ -233,8 +208,7 @@ fi
       if [ ! -f /home/$USER/Desktop/AmiRock-OS.desktop ]; then
         sudo cp -rf /usr/share/applications/AmiRock-OS.desktop /home/$USER/Desktop/AmiRock-OS.desktop
       fi  
-      
-      
+            
       if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
       
       #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
@@ -246,9 +220,7 @@ fi
       echo " "
       
       fi
-
-     
-      
+   
       echo " "
       echo "  ... cleanup Amiga folder  " 
      
@@ -319,9 +291,7 @@ fi
 	 fi
 	    #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
 	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
-	
-
-	    
+		    
 	    sudo chmod -R 775 /usr/share/plymouth/
   	    sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
@@ -364,9 +334,7 @@ fi
       sudo rm -rf ~/AmiRock
       
   
-cd
-	
-	    
+cd	    
 	    	
  clear
       toilet "AmiRock-OS" --metal
