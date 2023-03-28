@@ -307,6 +307,7 @@ if [  -d /home/rock/wine/share/wine ]; then
 	  #sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 
 	 fi
+	 sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
  #************************************************ End First run        **************************************   	     
  
  
