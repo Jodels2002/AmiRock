@@ -308,7 +308,7 @@ fi
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
       fi
-	sudo rm -rf /home/$USER/Desktop/Amiberry.desktop 
+	sudo rm -rf /home/$USER/.config/autostart/Amiberry.desktop 
 #***********************************************  #AmiRock-OS install script  *********************************** 
       clear   	
       echo " "
