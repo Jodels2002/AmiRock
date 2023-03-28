@@ -64,7 +64,6 @@ if [  -d /home/amiga/ ]; then
 fi    
    sudo adduser root i2c
    sudo cp -R /opt/AmiRock/config/boot.service /etc/systemd/system/boot.service
-   sudo cp -R /home/$USER/KickPi-OS/config/splash/Booting.png /etc/systemd/system/Booting.png
    sudo systemctl enable boot
   
   clear
