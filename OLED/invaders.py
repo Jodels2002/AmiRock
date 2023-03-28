@@ -214,7 +214,7 @@ if __name__ == '__main__':
         device.display(splash)
         device.display(splash)
 
-        time.sleep(3)
+        time.sleep(20)
         device.clear()
 
         while not army.invaded and army.size() > 0:
@@ -242,6 +242,6 @@ if __name__ == '__main__':
                 else:
                     draw.text((30, 28), text="Rock 5b", fill="white")
 
-        time.sleep(5)
+        time.sleep(15)
     except KeyboardInterrupt:
         pass
