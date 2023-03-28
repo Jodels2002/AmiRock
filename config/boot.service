@@ -4,7 +4,7 @@ DefaultDependencies=no
 After=local-fs.target
 
 [Service]
-ExecStart/usr/local/bin/boot.sh
+ExecStart=/usr/local/bin/boot.sh
 StandardInput=tty
 StandardOutput=tty
 
