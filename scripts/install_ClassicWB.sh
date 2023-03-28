@@ -18,11 +18,25 @@ GREY='\033[1;30m'
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
-          
+      sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
+      clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
       sudo apt install python3-pip  python3-dev  -y
+      clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
       sudo python3 -m pip install -U setuptools
       sudo python3 -m pip install -U amitools   
-      
+      clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
 
 
       
