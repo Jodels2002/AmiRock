@@ -1,10 +1,20 @@
+#!/bin/bash
+# Install AmiRock
+# B.Titze 2023.  # I2C2_SDA_M1, Install 1306 OLED Display
+# https://github.com/rm-hull/luma.core
 
-# I2C7_SDA_M3, I2C7_SCL_M3
+BLACK='\033[0;39m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+GREY='\033[1;30m'
 
- if [ ! -d ~/luma.examples ]; then
+ clear 
+if [ ! -d /opt/OLED/images/ ]; then
 
 sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 fi
+
 #sudo apt-get install -y python3 python3-pip python3-smbus python3-dev i2c-tools python3-pip  python3-dev
 #sudo apt-get install libffi-dev libssl-dev python3-pil libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 -y
 #sudo apt-get install python3-rpi.gpio -y 
@@ -12,25 +22,26 @@ fi
 #sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.5 2
 #sudo update-alternatives --config python
 #sudo apt-get install python3-libgpiod  -y
-
+# pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+#sudo pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 
 sudo apt install -y python3-dev python3-pip libfreetype6-dev libjpeg-dev build-essential
 sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
        
         sudo python3 -m pip install -U setuptools
         sudo python3 -m pip install -U gpiod
-        sudo python3 -m pip install -U RPi.GPIO
-       # pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
-       #sudo pip3 freeze - local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
-     
+        sudo pip install --upgrade luma.core     
+        #sudo -H pip3 install luma.oled
+        #sudo python3 -m pip install -U RPi.GPIO
        
-       sudo -H pip3 install luma.oled
        cd
        
        git clone https://github.com/rm-hull/luma.examples.git
        sudo chmod -R 777 luma.examples
        cd luma.examples
        sudo -H pip install -e .
+       
+       
        mkdir /opt/OLED
        mkdir /opt/OLED/images
 
@@ -40,26 +51,23 @@ sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2
        cp -rf  ~/luma.examples/examples/images /opt/OLED/
        cp -rf  ~/luma.examples/examples/hotspot /opt/OLED/
        cp -rf /opt/AmiRock/OLED/* /opt/OLED/
-         
-      
+  
        sudo rm -rf ~/luma.examples 
-       
-       
-     
+
 
 if [  -d /home/rock/ ]; then
      sudo adduser rock i2c
-  
 fi
 
 if [  -d /home/amiga/ ]; then
     sudo adduser amiga i2c
-
 fi    
-   
-    sudo adduser root i2c
- 
-
+   sudo adduser root i2c
+  
+  clear
+      		toilet "AmiRock" --metal
+      		echo " "
+      		echo " OLED-Control by Richard Hull"
 sudo i2cdetect -y 0
 
 
