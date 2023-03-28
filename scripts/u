@@ -87,7 +87,7 @@ sudo apt-get upgrade
       sudo chmod -R 775 /usr/local/bin
       sudo chmod -R 775 /opt/AmiRock/
        
-      
+      sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
   
       
       /home/$USER/AmiRock/scripts/AmiKickme.sh
