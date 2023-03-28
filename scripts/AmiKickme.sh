@@ -262,9 +262,13 @@ fi
          sudo rm -rf $HOME/Bilder/
       fi
       
-      if [ ! -d $HOME/Amiga/data/amiberry_dev.png/ ]; then
+      if [ ! -d /opt/data/amiberry_dev.png/ ]; then
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
+      
+   
+     
+
       
  #***********************************************  #AmiRock-OS Afterburner  ***********************************      
  
@@ -308,9 +312,6 @@ fi
       echo " "
       echo "  ... repair rights  "  
       
-    
-    if [  -d /home/$USER/wine/share/wine ]; then    
-    
   
       sudo chmod -R 775 /usr/local/bin/
       sudo chmod -R 775 /home/$USER/.config/
@@ -319,19 +320,8 @@ fi
   
       sudo chmod -R 775 /home/$USER/
       sudo chmod -R 775 /usr/share/applications/
-      sudo rm -rf ~/AmiRock
-      
-      else 
-      sudo chmod -R 777 /usr/local/bin/
-      sudo chmod -R 777 /home/$USER/.config/
-      sudo chmod -R 777 /home/$USER/.local/
-      sudo chmod -R 777 /opt/
-  
-      sudo chmod -R 777 /home/$USER/
-      sudo chmod -R 777 /usr/share/applications/
      
-     fi
-      
+           
       sudo rm -rf ~/AmiRock
       
   
