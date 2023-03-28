@@ -159,11 +159,17 @@ if [ ! -d /opt/Amiga/Install/ClassicWB_LITE_v28/ ]; then
       unzip -o -q ./ClassicWB_LITE_v28.zip
       clear
 fi 
+#***********************************************  #Restet folders ***********************************
+
+rm -d -r /opt/Amiga/dir/System_ADVSP
+rm -d -r /opt/Amiga/dir/System_P96
+rm -d -r /opt/Amiga/dir/Software
 cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
 
+#***********************************************  #System_ADVSP ***********************************
 if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
 
-     rm -d -r /opt/Amiga/dir/System_ADVSP/
+    
      mkdir /opt/Amiga/dir/System_ADVSP
 
    
@@ -206,11 +212,12 @@ if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
      #ClassicWB-ADVSP_run
        
     fi
-      
+  
+#***********************************************  #System_P96 ***********************************    
       if [ ! -d /opt/Amiga/dir/System_P96/ ]; then
 	  
       cd /opt/Amiga/hdf
-	  rm -d -r /opt/Amiga/dir/System_P96/
+	  
       mkdir /opt/Amiga/dir/System_P96
     
      
