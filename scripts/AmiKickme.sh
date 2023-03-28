@@ -281,8 +281,10 @@ fi
       echo "  Detect Afterburner Image "
       echo " "
       
-      	 sudo rm -rf /home/$USER/Desktop/Amiga.desktop
+      	 sudo rm -rf /home/$USER/Desktop/Ami*
 	 sudo rm -rf /home/$USER/Desktop/AmiRock-OS.desktop
+	
+	 
 	  if [ ! -d /home/$USER/Videos/ ]; then
 	  
 	 sudo rm -rf /home/$USER/Videos
