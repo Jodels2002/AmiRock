@@ -1,0 +1,12 @@
+[Unit]
+Description=Splash screen
+DefaultDependencies=no
+After=local-fs.target
+
+[Service]
+ExecStart=fbi -d /dev/fb0 --noverbose -a /etc/systemd/system/Booting.png
+StandardInput=tty
+StandardOutput=tty
+
+[Install]
+WantedBy=sysinit.target
