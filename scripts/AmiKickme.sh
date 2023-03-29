@@ -87,12 +87,7 @@ cd /home/$USER/AmiRock/
 
 clear
              
-       if [ ! -d /opt/OLED/images/ ]; then
-       mkdir /opt/OLED
-       mkdir /opt/OLED/images
-       fi
-
-       cp -rf /opt/AmiRock/OLED/* /opt/OLED/
+    
       
 
       # Update allways Routine
@@ -266,14 +261,16 @@ fi
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
       
+      if [ ! -d /opt/OLED/images/ ]; then
+       mkdir /opt/OLED
+       mkdir /opt/OLED/images
+      fi
       if [ -d /opt/OLED/ ]; then
        cp -rf /opt/AmiRock/OLED/* /opt/OLED/
        sudo cp -rf /opt/OLED/fonts/* /usr/share/fonts/truetype/
-       sudo rm -rf ~/luma.examples
       fi
+       
   
-      
-      
       #************************** Afterburner Extended **********************************************************************       
      
      if [  -d /home/rock/wine/share/wine ]; then
