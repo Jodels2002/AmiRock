@@ -266,8 +266,11 @@ fi
       sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
       fi
       
-   
-
+      if [ -d /opt/OLED/ ]; then
+       cp -rf /opt/AmiRock/OLED/* /opt/OLED/
+       sudo cp -rf /opt/OLED/fonts/* /usr/share/fonts/truetype/
+       sudo rm -rf ~/luma.examples
+      fi
   
       
       
