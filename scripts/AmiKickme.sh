@@ -281,8 +281,8 @@ fi
       echo "  Detect Afterburner Image "
       echo " "
       
-      	 sudo rm -rf /home/$USER/Desktop/Amiberry.desktop
-	 sudo rm -rf /home/$USER/Desktop/AmiRock-OS.desktop
+      	 sudo rm -rf /home/$USER/Desktop/*
+	
 	
 	 if [ ! -d /home/$USER/Videos/ ]; then
 	 mkdir /home/$USER/Videos
