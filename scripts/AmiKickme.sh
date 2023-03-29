@@ -267,15 +267,15 @@ fi
       fi
       
    
-     
 
+  
       
- #***********************************************  #AmiRock-OS Afterburner  ***********************************      
- 
- if [  -d /home/$USER/wine/share/wine ]; then
- 
-                 clear
-      toilet "AmiRock-OS" --metal
+      
+      #************************** Afterburner Extended **********************************************************************       
+     
+     if [  -d /home/rock/wine/share/wine ]; then
+     
+         toilet "AmiRock-OS" --metal
       echo " "
       echo " "
       echo "  Detect Afterburner Image "
@@ -284,28 +284,65 @@ fi
       	 sudo rm -rf /home/$USER/Desktop/Amiberry.desktop
 	 sudo rm -rf /home/$USER/Desktop/AmiRock-OS.desktop
 	
-	 
-	  if [ ! -d /home/$USER/Videos/ ]; then
-	  
-	 sudo rm -rf /home/$USER/Videos
-	
-	  fi 
-	 
-	 if [ ! -d /home/$USER/Movies/ ]; then
-	 
-	 mkdir /home/$USER/Movies
-	  
+	 if [ ! -d /home/$USER/Videos/ ]; then
+	 mkdir /home/$USER/Videos
 	 fi
+	 	 
+	 if [ ! -d /home/$USER/Movies/ ]; then
+	 mkdir /home/$USER/Movies
+	 fi
+	  
 	    #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
 	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
-		    
-	  	 
 	 
 	 sudo rm -rf /home/$USER/.config/dconf/*
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 	 sudo chmod -R 775 /home/rock/
-      fi
-	sudo rm -rf /home/$USER/.config/autostart/Amiberry.desktop 
+
+          clear
+      toilet "Afterburner" --metal
+      echo " "
+      echo " "
+      echo "  Extendet"
+      echo " "
+
+	      sudo chmod -R 775 /usr/share/plymouth/
+	      sudo rm -rf /usr/share/plymouth/themes/armbian/watermark.png
+	      sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/themes/armbian/watermark.png
+	      sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/ubuntu-logo.png
+  	    sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+  	    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/armbian/armbian.plymouth 500
+  	
+   clear
+      toilet "Afterburner" --metal
+      echo " "
+      echo " "
+      echo "  Extended "
+      echo " "
+      echo "  Updating Boot Image "
+     
+#************************** AmiRock **********************************************************************             
+   else 
+      sudo chmod -R 775 /usr/share/plymouth/
+      sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
+      sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
+  	clear
+      toilet "AmiRock-OS" --metal
+      echo " "
+      echo " "
+      echo "  Updating Boot Image "
+      echo " "
+      sudo update-initramfs -u
+       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
+       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
+    fi
+     sudo update-initramfs -u
+     
+      
+      
+      
+      
+	
 #***********************************************  #AmiRock-OS install script  *********************************** 
       clear   	
       echo " "
