@@ -210,23 +210,8 @@ cd
       sudo rm -rf /usr/share/backgrounds/o*
       sudo rm -rf /usr/share/backgrounds/Ch*
       sudo rm -rf /usr/share/backgrounds/B*
-   
-      echo " "
-#***********************************************  #AmiRock-OS install splash  ***********************************
-    if [ ! -d /home/rock/wine/share/wine ]; then   
-        #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
-	sudo chmod -R 775 /usr/share/plymouth/
-  	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
-  	clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  First installation "
-      echo " "
-      sudo update-initramfs -u
-    fi
       cd
+    
  #***********************************************  #AmiRock-OS Not Afterburner  ***********************************     
       if [ ! -d /home/rock/wine/share/wine ]; then
         clear
