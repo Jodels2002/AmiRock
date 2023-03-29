@@ -49,7 +49,7 @@ def cpu_usage():
 
 def mem_usage():
     usage = psutil.virtual_memory()
-    return " Mem:  %s %.0f%%" \
+    return " RAM:  %s %.0f%%" \
         % (bytes2human(usage.used), 100 - usage.percent)
 
 
@@ -61,8 +61,8 @@ def disk_usage(dir):
 
 def stats(device):
     # use custom font
-    font1 = ImageFont.truetype('fontawesome-webfont.ttf', 18)
-    font2 = ImageFont.truetype('Topaz_a1200_v1.0.ttf', 16)
+    font1 = ImageFont.truetype('fontawesome-webfont.ttf', 19)
+    font2 = ImageFont.truetype('Topaz_a1200_v1.0.ttf', 15)
 
  
     with canvas(device) as draw:
