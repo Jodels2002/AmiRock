@@ -301,9 +301,8 @@ fi
 
           clear
       toilet "Afterburner" --metal
-      echo " "
-      echo " "
-      echo "  Extendet"
+
+      echo "Extendet"
       echo " "
 
 	      sudo chmod -R 775 /usr/share/plymouth/
@@ -315,11 +314,9 @@ fi
   	
    clear
       toilet "Afterburner" --metal
+      echo "Extended "
       echo " "
-      echo " "
-      echo "  Extended "
-      echo " "
-      echo " Updating Boot Image "
+      echo "Updating Boot Image "
       echo " "
      
 #************************** AmiRock **********************************************************************             
@@ -330,10 +327,9 @@ fi
   	clear
       toilet "AmiRock-OS" --metal
       echo " "
+      echo "Updating Boot Image "
       echo " "
-      echo " Updating Boot Image "
-      echo " "
-      sudo update-initramfs -u
+   
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
     fi
