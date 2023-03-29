@@ -314,10 +314,10 @@ fi
   	
    clear
       toilet "Afterburner" --metal
-      echo "Extended "
+      echo " Extended "
       echo " "
-      echo "Updating Boot Image "
-      echo " "
+      echo -e "$BLUE Updating Boot Image "
+      echo -e "$GREY "
      
 #************************** AmiRock **********************************************************************             
    else 
@@ -327,8 +327,8 @@ fi
   	clear
       toilet "AmiRock-OS" --metal
       echo " "
-      echo "Updating Boot Image "
-      echo " "
+      echo -e "$BLUE Updating Boot Image "
+      echo -e "$GREY "
    
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
@@ -368,7 +368,6 @@ echo " No Rights Reserved.  "
 echo -e "$BLACK "
 echo " Type 'd' to boot into AmiRock Workbench"
 echo ""
-echo " 1.>  "
 echo -e " 1.>  ( u ) AmiRock-OS Update                     "
 echo " 1.>  ( m ) ArmRock-OS Config                       " 
 echo -e " 1.>  ( c ) Armbian-Config                       "
