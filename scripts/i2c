@@ -45,13 +45,13 @@ sudo apt install -y libsdl-dev libportmidi-dev libsdl-ttf2.0-dev libsdl-mixer1.2
        mkdir /opt/OLED
        mkdir /opt/OLED/images
 
-       sudo cp -rf  ~/luma.examples/examples/fonts/* /usr/share/fonts/truetype/
+      
        cp -rf  ~/luma.examples/examples/fonts /opt/OLED/
        cp -rf  ~/luma.examples/examples/images /opt/OLED/
        cp -rf  ~/luma.examples/examples/images /opt/OLED/
        cp -rf  ~/luma.examples/examples/hotspot /opt/OLED/
        cp -rf /opt/AmiRock/OLED/* /opt/OLED/
-  
+       sudo cp -rf /opt/OLED/fonts/* /usr/share/fonts/truetype/
        sudo rm -rf ~/luma.examples 
 
 
@@ -66,7 +66,7 @@ fi
    sudo cp -R /opt/AmiRock/config/boot.service /etc/systemd/system/boot.service
    sudo systemctl enable boot
    
-    (crontab -l 2>/dev/null; echo "*/2 * * * * /usr/local/bin/loop.sh") | crontab -
+    
   
   clear
       		toilet "AmiRock" --metal
@@ -74,7 +74,7 @@ fi
       		echo " luma.oled by Richard Hull"
         echo " "
 sudo i2cdetect -y 0
-
+#(crontab -l 2>/dev/null; echo "*/2 * * * * /usr/local/bin/loop.sh") | crontab -
 
 
 
