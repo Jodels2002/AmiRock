@@ -319,7 +319,8 @@ fi
       echo " "
       echo "  Extended "
       echo " "
-      echo "  Updating Boot Image "
+      echo " Updating Boot Image "
+      echo " "
      
 #************************** AmiRock **********************************************************************             
    else 
@@ -330,7 +331,7 @@ fi
       toilet "AmiRock-OS" --metal
       echo " "
       echo " "
-      echo "  Updating Boot Image "
+      echo " Updating Boot Image "
       echo " "
       sudo update-initramfs -u
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
