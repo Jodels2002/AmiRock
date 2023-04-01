@@ -14,6 +14,8 @@ from PIL import Image, ImageSequence, ImageDraw, ImageFont
 
 import subprocess
 
+
+
 serial = i2c(port=0, address=0x3C)
 device = sh1106(serial)
 
@@ -31,7 +33,7 @@ def main():
 	
     today_last_time = "Unknown"
     # Time in s in sec*********************************************************************
-    s = 10
+    s = 15
     x = s * 4
     for t in range ( x ):
         now = datetime.datetime.now()
@@ -43,7 +45,7 @@ def main():
                 now = datetime.datetime.now()
                 today_date = now.strftime("%d %b %y")
 
-                margin = 4
+                margin = 6
 
                 cx = 30
                 cy = min(device.height, 64) / 2
@@ -61,6 +63,7 @@ def main():
                 secs = posn(sec_angle, cy - margin - 2)
 
                 draw.ellipse((left + margin, margin, right - margin, min(device.height, 64) - margin), outline="white")
+                draw.ellipse((left + 1 + margin, margin + 1, right - 1 - margin, min(device.height, 64) - margin - 1), outline="white")
               
                 draw.line((cx, cy, cx + hrs[0], cy + hrs[1]), fill="white")
                 draw.line((cx, cy, cx + mins[0], cy + mins[1]), fill="white")
@@ -68,17 +71,17 @@ def main():
                 draw.ellipse((cx - 2, cy - 2, cx + 2, cy + 2), fill="white", outline="white")
                 draw.text((2 * (cx + margin), cy - 30), today_date, fill="yellow")
                 draw.text((2 * (cx + margin), cy - 20), today_time, fill="yellow")
-                draw.text((2 * (cx + margin), cy - 0), '  Radxa', fill="yellow")
-                draw.text((2 * (cx + margin), cy + 10), 'Rock 5b', fill="yellow")
+                draw.text((2 * (cx + margin), cy - 0), 'Radxa', fill="yellow")
+                draw.text((2 * (cx + margin), cy + 10), 'Rock5b', fill="yellow")
+
 
         time.sleep(0.2)
+
 
 
 if __name__ == "__main__":
     try:
         
         main()
-	
     except KeyboardInterrupt:
         pass
-
