@@ -14,8 +14,6 @@ from PIL import Image, ImageSequence, ImageDraw, ImageFont
 
 import subprocess
 
-
-
 serial = i2c(port=0, address=0x3C)
 device = sh1106(serial)
 
@@ -73,15 +71,14 @@ def main():
                 draw.text((2 * (cx + margin), cy - 0), '  Radxa', fill="yellow")
                 draw.text((2 * (cx + margin), cy + 10), 'Rock 5b', fill="yellow")
 
-
         time.sleep(0.2)
-
 
 
 if __name__ == "__main__":
     try:
         
         main()
+	
     except KeyboardInterrupt:
         pass
 
