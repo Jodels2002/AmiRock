@@ -28,6 +28,10 @@ device = ssd1306(serial)
 # height = 64
 
 def matrix(device):
+	
+	# Time s in sec*********************************************************************
+    s = 15
+    
     wrd_rgb = [
         (154, 173, 154),
         (0, 255, 0),
@@ -54,8 +58,11 @@ def matrix(device):
 
     def increase_population():
         blue_pilled_population.append([randint(0, device.width), 0, gauss(1.2, 0.6)])
-
-    while True:
+    
+    
+    
+    x = s * 10
+    for t in range ( x ):
         clock += 1
         with regulator:
             with canvas(device, dither=True) as draw:
@@ -73,9 +80,15 @@ def matrix(device):
         while len(blue_pilled_population) > max_population:
             blue_pilled_population.pop(0)
 
-
+def main():
+    
+        matrix( device )
+    
+        
+        
 if __name__ == "__main__":
     try:
-        matrix( device )
+          main()
     except KeyboardInterrupt:
         pass
+
