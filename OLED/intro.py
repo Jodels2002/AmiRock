@@ -17,7 +17,7 @@ import subprocess
 
 
 serial = i2c(port=0, address=0x3C)
-device = sh1106(serial)
+device = ssd1306(serial)
 
 top = 0
 width = 128
@@ -26,37 +26,10 @@ height = 64
 blurb = """
 
 
-   Afterburner:
+   Radxa
    Rock 5b
 
-It is a period of
-civil war. Rebel
-spaceships, striking
-from a hidden base,
-have won their first
-victory against the
-evil Galactic Empire.
 
-During the battle,
-Rebel spies managed
-to steal secret plans
-to the Empire's ulti-
-mate weapon, the
-DEATH STAR, an armor-
-ed space station with
-enough power to des-
-troy an entire planet.
-
-Pursued by the
-Empire's sinister
-agents, Princess Leia
-races home aboard her
-starship, custodian
-of the stolen plans
-that can save her
-people and restore
-freedom to the
-galaxy....
 """
 
 
@@ -64,19 +37,19 @@ def main():
     img_path = str(Path(__file__).resolve().parent.joinpath('images', 'Amiberry.pbm'))
     logo = Image.open(img_path)
 
-    virtual = viewport(device, width=device.width, height=768)
+    virtual = viewport(device, width=device.width, height=200)
 
     for _ in range(2):
         with canvas(virtual) as draw:
-            draw.text((0, 0), "A long time ago", fill="white")
-            draw.text((0, 12), "in a galaxy far", fill="white")
-            draw.text((0, 24), "far away....", fill="white")
+            draw.text((0, 0), "Welcome to AmiRock", fill="white")
+            draw.text((0, 12), "powered by", fill="white")
+            draw.text((0, 24), "Amiberry....", fill="white")
 
-    time.sleep(5)
+    time.sleep(3)
 
     for _ in range(2):
         with canvas(virtual) as draw:
-            draw.bitmap((20, 0), logo, fill="white")
+            draw.bitmap((0, 0), logo, fill="white")
             for i, line in enumerate(blurb.split("\n")):
                 draw.text((0, 40 + (i * 12)), text=line, fill="white")
 
@@ -95,3 +68,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         pass
+
