@@ -30,8 +30,12 @@ def posn(angle, arm_length):
 
 
 def main():
+	
     today_last_time = "Unknown"
-    while True:
+    # Time in s in sec*********************************************************************
+    s = 10
+    x = s * 4
+    for t in range ( x ):
         now = datetime.datetime.now()
         today_date = now.strftime("%d %b %y")
         today_time = now.strftime("%H:%M:%S")
@@ -73,9 +77,11 @@ def main():
         time.sleep(0.2)
 
 
+
 if __name__ == "__main__":
     try:
         
         main()
     except KeyboardInterrupt:
         pass
+
