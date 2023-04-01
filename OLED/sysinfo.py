@@ -85,10 +85,9 @@ def stats(device):
 
 
 def main():
-    while True:
+    for x in range ( 10 ):
         stats(device)
-        time.sleep(5)
-
+        time.sleep(1)
 
 if __name__ == "__main__":
     try:
@@ -96,3 +95,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         pass
+
