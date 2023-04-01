@@ -34,7 +34,8 @@ width = 128
 height = 64
 
 
-
+# ******************Invaders*************************
+# ***************************************************
 arrow = [0x04, 0x02, 0x01, 0x02, 0x04]
 alien1 = [0x4C, 0x1A, 0xB6, 0x5F, 0x5F, 0xB6, 0x1A, 0x4C]
 alien2 = [0x18, 0xFD, 0xA6, 0x3C, 0x3C, 0xA6, 0xFD, 0x18]
@@ -197,19 +198,17 @@ def ai_logic_move(army, plyr, rows):
                 plyr.update(-1)
                 return
         i += 1
-
+# ******************Invaders*************************
+# ***************************************************
 
 if __name__ == '__main__':
 
     
 
-    if device.width < 96 or device.height < 64:
-        raise ValueError(f"Unsupported mode: {device.width}x{device.height}")
+  
 
-    regulator = framerate_regulator()
-    plyr = player()
-    army = army()
-    rows = random.sample(range(12), 12)
+      # ******************Invaders*************************
+      # ***************************************************
 
     img_path = str(Path(__file__).resolve().parent.joinpath('images', 'radxa.png'))
     splash = Image.open(img_path) \
@@ -219,10 +218,22 @@ if __name__ == '__main__':
     try:
         # Double buffering in pygame?
         device.display(splash)
-        device.display(splash)
+        #device.display(splash)
 
-        time.sleep(20)
+        time.sleep(5)
+        
+        # ******************Invaders*************************
+        # ***************************************************
+        
         device.clear()
+        
+             if device.width < 96 or device.height < 64:
+               raise ValueError(f"Unsupported mode: {device.width}x{device.height}")
+            
+           regulator = framerate_regulator()
+           plyr = player()
+           army = army()
+           rows = random.sample(range(12), 12)
 
         while not army.invaded and army.size() > 0:
             with regulator:
@@ -250,6 +261,6 @@ if __name__ == '__main__':
                 else:
                     draw.text((30, 28), text="Rock 5b", fill="white")
 
-        time.sleep(15)
+        time.sleep(5)
     except KeyboardInterrupt:
         pass
