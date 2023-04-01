@@ -1,17 +1,19 @@
-#! /usr/bin/python3
-# -*- coding: utf-8 -*-
-
-import os
 import sys
+import math
+import random
 import time
-import psutil
+import datetime
 from pathlib import Path
-from datetime import datetime
+from operator import itemgetter
 from luma.core.interface.serial import i2c
-from luma.oled.device import sh1106, ssd1306
-from PIL import ImageFont, ImageDraw
+from luma.core.sprite_system import framerate_regulator
 from luma.core.render import canvas
-from PIL import ImageFont
+from luma.oled.device import sh1106, ssd1306
+from luma.core.virtual import viewport
+from PIL import Image, ImageSequence, ImageDraw, ImageFont  
+
+import subprocess
+
 
 
 serial = i2c(port=0, address=0x3C)
@@ -20,81 +22,49 @@ device = sh1106(serial)
 top = 0
 width = 128
 height = 64
-device.height = 64
-def bytes2human(n):
-    """
-    >>> bytes2human(10000)
-    '9K'
-    >>> bytes2human(100001221)
-    '95M'
-    """
-    symbols = ('K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y')
-    prefix = {}
-    for i, s in enumerate(symbols):
-        prefix[s] = 1 << (i + 1) * 10
-    for s in reversed(symbols):
-        if n >= prefix[s]:
-            value = int(float(n) / prefix[s])
-            return '%s%s' % (value, s)
-    return f"{n}B"
+
+blurb = """
 
 
-def cpu_usage():
-    # load average, uptime
-    uptime = datetime.now() - datetime.fromtimestamp(psutil.boot_time())
-    av1, av2, av3 = os.getloadavg()
-    return "  CPU:   %1.2f             %1f %1f   Up: %s" \
-        % (av1, av2, av3, str(uptime).split('.')[0])
+   Radxa
+   Rock 5b
 
 
-def mem_usage():
-    usage = psutil.virtual_memory()
-    return " RAM:  %s %.0f%%" \
-        % (bytes2human(usage.used), 100 - usage.percent)
-
-
-def disk_usage(dir):
-    usage = psutil.disk_usage(dir)
-    return " HDD: %s %.0f%%" \
-        % (bytes2human(usage.used), usage.percent)
-
-
-def stats(device):
-    # use custom font
-    font1 = ImageFont.truetype('fontawesome-webfont.ttf', 19)
-    font2 = ImageFont.truetype('Topaz_a1200_v1.0.ttf', 15)
-
- 
-    with canvas(device) as draw:
-		 # Icon CPU
-        draw.text((10, 3), cpu_usage(), font=font2, fill="white")
-        draw.text((0, 0), chr(61444), font=font1, fill="white")
-        if device.height >= 32:
-			# Icon memory
-            draw.text((20, 26), mem_usage(), font=font2, fill="white")
-            draw.text((0, 22), chr(62171), font=font1, fill="white")
-            # Icon disk
-            draw.text((20, 48), disk_usage('/'), font=font2, fill="white")
-            draw.text((0, 44), chr(61600), font=font1, fill="white")
-        
-            
-        if device.height >= 128:
-            draw.text((0, 34), disk_usage('/'), font=font2, fill="white")
-          
-        
+"""
 
 
 def main():
-  
-count = 0
-while count < 50:
-    stats(device)
-    count = count + 1
-    
-    
+    img_path = str(Path(__file__).resolve().parent.joinpath('images', 'radxa.png'))
+    logo = Image.open(img_path)
+
+    virtual = viewport(device, width=device.width, height=200)
+
+    for _ in range(2):
+        with canvas(virtual) as draw:
+            draw.text((0, 0), "A long time ago", fill="white")
+            draw.text((0, 12), "in a galaxy far", fill="white")
+            draw.text((0, 24), "far away....", fill="white")
+
+    time.sleep(5)
+
+    for _ in range(2):
+        with canvas(virtual) as draw:
+            draw.bitmap((20, 0), logo, fill="white")
+            for i, line in enumerate(blurb.split("\n")):
+                draw.text((0, 40 + (i * 12)), text=line, fill="white")
+
+    time.sleep(2)
+
+    # update the viewport one position below, causing a refresh,
+    # giving a rolling up scroll effect when done repeatedly
+    for y in range(450):
+        virtual.set_position((0, y))
+        time.sleep(0.01)
+
+
 if __name__ == "__main__":
     try:
-    
+        
         main()
     except KeyboardInterrupt:
         pass
