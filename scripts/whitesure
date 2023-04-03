@@ -1,0 +1,5 @@
+cd
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+sudo chmod -R 777 WhiteSur-gtk-theme
+cd WhiteSur-gtk-theme
+./install.sh
