@@ -22,10 +22,10 @@ OPTIONS=(d -"  Back to AmiRock Desktop               "
          i "Download & Install ClassicWB           "
 	 m "Download & Install MegaAGS             "
 	 w "Download & Install WHDL Games&Demos    "
-	# q "Install MSI in Wine           "
+	 o "Install OLED                 "
          u "Update AmiRock-OS             "
          n "Update Amiberry               "
-         o "Update Amiberry (DEV)         "
+         p "Update Amiberry (DEV)         "
          c "Armbian-config                "
          s "Shutdown                      ")
         
@@ -61,7 +61,17 @@ case $CHOICE in
             clear
             s
             ;; 
-                        
+         o)
+             #***********************************************  #AmiRock-OS install script  ***********************************
+             #************************************************  Install OLED SSD1306    **************************************
+            clear
+                cd
+
+		git clone --depth=1 https://github.com/Jodels2002/Rock5b_SSD1308.git
+		sudo chmod -R 775 Rock5b_SSD1308
+		cd Rock5b_SSD1308
+		./setup.sh		
+	     ;; 
          i)
              #***********************************************  #AmiRock-OS install script  ***********************************
              #************************************************  Install ClassicWB     **************************************
@@ -160,7 +170,7 @@ case $CHOICE in
            
             ;;  
        
-       o)
+       p)
            #***********************************************  #AmiRock-OS install script  ***********************************
            #************************************************  Compile Amiberry DEV        ************************************** 
 	        sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
