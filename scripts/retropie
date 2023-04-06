@@ -4,14 +4,18 @@ git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
 sudo chmod -R 775 /home/$USER/RetroPie-Setup
 cd RetroPie-Setup
-sudo __platform=rk3588 /retropie_setup.sh
+sudo __platform=rk3588 ./retropie_setup.sh
 
 sudo chmod -R 775 /home/$USER/.local/
 sudo chmod -R 777 /opt/
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/bios
 
-cd  /home/$USER/RetroPie/bios
+cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
-sudo echo "export SDL_JOYSTICK_HIDAPI=0 > output.log 2>&1 & " >> ~/.profile 
+sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/bios
+	
+sudo rm -rf /home/$USER/RetroPieBIOS 
+
+echo "export SDL_JOYSTICK_HIDAPI=0 > output.log 2>&1 & " >> ~/.profile 
 
