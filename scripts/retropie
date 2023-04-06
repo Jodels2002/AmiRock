@@ -8,5 +8,10 @@ sudo ./retropie_setup.sh
 
 sudo chmod -R 775 /home/$USER/.local/
 sudo chmod -R 777 /opt/
+mkdir /home/$USER/RetroPie
+mkdir /home/$USER/RetroPie/bios
+
+cd  /home/$USER/RetroPie/bios
+git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 
 export SDL_JOYSTICK_HIDAPI=0
