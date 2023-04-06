@@ -17,5 +17,5 @@ sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/bios
 	
 sudo rm -rf /home/$USER/RetroPieBIOS 
 
-echo "export SDL_JOYSTICK_HIDAPI=0 > output.log 2>&1 & " >> ~/.profile 
+echo "export SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
 
