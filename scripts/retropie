@@ -13,5 +13,5 @@ mkdir /home/$USER/RetroPie/bios
 
 cd  /home/$USER/RetroPie/bios
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
+sudo echo "export SDL_JOYSTICK_HIDAPI=0 > output.log 2>&1 & " >> ~/.profile 
 
-export SDL_JOYSTICK_HIDAPI=0
