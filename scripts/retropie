@@ -1,5 +1,4 @@
-
-sudo apt install -y lsb*
+# https://github.com/RetroPie/RetroPie-Setup/issues/3398sudo apt install -y lsb*
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
@@ -9,3 +8,5 @@ sudo ./retropie_setup.sh
 
 sudo chmod -R 775 /home/$USER/.local/
 sudo chmod -R 777 /opt/
+
+export SDL_JOYSTICK_HIDAPI=0
