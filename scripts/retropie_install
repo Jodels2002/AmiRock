@@ -9,11 +9,11 @@ sudo __platform=rk3588 ./retropie_setup.sh
 sudo chmod -R 775 /home/$USER/.local/
 sudo chmod -R 777 /opt/
 mkdir /home/$USER/RetroPie
-mkdir /home/$USER/RetroPie/bios
+mkdir /home/$USER/RetroPie/BIOS
 
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
-sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/bios
+sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
 	
 sudo rm -rf /home/$USER/RetroPieBIOS 
 
