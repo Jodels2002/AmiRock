@@ -370,6 +370,9 @@ function get_platform() {
             "Allwinner sun8i Family")
                 __platform="armv7-mali"
                 ;;
+             "RK3588 RockPi 5")
+                __platform="rk3588"
+                ;;
             *)
                 case $architecture in
                     i686|x86_64|amd64)
@@ -485,4 +488,8 @@ function platform_vero4k() {
     __default_cpu_flags="-mcpu=cortex-a7 -mfpu=neon-vfpv4"
     __default_cflags="-I/opt/vero3/include -L/opt/vero3/lib"
     __platform_flags+=(arm armv7 neon mali gles)
+}
+function platform_rk3588() {
+    __default_cpu_flags="-mcpu=cortex-a76+fp"
+    __platform_flags+=(aarch64)
 }
