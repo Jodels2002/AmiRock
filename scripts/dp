@@ -1,10 +1,10 @@
-sudo apt install wayland-sca* -y 
+sudo apt install wayland* -y 
 
 git clone https://gitlab.freedesktop.org/mesa/drm
 mkdir drm/build
-$cd drm/build
-$meson
-$sudo ninja install
+cd drm/build
+meson
+sudo ninja install
 
 
 git clone https://gitlab.freedesktop.org/wayland/wayland-protocols
