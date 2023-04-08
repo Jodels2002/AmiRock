@@ -21,6 +21,6 @@ cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/co
 mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg 
 rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad /opt/retropie/configs/all/emulationstation/
 rm -rf /home/$USER/RetroPieBIOS 
-
+sudo git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
 
 echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
