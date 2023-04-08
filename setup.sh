@@ -12,6 +12,8 @@ GREY='\033[1;30m'
 sudo rm -rf /home/$USER/.cache/*
 sudo rm -rf /tmp/
 
+export DISTRO=focal-stable
+wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 
  clear
       
@@ -31,10 +33,7 @@ sudo rm -rf /tmp/
       echo " " 
       echo "	Please type your sudo password ...  :-)"
       
-         
-      
-
-
+   
       
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Graphic Driver        **************************************   
@@ -44,6 +43,8 @@ sudo rm -rf /tmp/
       sudo chmod -R 775 /opt/
   clear
       		toilet "AmiRock" --metal
+          sudo apt update -y
+          sudo apt dist-upgrade -y
           
   cd /lib/firmware/
   sudo apt install build-essential meson git python3-mako libexpat1-dev bison flex libwayland-egl-backend-dev libxext-dev libxfixes-dev libxcb-glx0-dev libxcb-shm0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxshmfence-dev libxxf86vm-dev libxrandr-dev -y
