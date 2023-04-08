@@ -1,6 +1,6 @@
 # https://github.com/RetroPie/RetroPie-Setup/issues/3398sudo apt install -y lsb*
 
-
+sudo chmod -R 777 /opt/
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
 
@@ -16,11 +16,11 @@ cd RetroPie-Setup
 sudo __platform=rk3588 ./retropie_setup.sh
 
 cd /opt/retropie/configs/all/retroarch-joypads/
-sudo unzip -u  /opt/AmiRock/retropie/Gamepad.zip
-sudo cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/configs/all/retroarch-joypads/
-sudo rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad
-sudo rm -rf /home/$USER/RetroPieBIOS 
+unzip -u  /opt/AmiRock/retropie/Gamepad.zip
+cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/configs/all/retroarch-joypads/
+mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg 
+rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad /opt/retropie/configs/all/emulationstation/
+rm -rf /home/$USER/RetroPieBIOS 
 
-sudo chmod -R 775 /home/$USER/.local/
-sudo chmod -R 777 /opt/
+
 echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
