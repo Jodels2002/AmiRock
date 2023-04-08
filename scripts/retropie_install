@@ -18,8 +18,8 @@ sudo __platform=rk3588 ./retropie_setup.sh
 cd /opt/retropie/configs/all/retroarch-joypads/
 unzip -u  /opt/AmiRock/retropie/Gamepad.zip
 cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/configs/all/retroarch-joypads/
-mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg 
-rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad /opt/retropie/configs/all/emulationstation/
+mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg /opt/retropie/configs/all/emulationstation/
+rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad 
 rm -rf /home/$USER/RetroPieBIOS 
 sudo git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
 
