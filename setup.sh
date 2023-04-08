@@ -43,8 +43,8 @@ wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
       sudo chmod -R 775 /opt/
   clear
       		toilet "AmiRock" --metal
-          sudo apt update -y
-          sudo apt dist-upgrade -y
+         
+          
           
   cd /lib/firmware/
   sudo apt install build-essential meson git python3-mako libexpat1-dev bison flex libwayland-egl-backend-dev libxext-dev libxfixes-dev libxcb-glx0-dev libxcb-shm0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxshmfence-dev libxxf86vm-dev libxrandr-dev -y
