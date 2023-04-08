@@ -23,4 +23,4 @@ sudo rm -rf /home/$USER/RetroPieBIOS
 
 sudo chmod -R 775 /home/$USER/.local/
 sudo chmod -R 777 /opt/
-echo "export SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
+echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
