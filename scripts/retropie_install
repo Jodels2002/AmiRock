@@ -14,7 +14,13 @@ mkdir /home/$USER/RetroPie/BIOS
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
-	
+
+cd /opt/
+	     sudo rm -rf /opt/Amiga
+             #sudo ln -s /opt/Amiga/ Amiga
+	        
+             sudo unzip -u  /opt/AmiRock/retropie/Gamepad.zip
+
 sudo rm -rf /home/$USER/RetroPieBIOS 
 
 echo "export SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
