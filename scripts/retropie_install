@@ -1,12 +1,14 @@
 # https://github.com/RetroPie/RetroPie-Setup/issues/3398sudo apt install -y lsb*
 
 sudo chmod -R 777 /opt/
+if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
 
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
+fi
 
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
@@ -21,6 +23,7 @@ cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/co
 mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg /opt/retropie/configs/all/emulationstation/
 rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad 
 rm -rf /home/$USER/RetroPieBIOS 
+if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 sudo git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
-
+fi
 echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
