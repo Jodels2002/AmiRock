@@ -1,5 +1,5 @@
 sudo apt install wayland* -y 
-
+sudo apt install libwayland-dev -y
 git clone https://gitlab.freedesktop.org/mesa/drm
 mkdir drm/build
 cd drm/build
