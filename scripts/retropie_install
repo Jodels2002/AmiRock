@@ -1,10 +1,12 @@
 # https://github.com/RetroPie/RetroPie-Setup/issues/3398sudo apt install -y lsb*
 
+
+
 sudo chmod -R 777 /opt/
 if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
-
+sudo apt install feh -y
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
