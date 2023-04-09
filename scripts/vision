@@ -1,0 +1,91 @@
+BLACK='\033[0;39m'
+      BLUE='\033[1;34m'
+      GREEN='\033[1;32m'
+      RED='\033[1;31m'
+      GREY='\033[1;30m'
+      
+      sudo apt install python3-pip  python3-dev  -y
+      sudo python3 -m pip install -U setuptools
+      sudo python3 -m pip install -U amitools         
+
+clear
+      toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo -e "$GREY "
+      echo -e -n "$BLACK Check free disk space..." 
+      echo -e "$BLUE "
+	df -H -l /root
+	echo -e -n " "
+FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
+
+if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
+
+     echo -e  "Installation aborted..."
+     echo -e  "$RED 1.> Not enough disk space !                            -"
+     echo -e "$BLUE  1.> You need 10GB Avial left! " 
+     echo -e "$BLACK 1.> "
+     echo -e  ""
+ 
+     sleep 2
+   
+     
+     else
+if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
+      clear
+      echo -e "$GREEN "
+      echo "Installing AmigaVision ..."
+      echo -e "$GREY "
+      echo "Download AmigaVision"
+      echo -e "$GREY "
+      echo " "
+      mkdir /opt/AmigaVision
+    
+      cd /opt/MegaAGS/
+      wget https://archive.org/download/amigavision/AmigaVision-MegaAGS-2023-04-05.7z
+      
+      fi
+cd /opt/AmigaVision/
+
+if [ ! -d /opt/AmigaVision/ ]; then
+clear
+  
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREEN Extracting files .."
+      echo -e "$GREY "
+
+  7z x ./AmigaVision-MegaAGS-2023-04-05.7z
+  clear
+ 
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREEN Extracting files .."
+      echo -e "$GREY "
+    
+ 
+fi
+  
+if [ -d /opt/AmigaVision/ ]; then
+clear
+ toilet "AmiRock-OS" --metal
+      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
+      echo " Version V2.0 2020-2021 AmiRock-OS "
+      echo " No Rights Reserved.  "
+      echo " "
+      echo -e "$BLUE"
+      echo " "
+      echo -e "$GREEN ready  --- have fun :-)"
+      echo -e "$GREY "
+      echo " "
+   
+      cp -rf /opt/AmiRock/Amiga/MegaAGS/AmigaVision.desktop /usr/share/applications/ 
+      cp -rf /opt/AmiRock/Amiga/MegaAGS/AmigaVision.uae /opt/Amiga/conf/
+     
+fi 
+cd /opt/Amiga/
+      ./amiberry --config conf/AmigaVision.uae -G
+      cd
+fi
