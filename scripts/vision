@@ -45,7 +45,7 @@ if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
       echo " "
       mkdir /opt/AmigaVision
     
-      cd /opt/MegaAGS/
+      cd /opt/AmigaVision
       wget https://archive.org/download/amigavision/AmigaVision-MegaAGS-2023-04-05.7z
       
       fi
