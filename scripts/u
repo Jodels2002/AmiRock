@@ -9,7 +9,7 @@ RED='\033[1;31m'
 GREY='\033[1;30m'
 
 
-
+sudo mkdir -p /tmp/mkstempc
 cd
  clear
       toilet "AmiRock-OS" --metal
