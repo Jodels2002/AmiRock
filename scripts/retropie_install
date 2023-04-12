@@ -2,7 +2,7 @@
 
 
 
-sudo chmod -R 777 /opt/
+sudo chmod -R 777 /opt
 if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
