@@ -47,12 +47,8 @@ sudo rm -rf /tmp/
           sudo apt update -y
           sudo apt dist-upgrade -y
           
-  cd /lib/firmware/
-  sudo apt install build-essential meson git python3-mako libexpat1-dev bison flex libwayland-egl-backend-dev libxext-dev libxfixes-dev libxcb-glx0-dev libxcb-shm0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxshmfence-dev libxxf86vm-dev libxrandr-dev -y
-  sudo wget https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin
-  cd
-sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
-#sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
+sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb
+
 
 
 sudo apt-get autoremove -y
