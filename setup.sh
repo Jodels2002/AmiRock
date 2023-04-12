@@ -15,7 +15,7 @@ sudo rm -rf /home/$USER/.cache/*
 export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 
-sudo apt install software-properties-common
+sudo apt install software-properties-common -y
 
 clear      
       echo "  First installation "
