@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=AmigaVision
+Exec=AmigaVision_run
+Icon=/opt/Amiga/data/amiberry.png
+Terminal=true
+Type=Application
+Keywords=file manager;console;
