@@ -289,6 +289,7 @@ if [  -d /usr/lib/armbian/ ]; then
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
 	 sudo rm -rf $HOME/.config/
+	 unzip -u  $HOME/AmiRock/config/config.zip
          unzip -u  $HOME/AmiRock/config/afconfig.zip
 	 
 	 #sudo chmod -R 776 /home/rock/
