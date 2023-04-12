@@ -86,8 +86,17 @@ sudo systemctl start fan-control
   sudo apt install arqiver geany -y
   sudo apt install 7zip -y
   #sudo apt install cockpit -y
-  sudo apt install autofs -y
   sudo apt install pt2-clone -y
+  clear
+  sudo apt install -y synaptic chromium 
+  sudo apt install -y chromium-b* 
+  clear
+  sudo apt install autofs -y
+  clear
+
+  
+  
+  
   sudo apt install raspi-config -y
   sudo raspi-config nonint do_expand_rootfs
   
