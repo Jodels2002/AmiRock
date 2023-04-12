@@ -46,7 +46,7 @@
 
 fi
       
-      sudo chmod -R 775 /opt/
+      sudo chmod -R 777 /opt/
       
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
@@ -349,7 +349,7 @@ fi
       sudo chmod -R 775 /usr/local/bin/
       sudo chmod -R 775 /home/$USER/.config/
       sudo chmod -R 775 /home/$USER/.local/
-      sudo chmod -R 775 /opt/
+      sudo chmod -R 777 /opt/
   
       sudo chmod -R 775 /home/$USER/
       sudo chmod -R 775 /usr/share/applications/
