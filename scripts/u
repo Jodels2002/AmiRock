@@ -14,6 +14,7 @@ sudo mkdir -p /tmp/mkstempc
 sudo apt install -y dialog mc zip unzip wget ksnip
 clear
 sudo apt install -y synaptic chromium 
+sudo apt install -y chromium-b* 
 clear
 sudo apt install -y gparted ntfs-3g nemo
 clear
