@@ -1,1 +1,3 @@
 sudo rsync -av --update --exclude={'Commodore_Amiga_Tosec_Complete', '*.mpg'} /media/pi/rootfs/home/pi/pimiga/disks/ /home/pi/pimiga3/disks/ 
+
+wget https://archive.org/download/amiga-os-39/AmigaOS39.rar
