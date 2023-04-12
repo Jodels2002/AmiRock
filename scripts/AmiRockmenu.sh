@@ -11,23 +11,24 @@ clear
      echo "AmiRock OS 64 bit is running..."
      
 
-HEIGHT=35
-WIDTH=70
+HEIGHT=40
+WIDTH=75
 CHOICE_HEIGHT=8
 BACKTITLE="Main"
 TITLE="AmiRock-OS ROM Operating System"
 MENU="Version 3.1:"
 
-OPTIONS=(d -"  Back to AmiRock Desktop               "
-         i "Download & Install ClassicWB           "
-	 m "Download & Install MegaAGS             "
-	 w "Download & Install WHDL Games&Demos    "
-	 o "Install OLED                 "
-         u "Update AmiRock-OS             "
-         n "Update Amiberry               "
-         p "Update Amiberry (DEV)         "
-         c "Armbian-config                "
-         s "Shutdown                      ")
+OPTIONS=(d -"  Back to AmiRock Desktop                      "
+         i "Download & Install ClassicWB                    "
+	 m "Download & Install MegaAGS                      "
+	 v "Download & Install AmigaVision (MegaAGS2023)    "
+	 w "Download & Install WHDL Games&Demos             "
+	 o "Install OLED                                    "
+         u "Update AmiRock-OS                               "
+         n "Update Amiberry                                 "
+         p "Update Amiberry (DEV)                           "
+         c "Armbian-config                                  "
+         s "Shutdown                                        ")
         
 
 CHOICE=$(dialog --clear \
@@ -95,11 +96,17 @@ case $CHOICE in
             ags
             ;;  
 	    
-	     w)
+	   v)
+            #update
+            clear
+            vision
+            ;;  
+	    
+	   w)
             #update
             clear
             whd
-            ;;  
+            ;; 
 	    
 	    q)
             #update
