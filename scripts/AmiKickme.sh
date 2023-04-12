@@ -273,12 +273,12 @@ fi
   
       #************************** Afterburner Extended **********************************************************************       
      
-     if [  -d /home/rock/wine/share/wine ]; then
+     if [  -d /usr/lib/armbian  ]; then
      
          toilet "AmiRock-OS" --metal
       echo " "
       echo " "
-      echo "  Detect Afterburner Image "
+      echo "  Detect Armbian Image "
       echo " "
       
       	 sudo rm -rf /home/$USER/Desktop/*
@@ -300,7 +300,7 @@ fi
 	 sudo chmod -R 775 /home/rock/
 
           clear
-      toilet "Afterburner" --metal
+      toilet "Armbian" --metal
 
       echo "Extendet"
       echo " "
