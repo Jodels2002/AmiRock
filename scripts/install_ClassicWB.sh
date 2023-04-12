@@ -41,10 +41,10 @@ GREY='\033[1;30m'
 
       
  
-      mkdir /opt/Amiga/dir/
-      mkdir /opt/Amiga/dir/Work/Software
-      mkdir /opt/Amiga/dir/Software
-      mkdir /opt/Amiga/Install/
+      sudo mkdir -p /opt/Amiga/dir/
+      sudo mkdir -p /opt/Amiga/dir/Work/Software
+      sudo mkdir -p /opt/Amiga/dir/Software
+      sudo mkdir -p /opt/Amiga/Install/
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
