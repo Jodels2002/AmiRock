@@ -13,7 +13,6 @@ sudo mkdir -p /tmp/mkstempc
 
 
 
-
 cd
  clear
       toilet "AmiRock-OS" --metal
