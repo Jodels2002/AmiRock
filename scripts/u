@@ -11,24 +11,6 @@ GREY='\033[1;30m'
 sudo mkdir -p /tmp/
 sudo mkdir -p /tmp/mkstempc
 
-sudo apt install -y dialog mc zip unzip wget ksnip
-clear
-sudo apt install -y synaptic chromium 
-sudo apt install -y chromium-b* 
-clear
-sudo apt install -y gparted ntfs-3g nemo
-clear
-sudo apt install build-essential -y
-clear
-sudo apt install arqiver geany -y
-clear
-sudo apt install 7zip -y
-sudo apt install worker -y
-sudo apt install toilet -y
-clear
-sudo apt install autofs -y
-clear
-sudo apt install pt2-clone -y
 cd
  clear
       toilet "AmiRock-OS" --metal
