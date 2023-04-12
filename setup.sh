@@ -16,8 +16,7 @@ export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 
 sudo apt install software-properties-common
-sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
-wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc clear
+
 clear      
       echo "  First installation "
       echo " " 
