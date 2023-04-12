@@ -14,9 +14,14 @@ sudo rm -rf /home/$USER/.cache/*
 
 export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
-
+sudo apt update -y
 sudo apt install software-properties-common -y
+sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
 
+      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
+      sudo cp -f -R /home/$USER/AmiRock/ /opt
+      sudo chmod -R 777 /usr/local/bin
+      sudo chmod -R 777 /opt/
 clear      
       echo "  First installation "
       echo " " 
@@ -34,18 +39,16 @@ clear
       echo " " 
       echo "	Please type your sudo password ...  :-)"
       
-   
+     
       
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Graphic Driver        **************************************   
-      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo cp -f -R /home/$USER/AmiRock/ /opt
-      sudo chmod -R 775 /usr/local/bin
-      sudo chmod -R 775 /opt/
+      
+ 
   clear
       		toilet "AmiRock" --metal
          
-          
+ if [  -d /usr/lib/armbian/ ]; then       
           
   cd /lib/firmware/
   sudo apt install build-essential meson git python3-mako libexpat1-dev bison flex libwayland-egl-backend-dev libxext-dev libxfixes-dev libxcb-glx0-dev libxcb-shm0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxshmfence-dev libxxf86vm-dev libxrandr-dev -y
@@ -64,7 +67,10 @@ sudo apt install malirun -y
 sudo apt install mesa-utils -y
 #sudo apt install kodi -y
 
-      
+else
+  sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
+
+fi     
 #************************************************  Fan Control by pymumu        **************************************   
 
 clear
