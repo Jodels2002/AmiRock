@@ -61,7 +61,7 @@ sudo apt install mali-g610-firmware -y
 sudo apt install malirun -y
 
 #sudo apt install glmark2 glmark2-es2 glmark2-es2-wayland -y
-#sudo apt install mesa-utils -y
+sudo apt install mesa-utils -y
 #sudo apt install kodi -y
 
       
