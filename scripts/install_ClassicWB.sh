@@ -62,7 +62,7 @@ GREY='\033[1;30m'
       cd /opt/AmiRock/Amiga/ClassicWB/
       unzip -o -q ./DF0.zip
          mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /opt/Amiga/Install/DF0
-         chmod -R 777 /opt/Amiga/Install/DF0
+         chmod -R 775 /opt/Amiga/Install/DF0
       rm -d -r /opt/AmiRock/Amiga/ClassicWB/DF0/
       rm -d -r /opt/Amiga/Install/DF0/*.info
  fi 
@@ -161,10 +161,10 @@ if [ ! -d /opt/Amiga/Install/ClassicWB_LITE_v28/ ]; then
 fi 
 #***********************************************  #Restet folders ***********************************
 
-rm -d -r /opt/Amiga/dir/System_ADVSP
-rm -d -r /opt/Amiga/dir/System_P96
-rm -d -r /opt/Amiga/dir/Software
-cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
+sudo rm -d -r /opt/Amiga/dir/System_ADVSP
+sudo rm -d -r /opt/Amiga/dir/System_P96
+sudo rm -d -r /opt/Amiga/dir/Software
+sudo cp -rf "/opt/Amiga/Install/ClassicWB_UAE_v28/Hard Disk/Software" /opt/Amiga/dir/
 
 #***********************************************  #System_ADVSP ***********************************
 if [ ! -d /opt/Amiga/dir/System_ADVSP ]; then
