@@ -346,13 +346,13 @@ fi
       echo "  ... repair rights  "  
       
   
-      sudo chmod -R 777 /usr/local/bin/
-      sudo chmod -R 775 /home/$USER/.config/
-      sudo chmod -R 775 /home/$USER/.local/
-      sudo chmod -R 777 /opt/
+      sudo chmod -R 777 /usr/local/bin
+      sudo chmod -R 775 /home/$USER/.config
+      sudo chmod -R 775 /home/$USER/.local
+      sudo chmod -R 777 /opt
   
-      sudo chmod -R 775 /home/$USER/
-      sudo chmod -R 777 /usr/share/applications/
+      sudo chmod -R 777 /home/$USER
+      sudo chmod -R 777 /usr/share/applications
      
            
       sudo rm -rf ~/AmiRock
