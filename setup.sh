@@ -241,7 +241,7 @@ cd
       
       
       sudo rm -rf $HOME/.config/
-      unzip -u  $HOME/AmiRock/config/config.zip
+      unzip -o  $HOME/AmiRock/config/config.zip
       cd $HOME/AmiRock/
       git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
       clear
@@ -289,8 +289,8 @@ if [  -d /usr/lib/armbian/ ]; then
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
 	 sudo rm -rf $HOME/.config/
-	 unzip -u  $HOME/AmiRock/config/config.zip
-         unzip -u  $HOME/AmiRock/config/afconfig.zip
+	 unzip -o  $HOME/AmiRock/config/config.zip
+         unzip -o  $HOME/AmiRock/config/afconfig.zip
 	 
 	 #sudo chmod -R 776 /home/rock/
 	 #sudo reboot now
