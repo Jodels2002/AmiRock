@@ -35,7 +35,10 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
    
      
      else
-if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
+     
+     
+     
+     if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
       clear
       echo -e "$GREEN "
       echo "Installing AmigaVision ..."
@@ -81,7 +84,7 @@ clear
       echo -e "$GREEN ready  --- have fun :-)"
       echo -e "$GREY "
       echo " "
-   
+      sudo chmod -R 777 /usr/share/applications/
       cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.desktop /usr/share/applications/ 
       cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.uae /opt/Amiga/conf/
      
