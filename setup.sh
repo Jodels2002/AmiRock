@@ -253,9 +253,9 @@ fi
 	
 #************************************************ End First run        **************************************   		
 
-if [  -d /home/rock/wine/share/wine ]; then
+if [  -d /usr/lib/armbian/ ]; then
           clear
-      toilet "Afterburner" --metal
+      toilet "Armbian" --metal
       echo " "
       echo " "
       echo "  Extendet"
