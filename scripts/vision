@@ -51,7 +51,7 @@ if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
       fi
 cd /opt/AmigaVision/
 
-if [ ! -d /opt/AmigaVision/ ]; then
+if [ ! -d /opt/AmigaVision/games/Amiga/ ]; then
 clear
   
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
@@ -65,10 +65,11 @@ clear
       echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
     
+    
  
 fi
   
-if [ -d /opt/AmigaVision/ ]; then
+if [ -d /opt/AmigaVision/games/Amiga/ ]; then
 clear
  toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -81,8 +82,12 @@ clear
       echo -e "$GREY "
       echo " "
    
-      cp -rf /opt/AmiRock/Amiga/MegaAGS/AmigaVision.desktop /usr/share/applications/ 
-      cp -rf /opt/AmiRock/Amiga/MegaAGS/AmigaVision.uae /opt/Amiga/conf/
+      cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.desktop /usr/share/applications/ 
+      cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.uae /opt/Amiga/conf/
+     
+      
+      cp -rf /opt/AmigaVision/games/Amiga/*.rom /opt/Amiga/kickstarts/
+      cp -rf /opt/AmigaVision/games/Amiga500/*.rom /opt/Amiga/kickstarts/
      
 fi 
 cd /opt/Amiga/
