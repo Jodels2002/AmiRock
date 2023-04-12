@@ -16,7 +16,7 @@ export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 sudo apt update -y
 sudo apt install software-properties-common -y
-sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
+
 
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
