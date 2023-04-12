@@ -12,7 +12,7 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 GREY='\033[1;30m'
 
-      chmod -R 775 /opt/
+      chmod -R 777 /opt/
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
@@ -62,7 +62,7 @@ GREY='\033[1;30m'
       cd /opt/AmiRock/Amiga/ClassicWB/
       unzip -o -q ./DF0.zip
          mv /opt/AmiRock/Amiga/ClassicWB/DF0/* /opt/Amiga/Install/DF0
-         chmod -R 775 /opt/Amiga/Install/DF0
+         chmod -R 777 /opt/Amiga/Install/DF0
       rm -d -r /opt/AmiRock/Amiga/ClassicWB/DF0/
       rm -d -r /opt/Amiga/Install/DF0/*.info
  fi 
@@ -360,7 +360,7 @@ fi
        
        rm -d -r /opt/Amiga/Install/DF0/  
      
-         chmod -R 775 /opt/Amiga/
+         chmod -R 777 /opt/Amiga/
       cd
       clear
       toilet "AmiRock-OS" --metal
