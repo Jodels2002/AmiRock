@@ -23,6 +23,9 @@ With NVMe see https://forum.radxa.com/t/armbian-images-are-now-available-for-roc
 # Install AmiRock
 Simply open a terminal in the installed Armibian and execute these lines:
 
+sudo apt update -y
+
+sudo apt install git -y
 
 git clone --depth=1 https://github.com/Jodels2002/AmiRock.git
 
