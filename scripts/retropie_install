@@ -5,8 +5,11 @@
       RED='\033[1;31m'
       GREY='\033[1;30m'
 power
-sudo chmod -R 777 /opt
+
 sudo chmod -R 777 /etc/emulationstation
+sudo mkdir /opt/retropie
+sudo chmod -R 777 /opt
+
 clear
 rm -rf /home/$USER/RetroPie-Setup
 clear
@@ -38,6 +41,7 @@ git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
 sudo chmod -R 777 /home/$USER/RetroPie-Setup
 cd RetroPie-Setup
+sudo chmod -R 777 /opt
 sudo __platform=rk3588 ./retropie_setup.sh
 
 cd /opt/retropie/configs/all/retroarch-joypads/
