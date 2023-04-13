@@ -63,6 +63,9 @@ fi
 if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
 cd /home/$USER/RetroPie
 wget https://archive.org/download/archive_20190819/Romset.zip
+cd /home/$USER/RetroPie/roms
+sudo unzip -o  /home/$USER/RetroPie/Romset.zip
+
 fi
 
 clear
