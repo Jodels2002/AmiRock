@@ -5,12 +5,6 @@
       RED='\033[1;31m'
       GREY='\033[1;30m'
 power
-sudo chmod -R 777 /opt
-sudo chmod -R 777 /etc/emulationstation
-
-mkdir -p /opt/retropie/emulators
-sudo chmod -R 777 /opt
-
 clear
 rm -rf /home/$USER/RetroPie-Setup
 clear
@@ -18,6 +12,11 @@ rm -rf /opt/retropie
 clear
 rm -rf /etc/emulationstation
 clear
+
+sudo chmod -R 777 /etc/emulationstation
+mkdir -p /opt/retropie/emulators
+sudo chmod -R 777 /opt
+
 if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
@@ -29,15 +28,11 @@ git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
 fi
 
-
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 
+sudo mkdir -p /etc/emulationstation/themes
 sudo chmod -R 777 /etc/emulationstation
-
-mkdir -p /etc/emulationstation/themes
-
 fi
-
 
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
@@ -57,9 +52,7 @@ rm -rf /home/$USER/RetroPieBIOS
 #First install
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
-
 fi
-
 
 cd ~
 git clone https://github.com/zerojay/RetroPie-Extra.git
@@ -67,13 +60,11 @@ cd RetroPie-Extra/
 sudo chmod -R 777 /home/$USER/RetroPie-Extra
 ./install-extras.sh
 rm -rf /home/$USER/RetroPie-Extra
-
 fi
 
 if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
 cd /home/$USER/RetroPie
 wget https://archive.org/download/archive_20190819/Romset.zip
-
 fi
 
 clear
