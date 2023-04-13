@@ -10,7 +10,7 @@
       RED='\033[1;31m'
       GREY='\033[1;30m'
       sudo rm -rf /home/$USER/.cache/*
-       
+       power
       clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
  
