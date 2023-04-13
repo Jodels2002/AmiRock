@@ -20,7 +20,7 @@
 
        cd /opt/
 	     sudo rm -rf /opt/Amiga
-             #sudo ln -s /opt/Amiga/ Amiga
+            
 	        
              sudo unzip -u  /opt/AmiRock/Amiga/Amiga.zip
        clear
@@ -46,7 +46,7 @@
 
 fi
       
-      sudo chmod -R 777 /opt/
+      sudo chmod -R 777 /opt
       
       if [ ! -d /opt/Backup/ ]; then
          sudo mkdir /opt/Backup/
@@ -60,7 +60,7 @@ fi
       
    
       sudo unzip -o  /opt/AmiRock/config/up.zip   
-      sudo chmod -R 755 /home/$USER/AmiRock
+      
      
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo rm -rf /usr/share/applications/*Ami*
@@ -164,7 +164,7 @@ fi
    cd  
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
       	
-      	sudo chmod -R 755 $HOME/RetroPieBIOS
+      	sudo chmod -R 775 $HOME/RetroPieBIOS
         
       	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /opt/Amiga/kickstarts/A500.rom
       	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /opt/Amiga/kickstarts/A600.rom
@@ -297,7 +297,7 @@ fi
 	 
 	 sudo rm -rf /home/$USER/.config/dconf/*
 	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
-	 sudo chmod -R 775 /home/rock/
+	 
 
           clear
       toilet "Armbian" --metal
@@ -321,7 +321,7 @@ fi
      
 #************************** AmiRock **********************************************************************             
    else 
-      sudo chmod -R 775 /usr/share/plymouth/
+      sudo chmod -R 777 /usr/share/plymouth
       sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
       sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 500
   	clear
