@@ -22,7 +22,7 @@
 	     sudo rm -rf /opt/Amiga
             
 	        
-             sudo unzip -u  /opt/AmiRock/Amiga/Amiga.zip
+             sudo unzip -o  /opt/AmiRock/Amiga/Amiga.zip
        clear
       toilet "AmiRock-OS" --metal
       echo " "
