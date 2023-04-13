@@ -5,7 +5,15 @@
       RED='\033[1;31m'
       GREY='\033[1;30m'
 power
-
+sudo chmod -R 777 /opt
+sudo chmod -R 777 /etc/emulationstation
+clear
+rm -rf /home/$USER/RetroPie-Setup
+clear
+rm -rf /opt/retropie
+clear
+rm -rf /etc/emulationstation
+clear
 if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
@@ -17,13 +25,14 @@ git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
 fi
 
-sudo chmod -R 777 /opt
+
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 sudo mkdir /etc/emulationstation
 sudo mkdir /etc/emulationstation/themes
 sudo chmod -R 777 /etc/emulationstation
 fi
-rm -rf /home/$USER/RetroPie-Setup
+
+
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
