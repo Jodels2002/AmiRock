@@ -67,6 +67,9 @@ cd /home/$USER/RetroPie/roms
 sudo unzip -o  /home/$USER/RetroPie/Romset.zip
 
 fi
+sudo chmod -R 777 /home/$USER/RetroPie
+sudo chmod -R 777 /etc/emulationstation
+sudo chmod -R 777 /opt
 
 clear
 cd
