@@ -23,7 +23,7 @@ sudo mkdir /etc/emulationstation
 sudo mkdir /etc/emulationstation/themes
 sudo chmod -R 777 /etc/emulationstation
 fi
-
+rm -rf /home/$USER/RetroPie-Setup
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
@@ -42,11 +42,16 @@ rm -rf /home/$USER/RetroPieBIOS
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
 
+
+fi
 cd ~
 git clone https://github.com/zerojay/RetroPie-Extra.git
 cd RetroPie-Extra/
+sudo chmod -R 777 /home/$USER/RetroPie-Extra
 ./install-extras.sh
-rm -rf /home/$USER/RetroPie-Extrafi
+rm -rf /home/$USER/RetroPie-Extra
+
+
 echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
 
 fi
