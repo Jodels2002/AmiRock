@@ -8,10 +8,6 @@ power
 clear
 rm -rf /home/$USER/RetroPie-Setup
 clear
-rm -rf /opt/retropie
-clear
-rm -rf /etc/emulationstation
-clear
 
 sudo chmod -R 777 /etc/emulationstation
 mkdir -p /opt/retropie/emulators
