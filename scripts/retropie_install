@@ -1,6 +1,9 @@
 # https://github.com/RetroPie/RetroPie-Setup/issues/3398sudo apt install -y lsb*
-
-
+      BLACK='\033[0;39m'
+      BLUE='\033[1;34m'
+      GREEN='\033[1;32m'
+      RED='\033[1;31m'
+      GREY='\033[1;30m'
 
 
 if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
@@ -29,7 +32,32 @@ cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/co
 mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg /opt/retropie/configs/all/emulationstation/
 rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad 
 rm -rf /home/$USER/RetroPieBIOS 
+
+#First install
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
-fi
+
+cd ~
+git clone https://github.com/zerojay/RetroPie-Extra.git
+cd RetroPie-Extra/
+./install-extras.sh
+rm -rf /home/$USER/RetroPie-Extrafi
 echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
+
+fi
+clear
+cd
+toilet "AmiRock-OS" --metal
+      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
+      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
+echo " No Rights Reserved.  "
+echo -e "$BLACK "
+echo " Type 'd' to boot into AmiRock Workbench"
+echo -e "$BLUE "
+echo " 1.>  "
+echo -e " 1.>  ( u ) AmiRock-OS Update                     "
+echo " 1.>  ( m ) ArmRock-OS Config                       " 
+echo -e " 1.>  ( c ) Armbian-Config                       "
+echo " 1.>  ( s ) Shutdown                                "  
+echo -e "$GREY "
+
