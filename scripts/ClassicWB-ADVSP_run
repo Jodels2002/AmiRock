@@ -3,7 +3,7 @@
       GREEN='\033[1;32m'
       RED='\033[1;31m'
       GREY='\033[1;30m'
-      
+      power
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
