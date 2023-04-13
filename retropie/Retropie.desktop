@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Retropie
-Exec=emulationstation
-Icon=/opt/AmiRock/retropie/Retropie.png
-Terminal=true
-Type=Emulation
-Keywords=file manager;console;
