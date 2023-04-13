@@ -60,7 +60,7 @@ cd RetroPie-Extra/
 sudo chmod -R 777 /home/$USER/RetroPie-Extra
 ./install-extras.sh
 rm -rf /home/$USER/RetroPie-Extra
-fi
+
 
 if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
 cd /home/$USER/RetroPie
