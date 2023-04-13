@@ -22,7 +22,7 @@ if [ ! -d /opt/Amiga/data/ ]; then
 	     sudo rm -rf /opt/Amiga
        sudo mkdir /opt/
 	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 777 /opt/
+	    
 	     #sudo ln -s /opt/Amiga/ Amiga
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
        clear
