@@ -296,13 +296,14 @@ if [  -d /usr/lib/armbian/ ]; then
 	 #sudo reboot now
 	 sudo apt-get autoremove -y
 	 
-	 sudo chmod -R 775 /usr/share/plymouth/
+	 sudo chmod -R 777 /usr/share/plymouth/
 	 sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/ubuntu-logo.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
-  	clear
+  	
+	clear
       toilet "Afterburner" --metal
       echo " "
       echo " "
