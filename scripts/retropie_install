@@ -10,15 +10,14 @@ if [ ! -d /home/$USER/RetroPie/BIOS/mame2003/ ]; then
 mkdir /home/$USER/RetroPie
 mkdir /home/$USER/RetroPie/BIOS
 sudo mkdir -p /etc/emulationstation/themes
-sudo chmod -R 777 /opt
 sudo chmod -R 777 /home/$USER/RetroPie
-sudo chmod -R 777 /etc/emulationstation
 sudo apt install feh -y
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
 fi
-
+sudo chmod -R 777 /opt
+sudo chmod -R 777 /etc/emulationstation
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
