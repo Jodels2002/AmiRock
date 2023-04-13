@@ -490,6 +490,6 @@ function platform_vero4k() {
     __platform_flags+=(arm armv7 neon mali gles)
 }
 function platform_rk3588() {
-    __default_cpu_flags="mcpu=cortex-a76+fp"
+    __default_cpu_flags="-j8 -mcpu=cortex-a76+fp"
     __platform_flags+=(aarch64)
 }
