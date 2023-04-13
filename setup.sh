@@ -304,7 +304,7 @@ if [  -d /usr/lib/armbian/ ]; then
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	
 	clear
-      toilet "Afterburner" --metal
+      toilet "Amiga" --metal
       echo " "
       echo " "
       echo "  Extended "
