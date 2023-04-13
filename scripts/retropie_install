@@ -43,8 +43,7 @@ sudo chmod -R 777 /home/$USER/RetroPie-Setup
 cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
 cd RetroPie-Setup
 sudo chmod -R 777 /opt
-sudo __platform=rk3588 ./retropie_setup.sh
-
+sudo __nodialog=1 __platform=rk3588 ./retropie_setup.sh basic_install
 cd /opt/retropie/configs/all/retroarch-joypads/
 unzip -u  /opt/AmiRock/retropie/Gamepad.zip
 cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/configs/all/retroarch-joypads/
