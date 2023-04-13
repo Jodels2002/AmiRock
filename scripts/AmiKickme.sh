@@ -219,6 +219,8 @@ fi
    
       echo " "
       echo "  ... cleanup Amiga folder  " 
+      
+       #sudo rm -rf /home/$USER/Desktop/*
      
       echo " "
       echo "  ... delete unnecessary files  " 
@@ -281,7 +283,7 @@ fi
       echo "  Detect Armbian Image "
       echo " "
       
-      	 sudo rm -rf /home/$USER/Desktop/*
+      	
 	
 	
 	 if [ ! -d /home/$USER/Videos/ ]; then
