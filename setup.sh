@@ -21,7 +21,7 @@ sudo apt install software-properties-common -y
       sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       sudo cp -f -R /home/$USER/AmiRock/ /opt
       sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 777 /opt/
+      sudo chmod -R 777 /opt
 clear      
       echo "  First installation "
       echo " " 
@@ -126,7 +126,6 @@ sudo systemctl start fan-control
 cd
 	     sudo rm -rf /opt/Amiga
 	     sudo mkdir /opt/Amiga
-	     sudo chmod -R 755 /opt/
 	     sudo ln -s /opt/Amiga/ Amiga
 	     cd /opt/
              unzip -u  /opt/AmiRock/Amiga/Amiga.zip
@@ -257,7 +256,7 @@ fi
 #***********************************************  #AmiRock-OS install script  ***********************************
  
      if [ ! -d /opt/Backup/ ]; then
-      sudo chmod -R 755 /opt/
+     
       mkdir /opt/Backup/
       mkdir /opt/Backup/config/
       cp -rf /etc/lightdm/ /opt/Backup/config/
