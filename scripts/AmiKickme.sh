@@ -273,7 +273,7 @@ fi
   
       #************************** Afterburner Extended **********************************************************************       
      
-     if [  -d /usr/lib/armbian  ]; then
+     if [  -d /usr/lib/armbian/  ]; then
      
          toilet "AmiRock-OS" --metal
       echo " "
@@ -305,10 +305,10 @@ fi
       echo "Extendet"
       echo " "
 
-	      sudo chmod -R 775 /usr/share/plymouth/
+	      sudo chmod -R 777 /usr/share/plymouth
 	      sudo rm -rf /usr/share/plymouth/themes/armbian/watermark.png
-	      sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/themes/armbian/watermark.png
-	      sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/ubuntu-logo.png
+	      cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/themes/armbian/watermark.png
+	      cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/ubuntu-logo.png
   	    sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/armbian/armbian.plymouth 501
   	
