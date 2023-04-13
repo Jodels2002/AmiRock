@@ -12,12 +12,14 @@ GREEN='\033[0;32m'
 RED='\033[0;31m'
 GREY='\033[1;30m'
 
-      chmod -R 777 /opt/
+      chmod -R 777 /opt
+      power
       clear
       toilet "AmiRock-OS" --metal
       echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
       echo " Version V2.0 2020-2021 AmiRock-OS "
       echo " No Rights Reserved.  "
+      
       sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
       clear
       toilet "AmiRock-OS" --metal
@@ -360,7 +362,7 @@ fi
        
        rm -d -r /opt/Amiga/Install/DF0/  
      
-         chmod -R 777 /opt/Amiga/
+         chmod -R 777 /opt/Amiga
       cd
       clear
       toilet "AmiRock-OS" --metal
