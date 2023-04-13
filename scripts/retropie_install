@@ -5,9 +5,10 @@
       RED='\033[1;31m'
       GREY='\033[1;30m'
 power
-
+sudo chmod -R 777 /opt
 sudo chmod -R 777 /etc/emulationstation
-sudo mkdir /opt/retropie
+
+mkdir -p /opt/retropie/emulators
 sudo chmod -R 777 /opt
 
 clear
@@ -30,16 +31,18 @@ fi
 
 
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
-sudo mkdir /etc/emulationstation
-sudo mkdir /etc/emulationstation/themes
+
 sudo chmod -R 777 /etc/emulationstation
+
+mkdir -p /etc/emulationstation/themes
+
 fi
 
 
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
-sudo cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
 sudo chmod -R 777 /home/$USER/RetroPie-Setup
+cp -f -R /opt/AmiRock/retropie/system.sh /home/$USER/RetroPie-Setup/scriptmodules/
 cd RetroPie-Setup
 sudo chmod -R 777 /opt
 sudo __platform=rk3588 ./retropie_setup.sh
@@ -55,8 +58,9 @@ rm -rf /home/$USER/RetroPieBIOS
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
 
-
 fi
+
+
 cd ~
 git clone https://github.com/zerojay/RetroPie-Extra.git
 cd RetroPie-Extra/
@@ -64,10 +68,14 @@ sudo chmod -R 777 /home/$USER/RetroPie-Extra
 ./install-extras.sh
 rm -rf /home/$USER/RetroPie-Extra
 
+fi
 
-echo "SDL_JOYSTICK_HIDAPI=0" >> ~/.profile 
+if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
+cd /home/$USER/RetroPie
+wget https://archive.org/download/archive_20190819/Romset.zip
 
 fi
+
 clear
 cd
 toilet "AmiRock-OS" --metal
