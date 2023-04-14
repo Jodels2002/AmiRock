@@ -19,6 +19,8 @@ mkdir /home/$USER/RetroPie/BIOS
 
 sudo chmod -R 777 /home/$USER/RetroPie
 sudo apt install feh -y
+clear
+      toilet "Retropie" --metal
 cd  
 git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 sudo cp -rf $HOME/RetroPieBIOS/BIOS/* /home/$USER/RetroPie/BIOS
@@ -29,7 +31,8 @@ if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 sudo mkdir -p /etc/emulationstation/themes
 sudo chmod -R 777 /etc/emulationstation
 fi
-
+clear
+      toilet "Retropie" --metal
 cd
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 cd ~
@@ -50,7 +53,8 @@ cp -f -R  /opt/retropie/configs/all/retroarch-joypads/Gamepad/* /opt/retropie/co
 mv /opt/retropie/configs/all/retroarch-joypads/es_input.cfg /opt/retropie/configs/all/emulationstation/
 rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad 
 rm -rf /home/$USER/RetroPieBIOS 
-
+clear
+      toilet "Retropie" --metal
 #First install
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
@@ -58,7 +62,9 @@ fi
 
 
 
-
+clear
+      toilet "Retropie" --metal
+      
 if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
 cd /home/$USER/RetroPie
 wget https://archive.org/download/archive_20190819/Romset.zip
@@ -72,8 +78,12 @@ sudo chmod -R 777 /home/$USER/RetroPie
 sudo chmod -R 777 /etc/emulationstation
 sudo chmod -R 777 /opt
 cp -rf /opt/AmiRock/retropie/Retropie.desktop /usr/share/applications/ 
-
-
+ 
+ if [ ! -d /home/rock/wine/share/wine ]; then
+        clear
+      toilet "Retropie" --metal
+cp -rf /opt/AmiRock/retropie/Retropie.desktop /home/$USER/Desktop/
+fi
 
 clear
 cd
