@@ -270,7 +270,7 @@ fi
 
 if [  -d /usr/lib/armbian/ ]; then
           clear
-      toilet "Armbian" --metal
+      toilet "Afterburner" --metal
       echo " "
       echo " "
       echo "  Extendet"
@@ -282,29 +282,22 @@ if [  -d /usr/lib/armbian/ ]; then
 	 sudo apt purge nautilus nautilus-action -y
 	 sudo apt install xfce4-terminal -y
 	 sudo apt purge terminator -y
-	 #sudo apt purge gnome-c* -y
-	 
-         #sudo apt install xfce4 -y
 	 
 	 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 	 sudo usermod -a -G root rock
 	 sudo rm -rf $HOME/.config/
-	 unzip -o  $HOME/AmiRock/config/config.zip
-         unzip -o  $HOME/AmiRock/config/afconfig.zip
-	 
-	 #sudo chmod -R 776 /home/rock/
-	 #sudo reboot now
+         unzip -u  $HOME/AmiRock/config/afconfig.zip
+	
 	 sudo apt-get autoremove -y
 	 
-	 sudo chmod -R 777 /usr/share/plymouth/
+	 sudo chmod -R 775 /usr/share/plymouth/
 	 sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/themes/spinner/watermark.png
+	 sudo cp -rf /opt/AmiRock/config/Logo/afterburner-extended.png /usr/share/plymouth/ubuntu-logo.png
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
   	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
-  	
-	clear
-      toilet "Amiga" --metal
+  	clear
+      toilet "Afterburner" --metal
       echo " "
       echo " "
       echo "  Extended "
@@ -315,7 +308,6 @@ if [  -d /usr/lib/armbian/ ]; then
 	 sudo ln -s /home/rock/ /home/pi
 	 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
 	 sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
-
 	 fi
 	
 	 sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
