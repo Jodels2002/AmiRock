@@ -220,7 +220,10 @@ fi
       echo " "
       echo "  ... cleanup Amiga folder  " 
       
-      sudo rm -rf /home/$USER/Desktop/*
+      if [  -d /usr/lib/armbian/ ]; then      
+      
+          sudo rm -rf /home/$USER/Desktop/*
+      fi  
      
       echo " "
       echo "  ... delete unnecessary files  " 
