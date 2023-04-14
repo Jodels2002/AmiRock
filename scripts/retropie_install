@@ -58,8 +58,10 @@ rm -rf /opt/retropie/configs/all/retroarch-joypads/Gamepad
 rm -rf /home/$USER/RetroPieBIOS 
 clear
       toilet "Retropie" --metal
+      
 #First install
 if [ ! -d /etc/emulationstation/themes/magazinemadness/ ]; then
+sudo chmod -R 777 /etc/emulationstation
 git clone --recursive --depth 1 --branch master "https://github.com/RetroHursty69/es-theme-magazinemadness.git" "/etc/emulationstation/themes/magazinemadness"
 fi
 
@@ -67,7 +69,7 @@ clear
       toilet "Retropie" --metal
       
 if [ ! -f /home/$USER/RetroPie/Romset.zip ]; then
-
+      sudo chmod -R 777 /home/$USER/RetroPie
       cd /home/$USER/RetroPie
       wget https://archive.org/download/archive_20190819/Romset.zip
       cd /home/$USER/RetroPie/roms
