@@ -220,7 +220,7 @@ fi
       echo " "
       echo "  ... cleanup Amiga folder  " 
       
-       #sudo rm -rf /home/$USER/Desktop/*
+      sudo rm -rf /home/$USER/Desktop/*
      
       echo " "
       echo "  ... delete unnecessary files  " 
