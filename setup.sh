@@ -292,7 +292,7 @@ if [  -d /usr/lib/armbian/ ]; then
 	 sudo usermod -a -G root rock
 	 #sudo rm -rf $HOME/.config/
          #unzip -u  $HOME/AmiRock/config/afconfig.zip
-	 sudo rm -rf $HOME/.config/dconf/
+	 sudo rm -rf $HOME/.config/dconf/*
          sudo cp -rf $HOME/AmiRock/config/user $HOME/.config/dconf/
 	 sudo apt-get autoremove -y
 	 
