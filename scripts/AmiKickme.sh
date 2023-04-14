@@ -355,6 +355,7 @@ fi
       sudo chmod -R 777 /usr/local/bin
       sudo chmod -R 775 /home/$USER/.config
       sudo chmod -R 775 /home/$USER/.local
+      sudo chmod -R 775 /home/$USER/Desktop
       sudo chmod -R 777 /opt
   
       sudo chmod -R 777 /home/$USER
