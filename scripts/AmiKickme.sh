@@ -223,6 +223,8 @@ fi
       if [  -d /usr/lib/armbian/ ]; then      
       
           sudo rm -rf /home/$USER/Desktop/*
+	  sudo rm -rf /opt/.config/dconf/*
+          sudo cp -rf /opt/AmiRock/config/user $HOME/.config/dconf/      
       fi  
      
       echo " "
