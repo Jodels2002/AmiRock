@@ -46,8 +46,8 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
       echo "Download AmigaVision"
       echo -e "$GREY "
       echo " "
-      mkdir /opt/AmigaVision
-    
+      mkdir -p /opt/AmigaVision
+      sudo chmod -R 777 /opt
       cd /opt/AmigaVision
       wget https://archive.org/download/amigavision/AmigaVision-MegaAGS-2023-04-05.7z
       
