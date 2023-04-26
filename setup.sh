@@ -9,7 +9,7 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
-sudo rm -rf /home/$USER/.cache/*
+sudo rm -rf ~/.cache/*
 
 
 export DISTRO=focal-stable
@@ -19,8 +19,8 @@ sudo apt update -y
 sudo apt install software-properties-common -y
 
 
-      sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo cp -f -R /home/$USER/AmiRock/ /opt
+      sudo cp -f -R ~/AmiRock/scripts/* /usr/local/bin
+      sudo cp -f -R ~/AmiRock/ /opt
       sudo chmod -R 777 /usr/local/bin
       sudo chmod -R 777 /opt
 clear      
@@ -150,7 +150,7 @@ cd
       echo "  First installation "
       echo " "
       cd 
-      unzip -u  $HOME/AmiRock/config/worker.zip
+      unzip -u  ~/config/worker.zip
       
       sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
       
@@ -167,8 +167,8 @@ cd
       
       cd 
       git clone --depth=1 https://github.com/rewtnull/amigafonts
-      sudo cp -rf /home/$USER/amigafonts/ttf/* /usr/share/fonts/truetype/
-      sudo rm -rf /home/$USER/amigafonts/
+      sudo cp -rf ~/amigafonts/ttf/* /usr/share/fonts/truetype/
+      sudo rm -rf ~/amigafonts/
       sudo rm -rf /opt/Amiga/conf/am*
       
 
@@ -197,7 +197,7 @@ cd
 
 
       cd /usr/share/icons
-      sudo cp -rf $HOME/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
+      sudo cp -rf ~/AmiRock/config/AMIGAOSLINUX.zip /usr/share/icons
       sudo unzip -u  /usr/share/icons/AMIGAOSLINUX.zip
   
       sudo rm -rf /usr/share/icons/default
@@ -208,11 +208,11 @@ cd
       echo " "
       echo "  First installation "
       echo " "
-      cd $HOME/AmiRock/
+      cd ~/AmiRock/
       git clone --depth=1 https://github.com/x64k/amitk
       clear
-      sudo cp -rf $HOME/AmiRock/amitk /usr/share/themes
-      sudo cp -rf $HOME/AmiRock/config/Logo/* /usr/share/
+      sudo cp -rf ~/AmiRock/amitk /usr/share/themes
+      sudo cp -rf ~/AmiRock/config/Logo/* /usr/share/
   
             clear
       toilet "AmiRock-OS" --metal
@@ -240,13 +240,13 @@ cd
       echo " "
       
       
-      sudo rm -rf $HOME/.config/
+      sudo rm -rf ~/.config/
       unzip -o  $HOME/AmiRock/config/config.zip
       cd $HOME/AmiRock/
       git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
       clear
 
-      sudo cp -rf $HOME/AmiRock/amigaos_xfwm4_themes/* /usr/share/themes/
+      sudo cp -rf ~/AmiRock/amigaos_xfwm4_themes/* /usr/share/themes/
       sudo rm -rf /usr/share/themes/Default/xfwm4/
       sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
       sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
@@ -254,8 +254,8 @@ cd
 
       else
       
-      sudo rm -rf $HOME/.config/dconf/
-      sudo cp -rf $HOME/AmiRock/config/user $HOME/.config/dconf/
+      sudo rm -rf ~/.config/dconf/
+      sudo cp -rf ~/AmiRock/config/user $HOME/.config/dconf/
             
 fi
 
@@ -320,7 +320,7 @@ if [  -d /usr/lib/armbian/ ]; then
  #************************************************ End First run        **************************************   	     
  
  
-  $HOME/AmiRock/scripts/AmiKickme.sh
+  ~/AmiRock/scripts/AmiKickme.sh
  
 
       
