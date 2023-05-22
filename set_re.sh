@@ -419,7 +419,7 @@ if [  -d /usr/lib/armbian/ ]; then
 	 sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
  #************************************************ End First run        **************************************   	     
  
- 
+  cp -rf /opt/AmiRock/retropie/Retropie.desktop /usr/share/applications/ 
   ~/AmiRock/scripts/AmiKickme.sh
  
 
