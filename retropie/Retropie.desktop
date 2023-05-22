@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Retropie
+Comment=
+Exec=emulationstation
+Icon=/opt/AmiRock/retropie/Retropie.png
+Path=/home/pi/RetroPie
+Terminal=true
+StartupNotify=false
