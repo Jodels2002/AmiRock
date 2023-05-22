@@ -20,7 +20,7 @@ sudo apt-get install libsdl2-dev libfreeimage-dev libfreetype6-dev libcurl4-open
   libvlccore-dev vlc-bin
   cd
   git clone --recursive https://github.com/RetroPie/EmulationStation.git
-  cd YourEmulationStationDirectory
+  cd EmulationStation
   cmake .
    make
    cd
