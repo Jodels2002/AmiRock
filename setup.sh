@@ -320,7 +320,8 @@ if [  -d /usr/lib/armbian/ ]; then
 	
 	 sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
  #************************************************ End First run        **************************************   	     
- 
+ cd
+ unzip -o  ~/AmiRock/config/config.zip
  
   ~/AmiRock/scripts/AmiKickme.sh
  
