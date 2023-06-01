@@ -125,6 +125,7 @@ sudo systemctl start fan-control
 #***********************************************  #AmiRock-OS install script  ***********************************
 #************************************************  Amiga        ************************************** 
 cd
+       if [ ! -d /opt/Amiga/dir/ ]; then
 	     sudo rm -rf /opt/Amiga
 	     sudo mkdir /opt/Amiga
 	     sudo ln -s /opt/Amiga/ Amiga
@@ -142,6 +143,7 @@ cd
       
       sudo apt install worker unadf xdms fonts-amiga -y
       sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
+	fi
 	clear
       
       toilet "AmiRock-OS" --metal
