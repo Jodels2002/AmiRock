@@ -341,7 +341,7 @@ fi
        #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
     
     cd
-    unzip -o  /opt/AmiRock/config/config.zip
+    
     
     fi
                  #Symbolic Links
