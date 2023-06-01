@@ -276,7 +276,7 @@ fi
        cp -rf /opt/AmiRock/OLED/* /opt/OLED/
        sudo cp -rf /opt/OLED/fonts/* /usr/share/fonts/truetype/
       fi
-       
+
   
       #************************** Amiga Extended **********************************************************************       
      
@@ -344,6 +344,12 @@ fi
     unzip -o  /opt/AmiRock/config/config.zip
     
     fi
+                 #Symbolic Links
+
+ if [  -d /opt/retropie/configs/all/retroarch ]; then
+      rm -d -r /home/$USER/.config/retroarch
+      ln -s /opt/retropie/configs/all/retroarch/ /home/$USER/.config/retroarch
+ fi
      sudo update-initramfs -u
      
       
