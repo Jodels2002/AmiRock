@@ -329,7 +329,7 @@ if [  -d /usr/lib/armbian/ ]; then
       sudo chmod -R 777 /opt/AmiRock/  
       
       ~/AmiRock/scripts/AmiKickme.sh
- 
+ u
 
       
       
