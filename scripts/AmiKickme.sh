@@ -56,6 +56,7 @@ fi
       fi         
       
       sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
+      sudo cp -rf /opt/AmiRock/config/Desktop/R* /home/$USER/Desktop/
       sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
       
    
@@ -63,7 +64,7 @@ fi
       
      
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      sudo rm -rf /usr/share/applications/*Ami*
+      #sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
       sudo cp -rf /opt/AmiRock/config/Logo/* /opt/AmiRock/config/
       sudo cp -rf /opt/AmiRock/config/Logo/boot.jpg /usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg
@@ -222,7 +223,7 @@ fi
       
       if [  -d /usr/lib/armbian/ ]; then      
       
-          sudo rm -rf /home/$USER/Desktop/*
+          #sudo rm -rf /home/$USER/Desktop/*
 	  sudo rm -rf /opt/.config/dconf/*
           sudo cp -rf /opt/AmiRock/config/user $HOME/.config/dconf/      
       fi  
