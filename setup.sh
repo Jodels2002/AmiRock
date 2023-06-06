@@ -116,7 +116,7 @@ sudo systemctl start fan-control
   sudo apt install 7zip -y
   sudo apt purge lightd* -y
   #sudo apt install cockpit -y
-  sudo apt install pt2-clone -y
+  sudo apt install pt2-clone xinit* -y
   clear
   sudo apt install -y synaptic chromium 
   sudo apt install -y chromium-b* 
