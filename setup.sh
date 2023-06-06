@@ -10,7 +10,29 @@ RED='\033[1;31m'
 GREY='\033[1;30m'
 
 sudo rm -rf ~/.cache/*
+      
+      sudo useradd -m amiga
+      sudo usermod -G audio -a amiga
+      sudo usermod -G video -a amiga  
+      sudo update-locale LANG=en_US.UTF-8
+      setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gb,de,fr,it,gr,dk
+      sudo echo "amiga ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+      
+sudo systemctl disable getty@tty1.service
 
+sudo tee /etc/systemd/system/autologin@.service > /dev/null <<EOT
+[Unit]
+Description=Autologin to console as %I
+After=getty.target
+[Service]
+ExecStart=-/sbin/agetty --autologin amiga --noclear %I 38400 linux
+[Install]
+WantedBy=multi-user.target
+EOT
+sudo systemctl daemon-reload
+sudo systemctl enable autologin@tty1.service
+echo "Autologin enabled for user amiga"
+sudo apt-get update -y
 
 export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
@@ -88,10 +110,11 @@ sudo systemctl start fan-control
 
 #************************************************  usefull Tools        **************************************  
   sudo apt install -y dialog mc zip unzip wget toilet ksnip
-  sudo apt install -y gparted ntfs-3g nemo
-  #sudo apt install build-essential -y
+  sudo apt install -y gparted ntfs-3g nemo feh
+  sudo apt install build-essential -y
   sudo apt install arqiver geany -y
   sudo apt install 7zip -y
+  sudo apt purge lightd* -y
   #sudo apt install cockpit -y
   sudo apt install pt2-clone -y
   clear
