@@ -5,6 +5,7 @@
       GREY='\033[1;30m'
 
 cd
+clear
 toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
       echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
