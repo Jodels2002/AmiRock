@@ -34,8 +34,6 @@ sudo systemctl enable autologin@tty1.service
 echo "Autologin enabled for user amiga"
 sudo apt-get update -y
 
-export DISTRO=focal-stable
-wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
 
 sudo apt update -y
 sudo apt install software-properties-common -y
