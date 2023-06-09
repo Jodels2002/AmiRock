@@ -289,7 +289,7 @@ if [  -d /usr/lib/armbian/ ]; then
       echo " "
       echo "  Extended "
       echo " "
-      sudo update-initramfs -u
+     # sudo update-initramfs -u
 	 
 	 
 	 sudo ln -s /home/rock/ /home/pi
