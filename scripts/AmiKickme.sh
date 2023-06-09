@@ -351,7 +351,7 @@ fi
       rm -d -r /home/$USER/.config/retroarch
       ln -s /opt/retropie/configs/all/retroarch/ /home/$USER/.config/retroarch
  fi
-     sudo update-initramfs -u
+    # sudo update-initramfs -u
      
       
       
@@ -395,5 +395,5 @@ echo -e "$BLUE "
 echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
 
-m
+
 #firefox-esr http://localhost:9090/
