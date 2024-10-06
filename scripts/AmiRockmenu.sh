@@ -121,10 +121,8 @@ case $CHOICE in
               #***********************************************  #AmiRock-OS install script  ***********************************
               #************************************************  Compile Amiberry         ************************************** 
             clear
-           
-             sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
-             sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libraspberrypi-dev
-          
+             sudo apt install -y cmake libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0 libportmidi0
+	     sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev          
 	    clear
             
            clear
@@ -134,18 +132,18 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone https://github.com/midwan/amiberry
-            cd amiberry
+            git clone https://github.com/midwan/amiberry-lite
+            cd amiberry-lite
 
 
      	    make -j8 PLATFORM=rk3588
             
-	    sudo chmod -R 777 $HOME/amiberry
+	    sudo chmod -R 777 $HOME/amiberry-lite
 	    sudo chmod -R 777 /usr/share/plymouth/
 	    mkdir $HOME/Amiga/
-            cp -rf $HOME/Amiga/amiberry  $HOME/Amiga/amiberry_old
+            cp -rf $HOME/Amiga/amiberry-lite  $HOME/Amiga/amiberry_old
             cp -rf $HOME/amiberry/*  $HOME/Amiga/
-             sudo rm -rf $HOME/amiberry
+             sudo rm -rf $HOME/amiberry-lite
 	     sudo rm -rf $HOME/Amiga/abr
 	     sudo rm -rf $HOME/Amiga/cmake
 	     sudo rm -rf $HOME/Amiga/external
@@ -167,7 +165,7 @@ case $CHOICE in
 	    # Backup
 	 
 	    cp -rf  $HOME/Amiga/amiberry_old /opt/Backup
-            cp -rf  $HOME/Amiga/amiberry /opt/Backup
+            cp -rf  $HOME/Amiga/amiberry-lite /opt/Backup
 	    cp -rf  $HOME/Amiga/amiberry_dev /opt/Backup
 	    cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
              
@@ -180,8 +178,8 @@ case $CHOICE in
        p)
            #***********************************************  #AmiRock-OS install script  ***********************************
            #************************************************  Compile Amiberry DEV        ************************************** 
-	        sudo apt install -y libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0
-                sudo apt install -y libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev	
+	     sudo apt install -y cmake libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0 libportmidi0
+	     sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev   
 		clear
       		toilet "AmiRock" --metal
       		echo " "
@@ -189,7 +187,7 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone -b dev https://github.com/midwan/amiberry
+            git clone -b preview https://github.com/midwan/amiberry
             cd amiberry
 
 
