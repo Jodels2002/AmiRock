@@ -132,11 +132,11 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone https://github.com/midwan/amiberry-lite.git
-            cd amiberry-lite
-
-
-     	    make -j8 PLATFORM=rk3588
+            git clone https://github.com/midwan/amiberry
+            cd amiberry
+             cmake -B build && cmake --build build
+	     
+     	    #make -j8 PLATFORM=rk3588
             
 	    sudo chmod -R 777 $HOME/amiberry-lite
 	    sudo chmod -R 777 /usr/share/plymouth/
@@ -187,11 +187,11 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone -b preview https://github.com/midwan/amiberry.git
+            git clone -b preview https://github.com/midwan/amiberry
             cd amiberry
 
-
-     		make -j8 PLATFORM=rk3588
+                 cmake -B build && cmake --build build
+		 # make -j8 PLATFORM=rk3588
 		
             sudo chmod -R 777 $HOME/amiberry
 	    sudo chmod -R 777 /usr/share/plymouth/
