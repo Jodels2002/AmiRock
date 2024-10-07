@@ -132,7 +132,7 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone https://github.com/midwan/amiberry-lite
+            git clone https://github.com/midwan/amiberry-lite.git
             cd amiberry-lite
 
 
@@ -187,7 +187,7 @@ case $CHOICE in
        		echo "Compiling now ...Amiberry :-)"
 
             sudo rm -rf amiberry
-            git clone -b preview https://github.com/midwan/amiberry
+            git clone -b preview https://github.com/midwan/amiberry.git
             cd amiberry
 
 
