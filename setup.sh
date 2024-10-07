@@ -65,35 +65,7 @@ clear
      
       
 #***********************************************  #AmiRock-OS install script  ***********************************
-#************************************************  Graphic Driver        **************************************   
-      
- 
-  clear
-      		toilet "AmiRock" --metal
-         
- if [  -d /usr/lib/armbian/ ]; then       
-          
-  cd /lib/firmware/
-  sudo apt install build-essential meson git python3-mako libexpat1-dev bison flex libwayland-egl-backend-dev libxext-dev libxfixes-dev libxcb-glx0-dev libxcb-shm0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-present-dev libxshmfence-dev libxxf86vm-dev libxrandr-dev -y
-  sudo wget https://github.com/JeffyCN/rockchip_mirrors/blob/libmali/firmware/g610/mali_csffw.bin
-  cd
-sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
-#sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
-
-sudo apt update -y
-sudo apt dist-upgrade -y
-sudo apt-get autoremove -y
-sudo apt install mali-g610-firmware -y
-sudo apt install malirun -y
-
-#sudo apt install glmark2 glmark2-es2 glmark2-es2-wayland -y
-sudo apt install mesa-utils -y
-#sudo apt install kodi -y
-
-else
-  # sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
-sudo apt install mesa-utils -y
-fi     
+    
 #************************************************  Fan Control by pymumu        **************************************   
 
 clear
@@ -326,7 +298,7 @@ if [  -d /usr/lib/armbian/ ]; then
 	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
 	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
   	sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-  	sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
+  	# sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
   	clear
       toilet "Afterburner" --metal
       echo " "
