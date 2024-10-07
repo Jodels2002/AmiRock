@@ -91,8 +91,8 @@ sudo apt install mesa-utils -y
 #sudo apt install kodi -y
 
 else
-  sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
-
+  # sudo dpkg -i --force-overwrite /opt/AmiRock/config/deb/linux-gpu-mali-wayland_1.1-g6p0-20230406_arm64.deb 
+sudo apt install mesa-utils -y
 fi     
 #************************************************  Fan Control by pymumu        **************************************   
 
