@@ -221,6 +221,7 @@ echo " "
 
 sudo rm -rf ~/.config/
 unzip -o  $HOME/AmiRock/config/config.zip
+unzip -o  $HOME/AmiRock/config/worker.zip
 cd $HOME/AmiRock/
 git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
 clear
