@@ -48,16 +48,16 @@ echo "	Please type your sudo password ...  :-)"
 #************************************************  Fan Control by pymumu        **************************************   
 
 clear
-toilet "AmiRock" --metal
-echo " "
-echo " Fan-Control by pymumu"
+# toilet "AmiRock" --metal
+# echo " "
+# echo " Fan-Control by pymumu"
 
-git clone https://github.com/pymumu/fan-control-rock5b
-cd fan-control-rock5b
-make package
-sudo dpkg -i fan-control*.deb
-sudo systemctl enable fan-control
-sudo systemctl start fan-control   
+# git clone https://github.com/pymumu/fan-control-rock5b
+# cd fan-control-rock5b
+# make package
+# sudo dpkg -i fan-control*.deb
+# sudo systemctl enable fan-control
+# sudo systemctl start fan-control   
 
 #************************************************  usefull Tools        **************************************  
 sudo apt install -y dialog mc zip unzip wget toilet ksnip
