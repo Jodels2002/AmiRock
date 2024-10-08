@@ -301,10 +301,10 @@ fi
 	 fi
 
 	    #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
-	    sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
+	    # sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
 
-	 sudo rm -rf /home/$USER/.config/dconf/*
-	 sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
+	 # sudo rm -rf /home/$USER/.config/dconf/*
+	 # sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
 
 
           clear
