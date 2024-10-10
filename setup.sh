@@ -62,16 +62,14 @@ sudo systemctl start fan-control
 #************************************************  usefull Tools        **************************************  
 sudo apt install -y dialog mc zip unzip wget toilet ksnip
 sudo apt install -y gparted ntfs-3g nemo feh
-sudo apt install build-essential -y
+#sudo apt install build-essential -y
 sudo apt install arqiver geany -y
 sudo apt install 7zip -y
-sudo apt purge lightd* -y
+#sudo apt purge lightd* -y
 #sudo apt install cockpit -y
-  sudo apt install pt2-clone -y
-  sudo apt install pt2-clone xinit* -y
 clear
-sudo apt install -y synaptic chromium 
-sudo apt install -y chromium-b* 
+sudo apt install -y synaptic 
+
 clear
 sudo apt install autofs -y
 clear
@@ -102,8 +100,14 @@ echo " "
 cd
 if [ ! -d /opt/Amiga/dir/ ]; then
 sudo rm -rf /opt/Amiga
+
 sudo mkdir /opt/Amiga
 sudo ln -s /opt/Amiga/ Amiga
+
+sudo mkdir ~/Amiberry
+cd ~/Amiberry
+sudo ln -s /opt/Amiga/conf/ conf
+
 cd /opt/
 unzip -u  /opt/AmiRock/Amiga/Amiga.zip
 clear
@@ -117,7 +121,8 @@ sudo rm -rf /opt/Amiga/conf/amiberry.conf
 sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
 
 sudo apt install worker unadf xdms fonts-amiga -y
-sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev
+sudo apt install -y cmake libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0 libportmidi0
+sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev 
 
 
 fi
@@ -281,7 +286,7 @@ sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
 sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
+sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 503
 clear
 toilet "Afterburner" --metal
 echo " "
