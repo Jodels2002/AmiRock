@@ -130,49 +130,38 @@ case $CHOICE in
       		echo " "
       		echo " "
        		echo "Compiling now ...Amiberry :-)"
-
-            sudo rm -rf amiberry
-            git clone https://github.com/midwan/amiberry
-            cd amiberry
-             cmake -B build && cmake --build build
-	     
-     	    #make -j8 PLATFORM=rk3588
-            
-	    sudo chmod -R 777 $HOME/amiberry-lite
-	    sudo chmod -R 777 /usr/share/plymouth/
-	    mkdir $HOME/Amiga/
-            cp -rf $HOME/Amiga/amiberry-lite  $HOME/Amiga/amiberry_old
-            cp -rf $HOME/amiberry/*  $HOME/Amiga/
-             sudo rm -rf $HOME/amiberry-lite
-	     sudo rm -rf $HOME/Amiga/abr
-	     sudo rm -rf $HOME/Amiga/cmake
-	     sudo rm -rf $HOME/Amiga/external
-	     sudo rm -rf $HOME/Amiga/src
-	     sudo rm -rf $HOME/Amiga/Android.mk
-	     sudo rm -rf $HOME/Amiga/whdboot-src
-	     sudo rm -rf $HOME/Amiga/VSLinux
-	     sudo rm -rf $HOME/Amiga/Info.plist.template
-	     sudo rm -rf $HOME/Amiga/CMakeSettings.json
-	     sudo rm -rf $HOME/Amiga/Makefile
-	     sudo rm -rf $HOME/Amiga/Entitlements.plist
-	     sudo rm -rf $HOME/Amiga/CMakeLists.txt
-	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
-	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
-	     sudo rm -rf $HOME/Amiga/make-bundle.sh
-	    
-	      mkdir /opt/KickPi-OS/Backup
-	    
-	    # Backup
-	 
-	    cp -rf  $HOME/Amiga/amiberry_old /opt/Backup
-            cp -rf  $HOME/Amiga/amiberry-lite /opt/Backup
-	    cp -rf  $HOME/Amiga/amiberry_dev /opt/Backup
-	    cp -rf  $HOME/Amiga/data/amiberry.png /usr/share/applications/ 
-             
+        
 	
-            cd
             sudo rm -rf amiberry
-           
+            
+	    git clone  https://github.com/midwan/amiberry
+            cd amiberry
+
+            cmake -B build && cmake --build build
+		    # make -j8 PLATFORM=rk3588
+		
+            sudo chmod -R 777 $HOME/amiberry
+	        
+	        cp -rf /opt/Amiga/amiberry /opt/Amiga/amiberry_old
+	        cp -rf $HOME/amiberry/build/amiberry  /opt/Amiga/amiberry
+	        cp -rf $HOME/amiberry/data/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/plugins/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/external/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/whdboot/ /opt/Amiga/
+	    
+	       # Backup
+	 
+	    cp -rf  /opt/Amiga/amiberry_old /opt/Backup
+            cp -rf  /opt/Amiga/amiberry /opt/Backup
+	    cp -rf  /opt/Amiga/amiberry_dev /opt/Backup
+	    cp -rf  /opt/Amiga/data/amiberry_dev.png /usr/share/applications/
+	    cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
+      
+	    
+            cd
+            rm -rf amiberry
+
+     
             ;;  
        
        p)
@@ -186,47 +175,34 @@ case $CHOICE in
       		echo " "
        		echo "Compiling now ...Amiberry :-)"
 
-            sudo rm -rf amiberry
-            git clone -b preview https://github.com/midwan/amiberry
+                sudo rm -rf amiberry
+            
+	    git clone -b preview https://github.com/midwan/amiberry
             cd amiberry
 
-                 cmake -B build && cmake --build build
-		 # make -j8 PLATFORM=rk3588
+            cmake -B build && cmake --build build
+		    # make -j8 PLATFORM=rk3588
 		
             sudo chmod -R 777 $HOME/amiberry
-	    sudo chmod -R 777 /usr/share/plymouth/
-	   
-            cp -rf $HOME/amiberry/amiberry  $HOME/Amiga/amiberry_dev
-	    cp -rf $HOME/Amiga/amiberry_dev $HOME/Amiga/amiberry_dev_old
-	    sudo rm -rf $HOME/amiberry/amiberry
-            cp -rf $HOME/amiberry/*  $HOME/Amiga/
-             sudo rm -rf $HOME/amiberry
-	     sudo rm -rf $HOME/Amiga/abr
-	     sudo rm -rf $HOME/Amiga/cmake
-	     sudo rm -rf $HOME/Amiga/external
-	     sudo rm -rf $HOME/Amiga/src
-	     sudo rm -rf $HOME/Amiga/Android.mk
-	     sudo rm -rf $HOME/Amiga/whdboot-src
-	     sudo rm -rf $HOME/Amiga/VSLinux
-	     sudo rm -rf $HOME/Amiga/Info.plist.template
-	     sudo rm -rf $HOME/Amiga/CMakeSettings.json
-	     sudo rm -rf $HOME/Amiga/Makefile
-	     sudo rm -rf $HOME/Amiga/Entitlements.plist
-	     sudo rm -rf $HOME/Amiga/CMakeLists.txt
-	     sudo rm -rf $HOME/Amiga/PULL_REQUEST_TEMPLATE
-	     sudo rm -rf $HOME/Amiga/macos_init_amiberry.zsh
-	     sudo rm -rf $HOME/Amiga/make-bundle.sh
-	    # Backup
+	        
+	        cp -rf /opt/Amiga/amiberry_dev /opt/Amiga/amiberry_dev_old
+	        cp -rf $HOME/amiberry/build/amiberry  /opt/Amiga/amiberry_dev
+	        cp -rf $HOME/amiberry/data/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/plugins/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/external/ /opt/Amiga/
+	        cp -rf $HOME/amiberry/whdboot/ /opt/Amiga/
+	    
+	       # Backup
 	 
-	    cp -rf  $HOME/Amiga/amiberry_old /opt/Backup
-            cp -rf  $HOME/Amiga/amiberry /opt/Backup
-	    cp -rf  $HOME/Amiga/amiberry_dev /opt/Backup
-	    cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
-	    cp -rf  $HOME/AmiRock/amiberry_dev.png $HOME/Amiga/data/
-            cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/
+	    cp -rf  /opt/Amiga/amiberry_dev_old /opt/Backup
+            cp -rf  /opt/Amiga/amiberry /opt/Backup
+	    cp -rf  /opt/Amiga/amiberry_dev /opt/Backup
+	    cp -rf  /opt/Amiga/data/amiberry_dev.png /usr/share/applications/
+	    cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
+      
 	    
             cd
-            sudo rm -rf amiberry
+            rm -rf amiberry
          
             ;;  
             
