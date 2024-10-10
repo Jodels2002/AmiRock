@@ -169,16 +169,7 @@ fi
       mkdir /opt/Amiga/kickstarts
   fi
    cd  
-      	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 
-      	sudo chmod -R 775 $HOME/RetroPieBIOS
-
-      	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick34005.A500 /opt/Amiga/kickstarts/A500.rom
-      	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40063.A600 /opt/Amiga/kickstarts/A600.rom
-      	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/A1200.rom
-	sudo cp -rf $HOME/RetroPieBIOS/BIOS/kick40068.A1200 /opt/Amiga/kickstarts/kick31a1200.rom
-
-      	sudo rm -rf /home/$USER/RetroPieBIOS 
  clear
       toilet "AmiRock-OS" --metal
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
