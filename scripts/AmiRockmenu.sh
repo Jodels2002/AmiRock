@@ -73,6 +73,22 @@ case $CHOICE in
 		cd Rock5b_SSD1308
 		./setup.sh		
 	     ;; 
+
+ r)
+             #***********************************************  #AmiRock-OS install script  ***********************************
+             #************************************************  Install Retropie    **************************************
+            clear
+                cd
+
+		git clone --depth=1 https://github.com/Jodels2002/RetroPie_Rock5b.git
+
+		sudo chmod -R 777 RetroPie_Rock5b
+
+		cd RetroPie_Rock5b
+
+		./setup.sh  		
+	     ;;
+    
          i)
              #***********************************************  #AmiRock-OS install script  ***********************************
              #************************************************  Install ClassicWB     **************************************
