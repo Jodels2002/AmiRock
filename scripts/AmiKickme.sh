@@ -55,9 +55,9 @@ fi
          sudo mkdir /opt/Backup/
       fi         
 
-      sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
-      sudo cp -rf /opt/AmiRock/config/Desktop/R* /home/$USER/Desktop/
-      sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
+      # sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
+      # sudo cp -rf /opt/AmiRock/config/Desktop/R* /home/$USER/Desktop/
+      # sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
 
 
       sudo unzip -o  /opt/AmiRock/config/up.zip   
@@ -160,8 +160,14 @@ fi
       echo "1>                  Greetings your´s "
       echo "1>Assign >NIL:      Bernd Titze"
       echo " "
-
-
+  
+  if [ ! -d /opt/Amiga/dir/Work/ ]; then
+      mkdir /opt/Amiga/dir/
+      mkdir /opt/Amiga/dir/Work/
+      mkdir /opt/Amiga/dir/Software
+      mkdir /opt/Amiga/Install/
+      mkdir /opt/Amiga/kickstarts
+  fi
    cd  
       	git clone --depth=1 https://github.com/archtaurus/RetroPieBIOS.git
 
@@ -180,13 +186,7 @@ fi
       echo " No Rights Reserved.  "    
 
  fi
-  if [ ! -d /opt/Amiga/dir/Work/ ]; then
-      mkdir /opt/Amiga/dir/
-      mkdir /opt/Amiga/dir/Work/
-      mkdir /opt/Amiga/dir/Software
-      mkdir /opt/Amiga/Install/
-      mkdir /opt/Amiga/kickstarts
-  fi
+
 
     clear
       toilet "AmiRock-OS" --metal
@@ -351,7 +351,7 @@ fi
       rm -d -r /home/$USER/.config/retroarch
       ln -s /opt/retropie/configs/all/retroarch/ /home/$USER/.config/retroarch
  fi
-     sudo update-initramfs -u
+     # sudo update-initramfs -u
 
 
 
