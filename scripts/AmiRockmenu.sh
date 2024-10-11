@@ -81,7 +81,7 @@ case $CHOICE in
             clear
                 cd
   
-             install_retropi.sh
+             install_retropie.sh
 		 		
 	     ;;
     
