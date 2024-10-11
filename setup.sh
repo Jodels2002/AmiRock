@@ -349,6 +349,7 @@ sudo cp -f -R /home/$USER/AmiRock/ /opt
 sudo chmod -R 777 /usr/local/bin
 sudo chmod -R 777 /opt/AmiRock/  
 sudo apt -y autoremove
+sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
 
 ~/AmiRock/scripts/AmiKickme.sh
 
