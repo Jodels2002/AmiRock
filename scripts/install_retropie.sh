@@ -14,7 +14,7 @@
 		git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 		sudo chmod -R 777 ~/RetroPie-Setup
 		cp -f -R /opt/AmiRock/retropie/system.sh ~/RetroPie-Setup/scriptmodules/
-		cp -f -R /opt/AmiRock/retropie/retropie_setup.sh ~/RetroPie-Setup/
+		#cp -f -R /opt/AmiRock/retropie/retropie_setup.sh ~/RetroPie-Setup/
 
 		cd RetroPie-Setup
 		sudo chmod -R 777 /opt
