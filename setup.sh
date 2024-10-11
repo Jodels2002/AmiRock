@@ -46,7 +46,29 @@ echo "	Please type your sudo password ...  :-)"
 
 
 #***********************************************  #AmiRock-OS install script  ***********************************
-   
+#************************************************  Make User pi       **************************************        
+      sudo useradd -m pi
+      sudo usermod -G audio -a pi
+      sudo usermod -G video -a pi  
+      sudo update-locale LANG=en_US.UTF-8
+      setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gb,de,fr,it,gr,dk
+      sudo echo "pi ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+      
+sudo systemctl disable getty@tty1.service
+
+sudo tee /etc/systemd/system/autologin@.service > /dev/null <<EOT
+[Unit]
+Description=Autologin to console as %I
+After=getty.target
+[Service]
+ExecStart=-/sbin/agetty --autologin pi --noclear %I 38400 linux
+[Install]
+WantedBy=multi-user.target
+EOT
+sudo systemctl daemon-reload
+sudo systemctl enable autologin@tty1.service
+echo "Autologin enabled for user pi"
+ 
 #************************************************  Fan Control by pymumu        **************************************   
 
 clear
@@ -180,7 +202,7 @@ echo " "
 echo " "
 echo "  First installation "
 echo " "
-sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+#sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
 
 
 
@@ -292,8 +314,6 @@ sudo apt purge terminator -y
 
 cp -rf /home/$USER/AmiRock/scripts/bashrc /home/$USER/.bashrc
 sudo usermod -a -G root rock
-#sudo rm -rf $HOME/.config/
-#unzip -u  $HOME/AmiRock/config/afconfig.zip
 sudo rm -rf $HOME/.config/dconf/*
 sudo cp -rf $HOME/AmiRock/config/user $HOME/.config/dconf/
 sudo apt-get autoremove -y
@@ -303,7 +323,8 @@ sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
 sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 503
+sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
+
 clear
 toilet "Afterburner" --metal
 echo " "
@@ -314,11 +335,11 @@ sudo update-initramfs -u
 
 
 # sudo ln -s /home/rock/ /home/pi
-# sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
-# sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
+sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
+sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 fi
 
-sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+
 #************************************************ End First run        **************************************   	     
 cd
 unzip -o  ~/AmiRock/config/config.zip
