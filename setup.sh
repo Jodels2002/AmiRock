@@ -9,9 +9,11 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 GREY='\033[1;30m'
 
-sudo rm -rf ~/.cache/*
+
 
 sudo apt-get update -y
+sudo apt-get -y upgrade
+
 
 export DISTRO=focal-stable
 wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
@@ -67,6 +69,21 @@ sudo apt install arqiver geany -y
 sudo apt install 7zip -y
 #sudo apt purge lightd* -y
 #sudo apt install cockpit -y
+ sudo apt purge -y lxde  lxde-common lxde-core openbox-lxde-session
+ sudo apt purge -y raspberrypi-ui-mods 
+ sudo apt purge -y xser* xor* xin*
+ sudo apt purge -y gnome*
+     
+	
+
+	
+	sudo rm -rf ~/.config/
+ 
+	sudo apt install -y gnome-com*
+	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
+	sudo apt install -y xfce4-te*
+	sudo apt install -y chromium-b*
+
 clear
 sudo apt install -y synaptic 
 
@@ -224,7 +241,7 @@ echo "  First installation"
 echo " "
 
 
-sudo rm -rf ~/.config/
+
 unzip -o  $HOME/AmiRock/config/config.zip
 unzip -o  $HOME/AmiRock/config/worker.zip
 cd $HOME/AmiRock/
@@ -310,6 +327,7 @@ sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
 sudo cp -f -R /home/$USER/AmiRock/ /opt
 sudo chmod -R 777 /usr/local/bin
 sudo chmod -R 777 /opt/AmiRock/  
+sudo apt -y autoremove
 
 ~/AmiRock/scripts/AmiKickme.sh
 
