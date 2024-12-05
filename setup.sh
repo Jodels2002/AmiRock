@@ -92,9 +92,9 @@ sudo apt install 7zip -y
 #sudo apt purge lightd* -y
 #sudo apt install cockpit -y
 # sudo apt purge -y lxde  lxde-common lxde-core openbox-lxde-session
-# sudo apt purge -y raspberrypi-ui-mods 
-# sudo apt purge -y xser* xor* xin*
-#sudo apt purge -y gnome*
+sudo apt purge -y raspberrypi-ui-mods 
+sudo apt purge -y xser* xor* xin*
+sudo apt purge -y gnome*
      
 	
 
