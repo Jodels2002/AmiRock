@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 # Install AmiRock
 # B.Titze 2023
 
@@ -91,10 +91,10 @@ sudo apt install arqiver geany -y
 sudo apt install 7zip -y
 #sudo apt purge lightd* -y
 #sudo apt install cockpit -y
- sudo apt purge -y lxde  lxde-common lxde-core openbox-lxde-session
- sudo apt purge -y raspberrypi-ui-mods 
- sudo apt purge -y xser* xor* xin*
- sudo apt purge -y gnome*
+# sudo apt purge -y lxde  lxde-common lxde-core openbox-lxde-session
+# sudo apt purge -y raspberrypi-ui-mods 
+# sudo apt purge -y xser* xor* xin*
+#sudo apt purge -y gnome*
      
 	
 
@@ -102,12 +102,12 @@ sudo apt install 7zip -y
 	sudo rm -rf ~/.config/
  
 	sudo apt install -y gnome-com*
-	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
-	sudo apt install -y xfce4-te*
-	sudo apt install -y chromium-b*
+	#sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
+	#sudo apt install -y xfce4-te*
+	#sudo apt install -y chromium-b*
 
 clear
-sudo apt install -y synaptic 
+#sudo apt install -y synaptic 
 
 clear
 sudo apt install autofs -y
@@ -164,8 +164,7 @@ sudo apt install -y xdms
 sudo apt install -y unadf
 sudo apt install -y fonts-amiga
 
-sudo apt install -y cmake libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0 libportmidi0
-sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev 
+sudo apt -y install build-essential git cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev libenet-dev
 
 
 fi
