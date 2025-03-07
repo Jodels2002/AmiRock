@@ -11,7 +11,8 @@ GREY='\033[1;30m'
 
 sudo mkdir -p /tmp/mkstempc
  power
- 
+  sudo cp -f -R /home/$USER/.config /opt/Backup
+
 cd
 clear
       toilet "AmiRock-OS" --metal
