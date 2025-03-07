@@ -373,8 +373,9 @@ fi
       sudo chmod -R 777 /opt/Backup/     
       sudo cp -rf ~/AmiRock /opt/Backup/
       sudo rm -rf ~/AmiRock
-
-
+  sudo rm -rf /opt/Backup/.config
+  sudo rm -rf /home/$USER/.config
+  sudo cp -f -R /opt/Backup/.config /home/$USER/
 cd	    
 
  clear
