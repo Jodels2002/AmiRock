@@ -365,7 +365,13 @@ fi
       sudo chmod -R 777 /home/$USER
       sudo chmod -R 777 /usr/share/applications
 
-
+      if [ ! -d /opt/Backup/ ]; then
+         sudo mkdir /opt/Backup/
+	 sudo chmod -R 777 /opt/Backup/  
+      fi	 
+   
+      sudo chmod -R 777 /opt/Backup/     
+      sudo cp -rf ~/AmiRock /opt/Backup/
       sudo rm -rf ~/AmiRock
 
 
