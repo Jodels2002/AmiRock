@@ -38,7 +38,7 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
      
      
      
-     if [ ! -f /opt/AmigaVision/AmigaVision-MegaAGS-2023-04-05.7z ]; then
+     if [ ! -f /opt/AmigaVision/amiga-vision-mega-ags-pocket-2023.07.17.7z ]; then
       clear
       echo -e "$GREEN "
       echo "Installing AmigaVision ..."
@@ -49,7 +49,7 @@ if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
       mkdir -p /opt/AmigaVision
       sudo chmod -R 777 /opt
       cd /opt/AmigaVision
-      wget https://archive.org/download/amigavision/AmigaVision-MegaAGS-2023-04-05.7z
+      wget https://archive.org/details/amiga-vision-mega-ags-pocket-2023.07.17.7z
       
       fi
 cd /opt/AmigaVision/
@@ -61,7 +61,7 @@ clear
       echo -e "$GREEN Extracting files .."
       echo -e "$GREY "
 
-  7z x ./AmigaVision-MegaAGS-2023-04-05.7z
+  7z x ./amiga-vision-mega-ags-pocket-2023.07.17.7z
   clear
  
       echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
