@@ -171,7 +171,7 @@ case $CHOICE in
       
 	    
             cd
-            ;rm -rf amiberry
+            #rm -rf amiberry
 
      
             ;;  
@@ -213,7 +213,7 @@ case $CHOICE in
       
 	    
             cd
-            ;rm -rf amiberry-lite
+           #rm -rf amiberry-lite
          
             ;;  
             
