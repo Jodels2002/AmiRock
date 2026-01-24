@@ -60,7 +60,7 @@ fi
       # sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
 
 
-      # unzip -o  /opt/AmiRock/config/up.zip   
+      unzip -o  /opt/AmiRock/config/up.zip   
 
 
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
