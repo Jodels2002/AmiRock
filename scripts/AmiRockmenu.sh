@@ -179,8 +179,7 @@ case $CHOICE in
        p)
            #***********************************************  #AmiRock-OS install script  ***********************************
            #************************************************  Compile Amiberry DEV        ************************************** 
-	     sudo apt install -y cmake libsdl2-2.0-0 libsdl2-ttf-2.0-0 libsdl2-image-2.0-0 flac mpg123 libmpeg2-4 libserialport0 libportmidi0
-	     sudo apt install -y cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev   
+	       sudo apt install -y build-essential git cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev libenet-dev libpcap-dev libzstd-dev libglew-dev
 		clear
       		toilet "AmiRock" --metal
       		echo " "
@@ -189,20 +188,20 @@ case $CHOICE in
 
                 sudo rm -rf amiberry
             
-	    git clone -b preview https://github.com/midwan/amiberry
-            cd amiberry
+	    git clone -b https://github.com/BlitterStudio/amiberry-lite
+            cd amiberry-lite
 
             cmake -B build && cmake --build build
 		    # make -j8 PLATFORM=rk3588
 		
-            sudo chmod -R 777 $HOME/amiberry
+            sudo chmod -R 777 $HOME/amiberry-lite
 	        
 	        cp -rf /opt/Amiga/amiberry_dev /opt/Amiga/amiberry_dev_old
 	        cp -rf $HOME/amiberry/build/amiberry  /opt/Amiga/amiberry_dev
-	        cp -rf $HOME/amiberry/data/ /opt/Amiga/
-	        cp -rf $HOME/amiberry/plugins/ /opt/Amiga/
-	        cp -rf $HOME/amiberry/external/ /opt/Amiga/
-	        cp -rf $HOME/amiberry/whdboot/ /opt/Amiga/
+	        cp -rf $HOME/amiberry-lite/data/ /opt/Amiga/
+	        cp -rf $HOME/amiberry-lite/plugins/ /opt/Amiga/
+	        cp -rf $HOME/amiberry-lite/external/ /opt/Amiga/
+	        cp -rf $HOME/amiberry-lite/whdboot/ /opt/Amiga/
 	    
 	       # Backup
 	 
@@ -214,7 +213,7 @@ case $CHOICE in
       
 	    
             cd
-            rm -rf amiberry
+            ;rm -rf amiberry-lite
          
             ;;  
             
