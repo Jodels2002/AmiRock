@@ -17,7 +17,7 @@
  cd 
  
 	unzip -u /home/$USER/AmiRock/config/data.pac
-	cp -rf /home/$USER/AmiRock/config/.config/ /home/$USER/
+	cp -rf /home/$USER/AmiRock/config/data/.config/ /home/$USER/
     cp -rf /home/$USER/AmiRock/config/.local/ /home/$USER/ 
 
 #    unzip -o  /opt/AmiRock/config/up.zip   
