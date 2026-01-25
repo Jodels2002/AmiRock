@@ -95,8 +95,7 @@ sudo apt install 7zip -y
 sudo apt purge -y raspberrypi-ui-mods 
 sudo apt purge -y xser* xor* xin*
 sudo apt purge -y gnome*
-     
-	
+
 
 	
 	sudo rm -rf ~/.config/
@@ -105,6 +104,9 @@ sudo apt purge -y gnome*
 	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
 	#sudo apt install -y xfce4-te*
 	#sudo apt install -y chromium-b*
+
+
+	
 
 clear
 #sudo apt install -y synaptic 
@@ -164,7 +166,6 @@ sudo apt install -y xdms
 sudo apt install -y unadf
 sudo apt install -y fonts-amiga
 
-sudo apt -y install build-essential git cmake libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libflac-dev libmpg123-dev libpng-dev libmpeg2-4-dev libserialport-dev libportmidi-dev libenet-dev
 
 
 fi
@@ -257,7 +258,7 @@ sudo rm -rf /usr/share/backgrounds/B*
 cd
 
 #***********************************************  #AmiRock-OS Not Afterburner  ***********************************     
-if [ ! -d /home/rock/wine/share/wine ]; then
+
 clear
 toilet "AmiRock-OS" --metal
 echo " "
@@ -267,8 +268,6 @@ echo " "
 
 
 
-unzip -o  $HOME/AmiRock/config/config.zip
-unzip -o  $HOME/AmiRock/config/worker.zip
 cd $HOME/AmiRock/
 git clone --depth=1 https://github.com/lordwolfchild/amigaos_xfwm4_themes
 clear
@@ -279,12 +278,7 @@ sudo cp -rf /usr/share/themes/Amiga3.x_hidpi/* /usr/share/themes/Default/xfwm4/
 sudo cp -rf $HOME/AmiRock/config/rpd-wallpaper/Commodore/* /usr/share/backgrounds/
 cd
 
-else
 
-sudo rm -rf ~/.config/dconf/
-sudo cp -rf ~/AmiRock/config/user $HOME/.config/dconf/
-
-fi
 
 #***********************************************  #AmiRock-OS install script  ***********************************
 
@@ -300,15 +294,7 @@ fi
 
 #************************************************ End First run        **************************************   		
 
-if [  -d /usr/lib/armbian/ ]; then
-clear
-toilet "Afterburner" --metal
-echo " "
-echo " "
-echo "  Extendet"
-echo " "
 
-cd
 
 sudo apt purge gnome-terminal -y
 sudo apt purge nautilus nautilus-action -y
@@ -340,7 +326,7 @@ sudo update-initramfs -u
 # sudo ln -s /home/rock/ /home/pi
 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
 sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
-fi
+
 
 
 #************************************************ End First run        **************************************   	     
