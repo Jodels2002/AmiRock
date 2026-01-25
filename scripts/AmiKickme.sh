@@ -14,8 +14,17 @@
       clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
 
+ cd 
+ 
+	unzip -u /home/$USER/AmiRock/config/data.pac
+	cp -rf /home/$USER/AmiRock/config/.config/ /home/$USER/
+    cp -rf /home/$USER/AmiRock/config/.local/ /home/$USER/ 
 
+#    unzip -o  /opt/AmiRock/config/up.zip   
+	  
   if [ ! -d /opt/Amiga/data/ ]; then
+
+  
 
 
        cd /opt/
@@ -59,10 +68,7 @@ fi
       # sudo cp -rf /opt/AmiRock/config/Desktop/R* /home/$USER/Desktop/
       # sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
 
-
-      unzip -o  /opt/AmiRock/config/up.zip   
-
-
+      
       sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
       #sudo rm -rf /usr/share/applications/*Ami*
       sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
