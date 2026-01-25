@@ -14,7 +14,13 @@
       clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
 
- cd 
+
+
+
+	  
+  if [ ! -d /opt/Amiga/data/ ]; then
+   
+   cd 
    
 	unzip -u /home/$USER/AmiRock/config/data.pac
 	cp -rf /home/$USER/data/.config/ /home/$USER/
@@ -22,15 +28,9 @@
 	cp -rf /home/$USER/data/.worker/ /home/$USER/ 	
 	sudo rm -rf home/$USER/data/
 	
-	unzip -o  /opt/AmiRock/config/up.zip  
+	# unzip -o  /opt/AmiRock/config/up.zip  
 	
-	sudo chmod -R 777 /home/$USER/
-
-
-	  
-  if [ ! -d /opt/Amiga/data/ ]; then
-
-  
+	sudo chmod -R 777 /home/$USER/  
 
 
        cd /opt/
@@ -369,11 +369,7 @@ fi
 
 
       sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 775 /home/$USER/.config
-      sudo chmod -R 775 /home/$USER/.local
-      sudo chmod -R 775 /home/$USER/Desktop
       sudo chmod -R 777 /opt
-
       sudo chmod -R 777 /home/$USER
       sudo chmod -R 777 /usr/share/applications
 
@@ -382,9 +378,7 @@ fi
 	 sudo chmod -R 777 /opt/Backup/  
       fi	 
    
-      sudo chmod -R 777 /opt/Backup/     
-      sudo cp -rf ~/AmiRock /opt/Backup/
-      sudo rm -rf ~/AmiRock
+    
  
   sudo cp -f -R /opt/Backup/.config /home/$USER/
 cd	    
@@ -405,5 +399,5 @@ echo -e "$BLUE "
 echo "  ... finished AmiRock setup :-)  " 
 echo -e "$BLACK "
 
-m
+
 
