@@ -331,7 +331,7 @@ sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
 
 #************************************************ End First run        **************************************   	     
 cd
-unzip -o  ~/AmiRock/config/config.zip
+
 
 sudo cp -f -R /home/$USER/AmiRock/scripts/* /usr/local/bin
 sudo cp -f -R /home/$USER/AmiRock/ /opt
