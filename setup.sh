@@ -108,7 +108,32 @@ sudo apt purge -y gnome*
     sudo apt install -y xdms
     sudo apt install -y unadf
     sudo apt install -y fonts-amiga
+      sudo apt install -y mc zip unzip
+      sudo apt install -y gparted
+      sudo apt install -y mednaffe
+         
+     
+      sudo apt install -y git usbmount 
+      sudo apt install -y geany geany-plugins-common geany-common xmlstarlet
+      
+     
+     
+      clear
+      toilet "KickPi-OS" --metal
 
+      echo " "
+      echo " "
+      echo "Some little Amiga stuff...."
+      echo " "
+      sudo apt-get -y install grafx2
+      sudo apt-get -y install worker 
+      clear
+      toilet "KickPi-OS" --metal
+      echo " "
+      echo " "
+      cd /home/$USER
+      git clone --depth=1 https://github.com/rewtnull/amigafonts
+      sudo cp -rf /home/$USER/amigafonts/ttf/* /usr/share/fonts/truetype/
 	
 
 clear
@@ -294,7 +319,7 @@ fi
 
 #************************************************ End First run        **************************************   		
 
-
+sudo apt install -y libreoffice  
 
 sudo apt purge gnome-terminal -y
 sudo apt purge nautilus nautilus-action -y
@@ -326,7 +351,20 @@ sudo update-initramfs -u
 # sudo ln -s /home/rock/ /home/pi
 sudo echo "bootlogo=true" >> /boot/armbianEnv.txt
 sudo echo "overlays=rk3588-i2c0-m1" >> /boot/armbianEnv.txt
+  clear
+      # Update is running
+      sudo apt install -y gimp 
+      clear
+      toilet "KickPi-OS" --metal
 
+      echo " "
+      echo " "
+      toilet -F gay PhotoGimp
+       
+      curl -L "https://github.com/Diolinux/PhotoGIMP/releases/download/1.0/PhotoGIMP.by.Diolinux.v2020.for.Flatpak.zip" -o /home/$USER/KickPi-OS/PhotoGIMP.zip && unzip /home/$USER/KickPi-OS/PhotoGIMP.zip -d /home/$USER/KickPi-OS/ 
+      sudo cp -R /home/$USER/KickPi-OS/PhotoGIMP\ by\ Diolinux\ v2020\ for\ Flatpak/.var/app/org.gimp.GIMP/config/* ~/.config
+      echo " PhotoGimp by Diolinux installed..."
+      
 
 
 #************************************************ End First run        **************************************   	     
