@@ -14,7 +14,11 @@
       clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
 
-
+	unzip -u /home/$USER/AmiRock/config/data.pac
+	cp -rf /home/$USER/data/.config/ /home/$USER/
+    cp -rf /home/$USER/data/.local/ /home/$USER/ 
+	cp -rf /home/$USER/data/.worker/ /home/$USER/ 	
+	sudo rm -rf home/$USER/data/
 
 
 	  
