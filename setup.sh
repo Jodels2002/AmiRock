@@ -104,6 +104,7 @@ sudo apt purge -y gnome*
 	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
 	sudo apt install -y xfce4-te*
 	sudo apt install -y chromium-b*
+	sudo apt install -y firefox-e*
     sudo apt install -y worker
     sudo apt install -y xdms
     sudo apt install -y unadf
