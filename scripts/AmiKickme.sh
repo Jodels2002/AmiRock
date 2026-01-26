@@ -12,6 +12,22 @@
       sudo rm -rf /home/$USER/.cache/*
       power
       clear
+    sudo apt install -y gnome-com*
+	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
+	sudo apt install -y xfce4-te*
+	sudo apt install -y chromium-b*
+	sudo apt install -y firefox-esr
+    sudo apt install -y worker
+    sudo apt install -y xdms
+    sudo apt install -y unadf
+    sudo apt install -y fonts-amiga
+    sudo apt install -y mc zip unzip
+    sudo apt install -y gparted
+    sudo apt install -y mednaffe
+	sudo apt install -y git usbmount 
+    sudo apt install -y geany geany-plugins-common geany-common xmlstarlet
+
+	  
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
    cd
    
