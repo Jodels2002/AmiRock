@@ -13,8 +13,8 @@
       power
       clear
   cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
-    sudo rm -rf /home/$USER/.config/*
-	sudo rm -rf /home/$USER/.local/*
+   cd
+   
 	unzip -u /home/$USER/AmiRock/config/data.pac
 	cp -rf /home/$USER/data/.config/ /home/$USER/
     cp -rf /home/$USER/data/.local/ /home/$USER/ 
@@ -25,13 +25,9 @@
 	  
   if [ ! -d /opt/Amiga/data/ ]; then
    
-   cd 
    
-	unzip -u /home/$USER/AmiRock/config/data.pac
-	cp -rf /home/$USER/data/.config/ /home/$USER/
-    cp -rf /home/$USER/data/.local/ /home/$USER/ 
-	cp -rf /home/$USER/data/.worker/ /home/$USER/ 	
-	sudo rm -rf home/$USER/data/
+   
+	
 	
 	# unzip -o  /opt/AmiRock/config/up.zip  
 	
