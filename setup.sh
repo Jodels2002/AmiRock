@@ -102,9 +102,12 @@ sudo apt purge -y gnome*
  
 	sudo apt install -y gnome-com*
 	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
-	#sudo apt install -y xfce4-te*
-	#sudo apt install -y chromium-b*
-
+	sudo apt install -y xfce4-te*
+	sudo apt install -y chromium-b*
+    sudo apt install -y worker
+    sudo apt install -y xdms
+    sudo apt install -y unadf
+    sudo apt install -y fonts-amiga
 
 	
 
@@ -161,10 +164,7 @@ echo " "
 sudo rm -rf /opt/Amiga/conf/amiberry.conf
 sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf
 
-sudo apt install -y worker
-sudo apt install -y xdms
-sudo apt install -y unadf
-sudo apt install -y fonts-amiga
+
 
 
 
