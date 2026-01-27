@@ -15,10 +15,7 @@ sudo apt-get update -y
 sudo apt-get -y upgrade
 
 
-#export DISTRO=focal-stable
-#wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
-#echo performance | sudo tee /sys/bus/cpu/devices/cpu[046]/cpufreq/scaling_governor /sys/class/devfreq/dmc/governor /sys/class/devfreq/fb000000.gpu/governor
-sudo apt update -y
+
 sudo apt install software-properties-common -y
 
 
@@ -45,29 +42,7 @@ echo "	Please type your sudo password ...  :-)"
 
 
 
-#***********************************************  #AmiRock-OS install script  ***********************************
-#************************************************  Make User pi       **************************************        
-      sudo useradd -m pi
-      sudo usermod -G audio -a pi
-      sudo usermod -G video -a pi  
-      sudo update-locale LANG=en_US.UTF-8
-      setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,gb,de,fr,it,gr,dk
-      sudo echo "pi ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
-      
-sudo systemctl disable getty@tty1.service
 
-sudo tee /etc/systemd/system/autologin@.service > /dev/null <<EOT
-[Unit]
-Description=Autologin to console as %I
-After=getty.target
-[Service]
-ExecStart=-/sbin/agetty --autologin pi --noclear %I 38400 linux
-[Install]
-WantedBy=multi-user.target
-EOT
-sudo systemctl daemon-reload
-sudo systemctl enable autologin@tty1.service
-echo "Autologin enabled for user pi"
  
 #************************************************  Fan Control by pymumu        **************************************   
 
@@ -86,12 +61,9 @@ sudo systemctl start fan-control
 #************************************************  usefull Tools        **************************************  
 sudo apt install -y dialog mc zip unzip wget toilet ksnip
 sudo apt install -y gparted ntfs-3g nemo feh
-#sudo apt install build-essential -y
+sudo apt install build-essential -y
 sudo apt install arqiver geany -y
 sudo apt install 7zip -y
-#sudo apt purge lightd* -y
-#sudo apt install cockpit -y
-# sudo apt purge -y lxde  lxde-common lxde-core openbox-lxde-session
 sudo apt purge -y raspberrypi-ui-mods 
 sudo apt purge -y xser* xor* xin*
 sudo apt purge -y gnome*
@@ -377,6 +349,6 @@ sudo cp -f -R /home/$USER/AmiRock/ /opt
 sudo chmod -R 777 /usr/local/bin
 sudo chmod -R 777 /opt/AmiRock/  
 sudo apt -y autoremove
-sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+#sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
 
 ~/AmiRock/scripts/AmiKickme.sh
