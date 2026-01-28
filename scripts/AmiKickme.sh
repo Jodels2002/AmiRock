@@ -133,4 +133,63 @@ if [ ! -f /opt/Amiga/kickstarts/A1200.rom ]; then
     echo -e "${BLUE}Use only if you own original Amiga hardware."
 
     ensure_dir /opt/Amiga/dir/Work
-    ensure_dir /opt_
+    ensure_dir /opt/Amiga/dir/Software
+    ensure_dir /opt/Amiga/Install
+    ensure_dir /opt/Amiga/kickstarts
+fi
+
+# ------------------------------------------------------------
+# Repair User Environment
+# ------------------------------------------------------------
+sudo rm -f "${HOME_DIR}/.bashrc"
+cp -rf "${HOME_DIR}/AmiRock/scripts/.bashrc" "${HOME_DIR}/.bashrc"
+
+if [ ! -f "${HOME_DIR}/Desktop/AmiRock-OS.desktop" ]; then
+    cp -rf /usr/share/applications/AmiRock-OS.desktop "${HOME_DIR}/Desktop/"
+fi
+
+# ------------------------------------------------------------
+# Cleanup
+# ------------------------------------------------------------
+cd /opt
+sudo find . -name "._*" -delete
+sudo find . -name ".DS_*" -delete
+sudo find . -name "_UAEFSDB.___" -delete
+
+sudo rm -rf /opt/Amiga/conf/amiberry*.conf
+
+# ------------------------------------------------------------
+# Plymouth / Boot Logo
+# ------------------------------------------------------------
+if [ -d /usr/lib/armbian ]; then
+    banner "Armbian"
+    sudo chmod -R 777 /usr/share/plymouth
+    sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png \
+        /usr/share/plymouth/themes/spinner/watermark.png
+    sudo update-alternatives \
+        --install /usr/share/plymouth/themes/default.plymouth \
+        default.plymouth \
+        /usr/share/plymouth/themes/spinner/spinner.plymouth 500
+else
+    sudo chmod -R 777 /usr/share/plymouth
+    sudo update-alternatives \
+        --install /usr/share/plymouth/themes/default.plymouth \
+        default.plymouth \
+        /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 502
+fi
+
+# ------------------------------------------------------------
+# Final Permissions (unchanged behavior)
+# ------------------------------------------------------------
+sudo chmod -R 777 /usr/local/bin
+sudo chmod -R 777 /opt
+sudo chmod -R 777 "${HOME_DIR}"
+sudo chmod -R 777 /usr/share/applications
+
+# ------------------------------------------------------------
+# Finish
+# ------------------------------------------------------------
+banner "AmiRock-OS"
+echo -e "${GREEN}... finished AmiRock setup :-)"
+echo "Type 'd' to boot into AmiRock Workbench"
+echo
