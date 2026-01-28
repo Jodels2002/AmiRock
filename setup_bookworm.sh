@@ -77,4 +77,4 @@ fi
 sudo apt autoremove -y
 sudo apt clean
 
-echo "== Base setup finished. No reboot required =="
+~/AmiRock/scripts/AmiKickme.sh
