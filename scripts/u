@@ -10,7 +10,7 @@ GREY='\033[1;30m'
 
 
 sudo mkdir -p /tmp/mkstempc
- power
+
   sudo rm -rf /opt/Backup/.config
   sudo cp -f -R /home/$USER/.config /opt/Backup
 
@@ -91,9 +91,6 @@ sudo apt-get upgrade
       sudo chmod -R 777 /usr/local/bin
       sudo chmod -R 777 /opt/AmiRock/
 
-export DISTRO=focal-stable
-wget -O - apt.radxa.com/$DISTRO/public.key | sudo apt-key add -
-echo performance | sudo tee /sys/bus/cpu/devices/cpu[046]/cpufreq/scaling_governor /sys/class/devfreq/dmc/governor /sys/class/devfreq/fb000000.gpu/governor
-      
+
       /home/$USER/AmiRock/scripts/AmiKickme.sh
  
