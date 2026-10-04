@@ -201,8 +201,7 @@ echo
     sudo apt install -y mc zip unzip
     sudo apt install -y gparted
     sudo apt install -y mednaffe
-	sudo apt install -y git usbmount 
-    sudo apt install -y geany geany-plugins-common geany-common xmlstarlet
+	sudo apt install -y geany geany-plugins-common geany-common xmlstarlet
 
 # ==============================================================
 # AmiRock .bashrc
