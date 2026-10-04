@@ -657,7 +657,7 @@ if [[ -d "$BACKUP/.config" ]]; then
 
     info "... Backup-Konfiguration wiederherstellen"
 
-    cp -a \
+    sudo cp -a \
         "$BACKUP/.config"/. \
         "$USER_HOME/.config/"
 
