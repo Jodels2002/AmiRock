@@ -9,20 +9,20 @@
 # Variablen
 # ==============================================================
 
-readonly USER_NAME="${SUDO_USER:-$USER}"
-readonly USER_HOME="$(getent passwd "$USER_NAME" | cut -d: -f6)"
+ USER_NAME="${SUDO_USER:-$USER}"
+ USER_HOME="$(getent passwd "$USER_NAME" | cut -d: -f6)"
 
-readonly AMIROCK="$USER_HOME/AmiRock"
-readonly AMIGA="/opt/Amiga"
-readonly BACKUP="/opt/Backup"
-readonly OPT_AMIROCK="/opt/AmiRock"
+ AMIROCK="$USER_HOME/AmiRock"
+ AMIGA="/opt/Amiga"
+ BACKUP="/opt/Backup"
+ OPT_AMIROCK="/opt/AmiRock"
 
-readonly DATA_PAC="$AMIROCK/config/data.pac"
-readonly AMIGA_ZIP="$OPT_AMIROCK/Amiga/Amiga.zip"
+ DATA_PAC="$AMIROCK/config/data.pac"
+ AMIGA_ZIP="$OPT_AMIROCK/Amiga/Amiga.zip"
 
-readonly APP_DIR="/usr/share/applications"
-readonly FONT_DIR="/usr/share/fonts/truetype/amiga"
-readonly PLYMOUTH_DIR="/usr/share/plymouth/themes"
+ APP_DIR="/usr/share/applications"
+ FONT_DIR="/usr/share/fonts/truetype/amiga"
+ PLYMOUTH_DIR="/usr/share/plymouth/themes"
 
 # ==============================================================
 # Farben
