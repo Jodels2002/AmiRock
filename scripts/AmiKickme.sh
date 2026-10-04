@@ -1,417 +1,845 @@
-#!/bin/bash
-#***********************************************  #AmiRock-OS install script  ***********************************
-# Install AmiRock-OS
-# B.Titze 2023
-
-      #mkdir /home/$USER/.backup
-      BLACK='\033[0;39m'
-      BLUE='\033[1;34m'
-      GREEN='\033[1;32m'
-      RED='\033[1;31m'
-      GREY='\033[1;30m'
-      sudo rm -rf /home/$USER/.cache/*
-      power
-      clear
-    sudo apt install -y gnome-com*
-	sudo apt install -y xserver-xorg xfce4 xfce4-goodies lxinput xini* 
-	sudo apt install -y xfce4-te*
-	sudo apt install -y chromium-b*
-	sudo apt install -y firefox-esr
-    sudo apt install -y worker
-    sudo apt install -y xdms
-    sudo apt install -y unadf
-    sudo apt install -y fonts-amiga
-    sudo apt install -y mc zip unzip
-    sudo apt install -y gparted
-    sudo apt install -y mednaffe
-	sudo apt install -y git usbmount 
-    sudo apt install -y geany geany-plugins-common geany-common xmlstarlet
-
-	  
-  cp -rf /opt/AmiRock/scripts/.bashrc /home/$USER/
-   cd
-   
-	unzip -u /home/$USER/AmiRock/config/data.pac
-	cp -rf /home/$USER/data/.config/ /home/$USER/
-    cp -rf /home/$USER/data/.local/ /home/$USER/ 
-	cp -rf /home/$USER/data/.worker/ /home/$USER/ 	
-	sudo rm -rf home/$USER/data/
+#!/usr/bin/env bash
+#
+# ==============================================================
+# AmiRock-OS Install / Update Script
+# By B. Titze 2026
+# ==============================================================
 
 
-	  
-  if [ ! -d /opt/Amiga/data/ ]; then
-   
-   
-   
-	
-	
-	# unzip -o  /opt/AmiRock/config/up.zip  
-	
-	sudo chmod -R 777 /home/$USER/  
+set -Eeuo pipefail
+IFS=$'\n\t'
 
+# ==============================================================
+# Variablen
+# ==============================================================
 
-       cd /opt/
-	     sudo rm -rf /opt/Amiga
+readonly USER_NAME="${SUDO_USER:-$USER}"
+readonly USER_HOME="$(getent passwd "$USER_NAME" | cut -d: -f6)"
 
+readonly AMIROCK="$USER_HOME/AmiRock"
+readonly AMIGA="/opt/Amiga"
+readonly BACKUP="/opt/Backup"
+readonly OPT_AMIROCK="/opt/AmiRock"
 
-             sudo unzip -o  /opt/AmiRock/Amiga/Amiga.zip
-       clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  Fix Amiga Folder "
-      echo " "
+readonly DATA_PAC="$AMIROCK/config/data.pac"
+readonly AMIGA_ZIP="$OPT_AMIROCK/Amiga/Amiga.zip"
 
-      cd 
+readonly APP_DIR="/usr/share/applications"
+readonly FONT_DIR="/usr/share/fonts/truetype/amiga"
+readonly PLYMOUTH_DIR="/usr/share/plymouth/themes"
 
-      sudo cp -rf /opt/Amiga/data/AmigaTopaz.ttf /usr/share/fonts/truetype/amiga/
+# ==============================================================
+# Farben
+# ==============================================================
 
-      sudo cp -R /opt/Amiga/data/amiberry.png /usr/share/applications/
-      sudo cp -R /opt/Amiga/data/amiberry_dev.png /usr/share/applications/
-      sudo ln -s /opt/vc/lib/libbcm_host.so /usr/lib/aarch64-linux-gnu/libbcm_host.so.0
+BLACK='\033[0;39m'
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+GREY='\033[1;30m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
 
-            clear
-      toilet "AmiRock-OS" --metal
-      echo " "
+# ==============================================================
+# Fehlerbehandlung
+# ==============================================================
 
-      cd 
+error_exit()
+{
+    echo
+    echo -e "${RED}================================================${NC}"
+    echo -e "${RED} FEHLER${NC}"
+    echo -e "${RED}================================================${NC}"
+    echo -e "${RED}$1${NC}"
+    echo
+    exit 1
+}
 
+trap 'error_exit "Fehler in Zeile $LINENO: $BASH_COMMAND"' ERR
+
+# ==============================================================
+# Root prüfen
+# ==============================================================
+
+if [[ $EUID -eq 0 ]]; then
+    error_exit "Dieses Script bitte NICHT direkt als root starten."
 fi
 
-      sudo chmod -R 777 /opt
+# ==============================================================
+# sudo prüfen
+# ==============================================================
 
-      if [ ! -d /opt/Backup/ ]; then
-         sudo mkdir /opt/Backup/
-      fi
-      if [ ! -d /opt/Backup/ ]; then
-         sudo mkdir /opt/Backup/
-      fi         
+sudo -v
 
-      # sudo cp -rf /opt/AmiRock/config/Desktop/A* /home/$USER/Desktop/
-      # sudo cp -rf /opt/AmiRock/config/Desktop/R* /home/$USER/Desktop/
-      # sudo cp -rf /opt/AmiRock/config/config /home/$USER/.worker/
+# sudo Session während des Scripts aktiv halten
+(
+    while true; do
+        sudo -n true
+        sleep 60
+        kill -0 "$$" 2>/dev/null || exit
+    done
+) 2>/dev/null &
 
-      
-      sudo cp -R /home/$USER/AmiRock/scripts/* /usr/local/bin
-      #sudo rm -rf /usr/share/applications/*Ami*
-      sudo cp -R /home/$USER/AmiRock/config/Desktop/* /usr/share/applications/
-      sudo cp -rf /opt/AmiRock/config/Logo/* /opt/AmiRock/config/
-      sudo cp -rf /opt/AmiRock/config/Logo/boot.jpg /usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg
+SUDO_KEEPALIVE_PID=$!
 
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      echo " AmiRock-OS Update Linux System ..."
-      echo -e "$GREY "
-      echo " "
-      sudo apt-get update
-      sudo apt-get upgrade -y
+cleanup()
+{
+    kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true
+}
 
+trap cleanup EXIT
 
-cd /home/$USER/AmiRock/
+# ==============================================================
+# Hilfsfunktionen
+# ==============================================================
 
-clear
-
-
-
-
-      # Update allways Routine
-      if [ ! -d /opt/AmiRock/ ]; then
-
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-
-
-      echo "Update is running "             
-      echo " "
-      echo " "      
-      else 
-      clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      echo "Update is running "
-      echo " "
-      echo " System optimized :) "
-      echo " "
-      echo " " 
-fi
-
-
-if [ ! -f /opt/Amiga/data/amiberry_dev.png ]; then
-      sudo cp -R /opt/Amiga/amiberry_dev.png /opt/Amiga/data/
-      fi      
-cd	     
-
-if [ -d /opt/Backup/MegaAGS/games/Amiga/ ]; then
-
-      sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.desktop /usr/share/applications/ 
-      sudo cp -rf /opt/AmiRock/Amiga/MegaAGS/MegaAGS.uae /opt/Amiga/Amiga/conf/
-fi 
-
-   sudo cp -rf  $HOME/Amiga/data/amiberry_dev.png /usr/share/applications/  
-
-            if [ ! -f /opt/Amiga/amiberry_old ]; then
-            cp -rf  /opt/Amiga/amiberry_old /opt/Backup/
-	    fi
-	    if [ ! -f /opt/Amiga/amiberry ]; then
-            cp -rf  /opt/Amiga/amiberry /opt/Backup/
-	    fi
-	    if [ ! -f /opt/Amiga/amiberry_dev ]; then
-	    cp -rf  /opt/Amiga/amiberry_dev /opt/Backup/
-	    fi
-
-	    if [ ! -f /opt/Amiga/kickstarts/A1200.rom ]; then
-
-	             clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$RED "
-      echo "1>Please note that the Kickroms and Workbench files are still under copyright!  "
-      echo -e "$BLUE "
-      echo "1>So only use this image if you own the original Amigas, Amiga Forever."
-      echo "1>CLI: "
-      echo -e "$BLACK "
-      echo "1>                  Greetings your´s "
-      echo "1>Assign >NIL:      Bernd Titze"
-      echo " "
-  
-  if [ ! -d /opt/Amiga/dir/Work/ ]; then
-      mkdir /opt/Amiga/dir/
-      mkdir /opt/Amiga/dir/Work/
-      mkdir /opt/Amiga/dir/Software
-      mkdir /opt/Amiga/Install/
-      mkdir /opt/Amiga/kickstarts
-  fi
-   cd  
-
- clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "    
-
- fi
-
-
+header()
+{
     clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      echo "  ... repair settings  "  
 
-      sudo rm -rf /home/$USER/.bashrc
-      cp -rf $HOME/AmiRock/scripts/.bashrc /home/$USER/.bashrc
+    if command -v toilet >/dev/null 2>&1; then
+        toilet "AmiRock-OS" --metal
+    else
+        echo
+        echo "=========================================="
+        echo "              AmiRock-OS"
+        echo "=========================================="
+    fi
 
+    echo
+}
 
-      if [ ! -f /home/$USER/Desktop/AmiRock-OS.desktop ]; then
-        sudo cp -rf /usr/share/applications/AmiRock-OS.desktop /home/$USER/Desktop/AmiRock-OS.desktop
-      fi  
+info()
+{
+    echo -e "${BLUE}$1${NC}"
+}
 
-      if [ ! -f /usr/share/applications/MegaAGS.desktop ]; then
+success()
+{
+    echo -e "${GREEN}$1${NC}"
+}
 
-      #sudo cp -rf $HOME/AmiRock/config/MegaAGS.desktop /usr/share/applications/ 
-     clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
+warning()
+{
+    echo -e "${YELLOW}$1${NC}"
+}
 
-      fi
+error()
+{
+    echo -e "${RED}$1${NC}"
+}
 
-      echo " "
-      echo "  ... cleanup Amiga folder  " 
+ensure_dir()
+{
+    local dir="$1"
 
-      if [  -d /usr/lib/armbian/ ]; then      
+    if [[ ! -d "$dir" ]]; then
+        sudo mkdir -p "$dir"
+    fi
+}
 
-          #sudo rm -rf /home/$USER/Desktop/*
-	  sudo rm -rf /opt/.config/dconf/*
-          sudo cp -rf /opt/AmiRock/config/user $HOME/.config/dconf/      
-      fi  
+copy_if_exists()
+{
+    local source="$1"
+    local destination="$2"
 
-      echo " "
-      echo "  ... delete unnecessary files  " 
-      cd  /opt/
-      sudo find . -name "\._*" -type f -print0 | xargs -0 /bin/rm -f
-      sudo find . -name "\.DS_*" -type f -print0 | xargs -0 /bin/rm -f
-      sudo find . -name "_UAEFSDB.___" -type f -print0 | xargs -0 /bin/rm -f
-      cd ~
-       sudo rm -rf /opt/Amiga/conf/amiberry.conf
-       sudo rm -rf /opt/Amiga/conf/amiberry-osx.conf      
-     clear
+    if [[ -e "$source" ]]; then
+        sudo cp -a "$source" "$destination"
+    else
+        warning "Nicht gefunden: $source"
+    fi
+}
 
-      if [ -d $HOME/AMIGAOSLINUX/ ]; then
-         sudo rm -rf $HOME/AMIGAOSLINUX/
-      fi
+copy_dir_contents()
+{
+    local source="$1"
+    local destination="$2"
 
-      if [ -d $HOME/AmiRock/ ]; then
-         sudo rm -rf $HOME/AmiRock/
-      fi
+    if [[ -d "$source" ]]; then
+        sudo cp -a "$source"/. "$destination"/
+    else
+        warning "Verzeichnis nicht gefunden: $source"
+    fi
+}
 
-      if [ -d $HOME/fan-control-rock5b/ ]; then
-         sudo rm -rf $HOME/fan-control-rock5b/
-      fi
+# ==============================================================
+# Start
+# ==============================================================
 
-      if [ -d $HOME/Schreibtisch/ ]; then
-         sudo rm -rf $HOME/Schreibtisch/
-	 sudo rm -rf $HOME/.config/user-dirs.dirs
-	 mkdir $HOME/Desktop
-      fi
+header
 
-      if [ -d $HOME/Videos/ ]; then
-         sudo rm -rf $HOME/Videos/
-      fi
+echo -e "${BLUE}AmiRock-OS ROM Operating System and Libraries${NC}"
+echo -e "${GREY}Version V2.0 2020-2021 AmiRock-OS${NC}"
+echo
+echo "Installation / Update wird vorbereitet..."
+echo
 
-      if [ -d $HOME/Bilder/ ]; then
-         sudo rm -rf $HOME/Bilder/
-      fi
+# ==============================================================
+# Cache bereinigen
+# ==============================================================
 
-      if [ ! -d /opt/data/amiberry_dev.png/ ]; then
-      sudo cp -rf  /opt/AmiRock/Amiga/amiberry_dev.png /opt/Amiga/data/
-      fi
+info "... Linux Cache bereinigen"
 
-      if [ ! -d /opt/OLED/images/ ]; then
-       mkdir /opt/OLED
-       mkdir /opt/OLED/images
-      fi
-      if [ -d /opt/OLED/ ]; then
-       cp -rf /opt/AmiRock/OLED/* /opt/OLED/
-       sudo cp -rf /opt/OLED/fonts/* /usr/share/fonts/truetype/
-      fi
+if [[ -d "$USER_HOME/.cache" ]]; then
+    find "$USER_HOME/.cache" -mindepth 1 -maxdepth 1 \
+        -exec rm -rf -- {} + 2>/dev/null || true
+fi
 
+# ==============================================================
+# Pakete
+# ==============================================================
 
-      #************************** Amiga Extended **********************************************************************       
+header
+info "... benötigte Pakete installieren"
+echo
 
-     if [  -d /usr/lib/armbian/  ]; then
+PACKAGES=(
+    gnome-com*
+    xserver-xorg
+    xfce4
+    xfce4-goodies
+    lxinput
+    xini*
+    xfce4-te*
+    chromium-b*
+    firefox-esr
+    worker
+    xdms
+    unadf
+    fonts-amiga
+    mc
+    zip
+    unzip
+    gparted
+    mednaffe
+    git
+    usbmount
+    geany
+    geany-plugins-common
+    geany-common
+    xmlstarlet
+)
 
-         toilet "AmiRock-OS" --metal
-      echo " "
-      echo " "
-      echo "  Detect Armbian Image "
-      echo " "
+sudo apt-get update
 
+# Paketinstallation in EINEM Lauf
+sudo apt-get install -y "${PACKAGES[@]}"
 
+# ==============================================================
+# AmiRock .bashrc
+# ==============================================================
 
+header
+info "... Bash-Konfiguration installieren"
 
-	 if [ ! -d /home/$USER/Videos/ ]; then
-	 mkdir /home/$USER/Videos
-	 fi
+if [[ -f "$AMIROCK/scripts/.bashrc" ]]; then
+    cp -a "$AMIROCK/scripts/.bashrc" "$USER_HOME/.bashrc"
+    sudo chown "$USER_NAME:$USER_NAME" "$USER_HOME/.bashrc"
+fi
 
-	 if [ ! -d /home/$USER/Movies/ ]; then
-	 mkdir /home/$USER/Movies
-	 fi
+# ==============================================================
+# data.pac
+# ==============================================================
 
-	    #sudo cp -rf /opt/AmiRock/config/armbianEnv.txt /boot/
-	    # sudo cp -rf /opt/AmiRock/config/custom.conf /etc/gdm3/
+header
+info "... AmiRock Datenpaket installieren"
 
-	 # sudo rm -rf /home/$USER/.config/dconf/*
-	 # sudo cp -rf /opt/AmiRock/config/user /home/$USER/.config/dconf/
+if [[ -f "$DATA_PAC" ]]; then
 
+    cd "$USER_HOME"
 
-          clear
-      toilet "Armbian" --metal
+    unzip -o "$DATA_PAC"
 
-      echo "Amiga"
-      echo " "
+    copy_dir_contents \
+        "$USER_HOME/data/.config" \
+        "$USER_HOME/.config"
 
-	 sudo chmod -R 777 /usr/share/plymouth/
-	 sudo rm -rf /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/themes/spinner/watermark.png
-	 sudo cp -rf /opt/AmiRock/config/Logo/Amiga-Logo.png /usr/share/plymouth/ubuntu-logo.png
-  	 sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-  	 sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/spinner/spinner.plymouth 500
+    copy_dir_contents \
+        "$USER_HOME/data/.local" \
+        "$USER_HOME/.local"
 
-   clear
-      toilet "Afterburner" --metal
-      echo " Extended "
-      echo " "
-      echo -e "$BLUE Updating Boot Image "
-      echo -e "$GREY "
+    copy_dir_contents \
+        "$USER_HOME/data/.worker" \
+        "$USER_HOME/.worker"
 
-#************************** AmiRock **********************************************************************             
-   else 
-      sudo chmod -R 777 /usr/share/plymouth
-      sudo cp -rf /opt/AmiRock/config/plymouth/AmigaKickstart /usr/share/plymouth/themes/
-      sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/AmigaKickstart/AmigaKickstart.plymouth 502
-  	clear
-      toilet "AmiRock-OS" --metal
-      echo " "
-      echo -e "$BLUE Updating Boot Image "
-      echo -e "$GREY "
+    rm -rf "$USER_HOME/data"
 
-       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/armbian/bgrt-fallback.png
-       #sudo cp -rf  /opt/AmiRock/config/Logo/AmiRock-OS.png /usr/share/plymouth/themes/spinner/bgrt-fallback.png
+else
+    warning "data.pac nicht gefunden: $DATA_PAC"
+fi
 
-    cd
+# ==============================================================
+# AmiRock / Amiga installieren
+# ==============================================================
 
+if [[ ! -d "$AMIGA/data" ]]; then
+
+    header
+
+    info "... Amiga-System wird installiert"
+
+    ensure_dir "$BACKUP"
+
+    if [[ ! -f "$AMIGA_ZIP" ]]; then
+        error_exit "Amiga.zip wurde nicht gefunden:
+$AMIGA_ZIP"
+    fi
+
+    # Vorhandene Installation sichern
+    if [[ -d "$AMIGA" ]]; then
+
+        BACKUP_DATE="$(date '+%Y%m%d_%H%M%S')"
+
+        info "Vorhandene Amiga-Installation sichern..."
+
+        sudo mv \
+            "$AMIGA" \
+            "$BACKUP/Amiga_$BACKUP_DATE"
+    fi
+
+    ensure_dir "/opt"
+
+    cd /opt
+
+    sudo unzip -o "$AMIGA_ZIP"
+
+    # ==========================================================
+    # Amiga Fonts
+    # ==========================================================
+
+    ensure_dir "$FONT_DIR"
+
+    copy_if_exists \
+        "$AMIGA/data/AmigaTopaz.ttf" \
+        "$FONT_DIR/"
+
+    # ==========================================================
+    # Amiberry Icons
+    # ==========================================================
+
+    copy_if_exists \
+        "$AMIGA/data/amiberry.png" \
+        "$APP_DIR/"
+
+    copy_if_exists \
+        "$AMIGA/data/amiberry_dev.png" \
+        "$APP_DIR/"
+
+    # ==========================================================
+    # BCM Host Library
+    # ==========================================================
+
+    BCM_TARGET="/usr/lib/aarch64-linux-gnu/libbcm_host.so.0"
+    BCM_SOURCE="/opt/vc/lib/libbcm_host.so"
+
+    if [[ -e "$BCM_SOURCE" ]]; then
+
+        if [[ ! -e "$BCM_TARGET" ]]; then
+
+            sudo ln -s "$BCM_SOURCE" "$BCM_TARGET"
+
+        fi
+
+    else
+        warning "BCM Host Library nicht gefunden: $BCM_SOURCE"
+    fi
+
+fi
+
+# ==============================================================
+# Backup-Verzeichnis
+# ==============================================================
+
+ensure_dir "$BACKUP"
+
+# ==============================================================
+# AmiRock Scripts
+# ==============================================================
+
+header
+info "... AmiRock Scripts installieren"
+
+if [[ -d "$AMIROCK/scripts" ]]; then
+
+    sudo cp -a "$AMIROCK/scripts"/. /usr/local/bin/
+
+fi
+
+# ==============================================================
+# Desktop-Dateien
+# ==============================================================
+
+info "... Desktop-Dateien installieren"
+
+if [[ -d "$AMIROCK/config/Desktop" ]]; then
+
+    sudo cp -a \
+        "$AMIROCK/config/Desktop"/. \
+        "$APP_DIR"/
+
+fi
+
+# ==============================================================
+# Logos
+# ==============================================================
+
+info "... Logos installieren"
+
+if [[ -d "$OPT_AMIROCK/config/Logo" ]]; then
+
+    sudo cp -a \
+        "$OPT_AMIROCK/config/Logo"/. \
+        "$OPT_AMIROCK/config/"
+fi
+
+# Armbian Hintergrund
+if [[ -f "$OPT_AMIROCK/config/Logo/boot.jpg" ]] &&
+   [[ -d "/usr/share/backgrounds/armbian-lightdm" ]]; then
+
+    sudo cp -a \
+        "$OPT_AMIROCK/config/Logo/boot.jpg" \
+        "/usr/share/backgrounds/armbian-lightdm/armbian03-Dre0x-Minum-dark-blurred-3840x2160.jpg"
+fi
+
+# ==============================================================
+# System Update
+# ==============================================================
+
+header
+
+info "AmiRock-OS Linux-System wird aktualisiert..."
+echo
+
+sudo apt-get update
+sudo apt-get upgrade -y
+
+# ==============================================================
+# MegaAGS
+# ==============================================================
+
+if [[ -d "$BACKUP/MegaAGS/games/Amiga" ]]; then
+
+    info "... MegaAGS Konfiguration"
+
+    copy_if_exists \
+        "$OPT_AMIROCK/Amiga/MegaAGS/MegaAGS.desktop" \
+        "$APP_DIR/"
+
+    ensure_dir "$AMIGA/Amiga/conf"
+
+    copy_if_exists \
+        "$OPT_AMIROCK/Amiga/MegaAGS/MegaAGS.uae" \
+        "$AMIGA/Amiga/conf/"
+
+fi
+
+# ==============================================================
+# Amiberry Development Icon
+# ==============================================================
+
+if [[ -f "$AMIGA/amiberry_dev.png" ]] &&
+   [[ ! -f "$AMIGA/data/amiberry_dev.png" ]]; then
+
+    sudo cp \
+        "$AMIGA/amiberry_dev.png" \
+        "$AMIGA/data/"
+
+fi
+
+if [[ -f "$AMIGA/data/amiberry_dev.png" ]]; then
+
+    sudo cp \
+        "$AMIGA/data/amiberry_dev.png" \
+        "$APP_DIR/"
+
+fi
+
+# ==============================================================
+# Amiberry Backups
+# ==============================================================
+
+header
+info "... Amiberry Backups"
+
+ensure_dir "$BACKUP"
+
+for FILE in amiberry amiberry_old amiberry_dev; do
+
+    if [[ -e "$AMIGA/$FILE" ]] &&
+       [[ ! -e "$BACKUP/$FILE" ]]; then
+
+        sudo cp -a \
+            "$AMIGA/$FILE" \
+            "$BACKUP/"
 
     fi
-                 #Symbolic Links
 
- if [  -d /opt/retropie/configs/all/retroarch ]; then
-      rm -d -r /home/$USER/.config/retroarch
-      ln -s /opt/retropie/configs/all/retroarch/ /home/$USER/.config/retroarch
- fi
-     # sudo update-initramfs -u
+done
 
+# ==============================================================
+# Kickstart Verzeichnis
+# ==============================================================
 
+if [[ ! -f "$AMIGA/kickstarts/A1200.rom" ]]; then
 
+    header
 
+    warning "Kickstart-ROM A1200.rom wurde nicht gefunden."
+    echo
+    echo "Bitte beachten:"
+    echo
+    echo "Die Kickstart-ROMs und Workbench-Dateien"
+    echo "unterliegen weiterhin dem Urheberrecht."
+    echo
+    echo "Verwende diese Dateien nur, wenn du"
+    echo "die entsprechenden Rechte besitzt."
+    echo
 
+    ensure_dir "$AMIGA/dir/Work"
+    ensure_dir "$AMIGA/dir/Software"
+    ensure_dir "$AMIGA/Install"
+    ensure_dir "$AMIGA/kickstarts"
 
+fi
 
-#***********************************************  #AmiRock-OS install script  *********************************** 
-      clear   	
-      echo " "
-      echo "  ... repair rights  "  
+# ==============================================================
+# .bashrc reparieren
+# ==============================================================
 
+header
+info "... Benutzerkonfiguration reparieren"
 
-      sudo chmod -R 777 /usr/local/bin
-      sudo chmod -R 777 /opt
-      sudo chmod -R 777 /home/$USER
-      sudo chmod -R 777 /usr/share/applications
+if [[ -f "$AMIROCK/scripts/.bashrc" ]]; then
 
-      if [ ! -d /opt/Backup/ ]; then
-         sudo mkdir /opt/Backup/
-	 sudo chmod -R 777 /opt/Backup/  
-      fi	 
-   
-    
- 
-  sudo cp -f -R /opt/Backup/.config /home/$USER/
-cd	    
+    cp -a \
+        "$AMIROCK/scripts/.bashrc" \
+        "$USER_HOME/.bashrc"
 
- clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREY Version V2.0 2020-2021 AmiRock-OS "
-echo " No Rights Reserved.  "
-echo -e "$BLACK "
-echo " Type 'd' to boot into AmiRock Workbench"
-echo ""
-echo -e " 1.>  ( u ) AmiRock-OS Update                     "
-echo " 1.>  ( m ) ArmRock-OS Config                       " 
-echo -e " 1.>  ( c ) Armbian-Config                       "
-echo " 1.>  ( s ) Shutdown                                "  
-echo -e "$BLUE "
-echo "  ... finished AmiRock setup :-)  " 
-echo -e "$BLACK "
+    sudo chown \
+        "$USER_NAME:$USER_NAME" \
+        "$USER_HOME/.bashrc"
+
+fi
+
+# ==============================================================
+# Desktop Shortcut
+# ==============================================================
+
+if [[ -f "$APP_DIR/AmiRock-OS.desktop" ]] &&
+   [[ ! -f "$USER_HOME/Desktop/AmiRock-OS.desktop" ]]; then
+
+    ensure_dir "$USER_HOME/Desktop"
+
+    cp \
+        "$APP_DIR/AmiRock-OS.desktop" \
+        "$USER_HOME/Desktop/"
+
+    chown \
+        "$USER_NAME:$USER_NAME" \
+        "$USER_HOME/Desktop/AmiRock-OS.desktop"
+
+fi
+
+# ==============================================================
+# Armbian / Dconf
+# ==============================================================
+
+if [[ -d "/usr/lib/armbian" ]]; then
+
+    header
+    info "... Armbian erkannt"
+
+    ensure_dir "$USER_HOME/Videos"
+    ensure_dir "$USER_HOME/Movies"
+
+    # Dconf
+    if [[ -f "$OPT_AMIROCK/config/user" ]]; then
+
+        ensure_dir "$USER_HOME/.config/dconf"
+
+        cp \
+            "$OPT_AMIROCK/config/user" \
+            "$USER_HOME/.config/dconf/"
+
+        chown -R \
+            "$USER_NAME:$USER_NAME" \
+            "$USER_HOME/.config/dconf"
+
+    fi
+
+fi
+
+# ==============================================================
+# Unnötige Dateien entfernen
+# ==============================================================
+
+header
+info "... unnötige Dateien entfernen"
+
+if [[ -d /opt ]]; then
+
+    sudo find /opt \
+        -type f \
+        \( \
+            -name '._*' \
+            -o -name '.DS_*' \
+            -o -name '_UAEFSDB.___' \
+        \) \
+        -delete
+
+fi
+
+# Alte Amiberry Konfigurationen entfernen
+sudo rm -f \
+    "$AMIGA/conf/amiberry.conf" \
+    "$AMIGA/conf/amiberry-osx.conf"
+
+# ==============================================================
+# Alte Verzeichnisse entfernen
+# ==============================================================
+
+header
+info "... alte AmiRock Verzeichnisse entfernen"
+
+for DIR in \
+    "$USER_HOME/AMIGAOSLINUX" \
+    "$USER_HOME/AmiRock" \
+    "$USER_HOME/fan-control-rock5b" \
+    "$USER_HOME/Videos" \
+    "$USER_HOME/Bilder"
+do
+
+    # AmiRock selbst NICHT entfernen!
+    if [[ "$DIR" == "$AMIROCK" ]]; then
+        continue
+    fi
+
+    if [[ -d "$DIR" ]]; then
+        rm -rf "$DIR"
+    fi
+
+done
+
+# ==============================================================
+# Desktop / deutsche Verzeichnisse
+# ==============================================================
+
+if [[ -d "$USER_HOME/Schreibtisch" ]]; then
+
+    rm -rf "$USER_HOME/Schreibtisch"
+
+    rm -f \
+        "$USER_HOME/.config/user-dirs.dirs"
+
+    ensure_dir "$USER_HOME/Desktop"
+
+fi
+
+# ==============================================================
+# Amiberry Dev Icon
+# ==============================================================
+
+if [[ -f "$OPT_AMIROCK/Amiga/amiberry_dev.png" ]]; then
+
+    ensure_dir "$AMIGA/data"
+
+    if [[ ! -f "$AMIGA/data/amiberry_dev.png" ]]; then
+
+        sudo cp \
+            "$OPT_AMIROCK/Amiga/amiberry_dev.png" \
+            "$AMIGA/data/"
+
+    fi
+
+fi
+
+# ==============================================================
+# OLED
+# ==============================================================
+
+header
+info "... OLED Unterstützung"
+
+ensure_dir "/opt/OLED"
+ensure_dir "/opt/OLED/images"
+
+if [[ -d "$OPT_AMIROCK/OLED" ]]; then
+
+    sudo cp -a \
+        "$OPT_AMIROCK/OLED"/. \
+        "/opt/OLED/"
+
+fi
+
+if [[ -d "/opt/OLED/fonts" ]]; then
+
+    sudo cp -a \
+        /opt/OLED/fonts/. \
+        /usr/share/fonts/truetype/
+
+fi
+
+# ==============================================================
+# Plymouth
+# ==============================================================
+
+header
+info "... Plymouth Bootlogo"
+
+if [[ -d "/usr/lib/armbian" ]]; then
+
+    # Armbian
+    if [[ -f "$OPT_AMIROCK/config/Logo/Amiga-Logo.png" ]]; then
+
+        sudo cp \
+            "$OPT_AMIROCK/config/Logo/Amiga-Logo.png" \
+            "/usr/share/plymouth/themes/spinner/watermark.png"
+
+        sudo cp \
+            "$OPT_AMIROCK/config/Logo/Amiga-Logo.png" \
+            "/usr/share/plymouth/ubuntu-logo.png"
+
+    fi
+
+    if [[ -d "$OPT_AMIROCK/config/plymouth/AmigaKickstart" ]]; then
+
+        sudo cp -a \
+            "$OPT_AMIROCK/config/plymouth/AmigaKickstart" \
+            "$PLYMOUTH_DIR/"
+
+    fi
+
+    if [[ -f "$PLYMOUTH_DIR/spinner/spinner.plymouth" ]]; then
+
+        sudo update-alternatives \
+            --install \
+            /usr/share/plymouth/themes/default.plymouth \
+            default.plymouth \
+            "$PLYMOUTH_DIR/spinner/spinner.plymouth" \
+            500
+
+    fi
+
+else
+
+    # Nicht-Armbian
+    if [[ -d "$OPT_AMIROCK/config/plymouth/AmigaKickstart" ]]; then
+
+        sudo cp -a \
+            "$OPT_AMIROCK/config/plymouth/AmigaKickstart" \
+            "$PLYMOUTH_DIR/"
+
+    fi
+
+    if [[ -f "$PLYMOUTH_DIR/AmigaKickstart/AmigaKickstart.plymouth" ]]; then
+
+        sudo update-alternatives \
+            --install \
+            /usr/share/plymouth/themes/default.plymouth \
+            default.plymouth \
+            "$PLYMOUTH_DIR/AmigaKickstart/AmigaKickstart.plymouth" \
+            502
+
+    fi
+
+fi
+
+# ==============================================================
+# RetroPie
+# ==============================================================
+
+if [[ -d "/opt/retropie/configs/all/retroarch" ]]; then
+
+    header
+    info "... RetroPie Verknüpfung"
+
+    ensure_dir "$USER_HOME/.config"
+
+    if [[ -L "$USER_HOME/.config/retroarch" ]] ||
+       [[ -d "$USER_HOME/.config/retroarch" ]]; then
+
+        rm -rf "$USER_HOME/.config/retroarch"
+
+    fi
+
+    ln -s \
+        "/opt/retropie/configs/all/retroarch" \
+        "$USER_HOME/.config/retroarch"
+
+    chown -h \
+        "$USER_NAME:$USER_NAME" \
+        "$USER_HOME/.config/retroarch"
+
+fi
+
+# ==============================================================
+# Backup-Konfiguration zurückspielen
+# ==============================================================
+
+if [[ -d "$BACKUP/.config" ]]; then
+
+    info "... Backup-Konfiguration wiederherstellen"
+
+    cp -a \
+        "$BACKUP/.config"/. \
+        "$USER_HOME/.config/"
+
+fi
+
+# ==============================================================
+# Besitzer korrigieren
+# ==============================================================
+
+header
+info "... Dateirechte korrigieren"
+
+# WICHTIG:
+# Nicht mehr chmod -R 777 verwenden!
+
+sudo chown -R \
+    "$USER_NAME:$USER_NAME" \
+    "$USER_HOME"
+
+# Ausführbare AmiRock Scripts
+if [[ -d "/usr/local/bin" ]]; then
+
+    sudo find /usr/local/bin \
+        -maxdepth 1 \
+        -type f \
+        -name 'AmiRock*' \
+        -exec chmod 755 {} \;
+
+fi
+
+# Desktop-Dateien
+sudo find "$APP_DIR" \
+    -maxdepth 1 \
+    -type f \
+    -name '*.desktop' \
+    -exec chmod 644 {} \;
+
+# ==============================================================
+# Abschluss
+# ==============================================================
+
+header
+
+echo -e "${BLUE}AmiRock-OS ROM Operating System and Libraries${NC}"
+echo -e "${GREY}Version V2.0 2020-2021 AmiRock-OS${NC}"
+echo
+echo "No Rights Reserved."
+echo
+echo "Type 'd' to boot into AmiRock Workbench"
+echo
+echo "  ( u ) AmiRock-OS Update"
+echo "  ( m ) AmiRock-OS Config"
+echo "  ( c ) Armbian-Config"
+echo "  ( s ) Shutdown"
+echo
+echo -e "${GREEN}... AmiRock-OS Setup erfolgreich beendet :-)${NC}"
+echo
+
+success "Installation / Update abgeschlossen."
+
+exit 0
+
