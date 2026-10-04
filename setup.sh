@@ -164,3 +164,11 @@ sudo apt autoremove -y
 
 log "AmiRock installation complete!"
 toilet "AmiRock Ready" --metal
+
+# Final script execution
+
+if [ -f ~/AmiRock/scripts/AmiKickme.sh ]; then
+    chmod +x ~/AmiRock/scripts/AmiKickme.sh
+    ~/AmiRock/scripts/AmiKickme.sh
+fi
+
