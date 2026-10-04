@@ -499,24 +499,7 @@ if [[ -f "$AMIROCK/scripts/.bashrc" ]]; then
 
 fi
 
-# ==============================================================
-# Desktop Shortcut
-# ==============================================================
 
-if [[ -f "$APP_DIR/AmiRock-OS.desktop" ]] &&
-   [[ ! -f "$USER_HOME/Desktop/AmiRock-OS.desktop" ]]; then
-
-    ensure_dir "$USER_HOME/Desktop"
-
-    cp \
-        "$APP_DIR/AmiRock-OS.desktop" \
-        "$USER_HOME/Desktop/"
-
-    chown \
-        "$USER_NAME:$USER_NAME" \
-        "$USER_HOME/Desktop/AmiRock-OS.desktop"
-
-fi
 
 # ==============================================================
 # Armbian / Dconf
