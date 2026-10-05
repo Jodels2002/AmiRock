@@ -191,7 +191,7 @@ header
 info "... Bash-Konfiguration installieren"
 
 if [[ -f "$AMIROCK/scripts/.bashrc" ]]; then
-    cp -a "$AMIROCK/scripts/.bashrc" "$USER_HOME/.bashrc"
+    sudo cp -a "$AMIROCK/scripts/.bashrc" "$USER_HOME/.bashrc"
     sudo chown "$USER_NAME:$USER_NAME" "$USER_HOME/.bashrc"
 fi
 
