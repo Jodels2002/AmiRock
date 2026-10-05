@@ -1,99 +1,108 @@
+#!/usr/bin/env bash
+
+
+# Colors
 BLACK='\033[0;39m'
-      BLUE='\033[1;34m'
-      GREEN='\033[1;32m'
-      RED='\033[1;31m'
-      GREY='\033[1;30m'
-      
-      sudo apt install python3-pip  python3-dev  -y
-      sudo python3 -m pip install -U setuptools
-      sudo python3 -m pip install -U amitools         
+BLUE='\033[1;34m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+GREY='\033[1;30m'
+NC='\033[0m'
 
-clear
-      toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      echo -e "$GREY "
-      echo -e -n "$BLACK Check free disk space..." 
-      echo -e "$BLUE "
-	df -H -l /root
-	echo -e -n " "
-FREE=`df -k --output=avail "$PWD" | tail -n1`   # df -k not df -h 
+APP_DIR="/opt/AmigaVision"
+ARCHIVE="AmigaVision-Emulators-2026.04.26-r2.7z"
+ARCHIVE_URL="https://archive.org/download/amigavision-emulators/${ARCHIVE}"
+MIN_SPACE=10000000   # ~10GB in KB
 
-if [[ $FREE -lt  10000000 ]]; then               # 10G = 10*1024*1024k
+print_header() {
+    clear
+    toilet "KickPi-OS" --metal
+    echo -e "${GREY}KickPi-OS-OS ROM Operating System and Libraries${NC}"
+    echo "Version V2.0 2020-2021 KickPi-OS"
+    echo "No Rights Reserved."
+    echo
+}
 
-     echo -e  "Installation aborted..."
-     echo -e  "$RED 1.> Not enough disk space !                            -"
-     echo -e "$BLUE  1.> You need 10GB Avial left! " 
-     echo -e "$BLACK 1.> "
-     echo -e  ""
- 
-     sleep 2
-   
-     
-     else
-     
-     
-     
-     if [ ! -f /opt/AmigaVision/amiga-vision-mega-ags-pocket-2023.07.17.7z ]; then
-      clear
-      echo -e "$GREEN "
-      echo "Installing AmigaVision ..."
-      echo -e "$GREY "
-      echo "Download AmigaVision"
-      echo -e "$GREY "
-      echo " "
-      mkdir -p /opt/AmigaVision
-      sudo chmod -R 777 /opt
-      cd /opt/AmigaVision
-      wget https://archive.org/details/amiga-vision-mega-ags-pocket-2023.07.17.7z
-      
-      fi
-cd /opt/AmigaVision/
+check_disk_space() {
+    echo -ne "${BLACK}Checking free disk space... ${NC}"
+    local free
+    free=$(df -k --output=avail "$PWD" | tail -n1)
 
-if [ ! -d /opt/AmigaVision/games/Amiga/ ]; then
-clear
-  
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREEN Extracting files .."
-      echo -e "$GREY "
+    if (( free < MIN_SPACE )); then
+        echo -e "\n${RED}Installation aborted: Not enough disk space!${NC}"
+        echo -e "${BLUE}You need at least 10GB free.${NC}"
+        exit 1
+    fi
+}
 
-  7z x ./amiga-vision-mega-ags-pocket-2023.07.17.7z
-  clear
- 
-      echo -e "$BLUE AmiRock-OS ROM Operating System and Libraries" 
-      echo -e "$GREEN Extracting files .."
-      echo -e "$GREY "
+download_archive() {
+    if [[ ! -f "${APP_DIR}/${ARCHIVE}" ]]; then
+        clear
+        toilet "KickPi-OS" --metal
+        echo -e "${GREY}KickPi-OS-OS ROM Operating System and Libraries${NC}"
+        echo "Version V2.0 2020-2021 KickPi-OS"
+        echo "No Rights Reserved."
+        echo
+        echo -e "${GREEN}Downloading AmigaVision 2026...${NC}"
+        echo
+        mkdir -p "$APP_DIR"
+        cd "$APP_DIR"
+        wget -q --show-progress "$ARCHIVE_URL"
+    fi
+}
+
+extract_archive() {
+    cd "$APP_DIR"
+    if [[ ! -f "${APP_DIR}/Amiberry/Harddrives/AmigaVision.hdf" ]]; then
+        clear
+        toilet "KickPi-OS" --metal
+        echo -e "${GREY}KickPi-OS-OS ROM Operating System and Libraries${NC}"
+        echo "Version V2.0 2020-2021 KickPi-OS"
+        echo "No Rights Reserved."
+        echo
+        echo -e "${GREEN}Extracting files...${NC}"
+        echo
+        7z x "$ARCHIVE" >/dev/null
+    fi
+}
+install_files() {
+    echo -e "${GREEN}Finalizing installation...${NC}"
+
+    sudo install -m 644 /opt/KickPi-OS/Amiga/AmigaVision/AmigaVision.desktop /usr/share/applications/
+    cp -f /opt/KickPi-OS/Amiga/AmigaVision/*.uae /opt/Amiga/conf/
+    cp -f "${APP_DIR}"/Amiberry/Roms/*.rom /opt/Amiga/kickstarts/ || true
+}
+
+run_emulator() {
+    info "Updating Amiberry DEV..."
     
-    
- 
-fi
-  
-if [ -d /opt/AmigaVision/games/Amiga/ ]; then
-clear
- toilet "AmiRock-OS" --metal
-      echo -e "$GREY AmiRock-OS ROM Operating System and Libraries" 
-      echo " Version V2.0 2020-2021 AmiRock-OS "
-      echo " No Rights Reserved.  "
-      echo " "
-      echo -e "$BLUE"
-      echo " "
-      echo -e "$GREEN ready  --- have fun :-)"
-      echo -e "$GREY "
-      echo " "
-      sudo chmod -R 777 /usr/share/applications/
-      cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.desktop /usr/share/applications/ 
-      cp -rf /opt/AmiRock/Amiga/AmigaVision/AmigaVision.uae /opt/Amiga/conf/
-     
-      
-      cp -rf /opt/AmigaVision/games/Amiga/*.rom /opt/Amiga/kickstarts/
-      cp -rf /opt/AmigaVision/games/Amiga500/*.rom /opt/Amiga/kickstarts/
-     
-fi 
-cd /opt/Amiga/
-      ./amiberry --config conf/AmigaVision.uae -G
-      cd
-fi
+    rm -rf "$HOME/amiberry-lite"
+
+    git clone https://github.com/BlitterStudio/amiberry-lite "$HOME/amiberry-lite"
+    cd "$HOME/amiberry-lite"
+
+    cmake -B build && cmake --build build -j4
+
+    sudo cp build/amiberry-lite "$HOME/Amiga/amiberry_dev"
+    sudo cp -r data "$HOME/Amiga"
+    sudo cp -r external "$HOME/Amiga"
+    sudo cp -r whdboot "$HOME/Amiga"
+    rm -rf "$HOME/amiberry-lite"
+    rm -rf "$HOME/Amiberry-lite"
+    sudo ln -s /opt/Amiga/ /home/$USER/Amiberry-Lite
+    boot.sh
+    success "Amiberry DEV updated!"
+    cd /opt/Amiga
+    ./amiberry_dev --config /opt/Amiga/conf/AmigaVision2026.uae -G
+}
+
+# ---- MAIN ----
+print_header
+check_disk_space
+download_archive
+extract_archive
+print_header
+echo -e "${GREEN}Ready — have fun :-)${NC}"
+
+install_files
+run_emulator
